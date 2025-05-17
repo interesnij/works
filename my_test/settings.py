@@ -129,4 +129,4 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 
 MANAGERS = (("admin", "ochkarik1983@mail.ru"),)
 
-SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

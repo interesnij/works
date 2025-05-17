@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'VanDijckMTStd-Regular';
+  src: url('/static/fonts/VanDijckMTStd-Regular.eot');
+  src: url('/static/fonts/VanDijckMTStd-Regular.woff2') format('woff2'),
+       url('/static/fonts/VanDijckMTStd-Regular.woff') format('woff'),
+       url('/static/fonts/VanDijckMTStd-Regular.ttf') format('truetype'),
+       url('/static/fonts/VanDijckMTStd-Regular.svg#VanDijckMTStd-Regular') format('svg'),
+       url('/static/fonts/VanDijckMTStd-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}

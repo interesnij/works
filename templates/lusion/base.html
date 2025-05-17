@@ -1,0 +1,36 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js wf-loading is-en" lang="en">
+<head>
+  <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="theme-color" content="#0c0720">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Lusion</title>
+  <meta name="description" content="Lusion is a real-time, development focussed, creative studio.">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+  <base href="/">
+  <script> var ua = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+    document.documentElement.className += /(iPad|iPhone|Android)/i.test(ua) ? ' is-mobile' : ' is-desktop';
+    document.documentElement.className = document.documentElement.className.replace('no-js','js');
+    var supportedLangs = ['en', 'cn'];
+    var lang = 'en';
+  </script>
+  <link rel="stylesheet" href="{% static 'styles/lusion/style.css' %}">
+  </head>
+  <body>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static 'scripts/lusion/TweenLite.js' %}"></script>
+    <script src="{% static 'scripts/lusion/three.js' %}"></script>
+    <script src="{% static 'scripts/lusion/index.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Алкоголь{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid menu-header">
+    <div class="row">
+        <div class="sm-12 lg-4">
+            <img src="{% static 'images/manship/bread.png' %}" alt="" class="align-center visible-xs img-responsive">
+        </div>
+        <div class="sm-12 lg-4 text-center">
+            <div class="menu-content">
+                <h2 class="special dots-horz">Алкоголь</h2>
+                <p>Меню нашего ресторана дополняется одобренной картой знатоков вин и лучшим баром в Миссисипи.</p>
+
+            </div>
+        </div>
+        <div class="sm-12 lg-4"></div>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="libations-slider">
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-blood-and-sand.png' %}">
+            <h2 class="special">Кровь &амп; песок</h2>
+            <p class="text-center">Chivas Regal / Orange / Sweet Vermouth / Cherry Herring</p>
+        </div>
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-gnt.png' %}">
+            <h2 class="special">Лучший черт G &amp; T</h2>
+            <p class="text-center">Uncle Val’s Botanical Gin / Jack Rudy Tonic / Seltzer</p>
+        </div>
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-heat-index.png' %}">
+            <h2 class="special">Тепловой Индекс</h2>
+            <p class="text-center">Cathead Vodka / Lemon / Agave / Crème De Cassis</p>
+        </div>
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-marg.png' %}">
+            <h2 class="special">Hemingway Daquiri</h2>
+            <p class="text-center">Plantation Rum / Maraschino / Grapefruit / Lime / Simple Syrup</p>
+        </div>
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-mule.png' %}">
+            <h2 class="special">Горный осел</h2>
+            <p class="text-center">Lime / Vodka / Ginger Beer</p>
+        </div>
+        <div class="drank bars text-center">
+            <img src="{% static 'images/manship/cocktail-whiskey-v2.png' %}">
+            <h2 class="special">Vieux Carre</h2>
+            <p class="text-center">Rye Whiskey / Benedictine / Sweet Vermouth / Cognac / Bitters</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-content">
+                <div class="row">
+                    <div class="sm-8 lg-8">
+                        <h3>Самый большой выбор вин и спиртных напитков в Миссисипи</h3>
+                        <p>Коктейли, вино, спиртные напитки и пиво разработаны, чтобы прекрасно сочяетаться с нашими блюдами.
+                          Хорошо поесть здесь означает хорошо выпить. В нашем баре представлен обширный список собранных вручную вин,
+                          которые получили<strong>Премию Wine Spectator Award of Excellence</strong>,
+                          крафтовое пиво, дико изобретательные коктейли и самая большая коллекция виски и Бурбонов в штате. Вы можете
+                          <a href="{% static 'json/manship_brunch_4-27-19_letter.pdf' %}">
+                            Скачать полный список напитков здесь
+                          </a>.
+                        </p>
+                        <h3>Мы упоминали о нашем счастливом часе?</h3>
+                        <p>Наш счастливый час в будние дни действует в баре и патио.</p>
+                        <h4>Понедельник & #8211; пятница 15:00 &#8211; 18:00</h4>
+                        <p>1⁄2&nbsp;цены за пиццу<br />
+                            $2&nbsp;от всех ремесленных и импортных сортов пива<br />
+                            25% на все виды бомберов<br />
+                            $5&nbsp;на все вина<br />
+                            $5 на все бочковые вина</p>
+                        <h4>Другие специальные предложения по будням</h4>
+                        <p>Понедельник: Ночь Серверной Индустрии (- 20%)<br />
+                            Вторник: Технический Свободный Вторник (- 15%)<br />
+                            Среда: Вина "О Среда" (- 15%)</p>
+                        <p>*Цены и специальные предложения могут быть изменены</p>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="sm-4 lg-4">
+                        <div class="vert"></div>
+                        <a href="{% static 'json/manship_brunch_4-27-19_letter.pdf' %}" class="btn btn-default btn-lg">Смотреть полный список</a>
+                    </div>
+                </div>
+            </div>
+            <div class="vert"></div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page-parent active-page-parent"><a href="">Меню</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                        <li><a href="{% url 'manship_brunch' %}" aria-current="page">Бранч</a></li>
+                        <li><a href="{% url 'manship_dinner' %}">Обед</a></li>
+                        <li class="active-page"><a href="{% url 'manship_drink' %}">Алкоголь</a></li>
+                        <li><a href="{% url 'manship_lunch' %}">Ланч</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

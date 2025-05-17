@@ -1,0 +1,98 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container">
+
+            <div class="grid__wrapper js-background-zone" data-bz-color="default">
+                <div class="grid__container grid__container--large">
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars">Привет</h2>
+                </div>
+
+                <div class="grid__container contact-content">
+                    <div class="contact-content__item">
+                        <div class="contact-info__list js-printed-checker anim-fade">
+                            <a class="contact-info__item" href="mailto:info@mowellens.com">info@mowellens.com</a>
+                            <a class="contact-info__item" href="tel:1.800.916.3119">1.800.916.3119</a>
+                            <p class="contact-info__item">Создано  California</p>
+                        </div>
+
+                        <p class="page-contact__desc js-printed-checker anim-fade">Есть вопросы?<BR>Хотите поговорить о вашем опыте Mowellens? Наши линии всегда открыты, и мы хотели бы услышать от вас. <BR><BR>
+
+                            Часы поддержки заказа понедельник-пятница 8 утра-5 вечера.
+                            <BR>
+                            Не позволяйте выходные остановить вас от подключения. Если вы обратитесь, мы будем следить за вами
+                            в понедельник. И в течение недели мы стремимся к ответу в тот же день, но разрешаем нам 24 часа на
+                            всякий случай.
+                        </p>
+
+                        <ul class="page-contact__social || social-list js-printed-checker anim-fade--multiple">
+                            <li class="social-list__item"><a class="social-list__link" href="" target="_blank">Facebook</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11.5px" height="25px" viewBox="0 0 11.5 25" style="enable-background:new 0 0 11.5 25;" xml:space="preserve">
+                                    <path d="M2.6,25h5V12.4h3.5l0.4-4.2H7.7c0,0,0-1.6,0-2.4c0-1,0.2-1.4,1.2-1.4c0.8,0,2.7,0,2.7,0V0c0,0-2.9,0-3.5,0
+	C4.3,0,2.6,1.6,2.6,4.8c0,2.8,0,3.4,0,3.4H0v4.3h2.6V25z" />
+                                </svg>
+                            </li>
+                            <li class="social-list__item"><a class="social-list__link" href="" target="_blank">Twitter</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="25px" viewBox="0 0 24 25" style="enable-background:new 0 0 24 25;" xml:space="preserve">
+                                    <path d="M0,20.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14.3-7.7,14-14.6c1-0.7,1.8-1.6,2.5-2.5c-0.9,0.4-1.8,0.7-2.8,0.8
+    	c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6c-3.2,0-5.5,3-4.8,6C7.7,8.6,4.1,6.7,1.7,3.7
+    	C0.4,5.9,1,8.8,3.2,10.3C2.4,10.2,1.6,10,1,9.6c-0.1,2.3,1.6,4.4,3.9,4.9c-0.7,0.2-1.5,0.2-2.2,0.1c0.6,2,2.4,3.4,4.6,3.4
+    	C5.2,19.7,2.6,20.4,0,20.1z" />
+                                </svg>
+                            </li>
+                            <li class="social-list__item"><a class="social-list__link" href="" target="_blank">Instagram</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="25px" viewBox="0 0 23 25" style="enable-background:new 0 0 23 25;" xml:space="preserve">
+                                    <path d="M11.5,3.1c3.1,0,3.4,0,4.6,0.1c1.1,0.1,1.7,0.2,2.1,0.4c0.5,0.2,0.9,0.5,1.3,0.9c0.4,0.4,0.7,0.8,0.9,1.3
+		c0.2,0.4,0.3,1,0.4,2.1c0.1,1.2,0.1,1.6,0.1,4.6c0,3.1,0,3.4-0.1,4.6c-0.1,1.1-0.2,1.7-0.4,2.1c-0.2,0.5-0.5,0.9-0.9,1.3
+		c-0.4,0.4-0.8,0.7-1.3,0.9c-0.4,0.2-1,0.3-2.1,0.4c-1.2,0.1-1.6,0.1-4.6,0.1c-3.1,0-3.4,0-4.6-0.1c-1.1-0.1-1.7-0.2-2.1-0.4
+		c-0.5-0.2-0.9-0.5-1.3-0.9c-0.4-0.4-0.7-0.8-0.9-1.3c-0.2-0.4-0.3-1-0.4-2.1c-0.1-1.2-0.1-1.6-0.1-4.6c0-3.1,0-3.4,0.1-4.6
+		c0.1-1.1,0.2-1.7,0.4-2.1C2.7,5.2,3,4.8,3.4,4.4C3.8,4,4.2,3.7,4.7,3.5c0.4-0.2,1-0.3,2.1-0.4C8.1,3.1,8.4,3.1,11.5,3.1 M11.5,1
+		C8.4,1,8,1,6.8,1.1C5.5,1.1,4.7,1.3,4,1.6c-0.8,0.3-1.4,0.7-2,1.3c-0.6,0.6-1,1.3-1.3,2C0.3,5.7,0.1,6.5,0.1,7.8C0,9,0,9.4,0,12.5
+		c0,3.1,0,3.5,0.1,4.7c0.1,1.2,0.3,2.1,0.5,2.8c0.3,0.8,0.7,1.4,1.3,2c0.6,0.6,1.3,1,2,1.3c0.7,0.3,1.6,0.5,2.8,0.5
+		C8,24,8.4,24,11.5,24c3.1,0,3.5,0,4.7-0.1c1.2-0.1,2.1-0.3,2.8-0.5c0.8-0.3,1.4-0.7,2-1.3c0.6-0.6,1-1.3,1.3-2
+		c0.3-0.7,0.5-1.6,0.5-2.8C23,16,23,15.6,23,12.5c0-3.1,0-3.5-0.1-4.7c-0.1-1.2-0.3-2.1-0.5-2.8c-0.3-0.8-0.7-1.4-1.3-2
+		c-0.6-0.6-1.3-1-2-1.3c-0.7-0.3-1.6-0.5-2.8-0.5C15,1,14.6,1,11.5,1" />
+                                    <path d="M11.5,6.6c-3.3,0-5.9,2.6-5.9,5.9c0,3.3,2.6,5.9,5.9,5.9s5.9-2.6,5.9-5.9C17.4,9.2,14.8,6.6,11.5,6.6 M11.5,16.3
+		c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8s3.8,1.7,3.8,3.8S13.6,16.3,11.5,16.3" />
+                                    <path d="M19,6.4c0,0.8-0.6,1.4-1.4,1.4c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4C18.4,5,19,5.6,19,6.4" />
+                                </svg>
+                            </li>
+                        </ul>
+
+                        <div class="page-contact__btn-container">
+
+                            <a href="mailto:" class="btn btn--white js-printed-checker ">
+                                <span class="btn__label">Стать дилером</span>
+                                <span class="btn__label btn__label--hover" aria-hidden="true">Стать дилером</span>
+                            </a>
+
+                            <a href="mailto:" class="btn btn--white js-printed-checker ">
+                                <span class="btn__label">Для прессы</span>
+                                <span class="btn__label btn__label--hover" aria-hidden="true">Для прессы</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="mailto:" class="cta-bottom__item js-printed-checker  ">Написать </a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+
+{% endblock %}

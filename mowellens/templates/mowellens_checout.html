@@ -1,0 +1,180 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Оформление заказа{% endblock %}
+
+{% block content %}
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="checkout">
+            <div class="grid__wrapper">
+                <section class="grid__container">
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars">Оформление</h2>
+                    <div class="woocommerce">
+                        <div class="woocommerce-info">Есть купон? <a href="#" class="showcoupon">Нажмите здесь и введите промокод</a></div>
+                        <form class="checkout_coupon" method="post" style="display:none">
+                            <p class="form-row form-row-first">
+                                <input type="text" name="coupon_code" class="input-text" placeholder="Промокод" value="" />
+                            </p>
+                            <p class="form-row form-row-last">
+                                <button type="submit" class="button" name="apply_coupon" value="Введите промокод">Введите промокод</button>
+                            </p>
+                            <div class="clear"></div>
+                        </form>
+
+                        <form class="checkout woocommerce-checkout">
+                            <div class="col2-set" id="customer_details">
+                                <div class="col-1">
+                                    <div class="woocommerce-billing-fields">
+                                        <h3 class="title title--big title--has-slash || font-van  || cart-totals__title">Платежные реквизиты</h3>
+                                        <div class="woocommerce-billing-fields__field-wrapper">
+                                            <p class="form-row form-row-first validate-required"><label class="">Имя <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" value="" autofocus="autofocus" /></p>
+                                            <p class="form-row form-row-last validate-required" ><label class="">Фамилия <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" value="" /></p>
+                                            <p class="form-row form-row-wide"><label class="">Компания</label><input type="text" class="input-text " placeholder="" value=""/></p>
+                                            <p class="form-row form-row-wide address-field update_totals_on_change validate-required"><label class="">Страна <abbr class="required" title="required">*</abbr></label><strong>United States (US)</strong><input type="hidden" value="US" class="country_to_state" readonly="readonly" /></p>
+                                            <p class="form-row form-row-wide address-field validate-required"><label class="">Улица <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="House number and street name" value="" /></p>
+                                            <p class="form-row form-row-wide address-field"><input type="text" class="input-text" placeholder="Apartment, suite, unit etc. (optional)" /></p>
+                                            <p class="form-row form-row-wide address-field validate-required"><label class="">Город <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" value="" /></p>
+                                            <p class="form-row form-row-wide address-field validate-required validate-state"><label class="">Регион <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " value="" placeholder="" /></p>
+                                            <p class="form-row form-row-wide address-field validate-required validate-postcode"><label class="">Индекс <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" /></p>
+                                            <p class="form-row form-row-wide validate-required validate-phone"><label class="">Телефон <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="woocommerce-shipping-fields">
+                                        <h3 class="form-row">
+                                            <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                                                <p><input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox"  value="1" /> <span>Отправить по другому адресу?</span></p>
+                                            </label>
+                                        </h3>
+
+                                        <div class="shipping_address">
+                                            <div class="woocommerce-shipping-fields__field-wrapper">
+                                                <p class="form-row form-row-first validate-required"><label for="shipping_first_name" class="">Имя <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" /></p>
+                                                <p class="form-row form-row-last validate-required"><label for="shipping_last_name" class="">Фамилия <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" /></p>
+                                                <p class="form-row form-row-wide"><label for="shipping_company" class="">Компания</label><input type="text" class="input-text " placeholder="" value="" /></p>
+                                                <p class="form-row form-row-wide address-field update_totals_on_change validate-required"><label class="">Страна <abbr class="required" title="required">*</abbr></label><strong>United States (US)</strong><input type="hidden" class="country_to_state" readonly="readonly" /></p>
+                                                <p class="form-row form-row-wide address-field validate-required"><label class="">Улица <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text "  /></p>
+                                                <p class="form-row form-row-wide address-field"><input type="text" class="input-text " placeholder="Apartment, suite, unit etc. (optional)"  /></p>
+                                                <p class="form-row form-row-wide address-field validate-required"><label class="">Город <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " placeholder="" value="" /></p>
+                                                <p class="form-row form-row-wide address-field validate-required validate-state"><label class="">Регион <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " value="" placeholder="" /></p>
+                                                <p class="form-row form-row-wide address-field validate-required validate-postcode"><label class="">Индекс <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text "placeholder="" /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="woocommerce-additional-fields">
+                                        <div class="woocommerce-additional-fields__field-wrapper">
+                                            <p class="form-row notes" data-priority=""><label class="">Примечания к заказу</label>
+                                            <textarea class="input-text " placeholder="Примечания о вашем заказе, например, специальные примечания для доставки." rows="2" cols="5"></textarea></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <h3 id="order_review_heading" class="title title--big title--has-slash || font-van || cart-totals__title">Ваш заказ</h3>
+                                    <div class="woocommerce-checkout-review-order">
+                                        <table class="shop_table woocommerce-checkout-review-order-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="product-name">Продукт</th>
+                                                    <th class="product-total">Всего</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        Товар1&nbsp; <strong class="product-quantity">&times; 2</strong>
+                                                    </td>
+                                                    <td class="product-total">
+                                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>65.98</span> </td>
+                                                </tr>
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        Товар2&nbsp; <strong class="product-quantity">&times; 1</strong>
+                                                    </td>
+                                                    <td class="product-total">
+                                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>65.99</span> </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr class="cart-subtotal">
+                                                    <th>Цена</th>
+                                                    <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>131.97</span></td>
+                                                </tr>
+                                                <tr class="shipping">
+                                                    <th>Доставка</th>
+                                                    <td data-title="Shipping">
+                                                        <p>Введите свой полный адрес, чтобы увидеть стоимость доставки.</p>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="tax-total">
+                                                    <th>Процент</th>
+                                                    <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>0.00</span></td>
+                                                </tr>
+
+                                                <tr class="order-total">
+                                                    <th>Всего</th>
+                                                    <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>131.97</span></strong> </td>
+                                                </tr>
+
+                                            </tfoot>
+                                        </table>
+                                        <div id="payment" class="woocommerce-checkout-payment">
+                                            <ul class="wc_payment_methods payment_methods methods">
+                                                <li class="wc_payment_method payment_method_stripe">
+                                                    <input type="radio" class="input-radio" value="stripe" checked='checked' data-order_button_text="Продолжить оплату" />
+                                                    <label for="payment_method_stripe">
+                                                        Кредитка <img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/visa.svg" class="stripe-visa-icon stripe-icon" alt="Visa" /><img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/amex.svg" class="stripe-amex-icon stripe-icon" alt="American Express" /><img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/mastercard.svg" class="stripe-mastercard-icon stripe-icon" alt="Mastercard" /><img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/discover.svg" class="stripe-discover-icon stripe-icon" alt="Discover" /><img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/jcb.svg" class="stripe-jcb-icon stripe-icon" alt="JCB" /><img src="https://mowellens.com/app/plugins/woocommerce-gateway-stripe-2/assets/images/diners.svg" class="stripe-diners-icon stripe-icon" alt="Diners" />
+                                                    </label>
+                                                    <div class="payment_box payment_method_stripe">
+                                                        <div>
+                                                            <p>Оплата с помощью кредитной карты</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="form-row place-order">
+                                                <p class="form-row terms wc-terms-and-conditions">
+                                                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                                                        <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" />
+                                                        <span>Оформляя заказ, вы ознакомились и соглашаетесь с нашим
+                                                      <a href="{% url 'mowellens_terms' %}" target="_blank" class="woocommerce-terms-and-conditions-link">
+                                                        уловия использования
+                                                      </a>
+                                                      and
+                                                      <a href="{% url 'mowellens_policy' %}" target="_blank" class="woocommerce-privacy-policies-link">
+                                                        конфиденциальность
+                                                      </a>.
+                                                    </span>
+                                                    <span class="required">*</span>
+                                                    </label>
+                                                    <input type="hidden" value="1" />
+                                                </p>
+                                                <button type="submit" class="button alt js-place-order" style="display: none;" aria-hidden="true">Разместить заказ</button>
+                                                <button class="btn btn--green  ">
+                                                    <span class="btn__label">Разместить заказ</span>
+                                                    <span class="btn__label btn__label--hover" aria-hidden="true">Разместить заказ</span>
+                                                </button>
+                                                <input type="hidden" /><input type="hidden" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+{% endblock %}

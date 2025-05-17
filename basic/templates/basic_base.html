@@ -1,0 +1,261 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <base href="http://модули.рус/basic/" />
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'basic/styles/main.bundle.css' %}" />
+    <link href="{% static 'basic/styles/enhanced.bundle.css' %}" as="style" rel='stylesheet'>
+    <noscript>
+        <link rel="stylesheet" href="{% static 'basic/styles/enhanced.css' %}">
+      </noscript>
+<script src="{% static 'basic/scripts/modernizr.js' %}"></script>
+    <script>
+        ! function(e) {
+            "use strict";
+            var n = function(n, t, o) {
+                function i(e) {
+                    return a.body ? e() : void setTimeout(function() {
+                        i(e)
+                    })
+                }
+
+                function r() {
+                    l.addEventListener && l.removeEventListener("load", r), l.media = o || "all"
+                }
+                var d, a = e.document,
+                    l = a.createElement("link");
+                if (t) d = t;
+                else {
+                    var s = (a.body || a.getElementsByTagName("head")[0]).childNodes;
+                    d = s[s.length - 1]
+                }
+                var f = a.styleSheets;
+                l.rel = "stylesheet", l.href = n, l.media = "only x", i(function() {
+                    d.parentNode.insertBefore(l, t ? d : d.nextSibling)
+                });
+                var u = function(e) {
+                    for (var n = l.href, t = f.length; t--;)
+                        if (f[t].href === n) return e();
+                    setTimeout(function() {
+                        u(e)
+                    })
+                };
+                return l.addEventListener && l.addEventListener("load", r), l.onloadcssdefined = u, u(r), l
+            };
+            "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n
+        }("undefined" != typeof global ? global : this);
+        ! function(t) {
+            if (t.loadCSS) {
+                var e = loadCSS.relpreload = {};
+                if (e.support = function() {
+                        try {
+                            return t.document.createElement("link").relList.supports("preload")
+                        } catch (e) {
+                            return !1
+                        }
+                    }, e.poly = function() {
+                        for (var e = t.document.getElementsByTagName("link"), r = 0; r < e.length; r++) {
+                            var n = e[r];
+                            "preload" === n.rel && "style" === n.getAttribute("as") && (t.loadCSS(n.href, n, n.getAttribute("media")), n.rel = null)
+                        }
+                    }, !e.support()) {
+                    e.poly();
+                    var r = t.setInterval(e.poly, 300);
+                    t.addEventListener && t.addEventListener("load", function() {
+                        e.poly(), t.clearInterval(r)
+                    }), t.attachEvent && t.attachEvent("onload", function() {
+                        t.clearInterval(r)
+                    })
+                }
+            }
+        }(this);
+    </script>
+
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 137118,
+                hjsv: 5
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body data-svg-sprite="/static/basic/images/sprite.svg">
+
+    <div id="header-holder">
+
+        <header id="header" class="main-nav" data-header>
+            <div class="container">
+
+                <a href="http://модули.рус/basic/" class="logo">
+                    <svg>
+                        <use xlink:href="#basic-logo"></use>
+                    </svg>
+                </a>
+
+                <button class="hamburger hamburger--mobile" aria-expanded="false" aria-controls="header-nav">
+                    <span class="a11y">Toggle Menu</span>
+                    <span class="text" aria-hidden="true">меню</span>
+                </button>
+
+                <nav id="header-nav" class="desktop-nav" role="navigation">
+                    <ul role="presentation">
+                        <li role="presentation">
+                            <a href="{% url 'basic_works' %}">
+                                Работы
+                                <span></span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{% url 'basic_services' %}">
+                                Сервис
+                                <span></span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{% url 'basic_about' %}">
+                                О нас
+                                <span></span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{% url 'basic_news' %}">
+                                Новости
+                                <span></span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="{% url 'basic_careers' %}">
+                                Карьера
+                                <span></span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_contacts' %}" class="btn btn--light text-align-center no-hover" data-btn-fill="" onClick="ga(&#039;send&#039;, &#039;event&#039;, &#039;contact-cta&#039;, &#039;click&#039;, &#039;Contact Page CTA&#039;);">
+                                <span class="btn__text"><span class="btn__text-inner">Контакты</span></span>
+                            </a>
+
+                        </li>
+                        <li role="presentation" class="contact-link">
+                            <a href="" onClick="ga('send', 'event', 'contact-cta', 'click', 'Contact Page CTA');">Contact<span></span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="waiting hidden" data-loading-anim>
+        <svg>
+            <use xlink:href="#basic-logo-mark"></use>
+        </svg>
+    </div>
+    <div id="content">
+        <div id="main" role="main">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+
+    <footer id="footer" data-skrollex data-sk-static data-sk-hide-offscreen>
+        <div class="container">
+            <div class="grid">
+                <div class="grid__item col-4--small">
+                    <svg>
+                        <use xlink:href="#basic-logo-mark"></use>
+                    </svg>
+                    <p class="meta">Love the hustle.</p>
+                </div>
+                <div class="grid__item col-8--small">
+                    <div class="footer__copy">
+                        <p class="lead mb0">We collaborate with ambitious brands and people; we&rsquo;d love to build something great together.</p>
+                        <p class="lead fw-bold"><a href="" class="link-hover" onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'New Business Email Clicks');">biz@basicagency.com</a></p>
+                    </div>
+                    <div class="footer__contact-info grid grid--mobile">
+                        <div class="grid__item col-6 col-3--large mb3 mb0--large">
+                            <p class="fw-bold">Office</p>
+                            <p>
+                                <a href="" target="_blank" class="address link-hover no-underline" onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
+                                    San Diego &mdash;<br />845 15th Street, Suite 501<br /> San Diego, CA 92101
+                                </a>
+                            </p>
+                            <p>
+                                <a href="" target="_blank" class="address link-hover no-underline" onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
+                                    Mountain View &mdash;<br />1300 Villa St<br /> Mountain View, CA 94041
+                                </a>
+                            </p>
+                        </div>
+                        <div class="grid__item col-6 col-3--large mb3 mb0--large">
+                            <p class="fw-bold">Start a conversation</p>
+                            <p>
+                                <a href="" class="link-hover" onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'General Email Clicks');"></a>
+                                <br />
+                                <a href="tel:+1.858.755.6922" class="link-hover no-underline" onClick=”ga('send', 'event' , ' Phone Call' , 'click-to-call' , '+1.858.755.6922' );”>+7.904.000.0000</a>
+                            </p>
+                        </div>
+                        <div class="grid__item col-6 col-3--large mb5 mb0--large">
+                            <p class="fw-bold">Basic sites</p>
+                            <p>
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-culturemanual', 'click', '', {'NonInteraction': 1});">Culture Manual</a>
+                                <br />
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-brandbeats', 'click', '', {'NonInteraction': 1});">BrandBeats</a>
+                                <br />
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-basicyir16', 'click', 'BASIC YIR 16', {'NonInteraction': 1});">2016 YIR</a>
+                            </p>
+                        </div>
+                        <div class="grid__item col-6 col-3--large mb5 mb0--large">
+                            <p class="fw-bold">Social</p>
+                            <p>
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Facebook', {'NonInteraction': 1});">Facebook</a><br />
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Twitter', {'NonInteraction': 1});">Twitter</a><br />
+                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Instagram', {'NonInteraction': 1});">Instagram</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright grid">
+                <div class="grid__item col-4--small mb3 mb0--small">
+                    <p class="copyright mb0">&copy;2019<br /> All rights Reserved</p>
+                </div>
+                <div class="grid__item col-8--small">
+                    <div class="grid grid--mobile">
+                        <div class="grid__item col-6 col-3--large">
+                            <a href="" class="link-hover">Terms &amp; Conditions</a>
+                        </div>
+                        <div class="grid__item col-6 col-3--large">
+                            <a href="" class="link-hover">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<div class="next-page-footer__mask pos-f layer"></div>
+</div>
+
+<div class="page-transition-mask pos-f layer"></div>
+
+<script src="https://use.fontawesome.com/dfca782c46.js" async></script>
+<script src="{% static 'basic/scripts/common.js' %}"></script>
+<script src="{% static 'basic/scripts/main.bundle.js' %}"></script>
+<script src="{% static 'basic/scripts/enhanced.bundle.js' %}"></script>
+
+</body>
+
+</html>

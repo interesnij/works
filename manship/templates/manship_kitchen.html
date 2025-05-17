@@ -1,0 +1,116 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Наша кухня{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrapper hero-inner">
+    <img width="1400" height="500" src="{% static 'images/manship/header-images_0008_flames-copy-10.png' %}"
+          class="hero-img img-responsive wp-post-image"
+          alt=""
+          srcset="{% static 'images/manship/header-images_0008_flames-copy-10.png' %} 1400w,
+          {% static 'images/manship/header-images_0008_flames-copy-10.png' %} 300w,
+          {% static 'images/manship/header-images_0008_flames-copy-10.png' %} 768w,
+          {% static 'images/manship/header-images_0008_flames-copy-10.png' %} 1024w"
+          sizes="(max-width: 1400px) 100vw, 1400px" />
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Наша кухня</h2>
+                <img src="{% static 'images/manship/illos-02.png' %}" alt="In The Kitchen" class="page-header-illustration">
+            </div>
+            <div class="page-content">
+                <h3>Управление кухней нашего ресторана</h3>
+                <div class='content-column one_half'>
+                  <p>
+                    Исполнительный шеф-повар Алекс Итон управляет кухней рксторана с этосом, который проявляется в качестве его
+                    блюд. Это вопрос уважения: к животным, к ресторану, и к гостям, которые здесь едят.
+                  </p>
+                  <p>
+                    Там, где это возможно, Manship использует всю животную кулинарию, используя каждую часть животных, подаваемых
+                    в ресторане. Гораздо более этичный способ фермы и подачи мяса, этот вид приготовления пищи был только недавно оставлен
+                    в 20-м веке. Ресторан устраняет расточительность, где мы можем, и доказывает нашу доблесть с авантюрной, удостоенной
+                    наград кухней.
+                  </p>
+                    <p>
+                      На нашей кухне вы найдете лучшие качественные ингредиенты, которые наш шеф-повар может найти, часто
+                      <a href="{% url 'manship_source' %}">привлекая сторонние ресурсы</a>,
+                      сотрудничая с фермерами и дистрибьюторами в Миссисипи и Луизиане напрямую. Для вкуса, нет никакой замены
+                      для свежих ингредиентов или приготовления пищи в дровяных печах.<br />
+                </div>
+                <div class='content-column one_half last_column'>
+                  Когда гости приходят обедать в ресторан, они могут заметить пункты меню, которые не часто подаются в ресторанах в
+                  Джексоне. Это не тактика запугивания. Наши повара имеют обширную подготовку во многих стилях приготовления пищи,
+                  поэтому имеет смысл только принести лучшее, что у них есть на тарелке. Это больше, чем хорошо для того, чтобы поделиться кулинарное богатство. Это прекрасная столовая, которая все о еде и напитках, лишенная претензий, потому что подлинные блюда дают подлинные впечатления.<br /></div>
+                <div class='clear_column'></div>
+
+                <style type='text/css'>
+                    #gallery-2 {
+                        margin: auto;
+                    }
+
+                    #gallery-2 .gallery-item {
+                        float: left;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 33%;
+                    }
+
+                    #gallery-2 img {
+                        border: 2px solid #cfcfcf;
+                    }
+
+                    #gallery-2 .gallery-caption {
+                        margin-left: 0;
+                    }
+
+                </style>
+                <div id='gallery-2' class='gallery galleryid-10 gallery-columns-3 gallery-size-full'>
+                    <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                            <img width="1220" height="751" src="{% static 'images/manship/kitchen-1.jpg' %}" class="attachment-full size-full" alt=""  sizes="(max-width: 1220px) 100vw, 1220px" />
+                        </dt>
+                    </dl>
+                    <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                            <img width="1220" height="751" src="{% static 'images/manship/kitchen-2.jpg' %}" class="attachment-full size-full" alt=""  sizes="(max-width: 1220px) 100vw, 1220px" />
+                        </dt>
+                    </dl>
+                    <br style='clear: both' />
+                </div>
+
+            </div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page"><a>Наша кухня</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                          <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                          <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                          <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                          <li><a href="{% url 'manship_news' %}">Новости</a></li>
+                          <li><a href="{% url 'manship_about' %}">О нас</a></li>
+                          <li><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                          <li><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

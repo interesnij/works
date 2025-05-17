@@ -1,0 +1,119 @@
+{% load static %}
+
+<div class="contact-popup">
+  <div class="popup-content">
+    <div class="close-button cursor-customized">
+      <div class="cross-container">
+        <div class="stick stick1"></div>
+        <div class="stick stick2"></div>
+      </div>
+      <div class="back-container">
+        <p class="font-menu font-gray general-hover hover-white back-text">Назад</p>
+      </div>
+    </div>
+    <form class="contact-container animable-popup-container">
+      <div class="contact-form-slider-container ">
+        <div class="slider-container">
+          <div class="slides">
+            <div class="slide current" data-type="name" data-object="name">
+              <div class="slide-content">
+                <label for="form_name" class="font-menu-item font-black input-label">Имя</label>
+                <input class="input font-h5 font-black font-transform-none validationName" type="text" name="first name"  placeholder="Напишите сюда" autocomplete="off" maxlength="50" required>
+              </div>
+            </div>
+            <div class="slide" data-type="radio" data-object="company">
+              <div class="slide-content">
+                <label class="font-menu-item font-black input-label">Компания</label>
+                <div class="input-container">
+                  <input id="radio-company" class="input radio-input" type="radio" name="company" required value="company">
+                  <label for="radio-company" class="radio-label font-h5 font-black font-transform-none">Я работаю в компании.</label>
+                </div>
+                <div class="input-container">
+                  <input id="radio-no-company" class="input radio-input" type="radio" name="company" required value="client">
+                  <label for="radio-no-company" class="radio-label font-h5 font-black font-transform-none">Я работаю не в компании</label>
+                </div>
+              </div>
+            </div>
+            <div class="slide" data-type="name" data-object="company-name">
+              <div class="slide-content">
+                <label for="form_name" class="font-menu-item font-black input-label">Название компании</label>
+                <input class="input font-h5 font-black font-transform-none validationName" type="text" name="company name"  placeholder="Напишите сюда" autocomplete="off" maxlength="50" required>
+              </div>
+            </div>
+            <div class="slide" data-type="radio" data-object="you-are">
+              <div class="slide-content">
+                <label class="font-menu-item font-black input-label">Вы являетесь...</label>
+                <div class="input-container">
+                  <input id="radio-client" class="input radio-input" type="radio" name="you-are" required value="client">
+                  <label for="radio-client" class="radio-label font-h5 font-black font-transform-none">потенциальным клиентом.</label>
+                </div>
+                <div class="input-container">
+                  <input id="radio-fan" class="input radio-input" type="radio" name="you-are" required value="fan">
+                  <label for="radio-fan" class="radio-label font-h5 font-black font-transform-none">поклонником.</label>
+                </div>
+                <div class="input-container">
+                  <input id="radio-hater" class="input radio-input" type="radio" name="you-are" required value="hater">
+                  <label for="radio-hater" class="radio-label font-h5 font-black font-transform-none">ненавистником.</label>
+                </div>
+              </div>
+            </div>
+            <div class="slide" data-type="textarea" data-object="project-brief">
+              <div class="slide-content" >
+                <label for="form_name" class="font-menu-item font-black input-label">Кратко о проекте</label>
+                <textarea class="input font-h5 font-black font-transform-none" name="project brief" id="" placeholder="Напишите сюда" cols="30" rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="slide" data-type="textarea" data-object="open-your-heart">
+              <div class="slide-content" >
+                <label for="form_name" class="font-menu-item font-black input-label">Открыть свое сердце</label>
+                <textarea class="input font-h5 font-black font-transform-none" name="open your heart" id="" placeholder="Напишите сюда" cols="30" rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="slide" data-type="email" data-object="email">
+              <div class="slide-content">
+                <label for="form_name" class="font-menu-item font-black input-label">Ваш email</label>
+                <input class="input font-h5 font-black font-transform-none validationEmail" type="email" name="email"  placeholder="Напишите сюда" autocomplete="off" required>
+              </div>
+            </div>
+          </div>
+          <div class="controls-container">
+            <div class="prev disabled cursor-customized">
+              <p class="font-menu font-black">Назад</p>
+            </div>
+            <div class="next cursor-customized">
+              <p class="font-menu font-black">Вперед</p>
+            </div>
+            <div class="send cursor-customized">
+              <p class="font-menu font-black">Отправить</p>
+            </div>
+            <div class="contact-error">
+              <p class="contact-error-text font-menu font-red ">ошибка</p>
+            </div>
+          </div>
+          <div class="steps-container">
+            <div class="step current"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+          </div>
+          <div class="send-screen" data-send-screen="company">
+            <p class="font-menu-item font-black">Thank you!</p>
+            <p class="font-menu-item font-black">Мы свяжемся с вами в ближайшее время.</p>
+            <p class="send-screen-newsletter font-menu font-black font-bold cursor-customized general-hover hover-white"><u class="ruya-font-underline-black">Подписаться на рассылку</u></p>
+            <p class="send-screen-ok-message font-menu font-black font-bold">Thank you!</p>
+          </div>
+          <div class="send-screen" data-send-screen="fan">
+            <p class="font-menu-item font-black">Thank you!</p>
+            <p class="font-menu-item font-black">Мы ценим ваши комментарии.</p>
+            <p class="send-screen-newsletter font-menu font-black font-bold cursor-customized general-hover hover-white"><u class="ruya-font-underline-black">Subscribe to newsletter</u></p>
+            <p class="send-screen-ok-message font-menu font-black font-bold">Thank you!</p>
+          </div>
+          <div class="send-screen" data-send-screen="hater">
+            <p class="font-menu-item font-black">Thank you!</p>
+            <p class="font-menu-item font-black">Мы ценим ваши комментарии.</p>
+          </div>
+        </div>
+      </div>
+      <div class="confetti-wrapper"></div>
+    </form>
+  </div>
+</div>

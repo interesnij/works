@@ -1,0 +1,63 @@
+{% load static %}
+
+<div class="sr-only" role="navigation">
+    <strong>Skip to&hellip;</strong>
+    <ul>
+        <li><a href="#search">Search Form</a></li>
+        <li><a href="#global-navigation">Main Menu</a></li>
+        <li><a href="#content">Content</a></li>
+    </ul>
+</div>
+<!-- /skip-navigation -->
+<div class="overlay">
+    <div id="overlay_logo">
+        <img src="{% static 'images/manship/manship_logo_bottom.png' %}" alt="The Manship Logo">
+    </div>
+</div>
+<!-- .wrapper -->
+
+<div class="wrapper">
+    <header class="branding" role="banner">
+        <h1 class="logo">
+            <a href="{% url 'manship' %}">
+                <img src="{% static 'images/manship/logo.png' %}" alt="The Manship">
+            </a>
+            <span class="sr-only">Кафе Барс</span>
+        </h1>
+        <div class="mobile-menu">
+            <a href="tel:89042373637" title="Позвонить" class="pull-left">Позвонить</a>
+            <a href="#" title="Explore" class="activate-menu pull-right">Меню</a>
+        </div>
+        <nav class="main-menu">
+            <h1 class="sr-only">Меню</h1>
+            <ul id="menu-main-menu" class="list-inline">
+                <li id="menu-item-376" class="active"><a href="{% url 'manship' %}" aria-current="page">Гланая</a></li>
+                <li id="menu-item-316" class="has-children"><a href="{% url 'manship_about' %}">О кафе Барс</a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-317"><a href="{% url 'manship_about' %}">О нас</a></li>
+                        <li id="menu-item-37"><a href="{% url 'manship_story' %}">История</a></li>
+                        <li id="menu-item-36"><a href="{% url 'manship_people' %}">Люди</a></li>
+                        <li id="menu-item-35"><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                        <li id="menu-item-34"><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                        <li id="menu-item-33"><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                        <li id="menu-item-31"><a href="{% url 'manship_news' %}">Новости</a></li>
+                        <li id="menu-item-274"><a href="{% url 'manship_events' %}">События</a></li>
+                        <li id="menu-item-32"><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                        <li id="menu-item-241"><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                    </ul>
+                </li>
+                <li id="menu-item-325" class="has-children menu-lists"><a href="{% url 'manship_dinner' %}">Наше меню</a>
+                    <ul class="sub-menu">
+                        <li id="menu-item-55" class="menu-list-item"><a href="{% url 'manship_brunch' %}"><img src="{% static 'images/manship/manship-menu-breakfast.png' %}" alt="Manship Breakfast Menu">Бранч</a></li>
+                        <li id="menu-item-57" class="menu-list-item"><a href="{% url 'manship_lunch' %}"><img src="{% static 'images/manship/manship-menu-lunch.png' %}" alt="Manship Lunch Menu">Ланч&nbsp;&nbsp;</a></li>
+                        <li id="menu-item-56" class="menu-list-item"><a href="{% url 'manship_dinner' %}"><img src="{% static 'images/manship/manship-menu-dinner.png' %}" alt="Manshpi DinnerMenu">Обед&nbsp;&nbsp;</a></li>
+                        <li id="menu-item-54" class="menu-list-item"><a href="{% url 'manship_drink' %}"><img src="{% static 'images/manship/manship-menu-libations.png' %}" alt="Manship Libations">Возлияния</a></li>
+                    </ul>
+                </li>
+                <li id="menu-item-30" class="split"><a href="{% url 'manship_private' %}">Частные столовые</a></li>
+                <li id="menu-item-28"><a href="{% url 'manship_contacts' %}">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="lh-nav nav-bg"></div>
+        <div class="rh-nav nav-bg"></div>
+    </header>

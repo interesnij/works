@@ -1,0 +1,92 @@
+{% extends "lusion/base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+  <canvas id="canvas"></canvas>
+  <div id="app">
+    <div id="main" data-scroll-tooltip="Листайте вниз">
+      <div id="main-scroll">
+        <div id="page-container">
+          <main id="home" class="page is-home" data-id="home" data-page-id="home" data-url="/" data-title="Главная">
+            <section id="home-hero" class="hero is-full">
+              <div id="home-hero-context" class="hero-context flex-vertical">
+                <div class="hero-inner">
+                  <h1 id="home-hero-title" class="hero-title">Realise your creative ideas</h1>
+                  <h4 id="home-hero-desc" class="hero-desc">We build epic, realtime interactive experiences to blow people’s minds.</h4>
+                </div>
+              </div>
+            </section>
+            <section id="home-about">
+              <div id="home-about-context" class="sec-context flex-vertical">
+                <div class="sec-context-inner is-right darker-bg">
+                  <h3 id="home-about-title" class="font-header-bold split-line-mask-effect">We build real-time graphics for agencies and studios.</h3>
+                  <div id="home-about-desc" class="font-bold split-line-mask-effect">A small team of passionate artists and problem solvers.
+                    We execute ideas by using technical knowledge to craft beautiful artwork.
+                  </div>
+                  <a id="home-about-cta-wrapper" href="{% url 'lusion_about' %}">
+                    <div id="home-about-cta" class="font-bold split-line-mask-effect">More About Us</div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section id="home-video" class="is-full"></section>
+          </main>
+        </div>
+
+        {% include 'lusion_featured.html' %}
+
+        {% include 'lusion_contact.html' %}
+
+        </div>
+      </div>
+      <div id="main-scrollbar">
+        <div id="main-scrollbar-indicator"></div>
+      </div>
+      <div id="menu">
+        <canvas id="menu-canvas"></canvas>
+        <div id="menu-content" class="flex-vertical">
+          <ul id="menu-menu" class="nav">
+            <li class="menu-menu-item is-home">
+              <a href="{% url 'lusion' %}">Home</a>
+            </li>
+            <li class="menu-menu-item is-about">
+              <a href="{% url 'lusion_about' %}">About</a>
+            </li>
+            <li class="menu-menu-item is-work"><a href="/work">Work</a></li>
+            <li class="menu-menu-item is-contact"><a href="/contact">Contact</a></li>
+          </ul>
+          <div id="menu-lang-selector">
+            <span class="menu-lang-item is-en" data-id="en">En</span>
+            <span class="menu-lang-item-separator %>">/</span>
+            <a href="/cn" class="menu-lang-item is-cn" data-id="cn">中</a>
+          </div>
+        </div>
+      </div>
+
+      {% include 'lusion_header.html' %}
+
+
+      <div id="main-scroll-indicator">
+        <div id="main-scroll-indicator-text">Листайте вниз</div>
+        <div id="main-scroll-indicator-arrow-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="40" viewBox="0 0 5 40">
+            <title>Vector Smart Object</title>
+            <path d="M0,40V0H1V35H5Z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <a id="snd-btn" class="cache"></a>
+    <div id="preloader" class="cache" data-gesture="Click anywhere to begin">
+      <canvas id="preloader-canvas"></canvas>
+    </div>
+    <div id="not-support" class="cache">We are sorry to inform you that your browser is not compatible with our website.
+      <br><br>Please do consider upgrading your browser.
+    </div>
+    <div id="cursor-follow" class="font-bold"></div>
+
+
+{% endblock %}

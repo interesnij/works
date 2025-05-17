@@ -1,0 +1,283 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Товары{% endblock %}
+
+{% block content %}
+
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="the-goods">
+
+            <div class="grid__wrapper js-background-zone" data-bz-color="default">
+                <section class="grid__container grid__container--large">
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || page-the-goods__title">
+                      We’re wellness. Elevated. Go ahead, live your best life.
+                    </h2>
+                </section>
+
+                <section class="grid__container">
+                    <div class="product__list">
+
+                        <div class="product__item js-product-item js-printed-checker" data-color="#7fa8f8">
+                            <a href="{% url 'mowellens_detail' %}" class="product__link"></a>
+
+                            <a href="{% url 'mowellens_detail' %}" class="product__title">Товар 1</a>
+
+                            <div class="product-hover__container">
+                                <div class="product-hover__title-container">
+                                    <h3 class="product-hover__title || js-split-chars">Товар 1</h3>
+                                    <span class="product-hover__title-line js-title-progress"></span>
+                                </div>
+
+                                <div class="product-hover__lower">
+                                    <p class="product-hover__description">Описание товара</p>
+
+                                    <div class="product-hover__variation-container">
+                                        <span class="product-hover__variation">15ml</span>
+                                        <span class="product-hover__variation">100ml</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-hover__shape js-products-hover-mouse">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                                    <path id="one-and-all" d="M19.9,40.1C8.9,40.1,0,31,0,20S8.9-0.1,19.9-0.1S40,8.9,40,20C40,31,31,40.1,19.9,40.1z M19.9,8.3
+	C13.5,8.3,8.3,13.6,8.3,20s5.2,11.7,11.6,11.7S31.7,26.4,31.7,20S26.4,8.3,19.9,8.3z" />
+                                </svg>
+                            </div>
+
+                            <div class="product__splash-bg">
+                                <div class="product__splash-container product__splash-container--in">
+                                    <div class="splash-in splash-in--main splash-main"></div>
+                                    <div class="splash-in splash-in--dummy splash-dummy"></div>
+                                </div>
+                                <div class="product__splash-container product__splash-container--out">
+                                    <div class="splash-out splash-out--main splash-main"></div>
+                                    <div class="splash-out splash-out--dummy splash-dummy"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__image-container">
+                                <div class="product__image" style="background-image: url('/static/images/mowellens/01-compressor-1-1.jpg')"></div>
+                            </div>
+
+                            <img class="product__sizer" src="/static/images/mowellens/product-grid-sizer.gif" alt="">
+                        </div>
+
+                        <div class="product__item js-product-item js-printed-checker" data-color="#f0967e">
+                            <a href="{% url 'mowellens_detail' %}" class="product__link"></a>
+
+                            <a href="{% url 'mowellens_detail' %}" class="product__title">Товар 2</a>
+
+                            <div class="product-hover__container">
+                                <div class="product-hover__title-container">
+                                    <h3 class="product-hover__title || js-split-chars">Товар 2</h3>
+                                    <span class="product-hover__title-line js-title-progress"></span>
+                                </div>
+
+                                <div class="product-hover__lower">
+                                    <p class="product-hover__description">Описание товара</p>
+
+                                    <div class="product-hover__variation-container">
+                                        <span class="product-hover__variation">175ml</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-hover__shape js-products-hover-mouse">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                                    <path id="keeper-stash" d="M30,2.7H10L0,20l10,17.4h20L40,20L30,2.7z M20,20C20,20,20,20,20,20C20,20,20,20,20,20C20,20,20,20,20,20C20,20,20,20,20,20
+	z" />
+                                </svg>
+                            </div>
+
+                            <div class="product__splash-bg">
+                                <div class="product__splash-container product__splash-container--in">
+                                    <div class="splash-in splash-in--main splash-main"></div>
+                                    <div class="splash-in splash-in--dummy splash-dummy"></div>
+                                </div>
+                                <div class="product__splash-container product__splash-container--out">
+                                    <div class="splash-out splash-out--main splash-main"></div>
+                                    <div class="splash-out splash-out--dummy splash-dummy"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__image-container">
+                                <div class="product__image" style="background-image: url('/static/images/mowellens/02-compressor-2.jpg')"></div>
+                            </div>
+
+                            <img class="product__sizer" src="/static/images/mowellens/product-grid-sizer.gif" alt="">
+                        </div>
+
+                        <div class="product__item js-product-item js-printed-checker" data-color="#ead979">
+                            <a href="{% url 'mowellens_detail' %}" class="product__link"></a>
+
+                            <a href="{% url 'mowellens_detail' %}" class="product__title">Товар 3</a>
+
+                            <div class="product-hover__container">
+                                <div class="product-hover__title-container">
+                                    <h3 class="product-hover__title || js-split-chars">Товар 3</h3>
+                                    <span class="product-hover__title-line js-title-progress"></span>
+                                </div>
+
+                                <div class="product-hover__lower">
+                                    <p class="product-hover__description">Описание товара</p>
+
+                                    <div class="product-hover__variation-container">
+                                        <span class="product-hover__variation">6.75 fl oz.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-hover__shape js-products-hover-mouse">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                                    <path id="dream-in-green" d="M20.1,0C8.9,0,0,8.9,0,19.9C0,31.1,9.1,40,20.1,40c11,0,19.9-9.1,19.9-20.1C40,8.9,31.1,0,20.1,0z M20,20C20,20,20,20,20,20
+	C20,20,20,20,20,20C20,20,20,20,20,20C20,20,20,20,20,20z" />
+                                </svg>
+                            </div>
+
+                            <div class="product__splash-bg">
+                                <div class="product__splash-container product__splash-container--in">
+                                    <div class="splash-in splash-in--main splash-main"></div>
+                                    <div class="splash-in splash-in--dummy splash-dummy"></div>
+                                </div>
+                                <div class="product__splash-container product__splash-container--out">
+                                    <div class="splash-out splash-out--main splash-main"></div>
+                                    <div class="splash-out splash-out--dummy splash-dummy"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__image-container">
+                                <div class="product__image" style="background-image: url('/static/images/mowellens/03-compressor-1-1.jpg')"></div>
+                            </div>
+
+                            <img class="product__sizer" src="/static/images/mowellens/product-grid-sizer.gif" alt="">
+                        </div>
+
+                        <div class="product__item js-product-item js-printed-checker" data-color="#c5d67b">
+                            <a href="{% url 'mowellens_detail' %}" class="product__link"></a>
+
+                            <a href="{% url 'mowellens_detail' %}" class="product__title">Товар 4</a>
+
+                            <div class="product-hover__container">
+                                <div class="product-hover__title-container">
+                                    <h3 class="product-hover__title || js-split-chars">Товар 4</h3>
+                                    <span class="product-hover__title-line js-title-progress"></span>
+                                </div>
+
+                                <div class="product-hover__lower">
+                                    <p class="product-hover__description">Описание товара</p>
+
+                                    <div class="product-hover__variation-container">
+                                        <span class="product-hover__variation">15ml</span>
+                                        <span class="product-hover__variation">50ml</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-hover__shape js-products-hover-mouse">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                                    <path id="inner-peace" d="M20.1,0C20.1,0,6,18.2,6,25.9C6,33.7,12.4,40,20.1,40S34,33.6,34,25.9S20.1,0,20.1,0z M20,26L20,26L20,26
+	L20,26L20,26z" />
+                                </svg>
+                            </div>
+
+                            <div class="product__splash-bg">
+                                <div class="product__splash-container product__splash-container--in">
+                                    <div class="splash-in splash-in--main splash-main"></div>
+                                    <div class="splash-in splash-in--dummy splash-dummy"></div>
+                                </div>
+                                <div class="product__splash-container product__splash-container--out">
+                                    <div class="splash-out splash-out--main splash-main"></div>
+                                    <div class="splash-out splash-out--dummy splash-dummy"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__image-container">
+                                <div class="product__image" style="background-image: url('/static/images/mowellens/thumbnail-compressor-1.jpg')"></div>
+                            </div>
+
+                            <img class="product__sizer" src="/static/images/mowellens/product-grid-sizer.gif" alt="">
+                        </div>
+
+                        <div class="product__item js-product-item js-printed-checker" data-color="#8edfdd">
+                            <a href="{% url 'mowellens_detail' %}" class="product__link"></a>
+
+                            <a href="{% url 'mowellens_detail' %}" class="product__title">Товар 5</a>
+
+                            <div class="product-hover__container">
+                                <div class="product-hover__title-container">
+                                    <h3 class="product-hover__title || js-split-chars">Товар 5</h3>
+                                    <span class="product-hover__title-line js-title-progress"></span>
+                                </div>
+
+                                <div class="product-hover__lower">
+                                    <p class="product-hover__description">Описание товара</p>
+
+                                    <div class="product-hover__variation-container">
+                                        <span class="product-hover__variation">15ml</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-hover__shape js-products-hover-mouse">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                                    <path id="lit-from-within" d="M20,40C9,40,0,31,0,20C0,9,9,0,20,0s20,9,20,20C40,31.1,31,40,20,40z M20,12.6c-4.1,0-7.4,3.3-7.4,7.4
+	s3.3,7.4,7.4,7.4s7.4-3.3,7.4-7.4S24.1,12.6,20,12.6z" />
+                                </svg>
+                            </div>
+
+                            <div class="product__splash-bg">
+                                <div class="product__splash-container product__splash-container--in">
+                                    <div class="splash-in splash-in--main splash-main"></div>
+                                    <div class="splash-in splash-in--dummy splash-dummy"></div>
+                                </div>
+                                <div class="product__splash-container product__splash-container--out">
+                                    <div class="splash-out splash-out--main splash-main"></div>
+                                    <div class="splash-out splash-out--dummy splash-dummy"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__image-container">
+                                <div class="product__image" style="background-image: url('/static/images/mowellens/mowellens-lit-from-within-1.jpg')"></div>
+                            </div>
+
+                            <img class="product__sizer" src="/static/images/mowellens/product-grid-sizer.gif" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="grid__container grid__container--large">
+                    <div class="shipping-info__container js-screensaver-container">
+                        <h2 class="subtitle || subtitle--small || js-printed-checker || shipping-info__title || anim-fade">Nationwide shipping</h2>
+                        <h3 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || shipping-info__title">All Mowellens products are eligible to ship nationwide.</h3>
+
+                        <a href="" class="btn btn--white js-printed-checker ">
+                            <span class="btn__label">Terms and conditions</span>
+                            <span class="btn__label btn__label--hover" aria-hidden="true">Terms and conditions</span>
+                        </a>
+                        <span class="shipping-info__flag js-screensaver-element">
+		                        <img class="shipping-info__flag-img" src="/static/images/mowellens/butterfly.gif" alt="">
+	                         </span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="" class="cta-bottom__item js-printed-checker  ">The Facts </a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+
+{% endblock %}

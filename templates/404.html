@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %}Страница не существует{% endblock %}
+{% block content %}
+
+<header class="head">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-lg-12 text-right">
+                    <a href="{% url 'main' %}" class="btn-close hover-animate"></a>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </header>
+    <!-- End Head section -->
+
+    <!-- Start Content section -->
+    <section class="content padding-block">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
+                    <img src="{% static 'images/404.gif' %}" alt="UkieWeb">
+                    <h3 class="title1">Страница не существует</h3>
+                    <p>Страница была перемещена или удалена. Возможно, она и не существовала.</p>
+                    <a href="{% url 'main' %}" class="btn btn-color">На главную</a>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    {% endblock %}

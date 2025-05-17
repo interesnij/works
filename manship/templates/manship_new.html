@@ -1,0 +1,95 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Новость{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrapper hero-inner">
+    <img src="{% static 'images/manship/header-images_0007_flames-copy-8.png' %}" class="hero-img img-responsive" alt="">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <article id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Алекс Итон - Король американских морепродуктов</h2>
+            </div>
+            <div class="page-content">
+                <h2>Победитель Победитель, Ужин Из Морепродуктов</h2>
+                <p>
+                    <style type='text/css'>
+                        #gallery-2 {
+                            margin: auto;
+                        }
+
+                        #gallery-2 .gallery-item {
+                            float: left;
+                            margin-top: 10px;
+                            text-align: center;
+                            width: 33%;
+                        }
+
+                        #gallery-2 img {
+                            border: 2px solid #cfcfcf;
+                        }
+
+                        #gallery-2 .gallery-caption {
+                            margin-left: 0;
+                        }
+
+                    </style>
+                    <div id='gallery-2' class='gallery galleryid-432 gallery-columns-3 gallery-size-full'>
+                        <dl class='gallery-item'>
+                            <dt class='gallery-icon landscape'>
+                                <img width="534" height="401" src="{% static 'images/manship/Clarion-Ledger.jpg' %}" class="attachment-full size-full" alt="" aria-describedby="gallery-2-434" sizes="(max-width: 534px) 100vw, 534px" />
+                            </dt>
+                            <dd class='wp-caption-text gallery-caption' id='gallery-2-434'>
+                                Фото <a href="">The Clarion-Ledger</a>
+                            </dd>
+                        </dl>
+                        <dl class='gallery-item'>
+                            <dt class='gallery-icon landscape'>
+                                <img width="620" height="464" src="{% static 'images/manship/GASCO.jpg' %}" class="attachment-full size-full" alt="" aria-describedby="gallery-2-433" sizes="(max-width: 620px) 100vw, 620px" />
+                            </dt>
+                            <dd class='wp-caption-text gallery-caption' id='gallery-2-433'>
+                                Любезно предоставлено Энн Мэлони, NOLA.com & #8211; The Times-Picayune
+                            </dd>
+                        </dl>
+                        <br style='clear: both' />
+                    </div>
+                    <br />
+                    <p>
+                      Когда конфетти посыпалось в Новом Орлеане на недавно коронованного короля американских морепродуктов в
+                      субботу, 6 августа,это был Алекс Итон из Manship. Для
+                      <a href="http://www.greatamericanseafoodcookoff.com/">The Great American Seafood Cook Off</a>,
+                      Алекс подготовил трио креветок в Персидском заливе: барбекю залива коричневый, белый Средиземного залива
+                      и Флориды королевский красный.
+                      <a href="http://www.clarionledger.com/story/magnolia/2016/08/06/ms-chef-crowned-americas-seafood-king/88351092/">Кларион-Леджер сообщил</a>
+                      что блюдо трио было похоже на монтаж, который объединил основные моменты из его собственного кулинарного прошлого,
+                      включая ресторанную кухню в Новом Орлеане, Средиземноморское наследие его семьи и летние каникулы во Флориде.&#8221;
+                    </p>
+                    <p>Об этом также говорил
+                      <a href="http://www.nola.com/food/index.ssf/2016/08/chef_alex_eaton_crownd_king_sa.html">
+                        NOLA.com/The Times-Picayune
+                      </a>
+                      и рассказал им больше о своем вдохновении: "я провел некоторое время, готовя в Новом Орлеане, поэтому мне пришлось кричать с креветками для барбекю.&#8221;
+                    </p>
+                    <p> Алекс выигрывает в большом Миссисипи Seafood Cook Off и великий американский Seafood Cook Off
+                      квалифицировать его tcompete против 49 шеф-поваров со всего мира в ноябре на
+                      <a href="https://worldfoodchampionships.com/competitions/2016/world-seafood-championship">Чемпионате Мира По Морепродуктам.</a>
+                      Победитель этого приза получает $ 10,000 и имеет право участвовать в чемпионате мира по продовольствию.</p>
+
+                <time pubdate datetime="2016-08-11" class="special">Размещено в день звездопада</time>. Эта запись была размещена в
+                <a href="{% url 'manship_awwards' %}" rel="category tag">Наградах</a>
+
+            </div>
+            <div class="vert"></div>
+        </article>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

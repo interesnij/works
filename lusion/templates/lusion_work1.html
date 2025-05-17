@@ -1,0 +1,194 @@
+{% extends "lusion/base.html" %}
+{% load static %}
+
+{% block title %}Lusion - Work | Kaos Logo Generator{% endblock %}
+
+{% block content %}
+<canvas id="canvas"></canvas>
+<div id="app">
+  <div id="main" data-scroll-tooltip="Листайте вниз">
+    <div id="main-scroll">
+      <div id="page-container">
+        <main class="page is-project" data-id="kaos-logo-generator" data-page-id="project" data-url="work/kaos-logo-generator" data-title="Lusion - Work | Kaos Logo Generator">
+          <section class="hero is-full">
+            <div class="hero-context flex-vertical">
+              <div class="hero-inner darker-bg">
+                <h1 class="hero-title flex-vertical">Kaos Logo Generator</h1>
+                <h4 class="hero-desc flex-vertical">Audio driven generative visualisation</h4>
+              </div>
+            </div>
+          </section>
+          <section class="project-context">
+            <div class="sec-context is-white-content" data-base-color="#00f">
+              <div class="sec-context-inner">
+                <div class="project-main-paragraph">
+                  <p>
+                    <a href="">AKQA Portland</a>
+                    reached out to Lusion for a very interesting project for the new dayclub/nightclub - KAOS at the
+                    <a href="">Palms Resort</a>.
+                    They were looking for a digital partner to help create an audio driven logo generator and wanted to
+                    collaborate with us to refine the look of the generated logos. The idea was inspired by the Chaos Theory -
+                    the notion that amongst the apparent randomness of chaos is the existence of underlying patterns. They wanted
+                    to create a living, breathing, constantly evolving logo and design system. A system that allows the web
+                    users to generate their unique logos using their own voices.
+                  </p>
+                  <p>In the brief, it mentioned that the system will live not only on the Web but also for live audio.
+                    The generated logos will also be used across all elements of the KAOS brand design and identity including posters,
+                    signage and billboards. It means that we could not simply create a web based logo generator and expect that
+                    the quality of the generated logos would be good enough for the high resolution billboard prints.
+                  </p>
+                  <div class="space"></div>
+                  <h4>Our Solution: “Two Pronged Approach”</h4>
+                  <p>We suggested building the entire logo generator on two different platforms - one on the Web and one in Houdini
+                    Fx. The Web version will be used as the live logo generator and to generate the mid-to-low quality logo assets.
+                    The Houdini version will be used as the R&D tool to refine the look and to generate the high quality logo assets.
+                    The creative team at AKQA could also use this Houdini Fx source file to produce more high quality assets and other
+                    promotional products. Since we had experience building web applications using
+                    <a href="">Houdini Fx for R&D</a>
+                    , it did not actually take us twice the effort to build the same generator in two different platforms.
+                    The result of using this approach made the collaboration process a lot smoother.
+                  </p>
+                  <div class="space"></div>
+                  <h4>R&D with Houdini</h4>
+                  <p>To obtain the audio data we needed for the R&D in Houdini, we used
+                    <a href="">Meyda</a>
+                    to extract the audio features out of several recordings. When we were refining the look of the logo in Houdini,
+                    we always kept in mind that we had to replicate the exact same look at the end in WebGL, otherwise the R&D would
+                    become a total failure. Instead of using some of the built-in tool sets like the “Blurring”, “Resampling”,
+                    “Procedural noises” etc in Houdini, we had to build our own version of these tool sets to make sure the look
+                    was identical on both platforms. Luckily, we used this Houdini R&D workflow before so we had a few cards in our
+                    sleeves already for the tasks. With this workflow, we were able to supply the high fidelity renders and the high
+                    resolution 3D models to the creative team at AKQA Portland.
+                  </p>
+                  <div class="space"></div>
+                  <div class="lazy-load-img span-12" data-filename="aov.png" data-color="#313336" data-width="1400" data-height="972"></div>
+                  <div class="space"></div>
+                  <p>To make the creatives’ life easier, we also use Redshift to render a couple of custom AOVs(passes) and then we even
+                    created a Photoshop action to put all those AOVs into the different layers and compose them into several designer-friendly
+                    PSD files for the creative team at AKQA Portland to create other visual contents.
+                  </p>
+                  <h4>WebGL Logo Generator</h4>
+                  <p>For the WebGL logo generator, we reused the nodes and vex codes we used in Houdini and as a result, the logo in WebGL
+                    looks pretty much identical in our Houdini version. Here are a few features and tricks we used to create this WebGL
+                    experience:
+                  </p>
+                  <ul>
+                    <li>
+                      <b>WebAudio</b> - In our WebGL Logo Generator, we used WebAudio to capture the user's voice and used Meyda
+                      to analysis the audio features to create their own custom logo.
+                    </li>
+                    <li>
+                      <b>Matcap Shading</b> - We used Matcap shader for the wires rendering. We prebaked the diffuse intensity and the
+                      specular intensity into Red and Green channel of a 64x64 image and used it for the Matcap shader to render the wires
+                      dynamically.
+                    </li>
+                    <li>
+                      <b>Screen-Space Wire Rendering</b> - Unlike our Houdini version, our WebGL application needed to work smoothly on
+                      lower end mobile devices. Instead of rendering the logo wires as 3d tubes like we did in Houdini, we decided to use a
+                      screen space rendering technique to render the wires. Each wire segment was simply a quad. We calculated and stored
+                      the screen space rotation of each node of the wires in the GPU and we combined with the Matcap technique to make it
+                      look smoother.
+                    </li>
+                    <li>
+                      <b>Audio Feature Optimization</b> - We updated all of the live feature data into a 8-bit texture for reading in shader.
+                      We also had some GLSL shader snippets like <code>powerSpectrum_ease_3(<i>time</i>)</code> to get the powerSpectrum
+                      feature with an easing level of 3 in the audio at certain times of the audio which made it easier to map the Vex
+                      codes used in Houdini.
+                    </li>
+                    <li>
+                      <b>HighRes Exports</b> - In the WebGL generator, we created a logo image exporter that can export high resolution PNG
+                      images and SVG. For the PNG exports, instead of simply exporting the WebGL canvas, we rendered the logo into a
+                      separated clean WebGL framebuffer instead to give us more flexibility to display different things on the main WebGL
+                      canvas. However, with WebGL 1, it didn't support multisampling framebuffer and it looked aliasing and ugly. So, we
+                      decided to create a temporal filter to collect the subpixel information over multiple iterations across several
+                      frames. Our exporter supported up to 256 x AA which looked more than good enough for a hair thin wire in the logo.
+                    </li>
+                    <div class="lazy-load-img span-12" data-filename="multisampling.png" data-color="#f4eb61" data-width="800" data-height="460"></div>
+                  </ul>
+                </div>
+                <div class="project-badge">
+                  <div class="project-badge-clients-title project-badge-title">Clients</div>
+                  <div class="project-badge-clients-text project-badge-text">AKQA, Palms</div>
+                  <div class="project-badge-mediums-title project-badge-title">Mediums</div>
+                  <div class="project-badge-mediums-text project-badge-text">Website</div>
+                  <div class="project-badge-involvements-title project-badge-title">Involvements</div>
+                  <div class="project-badge-involvements-text project-badge-text">WebGL development, Research and Development</div>
+                  <div class="project-badge-links-title project-badge-title">Links</div>
+                  <ul class="project-badge-links-list project-badge-list nav">
+                    <li class="project-badge-links-text project-badge-list-item type-live">
+                      <a href="">View Website</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="space"></div>
+            <div class="lazy-load-img span-4 left-1 top-3" data-filename="mobile.jpg" data-color="#c7b7bc" data-width="720" data-height="1280"></div>
+            <div class="lazy-load-img span-5 left-1 top-5" data-filename="features.png" data-color="#c8c8c8" data-width="1200" data-height="1500"></div>
+            <div class="clear-fix"></div>
+            <div class="project-video-container resizer-container span-7 left-0 top-5" data-width="1280" data-height="720" data-color="#000">
+              <iframe src="https://player.vimeo.com/video/331983996?background=1&autoplay=1&loop=1&autopause=0&muted=1" width="1280" height="720" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            </div>
+            <div class="lazy-load-img span-3 left-1 top-8" data-filename="nodes.png" data-color="#353535" data-width="600" data-height="890"></div>
+            <div class="lazy-load-img span-12 top-5" data-filename="compare_merged.jpg" data-color="#242424" data-width="2560" data-height="1377"></div>
+            <div class="lazy-load-img span-6 top-2" data-filename="set_0.jpg" data-color="#ebe2cf" data-width="960" data-height="640"></div>
+            <div class="lazy-load-img span-5 left-1 top-8" data-filename="set_1.jpg" data-color="#e7c197" data-width="960" data-height="640"></div>
+            <div class="space"></div>
+          </section>
+        </main>
+      </div>
+
+      {% include 'lusion_featured.html' %}
+
+      {% include 'lusion_contact.html' %}
+
+      </div>
+    </div>
+    <div id="main-scrollbar">
+      <div id="main-scrollbar-indicator"></div>
+    </div>
+    <div id="menu">
+      <canvas id="menu-canvas"></canvas>
+      <div id="menu-content" class="flex-vertical">
+        <ul id="menu-menu" class="nav">
+          <li class="menu-menu-item is-home">
+            <a href="{% url 'lusion' %}">Home</a>
+          </li>
+          <li class="menu-menu-item is-about">
+            <a href="{% url 'lusion_about' %}">About</a>
+          </li>
+          <li class="menu-menu-item is-work"><a href="/work">Work</a></li>
+          <li class="menu-menu-item is-contact"><a href="/contact">Contact</a></li>
+        </ul>
+        <div id="menu-lang-selector">
+          <span class="menu-lang-item is-en" data-id="en">En</span>
+          <span class="menu-lang-item-separator %>">/</span>
+          <a href="/cn" class="menu-lang-item is-cn" data-id="cn">中</a>
+        </div>
+      </div>
+    </div>
+
+    {% include 'lusion_header.html' %}
+
+
+    <div id="main-scroll-indicator">
+      <div id="main-scroll-indicator-text">Листайте вниз</div>
+      <div id="main-scroll-indicator-arrow-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="40" viewBox="0 0 5 40">
+          <title>Vector Smart Object</title>
+          <path d="M0,40V0H1V35H5Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <a id="snd-btn" class="cache"></a>
+  <div id="preloader" class="cache" data-gesture="Click anywhere to begin">
+    <canvas id="preloader-canvas"></canvas>
+  </div>
+  <div id="not-support" class="cache">We are sorry to inform you that your browser is not compatible with our website.
+    <br><br>Please do consider upgrading your browser.
+  </div>
+  <div id="cursor-follow" class="font-bold"></div>
+
+
+{% endblock %}

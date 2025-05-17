@@ -1,0 +1,198 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Обед{% endblock %}
+
+{% block content %}
+<div class="container-fluid menu-header">
+    <div class="row">
+        <div class="xs-12 sm-3 lg-4">
+            <img src="{% static 'images/manship/bread.png' %}" alt="asdf" class="align-center visible-xs img-responsive">
+        </div>
+        <div class="sm-6 lg-4 text-center">
+            <div class="menu-content">
+                <h2 class="special dots-horz">Обед</h2>
+                <p>И ужин настолько вкусный, что Вы будете пытаться раскалить вашу домашнюю печь до 800 градусов.</p>
+
+                <div class="vert visible-sm visible-xs"></div>
+            </div>
+        </div>
+        <div class="sm-3 lg-4"></div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <a href="{% static 'json/manship_brunch_4-27-19_letter.pdf' %}" class="btn btn-lg btn-default">Загрузить полное меню в pdf</a>
+        <div class="vert"></div>
+    </div>
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="row">
+                <div class="sm-6 lg-6">
+
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="small-plates" class="special">Маленькая тарелка</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Свиная Грудинка</span> <span class="menu-price">14</span></li>
+                                <li><span>Буррата</span> <span class="menu-price">12</span></li>
+                                <li><span>Кукуруза &#038; Jalepeno Суп</span> <span class="menu-price">5/7</span></li>
+                                <li><span>Крудо Из Тунца</span> <span class="menu-price">13</span></li>
+                                <li><span>Куриные Крылья</span> <span class="menu-price">9/15</span></li>
+                                <li><span>Соус Из Копченого Тунца</span> <span class="menu-price">7/14</span></li>
+                                <li><span>Charcuterie &#038; сыр на выбор из трех</span> <span class="menu-price">16</span></li>
+                                <li><span>Charcuterie &#038; сыр на выбор из пяти</span> <span class="menu-price">20</span></li>
+                                <li><span>Крабовые Булочки</span> <span class="menu-price">14</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="vert"></div>
+                    <div class="menu-category">
+                        <div class="bars">
+                          <h3 id="salads-and-soups" class="special">Салаты и супы</h3>
+                          <ul class="list-unstyled leaders">
+
+                              <li><span>Летнее солнцестояние</span> <span class="menu-price">9</span></li>
+                              <li><span>Фамильный Помидор</span> <span class="menu-price">8</span></li>
+                              <li><span>Кукуруза &#038; Халапеньо Суп</span> <span class="menu-price">5/7</span></li>
+                              <li><span>Возвращение</span> <span class="menu-price">8</span></li>
+                              <li><span>Дом Итальянский</span> <span class="menu-price">8</span></li>
+                              <li><span>Цезарь</span> <span class="menu-price">8</span></li>
+                              <li><span>Клин</span> <span class="menu-price">8</span></li>
+
+                          </ul>
+                        </div>
+                    </div>
+
+                    <img src="{% static 'images/manship/pizza.png' %}" alt="Pizzas">
+                    <div class="menu-category">
+                        <div class="bars">
+                          <h3 id="pizzas" class="special">Пицца</h3>
+                          <ul class="list-unstyled leaders">
+
+                              <li><span>Креветки &#038; Чоризо</span> <span class="menu-price">16</span></li>
+                              <li><span>Маргарита</span> <span class="menu-price">10</span></li>
+                              <li><span>BBQ Курица</span> <span class="menu-price">12</span></li>
+                              <li><span>Грибная</span> <span class="menu-price">14</span></li>
+                              <li><span>Фермерская</span> <span class="menu-price">14</span></li>
+
+                          </ul>
+                        </div>
+                    </div>
+
+                    <div class="vert"></div>
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="add-ons" class="special">Дополнения</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Фермерское Яйцо</span> <span class="menu-price">2</span></li>
+                                <li><span>Курица Гриль</span> <span class="menu-price">5</span></li>
+                                <li><span>Креветки На Гриле</span> <span class="menu-price">9</span></li>
+                                <li><span>Жареный Лосось</span> <span class="menu-price">7</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-6 lg-6">
+
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="wood-fired-specialties" class="special">Дровяная прожарка</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Фетучини</span> <span class="menu-price">18</span></li>
+                                <li><span>Ковбой Рибай</span> <span class="menu-price">55</span></li>
+                                <li><span>Waygu Sirloin / Frites</span> <span class="menu-price">28</span></li>
+                                <li><span>Креветки Заливные</span> <span class="menu-price">19</span></li>
+                                <li><span>Креветки Лингвини</span> <span class="menu-price">21</span></li>
+                                <li><span>Лосось</span> <span class="menu-price">17</span></li>
+                                <li><span>Лазания</span> <span class="menu-price">17</span></li>
+                                <li><span>Филе рыбы</span> <span class="menu-price">34</span></li>
+                                <li><span>Красная рыба "на половинке раковины"8221;</span> <span class="menu-price">24</span></li>
+                                <li><span>Нола барбекю креветки</span> <span class="menu-price">24</span></li>
+                                <li><span>Симмонс Сом</span> <span class="menu-price">19</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <img src="{% static 'images/manship/spit-chicken.png' %}" alt="Spit-Fired Chicken">
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="spit-fired-chicken" class="special">Spit-Fired Курица</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Курица по-гречески</span> <span class="menu-price">11/15</span></li>
+                                <li><span>BBQ Курица</span> <span class="menu-price">11/15</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="vert"></div>
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="sides-for-2" class="special">По две порции</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Жареная кукуруза на сковороде с маслом</span> <span class="menu-price">8</span></li>
+                                <li><span>Леди горох / лук, чеснок</span> <span class="menu-price">8</span></li>
+                                <li><span>Кабачки на гриле &#038; кабачки с базиликовым маслом</span> <span class="menu-price">8</span></li>
+                                <li><span>Жареная бамия с томатным вареньем</span> <span class="menu-price">8</span></li>
+                                <li><span>Шнуровка картофель фри / пармезан, трюфель соль</span> <span class="menu-price">8</span></li>
+                                <li><span>Цветная капуста с чили, лук-шалот, зелень, оливковое масло</span> <span class="menu-price">8</span></li>
+                                <li><span>Шпинат с чесноком</span> <span class="menu-price">8</span></li>
+                                <li><span>Испанский Домашний Картофель Фри</span> <span class="menu-price">8</span></li>
+                                <li><span>Mac & #038; сыр / панчетта, пармезан, трюфель</span> <span class="menu-price">8</span></li>
+                                <li><span>Копченый Гауда Грица</span> <span class="menu-price">8</span></li>
+                                <li><span>Тушеная зелень с луком, чесноком, уксусом</span> <span class="menu-price">8</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="vert"></div>
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="main" class="special">Основное блюдо</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Тетраццини С Курицей</span> <span class="menu-price">16</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page-parent active-page-parent"><a href="">Меню</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_brunch' %}" aria-current="page">Бранч</a></li>
+                          <li class="active-page"><a href="{% url 'manship_dinner' %}">Обед</a></li>
+                          <li><a href="{% url 'manship_drink' %}">Алкоголь</a></li>
+                          <li><a href="{% url 'manship_lunch' %}">Ланч</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

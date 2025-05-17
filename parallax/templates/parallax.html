@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Тренируем parallax{% endblock %}
+
+{% block content %}
+<style>
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+html {
+	overflow: hidden;
+	touch-action: none;
+	content-zooming: none;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	visibility: hidden;
+}
+.prx {
+	position: absolute;
+	color: #FFF;
+	font-family: 'Bangers', cursive;
+	font-size:1.5em;
+	overflow: hidden;
+}
+.button {
+	cursor:pointer;
+	font-size:3em;
+	width:400px;
+	text-decoration: none;
+}
+.button:hover {
+	color: #F80;
+}
+.txt {
+	color:#777;
+}
+</style>
+<div id="#pan1" class="page" style="left:0%;top:0%">
+	<img alt="" src="{% static 'parallax/images/p3.jpg' %}" class="prx" style="left:0%;top:0%;z-index:0">
+	<div class="prx" style="left:0%;top:30%;width:100%;z-index:2;color:#fff;font-size:128px;font-weight:bold;text-align:center">
+    Зуба
+    <span style="visibility:hidden">ИП</span>
+    рев
+  </div>
+	<div class="prx" style="left:6%;top:26%;width:100%;z-index:3;color:#ab843f;font-size:196px;font-weight:bold;text-align:center">ИП</div>
+	<a href="#pan4" class="prx button" style="left:20%;top:15%;z-index:1">Вакансии</a>
+	<a href="#pan3" class="prx button" style="left:70%;top:10%;z-index:1">Принципы</a>
+	<a href="#pan2" class="prx button" style="left:60%;top:70%;z-index:1">О нас</a>
+</div>
+<!-- Artfully -->
+<div id="#pan3" class="page" style="left:100%;top:-100%">
+	<img alt="" src="{% static 'parallax/images/p5.jpg' %}" class="prx" style="left:0%;top:0%;z-index:0">
+	<img alt="" src="{% static 'parallax/images/p5.gif' %}" class="prx" style="left:50%;top:30%;z-index:3">
+	<a href="#pan5" class="prx button" style="left:60%;top:10%;width:100px;width:350px;z-index:1">Контакты</a>
+	<div class="prx" style="left:20%;top:30%;width:300px;z-index:1;color:#fff;font-size:164px;font-weight:bold;">3D</div>
+	<div class="prx txt" style="left:30%;top:80%;width:40%;z-index:1">
+		Читаемый код, значит, python. Надо быстро, значит Django. Надо красиво и универсально, значит Bootstrap.
+		Нужно безопасно, значит Postgre, VDS, защита сервера. Нужна 3D визуализация - VebGl,three.js, pixy.js.
+	</div>
+	<a href="#pan1" class="prx button" style="left:35%;top:65%;z-index:1">Назад</a>
+</div>
+<!-- android -->
+<div id="#pan5" class="page" style="left:200%;top:-200%">
+	<img alt="" src="{% static 'parallax/images/p5.jpg' %}" class="prx" style="left:-10%;top:0%;z-index:0">
+	<div class="prx" style="left:0%;top:25%;width:70%;z-index:2;color:#fff;font-size:128px;font-weight:bold;text-align:center">Пишите нам</div>
+	<div class="prx txt" style="left:60%;top:10%;width:40%;z-index:1">
+	  <br>
+    Наш сайт https://сделаем.сайт<br><br>
+		Телефон 89042373637
+    <span style="color:#fff">Пишите</span> по любфм вопросам.
+	</div>
+	<a href="#pan3" class="prx button" style="left:35%;top:80%;z-index:1">Назад</a>
+</div>
+<!-- intermediators -->
+<div id="#pan4" class="page" style="left:-100%;top:-100%">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:20%;top:15%;width:16%;z-index:0">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:60%;top:15%;width:16%;z-index:0">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:20%;top:15%;width:18%;z-index:1">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:60%;top:15%;width:18%;z-index:1">
+	<img alt="" src="{% static 'parallax/images/p2.gif' %}" class="prx" style="left:37%;top:15%;width:24%;z-index:1">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:20%;top:15%;width:20%;z-index:2">
+	<img alt="" src="{% static 'parallax/images/p.gif' %}" class="prx" style="left:60%;top:15%;width:20%;z-index:2">
+	<div class="prx txt" style="left:30%;top:0%;width:40%;z-index:1;">
+		Конкурентные подходы к созданию сайтов предполагают много работы. Мы рады
+    <span style="color:#fff">включить</span>
+     несколько человек в нашу команду.
+	</div>
+	<a href="#pan1"  class="prx button" style="left:46%;top:50%;z-index:2">Назад</a>
+</div>
+<!-- Average conflict -->
+<div id="#pan2" class="page" style="left:100%;top:100%">
+	<img alt="" src="{% static 'parallax/images/p4.jpg' %}" class="prx" style="left:30%;top:0%;z-index:0">
+	<div class="prx txt" style="left:15%;top:15%;width:25%;z-index:1">
+		Мы - молодая, но крайне амбиционная фирма. Мы хотим, чтобы на просторах Рунета были только современные и красивые сайты.
+    <br><br>
+    Для этого нужно <span style="color:#fff">создавать</span>
+    только качественный и недорогой ресурс. К несчастью, пока большинство сайтов оставляют желать лучшего. Давайте вместе это менять!
+	</div>
+	<a href="#pan1"  class="prx button" style="left:20%;top:80%;z-index:1;font-size:4em">Назад</a>
+</div>
+
+<script>
+! function()
+{
+	var pages = [],
+		active, prev,
+		perspective = 6,
+		timeStep = 0.05,
+		pointer = {
+			x: 0,
+			y: 0
+		},
+		screen = {
+			w: 0,
+			h: 0
+		},
+		position = {
+			x: 0,
+			y: 0
+		},
+		target = {
+			x: 0,
+			y: 0
+		},
+		parallax = {
+			x: 0,
+			y: 0
+		};
+	window.addEventListener("mousemove", function(e)
+	{
+		e.preventDefault();
+		pointer.x = e.clientX - screen.w * 0.5;
+		pointer.y = e.clientY - screen.h * 0.5;
+	}, false);
+	function resize()
+	{
+		screen.w = document.body.offsetWidth;
+		screen.h = document.body.offsetHeight;
+	}
+	window.addEventListener("resize", resize, false);
+	resize();
+	function run()
+	{
+		requestAnimationFrame(run);
+		parallax.x += (pointer.x - parallax.x) * (timeStep * 0.5);
+		parallax.y += (pointer.y - parallax.y) * (timeStep * 0.5);
+		position.x += (target.x - position.x) * timeStep;
+		position.y += (target.y - position.y) * timeStep;
+		for (var i = 0, n = pages.length; i < n; i++)
+		{
+			var p = pages[i];
+			if (p.visible)
+			{
+				for (var j = 0, m = p.nodes.length; j < m; j++)
+				{
+					var o = p.nodes[j];
+					var transform = 'matrix(1,0,0,1,' + ((p.x - parallax.x * 0.5 - position.x) * o.d) + ',' + ((p.y - parallax.y * 0.5 - position.y) * o.d) + ')';
+					o.css.transform = o.css.webkitTransform = transform;
+				}
+			}
+		}
+	}
+	var goto = function(label)
+	{
+		for (var i = 0, n = pages.length; i < n; i++)
+		{
+			if (pages[i].id == label)
+			{
+				prev = active;
+				active = pages[i];
+				target.x = active.x;
+				target.y = active.y;
+				if (prev) setTimeout(function()
+				{
+					prev.elem.style.visibility = "hidden";
+					prev.visible = false;
+				}, 800);
+				active.elem.style.visibility = "visible";
+				active.visible = true;
+				return;
+			}
+		}
+	}
+	window.addEventListener("hashchange", function()
+	{
+		goto(location.hash);
+		return false;
+	}, false);
+	var k = 0;
+	var r = document.querySelectorAll('.page');
+	for (var i = 0, n = r.length; i < n; i++)
+	{
+		var o = r[i];
+		var p = {
+			elem: o,
+			id: o.id,
+			x: o.offsetLeft,
+			y: o.offsetTop,
+			visible: false,
+			nodes: []
+		};
+		pages.push(p);
+		o.style.position = 'static';
+		var c = o.getElementsByTagName('*');
+		for (var j = 0, m = c.length; j < m; j++)
+		{
+			var elem = c[j];
+			if (elem.className.indexOf('prx') >= 0)
+			{
+				var z = (elem.style.zIndex || 0) * 1;
+				p.nodes.push(
+				{
+					css: elem.style,
+					d: Math.min(perspective, perspective / (perspective + 1 - z)),
+				});
+			}
+		}
+	}
+	run();
+	if (location.hash !== '' && location.hash !== "#") {
+		goto(location.hash);
+	} else window.location.hash = "#pan1";
+}();
+</script>
+{% endblock %}

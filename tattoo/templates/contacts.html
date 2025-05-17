@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="{% static 'tattoo/styles/tattoo.css' %}" />
+  <title>Контакты</title>
+</head>
+<body class="page-template page-template-templates page-template-page-contacts page-template-templatespage-contacts-php page page-id-14">
+  <div class="cover cover-main">
+    <div class="line-loader-container">
+      <div class="line-loader"></div>
+    </div>
+  </div>
+  <div class="cover cover-dark"></div>
+  <div class="cover cover-red"></div>
+  <div class="cover cover-gold"></div>
+  <div class="hamburger-container">
+    <button class="hamburger hamburger--spin-r" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+  <div id="navigation">
+    <div class="navigation cover-gold"></div>
+    <div class="navigation cover-red"></div>
+    <div class="navigation cover-dark">
+      <div class="top-container">
+        <div class="top-nav">
+          <nav class="nav-animation">
+            <ul>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo' %}" class="portfolio-item reveal-tattoo">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Главная">Главная</span>
+                  <div class="nav-stripe stripe-tattoo-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo_example' %}" class="portfolio-item reveal-tattoo">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Татуировки">Татуировки</span>
+                  <div class="nav-stripe stripe-tattoo-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo_about' %}" class="portfolio-item reveal-studio">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Студия &#038; Био">Студия &#038; Био</span>
+                  <div class="nav-stripe stripe-studio-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo_news' %}" class="portfolio-item reveal-news">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Новости">Новости</span>
+                  <div class="nav-stripe stripe-news-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'goods_index' %}" class="portfolio-item reveal-merch">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Март">Март</span>
+                  <div class="nav-stripe stripe-merch-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav selected">
+                <a href="{% url 'tattoo_contacts' %}" class="portfolio-item reveal-contacts">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Контакты">Контакты</span>
+                  <div class="nav-stripe stripe-contacts-nav"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="top-image nav-image image-nav-tattoo">
+          <img src="{% static 'tattoo/images/1.jpg' %}" alt="Tattoos" />
+        </div>
+        <div class="top-image nav-image image-nav-studio">
+          <img src="{% static 'tattoo/images/2.jpg' %}" alt="Studio &#038; Bio" />
+        </div>
+        <div class="top-image nav-image image-nav-news">
+          <img src="{% static 'tattoo/images/4.jpg' %}" alt="News" />
+        </div>
+        <div class="top-image nav-image image-nav-merch">
+          <img src="{% static 'tattoo/images/4.jpg' %}" alt="Merch" />
+        </div>
+        <div class="top-image nav-image image-nav-contacts">
+          <img src="{% static 'tattoo/images/3.jpg' %}" alt="Contacts" />
+        </div>
+      </div>
+      <div class="massive-typo typo-nav"></div>
+    </div>
+  </div>
+  <header>
+    <div class="header-logo">
+      <a href=""></a>
+    </div>
+  </header>
+  <div id="wrapper-outer">
+    <div id="wrapper">
+      <div class="opening">
+        <div class="top-container">
+          <div class="top-copy">
+            <div class="highlight">
+              <div class="underline"></div>
+              <h1>Контакт</h1>
+            </div>
+            <div class="highlight">
+              <div class="underline"></div>
+              <h2>Альдебаран</h2>
+            </div>
+            <div class="vertical-text">Название</div>
+          </div>
+          <div class="big-stripe stripe-contacts"></div>
+          <div class="image-cover"></div>
+          <div class="top-image image atvImg">
+            <div class="atvImg-layer" data-img="{% static 'tattoo/images/4.jpg' %}"></div>
+          </div>
+        </div>
+        <div class="massive-typo typo-contacts"></div>
+        <div class="line-scroll-down-container">
+          <div class="line-scroll-down"></div>
+        </div>
+      </div>
+      <section>
+        <div class="text-area news-content">
+          <p>
+            <strong>The Tattoo Shop</strong>
+            is one of the longest standing tattoo shops on the
+            <strong>Gold Coast</strong>.
+            Located just a stones throw away from beautiful Burleigh Heads beach, this studio has made a name for itself
+            <strong>housing 5 talented artists</strong>
+            who cover a wide genre of styles and are more than happy to accommodate your needs.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="text-block text-block-contact">
+          <div class="highlight">
+            <div class="underline-body"></div>
+            <h3>Let's get in touch</h3>
+          </div>
+          <p class="split-text-body">
+            Ask us for anything. Do you want more infos? Book an appointment? Let us know below.</p>
+            <form id="contact-form" method="post" action="">
+              <div class="form-container">
+                <div class="highlight-form">
+                  <div class="underline-form"></div>
+                  <span class="input input-form">
+                    <input class="input-field input-field-form" type="text" id="name" name="name" autocomplete="off" required />
+                    <label class="input-label input-label-form" for="name">
+                      <span class="input-label-content input-label-content-form">First and Last Name*</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="highlight-form">
+                  <div class="underline-form"></div>
+                  <span class="input input-form">
+                    <input class="input-field input-field-form" type="email" id="email" name="email" autocomplete="off" required />
+                    <label class="input-label input-label-form" for="email">
+                      <span class="input-label-content input-label-content-form">Email Address*</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="highlight-form">
+                  <div class="underline-form"></div>
+                  <span class="input input-form">
+                    <input class="input-field input-field-form" type="text" id="phone" name="phone" autocomplete="off" />
+                    <label class="input-label input-label-form" for="phone">
+                      <span class="input-label-content input-label-content-form">Phone Number</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="highlight-form">
+                  <div class="underline-form"></div>
+                  <span class="input input-form input-message">
+                    <input class="input-field input-field-form" type="text" id="message" name="message" autocomplete="off" required />
+                    <label class="input-label input-label-form" for="message">
+                      <span class="input-label-content input-label-content-form">Сообщение</span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+              <div id="form-messages"></div>
+              <br/><br/>
+              <button class="send-form" type="submit">Отправить</button>
+            </form>
+          </div>
+        </section>
+        <section class="contact-last">
+          <div class="text-block section-right">
+            <div class="parallax-container">
+              <div class="parallax-image parallax-google-maps">
+                <iframe src="" id="map"></iframe>
+              </div>
+            </div>
+            <div class="highlight">
+              <div class="underline-body"></div>
+              <h3>Мы здесь</h3>
+            </div>
+            <p class="split-text-body"><p>детали<br />
+              детали<br />
+              детали
+            </p>
+            <p>Phone. <strong>+7(777) 777777</strong></p>
+            </br>
+            </br>
+            </p>
+            <a href="" target="_blank">
+              <button class="send-form">Enquiry</button>
+            </a> </br>
+            </br>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="loader" class="hidden"></div>
+  <div id="holder-newpage" class="hidden"></div>
+  <footer itemscope itemtype="">
+    <div class="footer-top">
+      <div class="footer-title">
+        <h4>Сайт</h4>
+        <h7></h7>
+      </div>
+      <div class="footer-50">
+        <p>The Tattoo Shop Burleigh heads<br /> Альфа центавра
+          <br /> ул Космонавтов
+        </p>
+      </div>
+      <div class="footer-50">
+        <p>Tel. <span>+7(777) 777777</span>
+          <br/><br />
+          <a href="" target="_blank">Enquiry</a>
+        </p>
+      </div>
+      <div class="form">
+        <form style="display:inline;" action="" method="post" id="subForm" target="_blank">
+          <input placeholder="Email Address" id="fieldEmail" name="cm-mjynt-mjynt" type="email" required />
+          <div class="arrow-newsletter"></div>
+          <input type="submit" id="send-email" value="" /></form>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-nav">
+      <nav class="nav-animation footer-nav-main">
+        <ul>
+          <li >
+            <a href="{% url 'tattoo_example' %}" class="intro-item">
+              <div class="underline-nav"></div>
+              <span data-hover="Tattoos">Tattoos</span>
+              <div class="nav-stripe stripe-tattoo-nav"></div>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'tattoo_about' %}" class="intro-item">
+              <div class="underline-nav"></div>
+              <span data-hover="Studio &#038; Bio">Studio &#038; Bio</span>
+              <div class="nav-stripe stripe-studio-nav"></div>
+            </a>
+          </li>
+          <li >
+            <a href="{% url 'tattoo_news' %}" class="intro-item">
+            <div class="underline-nav"></div>
+            <span data-hover="News">News</span>
+            <div class="nav-stripe stripe-news-nav"></div>
+            </a>
+          </li>
+          <li > <a href="{% url 'goods_index' %}" class="intro-item">
+            <div class="underline-nav"></div>
+            <span data-hover="Merch">Merch</span>
+            <div class="nav-stripe stripe-merch-nav"></div>
+            </a>
+          </li>
+          <li class="selected">
+            <a href="{% url 'tattoo_contacts' %}" class="intro-item">
+              <div class="underline-nav"></div>
+              <span data-hover="Contacts">Contacts</span>
+              <div class="nav-stripe stripe-contacts-nav"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script type="text/javascript" defer src="{% static 'tattoo/scripts/autoptimize.js' %}"></script>
+  </body>
+</html>
+
+
+
+<!-- Compression = gzip -->

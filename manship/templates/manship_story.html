@@ -1,0 +1,42 @@
+{% extends "manship/base_story.html" %}
+{% load static %}
+{% block title %}Наша история{% endblock %}
+
+{% block content %}
+
+<div id="impress" data-transition-duration="2000">
+    <div id="intro" class="step" data-x="0" data-y="0">
+        <img src="{% static 'images/manship/trees-left2.png' %}" alt="" class="tree-left">
+        <img src="{% static 'images/manship/trees-right2.png' %}" alt="" class="tree-right">
+    </div>
+    <div id="illuminated" class="step" data-x="0" data-y="100" data-z="-350">
+        <img src="{% static 'images/manship/fire1600_v2.png" alt="" class="fire">
+    </div>
+    <div id="fire" class="step" data-x="0" data-y="100" data-z="-350"></div>
+    <div id="new-possibilities" class="step" data-x="0" data-y="-1600" data-z="-700" data-duration="4000"></div>
+    <div id="inspired" class="step" data-x="2250" data-y="-1600" data-z="-700">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/inspired-earth2.png' %}" class="earth">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/moon2.png' %}" class="moon">
+    </div>
+    <div id="dishes" class="step" data-x="2250" data-y="-1600" data-z="-701">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/plate1600_v3.png' %}" alt="" class="wood-top">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/dishes-plate2.png' %}" alt="" class="plate">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/drink.png' %}" class="glass">
+    </div>
+    <div id="table" class="step" data-x="2250" data-y="100" data-z="-700" >
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/left-hand.png' %}" alt="" class="wine wine-left">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/right-hand.png' %}" alt="" class="wine wine-right">
+    </div>
+    <div id="oven" class="step" data-x="2250" data-y="200" data-z="-1500">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{% static 'images/manship/wood-fire4.png' %}" alt="" class="wood-fire">
+    </div>
+</div>
+<div class="clicker"></div>
+<div id="story-slider"></div>
+<div class="fin">
+    <a href="/open-table-modal/" title="Reserve a Table" class="btn btn-lg btn-story iframe">Reserve a Table</a>
+    <a href="{% url 'manship_story' %}" title="Watch Illuminated Again" class="watch-again"><em>Watch Again!</em></a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,234 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<div class="page page--news">
+
+    <h1 class="a11y">Новости</h1>
+
+    <div class="hero hero--news-landing">
+        <div class="hero__content">
+            <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+                <div class="hero__meta meta spacer-smedium no-wrap">
+                    <hr class="dash" />Новости
+                </div>
+                <h2 class="h1 hero__title" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.75">Новости</h2>
+                <div class="hero__filters spacer-smedium-top" data-hero-filters>
+                    <div class="category-group category-group--desktop" data-skrollex data-sk-group>
+                        <h2 class="meta">Категории</h2>
+                        <ul>
+                            <li><a href="" class="active">Все</a></li>
+                            <li><a href="">Insights<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Work<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">News<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Events<span class="a11y"> Case Studies</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid grid--gutters grid--three-up">
+            <div class="card card--news grid__item spacer-block" data-push-hover>
+                <div class="card--news__image spacer-smedium">
+                    <div class="image-holder pos-r" data-skrollex data-sk-group data-sk-mask data-push-hover-child data-sk-sa-delay="0.2">
+                        <div class="bg layer ratio-1" style="background-image: url({% static 'basic/images/23.jpg' %});"></div>
+                    </div>
+                </div>
+                <div class="card--news__text dash-holder dash-holder--push-content">
+                    <hr class="dash" data-skrollex data-sk-group />
+                    <div class="meta spacer-small" data-skrollex data-sk-group data-push-hover-headline>
+                        Новости | 04.25.2019
+                    </div>
+                    <h3 class="h4" data-skrollex data-sk-group data-sk-headline>BASIC Makes Its Debut as a One Show Finalist in Three Categories</h3>
+                </div>
+                <a href="{% url 'basic_new1' %}" class="layer z1"><span class="a11y">Explore BASIC Makes Its Debut as a One Show Finalist in Three Categories Case Study</span></a>
+            </div>
+
+            <div class="card card--news grid__item spacer-block" data-push-hover>
+                <div class="card--news__image spacer-smedium">
+                    <div class="image-holder pos-r" data-skrollex data-sk-group data-sk-mask data-push-hover-child data-sk-sa-delay="0.2">
+                        <div class="bg layer ratio-1" style="background-image: url({% static 'basic/images/23.jpg' %});"></div>
+                    </div>
+                </div>
+                <div class="card--news__text dash-holder dash-holder--push-content">
+                    <hr class="dash" data-skrollex data-sk-group />
+                    <div class="meta spacer-small" data-skrollex data-sk-group data-push-hover-headline>
+                        Новости | 03.12.2019
+                    </div>
+                    <h3 class="h4" data-skrollex data-sk-group data-sk-headline>SXSW Is a Cultural Moment Disguised as a Tech Conference</h3>
+                </div>
+                <a href="{% url 'basic_new1' %}" class="layer z1"><span class="a11y">Explore SXSW Is a Cultural Moment Disguised as a Tech Conference Case Study</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="brand-beats-callout spacer-large">
+        <hr class="spacer spacer-large" />
+        <div class="brand-beats-callout__title">
+            <div class="container container--content dash-holder dash-holder--outside">
+                <hr class="dash" />
+                <p class="meta brand-beats-callout__meta">вибрируй с нами</p>
+                <h2 class="spacer-xmedium"><span class="fw-bold">Brandbeats /</span><br /><span class="fw-medium">куратор мелодий и отраслевые новости, представленные нашей командой.</span></h2>
+            </div>
+        </div>
+        <div class="brand-beats-callout__carousel">
+            <div id="image-carousel-0" class="image-carousel spacer-large spacer-large-top" data-tabpanel data-image-carousel data-animation-type="mask" data-skrollex data-sk-group>
+                <div class="container container--content pos-r">
+                    <div class="image-carousel__controls carousel-controls">
+                        <button class="btn-prev" tabindex="-1">
+                            <svg class="icon">
+                                <use xlink:href="#icon-arrow"></use>
+                            </svg>
+                        </button>
+                        <ul role="tablist" class="meta">
+                            <li role="presentation">
+                                <a id="image-carousel-0-tab-1" href="#image-carousel-0-panel-1" aria-controls="image-carousel-0-panel-1" role="tab" data-no-hijack class="active" tabindex="0" aria-selected="true"><span aria-hidden="true">01</span><span class="a11y"></span></a><a id="image-carousel-0-tab-2" href="#image-carousel-0-panel-2" aria-controls="image-carousel-0-panel-2" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">02</span><span class="a11y"></span></a><a id="image-carousel-0-tab-3" href="#image-carousel-0-panel-3" aria-controls="image-carousel-0-panel-3" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">03</span><span class="a11y"></span></a><a id="image-carousel-0-tab-4" href="#image-carousel-0-panel-4" aria-controls="image-carousel-0-panel-4" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">04</span><span class="a11y"></span></a><a id="image-carousel-0-tab-5" href="#image-carousel-0-panel-5" aria-controls="image-carousel-0-panel-5" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">05</span><span class="a11y"></span></a><a id="image-carousel-0-tab-6" href="#image-carousel-0-panel-6" aria-controls="image-carousel-0-panel-6" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">06</span><span class="a11y"></span></a><a id="image-carousel-0-tab-7" href="#image-carousel-0-panel-7" aria-controls="image-carousel-0-panel-7" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">07</span><span class="a11y"></span></a><a id="image-carousel-0-tab-8" href="#image-carousel-0-panel-8" aria-controls="image-carousel-0-panel-8" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">08</span><span class="a11y"></span></a><a id="image-carousel-0-tab-9" href="#image-carousel-0-panel-9" aria-controls="image-carousel-0-panel-9" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">09</span><span class="a11y"></span></a><a id="image-carousel-0-tab-10" href="#image-carousel-0-panel-10" aria-controls="image-carousel-0-panel-10" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">10</span><span class="a11y"></span></a><a id="image-carousel-0-tab-11" href="#image-carousel-0-panel-11" aria-controls="image-carousel-0-panel-11" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">11</span><span class="a11y"></span></a><a id="image-carousel-0-tab-12" href="#image-carousel-0-panel-12" aria-controls="image-carousel-0-panel-12" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">12</span><span class="a11y"></span></a><a id="image-carousel-0-tab-13" href="#image-carousel-0-panel-13" aria-controls="image-carousel-0-panel-13" role="tab" data-no-hijack tabindex="-1" aria-selected="false"><span aria-hidden="true">13</span><span class="a11y"></span></a> </li>
+                            <li role="presentation" aria-hidden="true">&mdash;</li>
+                            <li role="presentation" aria-hidden="true">13</li>
+                        </ul>
+                        <button class="btn-next" tabindex="-1">
+                            <svg class="icon">
+                                <use xlink:href="#icon-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="image-carousel__images">
+                        <div class="image-carousel__image-track">
+                            <div id="image-carousel-0-panel-1" role="tabpanel" aria-hidden="false" class="image-carousel__image active">
+                                <div class="brand-beats-carousel-slide">
+                                    <div class="grid grid--middle">
+                                        <div class="grid__item col-6--small">
+                                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271602%27%20height%3D%271598%27%20style%3D%27background%3Atransparent%27%2F%3E"
+																						srcset="
+																						{% static 'basic/images/20-1.jpg' %} 600w,
+																						{% static 'basic/images/20-2.jpg' %} 940w"
+																						sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                                        </div>
+                                        <div class="grid__item col-6--small brand-beats-carousel-slide__text">
+                                            <p class="meta">Season Two: Episode 02</p>
+                                            <h3>Diversity in the workplace</h3>
+                                            <div class="brand-beats-carousel-slide__cta">
+                                                <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_new1' %}" class="btn btn--icon btn--light btn--mobile" target="_blank">
+                                                    <span class="btn__text"><span class="btn__text-inner">Listen</span></span>
+                                                    <div class="icon">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                                <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_new1' %}" class="btn btn--icon btn--light btn--desktop" target="_blank">
+                                                    <span class="btn__text"><span class="btn__text-inner">Listen to the Episode</span></span>
+                                                    <div class="icon">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-carousel__image-track image-carousel__image-track-sync">
+                            <div class="image-carousel__image">
+                                <div class="brand-beats-carousel-slide">
+                                    <div class="grid grid--middle">
+                                        <div class="grid__item col-6--small">
+                                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27801%27%20height%3D%27799%27%20style%3D%27background%3Atransparent%27%2F%3E"
+																						srcset="
+																						{% static 'basic/images/20-1.jpg' %} 600w" sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                                        </div>
+                                        <div class="grid__item col-6--small brand-beats-carousel-slide__text">
+                                            <p class="meta">Season One: Episode 08</p>
+                                            <h3>Do&#039;s and don&#039;ts of feedback</h3>
+                                            <div class="brand-beats-carousel-slide__cta">
+                                                <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_new1' %}" class="btn btn--icon btn--light btn--mobile" target="_blank">
+                                                    <span class="btn__text"><span class="btn__text-inner">Listen</span></span>
+                                                    <div class="icon">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                                <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_new1' %}" class="btn btn--icon btn--light btn--desktop" target="_blank">
+                                                    <span class="btn__text"><span class="btn__text-inner">Listen to the Episode</span></span>
+                                                    <div class="icon">
+                                                        <svg class="">
+                                                            <use xlink:href="#icon-arrow"></use>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="spacer spacer-large-top" />
+    </div>
+
+    <div class="container">
+        <div class="grid grid--gutters grid--three-up">
+            <div class="card card--news grid__item spacer-block" data-push-hover>
+                <div class="card--news__image spacer-smedium">
+                    <div class="image-holder pos-r" data-skrollex data-sk-group data-sk-mask data-push-hover-child data-sk-sa-delay="0.2">
+                        <div class="bg layer ratio-1" style="background-image: url({% static 'basic/images/23.jpg' %});"></div>
+                    </div>
+                </div>
+                <div class="card--news__text dash-holder dash-holder--push-content">
+                    <hr class="dash" data-skrollex data-sk-group />
+
+                    <div class="meta spacer-small" data-skrollex data-sk-group data-push-hover-headline>
+                        News | 02.02.2019
+                    </div>
+
+                    <h3 class="h4" data-skrollex data-sk-group data-sk-headline>We&#039;re Making Moves — Introducing our New HQ</h3>
+                </div>
+                <a href="{% url 'basic_new1' %}" class="layer z1"><span class="a11y">Explore We&#039;re Making Moves — Introducing our New HQ Case Study</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination text-align-center h3" data-pagination data-skrollex data-sk-group>
+        <div class="container container--content">
+
+            <span class="current"><span class="a11y">Page </span>1</span>
+            <a href=""><span class="a11y">Page </span>2</a>
+
+            <span class="ellipses">&hellip;</span>
+            <a href=""><span class="a11y">Page </span>9</a>
+        </div>
+    </div>
+</div>
+
+<div id="footer-holder">
+    <div class="next-page-footer pointer" data-next-page-footer data-skrollex data-sk-static data-easy-click>
+        <div class="container next-page-footer__inner">
+            <div class="next-page-footer__text">
+                <div class="meta spacer-medium">Next </div>
+                <h2 class="h3 spacer-medium">
+                    Join Us
+                </h2>
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="{% url 'basic_careers' %}" data-transition="mask">
+                <span class="a11y">Explore Careers</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

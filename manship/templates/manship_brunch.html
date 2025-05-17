@@ -1,0 +1,122 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Ланч{% endblock %}
+
+{% block content %}
+<div class="container-fluid menu-header">
+    <div class="row">
+        <div class="xs-12 sm-3 lg-4">
+            <img src="{% static 'images/manship/bread.png' %}" alt="asdf" class="align-center visible-xs img-responsive">
+        </div>
+        <div class="sm-6 lg-4 text-center">
+            <div class="menu-content">
+                <h2 class="special dots-horz">Бранч</h2>
+                <p><strong>Суббота 10 утра &#8211; 14: 30 вечера & amp; воскресенье: 11 утра – 14: 30 вечера</strong><br />
+                    Доброе утро! Поужинайте с нами или возьмите его с собой. В любом случае, тебе нужен бекон, а у нас есть бекон.</p>
+
+                <div class="vert visible-sm visible-xs"></div>
+            </div>
+        </div>
+        <div class="sm-3 lg-4"></div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+        <a href="{% static 'json/manship_brunch_4-27-19_letter.pdf' %}" target="_blank" class="btn btn-lg btn-default">Загрузить полное меню в pdf</a>
+        <div class="vert"></div>
+    </div>
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="row">
+                <div class="sm-6 lg-6">
+
+
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="small-plates" class="special">Маленькая Тарелка</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Салат Клин</span> <span class="menu-price">8</span></li>
+                                <li><span>Земляника &#038; Салат Из Авокадо</span> <span class="menu-price">8</span></li>
+                                <li><span>Копченый тунец в крекерах</span> <span class="menu-price">7</span></li>
+                                <li><span>Курица &#038; Колбаса Гамбо</span> <span class="menu-price">5/8</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="vert"></div>
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="main" class="special">Основа</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Блины Крем-Брюле</span> <span class="menu-price">14</span></li>
+                                <li><span>Белхейвен Завтрак</span> <span class="menu-price">12</span></li>
+                                <li><span>Сладкая Доска Обслуживания</span> <span class="menu-price">14</span></li>
+                                <li><span>Завтрак Тако</span> <span class="menu-price">12</span></li>
+                                <li><span>Huevos Rancheros</span> <span class="menu-price">12</span></li>
+                                <li><span>Утиная Ножка</span> <span class="menu-price">13</span></li>
+                                <li><span>Фирменный бургер</span> <span class="menu-price">14</span></li>
+                                <li><span>Жареная курица и вафли</span> <span class="menu-price">14</span></li>
+                                <li><span>Яйца Бенедикт и краб</span> <span class="menu-price">14</span></li>
+                                <li><span>Говяжья вырезка и яйца</span> <span class="menu-price">23</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-6 lg-6">
+
+
+                    <div class="menu-category">
+                        <div class="bars">
+                            <h3 id="sides" class="special">Добавка</h3>
+                            <ul class="list-unstyled leaders">
+
+                                <li><span>Вермонтская Кленовая Колбаса</span> <span class="menu-price">3.50</span></li>
+                                <li><span>Бекон</span> <span class="menu-price">3</span></li>
+                                <li><span>Вафли</span> <span class="menu-price">6</span></li>
+                                <li><span>Спаржа</span> <span class="menu-price">5</span></li>
+                                <li><span>Копченый Сыр Гауда Грица</span> <span class="menu-price">4</span></li>
+                                <li><span>Драники Запеканка</span> <span class="menu-price">3</span></li>
+                                <li><span>Испанский Домашний Картофель Фри</span> <span class="menu-price">3</span></li>
+                                <li><span>Два яйца в любом стиле</span> <span class="menu-price">4</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sub-nav">
+                <!-- .sidebar widget-area -->
+                <div class="sidebar widget-area" role="complementary">
+                    <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                        <h3 class="special text-center">Все разделы</h3>
+                        <ul class="subpage-nav">
+                            <li class="active-page-parent active-page-parent"><a href="">Меню</a></li>
+                        </ul>
+                        <ul class="subpage-nav children">
+                            <li class="active-page"><a href="{% url 'manship_brunch' %}" aria-current="page">Бранч</a></li>
+                            <li><a href="{% url 'manship_dinner' %}">Обед</a></li>
+                            <li><a href="{% url 'manship_drink' %}">Алкоголь</a></li>
+                            <li><a href="{% url 'manship_lunch' %}">Ланч</a></li>
+                        </ul>
+                    </aside>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrapper hero-inner">
+    <img src="{% static 'images/manship/header-images_0007_flames-copy-8.png' %}" class="hero-img img-responsive" alt="">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <section id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Новости</h2>
+            </div>
+            <div class="page-content">
+                <div class="row">
+                    <div class="row-flex">
+
+                        <article class="news-item sm-12 lg-6">
+                            <h3 class="h4"><a href="{% url 'manship_new' %}" title="Новость 1">Новость 1</a></h3>
+                            <p>
+                              Победитель победитель, ужин из морепродуктов когда конфетти пролился дождем в Новом Орлеане на
+                              недавно коронованного короля американских морепродуктов в субботу, 6 августа,это был Алекс
+                              Итон из нашего ресторана. Для великого американского повара морепродуктов Алекс приготовил трио
+                              <a href="{% url 'manship_new' %}">Узнать больше <span class="meta-nav">&rarr;</span></a></p>
+                            <time pubdate datetime="2016-08-11" class="special">Размещено в день звездопада</time>
+                        </article>
+                        <article class="news-item sm-12 lg-6">
+                            <h3 class="h4"><a href="{% url 'manship_new' %}" title="Новость 2">Новость 2</a></h3>
+                            <p>
+                               исполнительный шеф-повар, Алекс Итон, отправляется в Новый Орлеан, чтобы соревноваться в
+                                 субботу, 6 августа, в Great American Seafood Cook-Off. Он квалифицировался на Национальный
+                                 конкурс после победы в конкурсе Миссисипи в начале этого года. Он открыл для &hellip;
+                                 <a href="{% url 'manship_new' %}">Узнать больше <span class="meta-nav">&rarr;</span></a>
+                             </p>
+                            <time pubdate datetime="2016-08-04" class="special">Размещено в день ящерицы</time>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page"><a>Новости</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                          <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                          <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                          <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                          <li><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                          <li><a href="{% url 'manship_about' %}">О нас</a></li>
+                          <li><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                          <li><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </section>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

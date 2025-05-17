@@ -1,0 +1,412 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Факты{% endblock %}
+
+{% block content %}
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="the-facts">
+
+            <div class="anchors-nav__wrapper || js-sticky-element">
+                <div class="anchors-nav">
+                    <a href="#wellness" class="anchors-nav__item anchors-nav__item--active">
+                        <span class="anchors-nav__text">Хорошее здоровье</span>
+                    </a>
+                    <a href="#benefits" class="anchors-nav__item">
+                        <span class="anchors-nav__text">Выгоды</span>
+                    </a>
+                    <a href="#cannabis" class="anchors-nav__item">
+                        <span class="anchors-nav__text">Конопля</span>
+                    </a>
+                    <a href="#feel" class="anchors-nav__item">
+                        <span class="anchors-nav__text">Хорошее самочувствие</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-section || js-background-zone" data-bz-color="punch" id="wellness">
+                <div class="grid__container grid__container--large || summary">
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current ">Каннабис для здоровья</h2>
+                    <a href="#benefits" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Плюсы каннабиноидов</a>
+                    <a href="#cannabis" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Конопля и марихуана</a>
+                    <a href="#feel" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Хорошее самочувствие</a>
+                </div>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle">Полное психическое, физическое и социальное благополучие. Наука за товаром.</p>
+                </div>
+
+                <div class="grid__container || content-block || page-the-facts__wellness-content">
+                    <div class="content-block__title">Живите своей лучшей жизнью </div>
+
+                    <ul class="facts js-printed-checker anim-fade">
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Выключите повседневный стресс </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Искра творчества </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Продлите терпение </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Каждый день адаптоген </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Пробудите открытость к духу </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Улучшите тусклую кожу </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Откройте свой разум </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Улучшите вкус еды </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Принесите поэзию на язык </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Спонтанность для исполнителя </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Пробудите чувство удивления </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Усиление звука концерта </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Катализировать смех </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Способствовать дружбе </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Мост между людьми </span>
+
+                        </li>
+                        <li class="facts__item || facts-item facts__item--disabled">
+                            <span class="facts-item__title">Антивозрастной уход за кожей </span>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="photo-shrink js-shrink-scroll">
+                <div class="photo-shrink__panel photo-shrink__panel--left"></div>
+                <div class="photo-shrink__panel photo-shrink__panel--right"></div>
+
+                <div class="photo-shrink__img-container" id="photo-shrink">
+                    <img class="photo-shrink__img js-scroll" data-speed="-1" src="{% static 'images/mowellens/facts-compressor-1.jpg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-section || js-background-zone" data-bz-color="default" id="benefits">
+              <div class="grid__container grid__container--large || summary">
+                  <a href="#wellness" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Каннабис для здоровья</a>
+                  <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current ">Плюсы каннабиноидов</h2>
+                  <a href="#cannabis" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Конопля и марихуана</a>
+                  <a href="#feel" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Хорошее самочувствие</a>
+              </div>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle">Природные соединения, найденные в конопле. Также известно, почему это будут ваши новые любимые продукты.</p>
+                </div>
+
+                <div class="grid__container grid__container--large">
+
+                    <div class="cannabinoids-graph__wrapper">
+                        <div class="cannabinoids-graph">
+
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":38,"top":59,"left":36,"mobile":{"size":75,"top":54,"left":47}}'>
+                                <span class="cannabinoids-graph-item__name">CBD</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Антибактериальный<br />
+                                    Ингибирует рост раковых клеток<br />
+                                    Нейро-защитный<br />
+                                    Способствует росту костей <br />
+                                    Уменьшает приступы судорог<br />
+                                    Снижает уровень сахара в крови <br />
+                                    Поддерживает здоровую иммунную систему<br />
+                                    Уменьшает воспаление<br />
+                                    Снижает риск закупорки артерий<br />
+                                    Уменьшает сокращения тонкой кишки<br />
+                                    Уменьшает рвоту и тошноту<br />
+                                    Уменьшает боль<br />
+                                    Снимает беспокойство<br />
+                                    Замедляет рост бактерий <br />
+                                    Подавляет мышечные спазмы<br />
+                                    Успокоительный<br />
+                                    Лечит псориаз<br />
+                                    Сосудорасширяющий<br />
+                                </div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":12,"top":0,"left":25,"mobile":{"size":32,"top":0,"left":66}}'>
+                                <span class="cannabinoids-graph-item__name">Δ9-THCA</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Спид спит<br />
+                                    Ингибирует рост раковых клеток<br />
+                                    Подавляет мышечные спазмы</div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":19,"top":20,"left":0,"mobile":{"size":43,"top":9,"left":9}}'>
+                                <span class="cannabinoids-graph-item__name">CBC</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Ингибирует рост раковых клеток<br />
+                                    Способствует росту костей <br />
+                                    Уменьшает воспаление<br />
+                                    Уменьшает боль</div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":7,"top":37,"left":19,"mobile":{"size":21,"top":30,"left":19}}'>
+                                <span class="cannabinoids-graph-item__name">Δ8-THC</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает боль</div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":7,"top":71,"left":9,"mobile":{"size":21,"top":70,"left":0}}'>
+                                <span class="cannabinoids-graph-item__name">CBCA</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает воспаление<br />
+                                    Лечит грибковую инфекцию</div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":7,"top":22,"left":72,"mobile":{"size":21,"top":15,"left":93}}'>
+                                <span class="cannabinoids-graph-item__name">CBDA</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает воспаление<br />
+                                    Ингибирует рост раковых клеток</div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":19,"top":38,"left":99,"mobile":{"size":43,"top":28,"left":100}}'>
+                                <span class="cannabinoids-graph-item__name">CBG</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Спид спит<br />
+                                    Ингибирует рост раковых клеток<br />
+                                    Способствует росту костей <br />
+                                    Замедляет рост бактерий </div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":8,"top":53,"left":82,"mobile":{"size":23,"top":76,"left":39}}'>
+                                <span class="cannabinoids-graph-item__name">THCV</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает конвульсии и судороги<br />
+                                    Способствует росту костей </div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":13,"top":60,"left":71,"mobile":{"size":33,"top":81,"left":88}}'>
+                                <span class="cannabinoids-graph-item__name">CBGA</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает воспаление<br />
+                                    Уменьшает боль<br />
+                                    Замедляет рост бактерий </div>
+                            </div>
+                            <div class="cannabinoids-graph__item || cannabinoids-graph-item" data-specs='{"size":22,"top":97,"left":69,"mobile":{"size":53,"top":100,"left":19}}'>
+                                <span class="cannabinoids-graph-item__name">Δ9-THC</span>
+
+                                <div class="cannabinoids-graph-item__hover">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                                        <circle fill="transparent" style="stroke-width:50;stroke-miterlimit:10;" cx="50" cy="50" r="25" />
+                                    </svg>
+                                </div>
+
+                                <div class="cannabinoids-graph-item__text">Уменьшает рвоту и тошноту<br />
+                                    Уменьшает боль<br />
+                                    Стимулирует аппетит<br />
+                                    Подавляет мышечные спазмы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-section || js-background-zone" data-bz-color="punch" id="cannabis">
+              <div class="grid__container grid__container--large || summary">
+                  <a href="#wellness" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Каннабис для здоровья</a>
+                  <a href="#benefits" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Плюсы каннабиноидов</a>
+                  <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current ">Конопля и марихуана</h2>
+                  <a href="#feel" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Хорошее самочувствие</a>
+              </div>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle">
+                      Да, препараты из одного вида - конопли. Нет, это не одно и то же.
+                    </p>
+                </div>
+
+                <div class="grid__container || content-block">
+
+                    <div class="content-block__title">Так, давайте сделаем попроще.</div>
+
+                    <div class="content-block__item || js-printed-checker || wysiwyg || anim-fade">
+                        <h3 class="content-block__subtitle">КОНОПЛЯ <BR>= <BR>ПРАКТИЧЕСКИ НЕТ ТГК</h3>
+                        <p>Подумайте о конопле как о чертовски умном, мирском, марафонском кузене марихуаны.
+                          Они оба содержат каннабиноиды и терпены (реальные игроки власти в мире фитомедицины), они оба
+                          содержат каннабидиол (CBD), и они оба могут быть полезны для вашего общего здоровья и благополучия.
+                          Реальная разница? Конопля содержит мало ТГК, что означает отсутствие психотропных побочных
+                          эффектов, т. е. это не даст вам высокий.
+                        </p>
+                    </div>
+
+                    <div class="content-block__item || js-printed-checker || wysiwyg || anim-fade">
+                        <h3 class="content-block__subtitle">МАРИХУАНА <BR>= <BR>БОЛЕЕ ВЫСОКИЕ УРОВНИ ТГК</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-sectio || js-background-zone" data-bz-color="default" id="feel">
+              <div class="grid__container grid__container--large || summary">
+                  <a href="#wellness" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Каннабис для здоровья</a>
+                  <a href="#benefits" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Плюсы каннабиноидов</a>
+                  <a href="#cannabis" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Конопля и марихуана</a>
+                  <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current ">Хорошее самочувствие</h2>
+              </div>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle">
+                      Вы уже знакомитесь с каннабиноидами, такими как CBD и THC, но есть еще один член семьи, достойный введения: терпены.
+                    </p>
+                </div>
+
+                <div class="grid__container || content-block">
+
+                    <div class="content-block__title">Терпены</div>
+
+                    <div class="content-block__item content-block__item--paragraph || js-printed-checker || wysiwyg || anim-fade">
+                        <p>
+                          Терпены-это двоюродный брат, который знает три языка и имеет полный паспорт. Они также важны, но их
+                          труднее найти в продуктах CBD. Когда вы думаете о терпенах, подумайте об ароматерапии, целостной
+                          лечебной модальности. Эти терпены каннабиса определяют неотразимый аромат и вкус в каждом штамме.
+                        </p>
+                        <p>
+                          Около 200 терпенов и 100 каннабиноидов были найдены в каннабисе, но только некоторые из этих веществ
+                          появляются в количествах, достаточно существенных, чтобы быть примечательными. Синергия этих
+                          соединений является то, что делает растение особенным. "Эффект окружения" увеличивает терапевтические
+                          преимущества отдельных компонентов растения—так что лекарственное воздействие всего растения больше,
+                          чем сумма его частей. Семейные ценности, действительно.
+                        </p>
+                    </div>
+
+                    <div class="content-block__item content-block__item--paragraph || js-printed-checker || wysiwyg || anim-fade">
+                        <p>
+                          Мы используем лучший полный спектр экстракта конопли, где вы найдете рог изобилия терпенов и
+                          каннабиноидов в каждом продукте. Мы всегда покажем вам, сколько CBD (и других каннабиноидов и
+                          терпенов) находится в каждом из наших продуктов, поэтому вы можете быть комфортно и уверенно
+                          наслаждаться ими.
+                        </p>
+                        <p>
+                          О, и еще одна вещь: конопля полностью биоразлагаема, перерабатывается и является многоразовым ресурсом во
+                          всех его формах. И так как это естественно устойчивы к вредителям, он требует мало, если какие-либо пестициды,
+                          что хорошо для вас и окружающей среды. Мы сказали вам, что это полный комплект.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facts-modal || js-sticky-element">
+                <div class="facts-modal__container">
+                    <div class="facts-modal__close"></div>
+
+                    <div class="facts-modal__content">
+                        <div class="facts-modal__title || facts-item__title"></div>
+                        <div class="facts-modal__quote || facts-item__quote"></div>
+                        <div class="facts-modal__author || facts-item__author"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cannabinoids-modal || js-sticky-element">
+                <div class="cannabinoids-modal__close-overlay"></div>
+
+                <div class="cannabinoids-modal__container">
+                    <div class="cannabinoids-modal__close"></div>
+
+                    <div class="cannabinoids-modal__content">
+                        <div class="cannabinoids-modal__title">TITLE</div>
+                        <div class="cannabinoids-modal__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque adipisci doloribus natus vel nam inventore, cum quis, sit itaque architecto voluptate dolor consequatur dolores tempore, voluptates sequi exercitationem quod.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="{% url 'mowellens_goods' %}" class="cta-bottom__item js-printed-checker  ">Продукты </a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+{% endblock %}

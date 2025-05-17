@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'styles/mowellens/normalize.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" id="main-css" href="{% static 'styles/mowellens/min.css' %}" media="none" onload="if(media!='all')media='all'" />
+		<link rel="stylesheet" id='wop_cart_font.css-css' href="{% static 'styles/mowellens/font.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" id='styles_second_css-css-css' href="{% static 'styles/mowellens/styles_second_css.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" id='affwp-forms-css' href="{% static 'styles/mowellens/forms.min.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" id='menu-image-css' href="{% static 'styles/mowellens/menu-image.css' %}" type='text/css' media='all' />
+    <title>{% block title %}{% endblock %}</title>
+		<script type='text/javascript' src="{% static 'scripts/mowellens/jquery-3.1.1.min.js' %}"></script>
+</head>
+
+  <body>
+
+		{% include 'mowellens/code2.html' %}
+		{% include 'mowellens/script.html' %}
+    {% include "mowellens/navbar.html" %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include "mowellens/footer.html" %}
+
+  <script src="{% static 'scripts/mowellens/vendors.min.js' %}" type="text/javascript" /></script>
+  <script src="{% static 'scripts/mowellens/min.js' %}" type="text/javascript" /></script>
+
+</body>
+</html>

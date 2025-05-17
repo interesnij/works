@@ -1,0 +1,86 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+<div class="hero-wrapper hero-inner">
+
+    <img width="1400"
+         height="500"
+         src="{% static 'images/manship/header-images_0008_flames-copy-11.png' %}"
+         class="hero-img img-responsive wp-post-image"
+         alt="The Manship Chicken"
+         srcset="
+                  {% static 'images/manship/header-images_0008_flames-copy-11.png' %} 300w,
+                  {% static 'images/manship/header-images_0008_flames-copy-11.png' %} 768w,
+                  {% static 'images/manship/header-images_0008_flames-copy-11.png' %} 1024w"
+        sizes="(max-width: 1400px) 100vw, 1400px" />
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">О нас</h2>
+                <img src="{% static 'images/manship/illos-02.png' %}" alt="About" class="page-header-illustration">
+            </div>
+            <div class="page-content">
+                <h3 style="text-align: center;">Хорошее вкусное место всегда рядом с Вами</h3>
+                <p>&nbsp;</p>
+                <div class='content-column one_half'>На владык дровяной кухней, расположенном в историческом
+                  <a href="{% url 'manship_people' %}">Belhaven</a> район Джексон, штат Миссисипи, является родиной
+                  <a href="{% url 'manship_people' %}">шеф-повара Алекса Эйтона</a> и предприниматель, и сомелье
+                  <a href="">Стивен О'Нил</a>.
+                  <p>
+                    Меню ресторана преображает суть средиземноморской кухни и Южной классики, захватывая ароматную кухню стран,
+                    окружающих Средиземное море, сохраняя при этом южный колорит. Ресторанное пространство так же шикарно, как и
+                    деревенское, транспортируя гостей в Европу, оставаясь в Джексоне.
+                  </p>
+                    <p>Сезонная кухня отеля Eaton отличается свежими
+                      <a href="{% url 'manship_source' %}">сезонными ингредиентами</a>
+                      от местных поставщиков по всему югу. Компания Eaton собирает достоверно производства средиземноморских
+                      ингредиентов от местных европейских компаний-импортеров. Наше
+                      <a href="">меню</a> отражает взаимосвязь между шеф-поваром и сезонным урожаем.<br />
+                </div>
+                <div class='content-column one_half last_column'>
+                    <p>Наша <a href="{% url 'manship_bar' %}">мастерская коктейльная программа</a>,
+                    режиссера Стивена О'Нила, воплощает в себе философию кухни мастеров кухни. Напитки ручной работы уходят корнями на
+                    коктейли эпохи сухого закона и сделаны уникально. Верхняя полка бара доставляет лучшие спиртные
+                    напитки в штате, а в примечательной карте вин и крафтового пива есть напиток, который дополняет каждое блюдо в меню.</p>
+                    <p>Наш ресторан-это районное место с большим городским ощущением, наполненное интересными и уникальными ароматами,
+                      подходящими для каждого вкуса.
+                    </p>
+                    <p><a href="">Свяжитесь</a> с нами, чтобы сделать заказ сегодня!</p>
+                </div>
+                <div class='clear_column'></div>
+            </div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                    <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                        <h3 class="special text-center">Все разделы</h3>
+                        <ul class="subpage-nav">
+                            <li class="active-page"><a>О нас</a></li>
+                        </ul>
+                        <ul class="subpage-nav children">
+                            <li><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                            <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                            <li><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                            <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                            <li><a href="{% url 'manship_news' %}">Новости</a></li>
+                            <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                            <li><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                            <li><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

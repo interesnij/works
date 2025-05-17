@@ -1,0 +1,43 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="home">
+
+            <div class="fancy-slider">
+                <div class="fancy-slider__titles || fancy-slider-titles">
+                  {% include 'first/mowellens_slider_title.html' %}
+                  {% include 'first/mowellens_slider_title.html' %}
+                </div>
+
+                {% include 'first/mowellens_slider_btn.html' %}
+
+                <a href="{% url 'mowellens_goods' %}" class="fancy-slider__btn-all"><span>Все продукты</span></a>
+
+                {% include 'first/mowellens_slider_shape.html' %}
+
+                <div class="fancy-slider__particles || fancy-slider-particles fancy-slider-particles--above">
+                  {% include 'first/mowellens_slider_list.html' %}
+                  {% include 'first/mowellens_slider_list.html' %}
+                </div>
+
+                <div class="fancy-slider__particles || fancy-slider-particles fancy-slider-particles--behind">
+                    {% include 'first/mowellens_slider_list2.html' %}
+                    {% include 'first/mowellens_slider_list2.html' %}
+                </div>
+
+                <div class="fancy-slider__arrow fancy-slider__arrow--left"></div>
+                <div class="fancy-slider__arrow fancy-slider__arrow--right"></div>
+
+                <div class="fancy-slider__timer-progress"></div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+{% endblock %}

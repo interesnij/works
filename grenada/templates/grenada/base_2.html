@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{% static 'grenada/styles/font-awesome.min.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" href="{% static 'grenada/styles/style.css' %}" type='text/css' media='all' />
+
+		<!--
+		<link rel="stylesheet" href="{% static 'styles/grenada/assets.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" href="{% static 'styles/grenada/landing.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" href="{% static 'styles/grenada/portfolio.css' %}" type='text/css' media='all' />
+    <link rel="stylesheet" href="{% static 'styles/grenada/shortcodes.css' %}" type='text/css' media='all' />
+	-->
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body class="hidden">
+
+	<main>
+    <div class="preloader-wrap">
+      <div class="outer">
+        <div class="inner">
+          <div class="percentage" id="precent"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cd-index cd-main-content">
+      <div id="page-content" class="light-content">
+        {% include "grenada/navbar.html" %}
+
+        {% block content %}
+
+        {% endblock %}
+
+        {% include "grenada/footer_2.html" %}
+      </div>
+    </div>
+  </main>
+  <div class="cd-cover-layer"></div>
+  <div id="magic-cursor">
+    <div id="ball">
+      <div id="ball-loader"></div>
+    </div>
+  </div>
+  <div id="rotate-device"></div>
+
+  <script src="{% static 'grenada/scripts/jquery.min.js' %}" type="text/javascript" /></script>
+  <script src="{% static 'grenada/scripts/plugins.js' %}" type="text/javascript" /></script>
+  <script src="{% static 'grenada/scripts/scripts.js' %}" type="text/javascript" /></script>
+
+</body>
+</html>

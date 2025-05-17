@@ -1,0 +1,114 @@
+<script type="text/javascript">
+
+window.preloaderLogo = {
+  init: function() {
+    this.preloaderLogo = document.getElementById('preloader-logo')
+
+    // TIME Settings
+    this.lastTime = 0;
+    this.currentTime;
+    this.FPS = 22;
+
+    // FRAMES Settings
+    this.frameSize = 125;
+    this.numberOfFrames = (10500/2) / this.frameSize;
+    this.currentFrame = 0;
+    this.targetFrame = 28;
+    this.speed = 1;
+
+    this.update()
+  },
+
+  setTarget: function(value) {
+    this.targetFrame = value
+  },
+
+  update: function() {
+    this.currentTime = new Date().getTime();
+
+    if(this.currentFrame != this.targetFrame) {
+      // We check if we have to update the frame
+      if(this.currentTime - this.lastTime > (1000 / this.FPS))
+      {
+        // Calculation of the X position in function of the currentFrame
+        var newX = this.currentFrame * this.frameSize;
+        this.preloaderLogo.style.backgroundPosition = '0 -'+newX+'px';
+
+        // currentFrame increment
+        if(this.currentFrame < this.numberOfFrames) this.currentFrame+=this.speed;
+        else this.currentFrame = 0;
+
+        // We update the lastTime
+        this.lastTime = this.currentTime;
+      }
+    }
+
+    requestAnimationFrame(this.update.bind(this))
+  }
+}
+
+window.preloader = {
+  init: function() {
+    this.progressBar = document.getElementById('preloader-progress')
+    this.preloaderSentence = document.getElementById('preloader-sentence')
+
+    var DELAY = 1250
+
+    this.start = Date.now() + DELAY
+
+    this.speed = 0.1
+    this.raf = null
+    this.value = 0
+
+    var scope = this
+
+    window.preloaderLogo.init()
+    setTimeout(function () {
+        scope.launch()
+    }, DELAY);
+  },
+
+  launch: function() {
+    this.step(0.5)
+
+    this.preloaderSentence.classList.add('active')
+
+    var scope = this
+    this.stepTimeout = setTimeout(function() {
+      scope.speed = 0.01
+      scope.step(0.9)
+    }, 1000)
+  },
+
+  updateProgressBar: function() {
+    this.progressBar.style.transform = 'scale3d('+this.value+',1,1)'
+  },
+
+  step: function(target) {
+    var gap = target - this.value,
+      oldValue = this.value,
+      localValue = 0,
+      tick = 0
+
+    cancelAnimationFrame(this.raf)
+
+    var scope = this
+    function update() {
+      localValue = (1 - 1/(1+tick*scope.speed)) * gap
+      scope.value = oldValue + localValue
+      scope.updateProgressBar()
+
+      tick++
+      scope.raf = requestAnimationFrame(update)
+    }
+    update()
+  },
+
+  stop: function() {
+    clearTimeout(this.stepTimeout)
+    cancelAnimationFrame(this.raf)
+  }
+}
+
+window.preloader.init()
+</script>

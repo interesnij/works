@@ -1,0 +1,293 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="page page--contact">
+
+    <div class="hero hero--contact" data-contact-hero>
+        <div class="hero--contact__inner hero__content">
+            <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+                <div class="hero__meta meta spacer-smedium no-wrap">
+                    <hr class="dash" /> Скажи привет
+                </div>
+
+                <div class="hero--contact__dropdown">
+                    <button class="h1" aria-expanded="false" aria-controls="#collapsible">Я хотел бы поговорить о & hellip; <svg>
+                            <use xlink:href="#icon-caret-down-large"></use>
+                        </svg></button>
+
+                    <div id="collapsible" class="collapsible" aria-hidden="true">
+                        <ul role="presentation">
+                            <li role="presentation">
+                                <a href="#form-new-business" class="h3">Работать вместе с вами</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#form-careers" class="h3">Присоединение к вашей команде</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#form-general" class="h3">Что-то еще</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="form-new-business" class="hero--contact__form hero--contact__form-new-biz">
+                    <button class="h1" data-close-form>Я заинтересован в совместной работе <span class="a11y">Закрыть новую бизнес-форму</span><svg>
+                            <use xlink:href="#icon-caret-down-large"></use>
+                        </svg></button>
+                    <div class="form-inner">
+                        <div class="new-business-form" data-skrollex data-sk-group>
+                            <form method="post" accept-charset="utf-8" enctype="multipart/form-data" id="contact" novalidate data-form>
+                                <input type="hidden" name="action" value="sproutForms/entries/saveEntry">
+                                <input type="hidden" name="handle" value="newBusiness">
+                                <input type="hidden" name="fields[entry]" value="[12]">
+
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-firstName" type="text" name="fields[firstName]" aria-required="true" placeholder="* Имя" data-validetta="required" aria-describedby="message-firstName" />
+                                            <label for="input-firstName" class="meta required">Имя</label>
+                                            <div id="message-firstName" class="a11y">Please provide your first name</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-lastName" type="text" name="fields[lastName]" aria-required="true" placeholder="* Фамилия" data-validetta="required" aria-describedby="message-lastName" />
+                                            <label for="input-lastName" class="meta required">Фамилия</label>
+                                            <div id="message-lastName" class="a11y">Please provide your last name</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-email" type="email" name="fields[email]" aria-required="true" placeholder="* Email" data-validetta="required,email" aria-describedby="message-email" />
+
+                                            <label for="input-email" class="meta required">Email</label>
+
+                                            <div id="message-email" class="a11y">Please provide your email address</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-phone" type="text" name="fields[phoneNumber]" aria-required="true" placeholder="*Телефон" data-validetta="required" aria-describedby="message-phone" />
+
+                                            <label for="input-phone" class="meta required">Телефон</label>
+
+                                            <div id="message-phone" class="a11y">Please provide your phone number</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-company" type="text" name="fields[companyName]" aria-required="true" placeholder="* Компания" data-validetta="required" aria-describedby="message-company" />
+
+                                            <label for="input-company" class="meta required">Компания</label>
+
+                                            <div id="message-company" class="a11y">Please provide your company name</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item col-6--small">
+                                        <div class="form-group">
+                                            <input id="input-role" type="text" name="fields[role]" aria-required="true" placeholder="* Ваше звание / роль" data-validetta="required" aria-describedby="message-role" />
+
+                                            <label for="input-role" class="meta required">Ваше звание / роль</label>
+
+                                            <div id="message-role" class="a11y">Please provide your title</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="fields[message]" id="input-message" data-validetta="required" aria-describedby="message-comments" placeholder="Пожалуйста, расскажите нам немного о том, над чем вы собираетесь сотрудничать. Такие вещи, как объем, бюджет, сроки и проблемы, которые вы хотите решить, полезны :)"></textarea>
+
+                                    <label for="input-message" class="meta required">Please tell us a bit about what you’re looking for</label>
+
+                                    <div id="message-comments" class="a11y">Please tell us a bit about what you’re looking for</div>
+                                </div>
+
+                                <div class="form-submit">
+                                    <button id="contact-submit" class="btn btn--submit" type="submit" onClick="ga('send', 'event', 'submission-contact-form', 'submission', 'Contact Form Completion');">Отправить</button>
+                                    <button type="reset" class="btn">Очистить форму</button>
+                                </div>
+                            </form>
+                            <div role="alert" aria-live="polite" class="hidden form-submit-success text-align-center">
+                                <p class="mb0 meta full">Спасибо за ваше предложение. Будем на связи.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form-careers" class="hero--contact__form hero--contact__form-careers">
+                    <button class="h1" data-close-form>Я хотел бы присоединиться к команде<span class="a11y">Закрыть форму карьеры</span><svg>
+                            <use xlink:href="#icon-caret-down-large"></use>
+                        </svg></button>
+                    <div class="form-inner">
+                        <div class="career-detail-form" data-career-detail-form>
+                            <div class="container">
+                                <div class="career-detail-form__inner">
+                                    <div class="container">
+                                        <div class="event-registration-form__title">
+                                            <h2 class="h6" data-skrollex data-sk-group data-sk-headline>Применить ниже</h2>
+                                            <hr data-skrollex data-sk-group />
+                                        </div>
+                                        <form method="post" accept-charset="utf-8" enctype="multipart/form-data" id="career-detail" novalidate data-form>
+                                            <input type="hidden" id="id" name="id" value="" />
+
+                                            <div class="grid grid--gutters">
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-firstName" type="text" name="first_name" aria-required="true" placeholder="* Имя" data-validetta="required" aria-describedby="message-firstName" />
+                                                        <label for="input-firstName" class="meta required">Имя</label>
+                                                        <div id="message-firstName" class="a11y">Please provide your first name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-lastName" type="text" name="last_name" aria-required="true" placeholder="* Фамилия" data-validetta="required" aria-describedby="message-lastName" />
+                                                        <label for="input-lastName" class="meta required">Фамилия</label>
+                                                        <div id="message-lastName" class="a11y">Please provide your last name</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="grid grid--gutters">
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-email" type="email" name="email" aria-required="true" placeholder="* Email" data-validetta="required,email" aria-describedby="message-email" />
+                                                        <label for="input-email" class="meta required">Email</label>
+                                                        <div id="message-email" class="a11y">Please provide your email address</div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-phone" type="text" name="phone" aria-required="true" placeholder="* Телефон" data-validetta="required" aria-describedby="message-phone" />
+                                                        <label for="input-phone" class="meta required">Телефон</label>
+                                                        <div id="message-phone" class="a11y">Please provide your phone number</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid--gutters">
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-linkedinProfile" type="text" name="fields[linkedinProfile]" aria-required="true" placeholder="* Профиль" data-validetta="required" aria-describedby="message-linkedinProfile" />
+                                                        <label for="input-linkedinProfile" class="meta required">Профиль </label>
+                                                        <div id="message-linkedinProfile" class="a11y">Send us your linkedin profile</div>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__item col-6--small">
+                                                    <div class="form-group">
+                                                        <input id="input-portfolioUrl" type="text" name="fields[portfolioUrl]" aria-required="true" placeholder="* Ссылка на портфолио" data-validetta="required" aria-describedby="message-portfolioUrl" />
+                                                        <label for="input-portfolioUrl" class="meta required">Ссылка на портфолио</label>
+                                                        <div id="message-portfolioUrl" class="a11y">Send us your portfolio url</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea name="fields[message]" id="input-message" data-validetta="required" aria-describedby="message-comments" placeholder="Пожалуйста, расскажите нам немного о себе..."></textarea>
+                                                <label for="input-message" class="meta required">Немного о себе</label>
+                                                <div id="message-comments" class="a11y">Tell us a bit about yourself</div>
+                                            </div>
+
+                                            <div class="form-submit">
+                                                <button id="contact-submit" class="btn btn--submit" type="submit" onClick="ga('send', 'event', { eventCategory: 'contact', eventAction: 'submission', eventLabel: 'careers'});">Submit</button>
+                                                <button type="reset" class="btn">Reset Form</button>
+                                            </div>
+                                        </form>
+                                        <div role="alert" aria-live="polite" class="hidden form-submit-success text-align-center">
+                                            <p class="mb0 meta full">Thank you for your submission. We will be in touch.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="form-general" class="hero--contact__form hero--contact__form-general">
+                    <button class="h1" data-close-form>Я хотел бы поговорить о чем-то еще <span class="a11y">Закрыть</span><svg>
+                            <use xlink:href="#icon-caret-down-large"></use>
+                        </svg></button>
+                    <div class="form-inner">
+
+                        <div class="contact-form" data-skrollex data-sk-group>
+                            <form method="post" accept-charset="utf-8" enctype="multipart/form-data" id="contact" novalidate data-form>
+
+                                <input type="hidden" name="action" value="sproutForms/entries/saveEntry">
+                                <input type="hidden" name="handle" value="contact">
+                                <input type="hidden" name="fields[entry]" value="[12]">
+
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-firstName" type="text" name="fields[firstName]" aria-required="true" placeholder="* Имя" data-validetta="required" aria-describedby="message-firstName" />
+                                            <label for="input-firstName" class="meta required">Имя</label>
+                                            <div id="message-firstName" class="a11y">Please provide your first name</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-lastName" type="text" name="fields[lastName]" aria-required="true" placeholder="* Фамилия" data-validetta="required" aria-describedby="message-lastName" />
+                                            <label for="input-lastName" class="meta required">Фамилия</label>
+                                            <div id="message-lastName" class="a11y">Please provide your last name</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-email" type="email" name="fields[email]" aria-required="true" placeholder="* Email" data-validetta="required,email" aria-describedby="message-email" />
+                                            <label for="input-email" class="meta required">Email</label>
+                                            <div id="message-email" class="a11y">Please provide your email address</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-phone" type="text" name="fields[phoneNumber]" aria-required="true" placeholder="* Телефон" data-validetta="required" aria-describedby="message-phone" />
+                                            <label for="input-phone" class="meta required">Телефон</label>
+                                            <div id="message-company" class="a11y">Please provide your Phone Number</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid grid--gutters">
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-company" type="text" name="fields[companyName]" aria-required="true" placeholder="* Компания" data-validetta="required" aria-describedby="message-company" />
+                                            <label for="input-company" class="meta required">Компания</label>
+                                            <div id="message-company" class="a11y">Please provide your company name</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item">
+                                        <div class="form-group">
+                                            <input id="input-role" type="text" name="fields[role]" aria-required="true" placeholder="* Ваш статус" data-validetta="required" aria-describedby="message-role" />
+                                            <label for="input-role" class="meta required">Ваш статус</label>
+                                            <div id="message-role" class="a11y">Please provide your role or title</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="fields[message]" id="input-message" data-validetta="required" aria-describedby="message-comments" placeholder="Пожалуйста, расскажите нам, о чем бы вы хотели поговорит..."></textarea>
+                                    <label for="input-message" class="meta required">Пожалуйста, сообщите нам, что вы ищете.</label>
+                                    <div id="message-comments" class="a11y">Please tell us what you&rsquo;re looking for...</div>
+                                </div>
+                                <div class="form-submit">
+                                    <button id="contact-submit" class="btn btn--submit" type="submit" onClick="ga('send', 'event', 'submission-contact-form', 'submission', 'Contact Form Completion');">Отпрааить</button>
+                                    <button type="reset" class="btn">Очистить форму</button>
+                                </div>
+                            </form>
+                            <div role="alert" aria-live="polite" class="hidden form-submit-success text-align-center">
+                                <p class="mb0 meta full">Thank you for your submission. We will be in touch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

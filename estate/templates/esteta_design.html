@@ -1,0 +1,118 @@
+{% extends "esteta/base.html" %}
+{% load static %}
+{% block title %}Дизайнеры{% endblock %}
+
+{% block content %}
+<div id="content" class="site-content">
+
+    <div id="primary" class="content-area archive_designer archive no_footer">
+        <main id="main" class="site-main" role="main">
+            <div class="page_content">
+                <h1 class="big_title"></h1>
+                <div class="scroll_down_line"><span></span></div>
+                <section class="module-matrix-alternate-row" data-module="matrix" data-type="alternate_row">
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-6 rowA odd" data-index="1" data-parallax-vel="7.5">
+                                    <a href="{% url 'esteta_design_detail' %}">
+                                        <div class="wrapper-text">
+                                            <div class="container-text">
+                                                <header class="container-title">
+                                                    <h1 class="title text_cover" data-title="Massimo"><b>Имя</b><span></span></h1>
+                                                    <h2 class="sub-title text_cover" data-title="Castagna"><b>Фамилия</b><span></span></h2>
+                                                </header>
+                                            </div>
+                                        </div>
+                                        <div class="cont_img">
+                                            <div class="box_img">
+                                                <div class="bg" style="background-image:url('{% static 'estate/images/12.jpg' %}');"></div>
+                                                <div class="cover"></div>
+                                                <div class="overlay"></div>
+                                            </div>
+                                            <div class="hover_text"><b>Детали</b><span><strong></strong></span></div>
+                                        </div>
+                                        <img class="sizing" src="{% static 'estate/images/alternate_row.gif' %}" title="Massimo" />
+                                    </a>
+                                </div>
+                                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-6 rowA even" data-index="2" data-parallax-vel="5.5">
+                                    <a href="{% url 'esteta_design_detail' %}">
+                                        <div class="wrapper-text">
+                                            <div class="container-text">
+                                                <header class="container-title">
+                                                    <h1 class="title text_cover" data-title="Ludovica +"><b>Имя</b><span></span></h1>
+                                                    <h2 class="sub-title text_cover" data-title="Roberto Palomba "><b>Фамилия </b><span></span></h2>
+                                                </header>
+                                            </div>
+                                        </div>
+                                        <div class="cont_img">
+                                            <div class="box_img">
+                                                <div class="bg" style="background-image:url('{% static 'estate/images/12.jpg' %}');"></div>
+                                                <div class="cover"></div>
+                                                <div class="overlay"></div>
+                                            </div>
+                                            <div class="hover_text"><b>Детали</b><span><strong></strong></span></div>
+                                        </div>
+                                        <img class="sizing" src="{% static 'estate/images/alternate_row.gif' %}" title="Ludovica +" />
+                                    </a>
+                                </div>
+                                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-6 rowB odd" data-index="3" data-parallax-vel="7.5">
+                                    <a href="{% url 'esteta_design_detail' %}">
+                                        <div class="wrapper-text">
+                                            <div class="container-text">
+                                                <header class="container-title">
+                                                    <h1 class="title text_cover" data-title="Gae"><b>Имя</b><span></span></h1>
+                                                    <h2 class="sub-title text_cover" data-title="Aulenti"><b>Фамилия</b><span></span></h2>
+                                                </header>
+                                            </div>
+                                        </div>
+                                        <div class="cont_img">
+                                            <div class="box_img">
+                                                <div class="bg" style="background-image:url('{% static 'estate/images/12.jpg' %}');"></div>
+                                                <div class="cover"></div>
+                                                <div class="overlay"></div>
+                                            </div>
+                                            <div class="hover_text"><b>Детали</b><span><strong></strong></span></div>
+                                        </div>
+                                        <img class="sizing" src="{% static 'estate/images/alternate_row.gif' %}" title="Gae" />
+                                    </a>
+                                </div>
+                                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-6 rowB even" data-index="4" data-parallax-vel="4.5">
+                                    <a href="{% url 'esteta_design_detail' %}">
+                                        <div class="wrapper-text">
+                                            <div class="container-text">
+                                                <header class="container-title">
+                                                    <h1 class="title text_cover" data-title="Paolo"><b>Имя</b><span></span></h1>
+                                                    <h2 class="sub-title text_cover" data-title="Bonazzi"><b>Фамилия</b><span></span></h2>
+                                                </header>
+                                            </div>
+                                        </div>
+                                        <div class="cont_img">
+                                            <div class="box_img">
+                                                <div class="bg" style="background-image:url('{% static 'estate/images/12.jpg' %}');"></div>
+                                                <div class="cover"></div>
+                                                <div class="overlay"></div>
+                                            </div>
+                                            <div class="hover_text"><b>Детали</b><span><strong></strong></span></div>
+                                        </div>
+                                        <img class="sizing" src="{% static 'estate/images/alternate_row.gif' %}" title="Paolo" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detect alternate_row_mob"></div>
+                </section>
+            </div>
+            <div class="linee_bck">
+                <span class='even line_1'></span><span class='odd line_2'></span><span class='even line_3'></span><span class='odd line_4'></span><span class='even line_5'></span> </div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+    <span class="detect global_tablet_mob"></span>
+    <span class="detect global_smart_mob"></span>
+</div>
+{% endblock %}
+{% block script %}
+{% include 'esteta/base_design.html' %}
+{% endblock %}

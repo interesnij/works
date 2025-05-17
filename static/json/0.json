@@ -1,0 +1,60 @@
+{
+    "status": 200,
+    "articles": [{
+        "url": "https:\/\/mowellens.com\/iced-hibiscus-cbd-latte\/",
+        "title": "Iced Hibiscus CBD Latte",
+        "date": 1564444967,
+        "date-formated": "30\/07\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/07\/iced-hibiscus-latte-2.jpg",
+        "excerpt": "\r\nYour body craves refreshment and hydration in the heat of summer, and an iced hibiscus latte is ju..."
+    }, {
+        "url": "https:\/\/mowellens.com\/morning-hemp-elixir\/",
+        "title": "Morning Hemp Elixir",
+        "date": 1563556536,
+        "date-formated": "19\/07\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/07\/moshoneygoodmylk3.png",
+        "excerpt": "We\u2019re continuing our Hemp series with Good Mylk Co. and this week we\u2019re talking about all things..."
+    }, {
+        "url": "https:\/\/mowellens.com\/hemp-overnight-oats\/",
+        "title": "Hemp Overnight Oats",
+        "date": 1562794802,
+        "date-formated": "10\/07\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/07\/moshoneygoodmylk.png",
+        "excerpt": "We\u2019re excited to officially announce our new partnership with women-founded homemade plant mylk co..."
+    }, {
+        "url": "https:\/\/mowellens.com\/cbd-honey-mask\/",
+        "title": "CBD Honey Mask: Brighter, Clearer, Radiant Skin",
+        "date": 1560992434,
+        "date-formated": "20\/06\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/06\/honey-girl-mask.png",
+        "excerpt": "How much do you pay attention to your skincare products? When you think of clean green beauty, what ..."
+    }, {
+        "url": "https:\/\/mowellens.com\/balancing-life\/",
+        "title": "Balancing Life: The Plant That Helps Keep Us Sane",
+        "date": 1559804426,
+        "date-formated": "06\/06\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/06\/hutomo-abrianto-576207-unsplash.png",
+        "excerpt": "\r\n\r\nIn an age when everyday living can seem chaotic and overwhelming, many people are looking for ea..."
+    }, {
+        "url": "https:\/\/mowellens.com\/honey-cbd-pb-cookies\/",
+        "title": "Honey CBD Peanut Butter No-Bake Cookies",
+        "date": 1558606919,
+        "date-formated": "23\/05\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/05\/honey-peanut-butter-cookies-1.jpg",
+        "excerpt": "\r\nYou don\u2019t need to sacrifice your health when you reach for dessert. The best way to make it clea..."
+    }, {
+        "url": "https:\/\/mowellens.com\/chamomile-cbd-lavender-latte\/",
+        "title": "Chamomile CBD Lavender Latte",
+        "date": 1557910021,
+        "date-formated": "15\/05\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/05\/chamomile-lavender-latte-2.jpg",
+        "excerpt": "\r\nSlow down your body systems and center your energy with this soothing chamomile lavender latte inf..."
+    }, {
+        "url": "https:\/\/mowellens.com\/why-wellness-is-the-new-black\/",
+        "title": "Why Wellness is the New Black",
+        "date": 1557306122,
+        "date-formated": "08\/05\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/05\/nordwood-themes-535273-unsplash-1.jpg",
+        "excerpt": "Diving into Mental Health Awareness Month, we\u2019re talking about the thing that goes hand-in-hand wi..."
+    }]
+}

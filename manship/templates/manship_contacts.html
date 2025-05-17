@@ -1,0 +1,31 @@
+{% extends "manship/base_contacts.html" %}
+{% load static %}
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-12 lg-12 hours">
+
+        </div>
+    </div>
+</div>
+
+<div class="map-content" style="margin-top: 50px;">
+    <h3>Контакты:</h3>
+    <p>1200 Северный Полюс.<br />
+        Улица 1120, Юрта 39202<br />
+        <a class="contact-phone" title="Позвоните нам на телефон 123-456-7890" href="tel:123-456-7890">123-456-7890</a> (телефон)<br />
+        769-230-4720 (fax)<br />
+        <a class="contact-catering" title="Получите кейтеринг 123-456-7890" href="tel:123-456-7890">123-456-7890</a> (кейтеринг)<br />
+        <a href="mailto:info@vinnipuh.com">info@vinnipuh.com</a></p>
+    <h3>Часы работы:</h3>
+    <p><strong>Ланч/Обед:</strong><br />
+        Понед: 11 – 20 <br />
+        Вторн – Пятн: 11 – 20</p>
+    <p><strong>Бранч:</strong><br />
+        Суббота: 10 &#8211; </p>
+    <p>Воскр: 11 - 2:30</p>
+    <p><a class="btn btn-lg btn-default iframe" style="display: block;" title="Зарезервировать столик" href="/open-table-modal/">Зарезервировать столик</a></p>
+</div>
+{% endblock %}

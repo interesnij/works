@@ -1,0 +1,188 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Сервис{% endblock %}
+
+{% block content %}
+
+<div class="page page--expertise">
+
+    <h1 class="a11y">Брендинг, дизайн сайтов электронной коммерции и Услуги цифрового агентства</h1>
+
+    <div class="hero hero--expertise-landing">
+        <div class="hero__content">
+            <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+                <div class="hero__meta meta spacer-smedium no-wrap">
+                    <hr class="dash" />Что мы делаем
+                </div>
+                <h2 class="h1 hero__title" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.75">В цифровой экономике, ориентированной на опыт, клиенты привлекают нас, чтобы помочь им представить и создать свое будущее. </h2>
+                <p class="lead hero__excerpt spacer-medium spacer-small-top" data-skrollex data-sk-group data-sk-paragraph>
+                    В качестве стратегического партнера мы разрабатываем программы для создания первых цифровых брендов, интерактивный опыт и флагманы электронной коммерции, которые дифференцируют и находят отклик в современной, постоянно меняющейся бизнес-среде, ориентированной на потребителя.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bucket bucket--expertise-landing spacer-block">
+        <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+            <hr class="item-spacer" />
+        </div>
+        <div class="bucket--expertise-landing__item">
+            <div class="container dash-holder dash-holder--push-content">
+                <div class="grid grid--middle pointer" data-push-hover data-easy-click>
+                    <div class="grid__item col-6--small item__image">
+                        <div class="item__image-inner" data-skrollex data-sk-group data-sk-mask data-push-hover-child>
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275%27%20height%3D%274%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                            srcset="
+                            {% static '/images/basic/4-3.jpg' %} 600w,
+                            {% static '/images/basic/4-2.jpg' %} 940w"
+                            sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="eCommerce Strategy, Design, and Development - Services Homepage Hero Image" />
+                        </div>
+                    </div>
+                    <div class="grid__item col-6--small item__text" data-skrollex data-sk-group>
+                        <h2 class="title h3" data-skrollex data-sk-group data-sk-headline>Брендирование eCommerce</h2>
+                        <p class="excerpt spacer-smedium">Наш дизайн электронной коммерции начинается и заканчивается лучшей в своем классе стратегией, которая создает бренды и стимулирует транзакции.</p>
+                        <div class="cta">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_service1' %}" class="btn btn--icon">
+                                <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span> <span class="a11y"> Брендирование eCommerce</span>
+                                <div class="icon">
+                                    <svg class="">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+            <hr class="item-spacer" />
+        </div>
+
+        <div class="bucket--expertise-landing__item">
+            <div class="container dash-holder dash-holder--push-content">
+                <div class="grid grid--middle pointer" data-push-hover data-easy-click>
+                    <div class="grid__item col-6--small item__image">
+                        <div class="item__image-inner" data-skrollex data-sk-group data-sk-mask data-push-hover-child>
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275%27%20height%3D%274%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                            srcset="
+                            {% static 'basic/images/3-1.jpg' %} 600w"
+                            sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="UX / UI Design Websites and Digital Platforms Services Landing Hero Image" />
+                        </div>
+                    </div>
+
+                    <div class="grid__item col-6--small item__text" data-skrollex data-sk-group>
+                        <h2 class="title h3" data-skrollex data-sk-group data-sk-headline>Сайты и цифровые продукты</h2>
+                        <p class="excerpt spacer-smedium">Благодаря глубокому пониманию состава и мотивов нашей аудитории, мы разрабатываем цифровой опыт, который связывает людей.</p>
+                        <div class="cta">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_service2' %}" class="btn btn--icon">
+                                <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span> <span class="a11y"> Сайты и цифровые продукт</span>
+                                <div class="icon">
+                                    <svg class="">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+            <hr class="item-spacer" />
+        </div>
+
+        <div class="bucket--expertise-landing__item">
+            <div class="container dash-holder dash-holder--push-content">
+                <div class="grid grid--middle pointer" data-push-hover data-easy-click>
+                    <div class="grid__item col-6--small item__image">
+                        <div class="item__image-inner" data-skrollex data-sk-group data-sk-mask data-push-hover-child>
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275%27%20height%3D%274%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                            srcset="
+                            {% static 'basic/images/2-5.jpg' %} 600w,
+                            {% static 'basic/images/2-5.jpg' %} 940w"
+                            sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="Brand Strategy, Identity, and Design Services Landing Image" />
+                        </div>
+                    </div>
+                    <div class="grid__item col-6--small item__text" data-skrollex data-sk-group>
+                        <h2 class="title h3" data-skrollex data-sk-group data-sk-headline>Стратегия бренда и индивидуальности</h2>
+                        <p class="excerpt spacer-smedium">Мы создаем и активируем бренды благодаря культурной проницательности, стратегическому видению и силе эмоций во всех его проявлениях.. </p>
+                        <div class="cta">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_service3' %}" class="btn btn--icon">
+                                <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span> <span class="a11y"> Стратегия бренда и индивидуальности</span>
+                                <div class="icon">
+                                    <svg class="">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+            <hr class="item-spacer" />
+        </div>
+
+        <div class="bucket--expertise-landing__item">
+            <div class="container dash-holder dash-holder--push-content">
+                <div class="grid grid--middle pointer" data-push-hover data-easy-click>
+                    <div class="grid__item col-6--small item__image">
+                        <div class="item__image-inner" data-skrollex data-sk-group data-sk-mask data-push-hover-child>
+                            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%275%27%20height%3D%274%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                            srcset="
+                            {% static 'basic/images/1-5.jpg' %} 600w,
+                            {% static 'basic/images/1-5.jpg' %} 940w"
+                            sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="Video Production Photography Storytelling Services Hero Image" />
+                        </div>
+                    </div>
+                    <div class="grid__item col-6--small item__text" data-skrollex data-sk-group>
+                        <h2 class="title h3" data-skrollex data-sk-group data-sk-headline>Производство контента</h2>
+                        <p class="excerpt spacer-smedium">Каждый бренд основан на сильных историях и истинах; мы создаем фирменный контент, необходимый для выражения этих историй и истин.</p>
+                        <div class="cta">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_service4' %}" class="btn btn--icon">
+                                <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span> <span class="a11y"> Производство контента</span>
+                                <div class="icon">
+                                    <svg class="">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+            <hr class="item-spacer" />
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer-holder">
+
+    <div class="next-page-footer pointer" data-next-page-footer data-skrollex data-sk-static data-easy-click>
+        <div class="container next-page-footer__inner">
+            <div class="next-page-footer__text">
+                <div class="meta spacer-medium">Далее </div>
+                <h2 class="h3 spacer-medium">
+                    Наши кейсы
+                </h2>
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="https://basicagency.com/case-studies" data-transition="mask">
+                <span class="a11y">Изучите наши работы</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

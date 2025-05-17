@@ -1,0 +1,256 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+
+{% block title %}Компания{% endblock %}
+
+{% block content %}
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="the-company">
+
+            <div class="anchors-nav__wrapper || js-sticky-element">
+                <div class="anchors-nav">
+                    <a href="#believe" class="anchors-nav__item anchors-nav__item--active">
+                        <span class="anchors-nav__text">Убеждения</span>
+                    </a>
+                    <a href="#founder" class="anchors-nav__item">
+                        <span class="anchors-nav__text">Основатель</span>
+                    </a>
+                    <a href="#contribute" class="anchors-nav__item">
+                        <span class="anchors-nav__text">Способствовать</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-sectio || js-background-zone" data-bz-color="punch" id="believe">
+                <div class="grid__container grid__container--large || summary">
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current">Во что мы верим</h2>
+                    <a href="#founder" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Основатель</a>
+                    <a href="#contribute" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Как мы вносим свой вклад</a>
+                </div>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle anim-fade">
+                      Вдохновленный давней страстью к самообслуживанию как величайшей форме здравоохранения.
+                    </p>
+                </div>
+
+                <div class="grid__container || content-block || wysiwyg">
+                    <div class="content-block__title">Наш девиз</div>
+
+                    <div class="content-block__item || js-printed-checker anim-fade">
+                        <h3 class="content-block__subtitle">ИДИ ВПЕРЕД, <BR>ЖИВИ СВОЕЙ ЛУЧШЕЙ ЖИЗНЬЮ</h3>
+                        <p>Трудно жить своей лучшей жизнью, если вы загружаете свое тело химическими веществами и искусственными ингредиентами.
+                          Так на Mowellens наши продукты сформулированы 100% свободно пестицидов, добавок, синтетических смесей, сульфатов,
+                          фталатов, парабенов, GMOs, формальдегида выпуская предохранители, искусственние благоухания и цветы, titanium двуокись,
+                          или остаточные растворители. Мы включаем уникально ботанические выдержки найденные от вокруг мира и чувствительно
+                          извлеченные. Низкие темпы извлечения сохраняют терпеновый профиль в масле и дополнительно повышают полезные свойства
+                          нашей продукции. Наша приверженность маркировке и образованию каннабиса обеспечивает прозрачность для наших потребителей.
+                        </p>
+                    </div>
+
+                    <div class="content-block__item || js-printed-checker anim-fade">
+                        <h3 class="content-block__subtitle">ЗНАЙ БОЛЬШЕ, ДЕЛАЙ ЛУЧШЕ, <BR>ЧУВСТВУЙ СЕБЯ ЛУЧШЕ.</h3>
+                        <p>МО Виллемс верит в полезные свойства растения конопли для оптимизации вашего общего здоровья и хорошего
+                          самочувствия. Обычно мы обращаемся к органической пище, холистическим средствам, альтернативной медицине в
+                          качестве дополнения к традиционным фармацевтическим препаратам.
+                        </p>
+                        <p>Мы считаем, что заправка тела и разума простыми, растительными, натуральными ингредиентами создает
+                          органическое восстановление и возвращение к гомеостазу; знайте лучше, делайте лучше, чувствуйте себя
+                          лучше.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="photo-shrink js-shrink-scroll">
+                    <div class="photo-shrink__panel photo-shrink__panel--left"></div>
+                    <div class="photo-shrink__panel photo-shrink__panel--right"></div>
+
+                    <div class="photo-shrink__img-container" id="photo-shrink">
+                        <img class="photo-shrink__img js-scroll" data-speed="-1" src="{% static 'images/mowellens/Untitled-1-compressor.jpg' %}" alt="The Company">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-section || js-background-zone" data-bz-color="default" id="founder">
+                <div class="grid__container grid__container--large || summary">
+                    <a href="#believe" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item">Во что мы верим</a>
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item  summary__item--current">Основатель</h2>
+                    <a href="#contribute" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Как мы вносим свой вклад</a>
+                </div>
+
+                <div class="grid__container || content-block">
+
+                    <div class="content-block__title js-printed-checker">Эми Дункан</div>
+
+                    <div class="content-block__item || js-printed-checker || wysiwyg anim-fade">
+                        <h3 class="content-block__subtitle">ГЛАВНЫЙ СПЛЕТНИК, <BR>ОЗДОРОВИТЕЛЬНЫЙ ВОИН, <BR>БЕССТРАШНЫЙ ЛИДЕР.</h3>
+                        <p>Моя страсть к растениям выросла из помощи моему мужу в борьбе со злокачественной опухолью головного мозга в 2012 году.
+                          Как его лечение прогрессировало, так и моя вера в целительную силу каннабиса — как для него, так и для меня. Каннабис
+                          делает меня более занятым воспитателем, вдумчивой женой и настроенной деловой женщиной. Mowellens был рожден из моего
+                          опыта в области биотехнологии и здравоохранения; лабораторно проверенный, высокий терпен, чистый, натуральный,
+                          ассортимент продуктов каннабиса, который дает результаты, которые вы можете видеть и чувствовать.
+                        </p>
+
+                        <ul class="content-block__bottom || social-list anim-fade--multiple js-printed-checker">
+                            <li class="social-list__item"><a class="social-list__link" target="_blank" href="">Facebook</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11.5px" height="25px" viewBox="0 0 11.5 25" style="enable-background:new 0 0 11.5 25;" xml:space="preserve">
+                                    <path d="M2.6,25h5V12.4h3.5l0.4-4.2H7.7c0,0,0-1.6,0-2.4c0-1,0.2-1.4,1.2-1.4c0.8,0,2.7,0,2.7,0V0c0,0-2.9,0-3.5,0
+	C4.3,0,2.6,1.6,2.6,4.8c0,2.8,0,3.4,0,3.4H0v4.3h2.6V25z" />
+                                </svg>
+                            </li>
+                            <li class="social-list__item"><a class="social-list__link" target="_blank" href="">Twitter</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="25px" viewBox="0 0 24 25" style="enable-background:new 0 0 24 25;" xml:space="preserve">
+                                    <path d="M0,20.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14.3-7.7,14-14.6c1-0.7,1.8-1.6,2.5-2.5c-0.9,0.4-1.8,0.7-2.8,0.8
+    	c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6c-3.2,0-5.5,3-4.8,6C7.7,8.6,4.1,6.7,1.7,3.7
+    	C0.4,5.9,1,8.8,3.2,10.3C2.4,10.2,1.6,10,1,9.6c-0.1,2.3,1.6,4.4,3.9,4.9c-0.7,0.2-1.5,0.2-2.2,0.1c0.6,2,2.4,3.4,4.6,3.4
+    	C5.2,19.7,2.6,20.4,0,20.1z" />
+                                </svg>
+                            </li>
+                            <li class="social-list__item"><a class="social-list__link" target="_blank" href="">Instagram</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23px" height="25px" viewBox="0 0 23 25" style="enable-background:new 0 0 23 25;" xml:space="preserve">
+                                    <path d="M11.5,3.1c3.1,0,3.4,0,4.6,0.1c1.1,0.1,1.7,0.2,2.1,0.4c0.5,0.2,0.9,0.5,1.3,0.9c0.4,0.4,0.7,0.8,0.9,1.3
+		c0.2,0.4,0.3,1,0.4,2.1c0.1,1.2,0.1,1.6,0.1,4.6c0,3.1,0,3.4-0.1,4.6c-0.1,1.1-0.2,1.7-0.4,2.1c-0.2,0.5-0.5,0.9-0.9,1.3
+		c-0.4,0.4-0.8,0.7-1.3,0.9c-0.4,0.2-1,0.3-2.1,0.4c-1.2,0.1-1.6,0.1-4.6,0.1c-3.1,0-3.4,0-4.6-0.1c-1.1-0.1-1.7-0.2-2.1-0.4
+		c-0.5-0.2-0.9-0.5-1.3-0.9c-0.4-0.4-0.7-0.8-0.9-1.3c-0.2-0.4-0.3-1-0.4-2.1c-0.1-1.2-0.1-1.6-0.1-4.6c0-3.1,0-3.4,0.1-4.6
+		c0.1-1.1,0.2-1.7,0.4-2.1C2.7,5.2,3,4.8,3.4,4.4C3.8,4,4.2,3.7,4.7,3.5c0.4-0.2,1-0.3,2.1-0.4C8.1,3.1,8.4,3.1,11.5,3.1 M11.5,1
+		C8.4,1,8,1,6.8,1.1C5.5,1.1,4.7,1.3,4,1.6c-0.8,0.3-1.4,0.7-2,1.3c-0.6,0.6-1,1.3-1.3,2C0.3,5.7,0.1,6.5,0.1,7.8C0,9,0,9.4,0,12.5
+		c0,3.1,0,3.5,0.1,4.7c0.1,1.2,0.3,2.1,0.5,2.8c0.3,0.8,0.7,1.4,1.3,2c0.6,0.6,1.3,1,2,1.3c0.7,0.3,1.6,0.5,2.8,0.5
+		C8,24,8.4,24,11.5,24c3.1,0,3.5,0,4.7-0.1c1.2-0.1,2.1-0.3,2.8-0.5c0.8-0.3,1.4-0.7,2-1.3c0.6-0.6,1-1.3,1.3-2
+		c0.3-0.7,0.5-1.6,0.5-2.8C23,16,23,15.6,23,12.5c0-3.1,0-3.5-0.1-4.7c-0.1-1.2-0.3-2.1-0.5-2.8c-0.3-0.8-0.7-1.4-1.3-2
+		c-0.6-0.6-1.3-1-2-1.3c-0.7-0.3-1.6-0.5-2.8-0.5C15,1,14.6,1,11.5,1" />
+                                    <path d="M11.5,6.6c-3.3,0-5.9,2.6-5.9,5.9c0,3.3,2.6,5.9,5.9,5.9s5.9-2.6,5.9-5.9C17.4,9.2,14.8,6.6,11.5,6.6 M11.5,16.3
+		c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8s3.8,1.7,3.8,3.8S13.6,16.3,11.5,16.3" />
+                                    <path d="M19,6.4c0,0.8-0.6,1.4-1.4,1.4c-0.8,0-1.4-0.6-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4C18.4,5,19,5.6,19,6.4" />
+                                </svg>
+                            </li>
+                            <li class="social-list__item"><a class="social-list__link" target="_blank" href="">Сайт</a><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.8 31.8" style="enable-background:new 0 0 31.8 31.8;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path d="M25.2,18.8c0,1.7,0,3.4,0,5c0,0.7,0,1.4,0,2.1c0,0.4,0,0.8,0,1.2c0-0.1,0-0.3,0.1-0.4
+				c0,0.3-0.1,0.6-0.2,0.9c0.1-0.1,0.1-0.2,0.2-0.4c-0.1,0.3-0.3,0.5-0.4,0.8c0.1-0.1,0.2-0.2,0.2-0.3c-0.2,0.2-0.4,0.4-0.6,0.6
+				c0.1-0.1,0.2-0.2,0.3-0.3c-0.2,0.2-0.5,0.3-0.8,0.5c0.1-0.1,0.3-0.1,0.4-0.2c-0.3,0.1-0.6,0.2-0.9,0.2c0.1,0,0.3,0,0.4-0.1
+				c-0.4,0-0.8,0-1.1,0c-0.7,0-1.4,0-2.1,0c-2.1,0-4.3,0-6.4,0c-2.1,0-4.3,0-6.4,0c-0.7,0-1.4,0-2,0c-0.4,0-0.8,0-1.2,0
+				c0.1,0,0.3,0,0.4,0.1c-0.3,0-0.6-0.1-0.9-0.2c0.1,0.1,0.2,0.1,0.4,0.2c-0.3-0.1-0.5-0.3-0.8-0.4c0.1,0.1,0.2,0.2,0.3,0.2
+				c-0.2-0.2-0.4-0.4-0.6-0.6c0.1,0.1,0.2,0.2,0.3,0.3c-0.2-0.2-0.3-0.5-0.5-0.8c0.1,0.1,0.1,0.3,0.2,0.4c-0.1-0.3-0.2-0.6-0.2-0.9
+				c0,0.1,0,0.3,0.1,0.4c0-0.4,0-0.8,0-1.1c0-0.7,0-1.4,0-2.1c0-2.1,0-4.3,0-6.4c0-2.1,0-4.3,0-6.4c0-0.7,0-1.4,0-2
+				c0-0.4,0-0.8,0-1.2c0,0.1,0,0.3-0.1,0.4c0-0.3,0.1-0.6,0.2-0.9C3.3,7.6,3.3,7.8,3.2,7.9c0.1-0.3,0.3-0.5,0.4-0.8
+				C3.6,7.2,3.5,7.3,3.4,7.4C3.6,7.2,3.8,7,4,6.8C3.9,6.9,3.8,7,3.7,7.1c0.2-0.2,0.5-0.3,0.8-0.5C4.4,6.7,4.2,6.7,4.1,6.8
+				C4.4,6.7,4.7,6.6,5,6.5c-0.1,0-0.3,0-0.4,0.1c0.6-0.1,1.2,0,1.9,0c1.1,0,2.2,0,3.3,0c1,0,2.1,0,3.1,0c0.9,0,1.6-0.7,1.6-1.6
+				c0-0.9-0.7-1.6-1.6-1.6c-1.7,0-3.4,0-5,0c-0.9,0-1.7,0-2.6,0c-0.4,0-0.9,0-1.3,0.1C3.5,3.6,3,3.8,2.6,4C2.1,4.3,1.7,4.6,1.4,5
+				C0.5,6,0,7.2,0,8.6c0,0.5,0,1,0,1.4c0,2,0,3.9,0,5.9c0,2.2,0,4.5,0,6.7c0,1.3,0,2.6,0,4c0,0.3,0,0.7,0.1,1c0.1,0.5,0.3,1,0.5,1.5
+				c0.2,0.4,0.5,0.9,0.9,1.2c1,1,2.3,1.5,3.7,1.5c1.3,0,2.6,0,4,0c2.2,0,4.5,0,6.7,0c2,0,3.9,0,5.9,0c0.5,0,1,0,1.4,0
+				c0.2,0,0.4,0,0.5,0c0.3,0,0.6-0.1,0.9-0.2c0.3-0.1,0.6-0.2,0.9-0.4c0.5-0.2,0.9-0.5,1.2-0.9c0.7-0.7,1.3-1.6,1.5-2.6
+				c0.1-0.4,0.1-0.9,0.1-1.3c0-0.9,0-1.7,0-2.6c0-1.7,0-3.4,0-5.1c0,0,0,0,0,0c0-0.9-0.7-1.6-1.6-1.6C25.9,17.2,25.2,17.9,25.2,18.8
+				L25.2,18.8z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M17.6,3.2c1.3,0,2.6,0,3.9,0c2.2,0,4.4,0,6.6,0c0.7,0,1.4,0,2,0c0.9,0,1.6-0.7,1.6-1.6
+				C31.8,0.7,31,0,30.2,0c-1.3,0-2.6,0-3.9,0c-2.2,0-4.4,0-6.6,0c-0.7,0-1.4,0-2,0C16.7,0,16,0.7,16,1.6C16,2.4,16.7,3.2,17.6,3.2
+				L17.6,3.2z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M31.7,14.2c0-1.3,0-2.6,0-3.9c0-2.2,0-4.4,0-6.6c0-0.7,0-1.4,0-2C31.8,0.7,31,0,30.2,0
+				c-0.9,0-1.6,0.7-1.6,1.6c0,1.3,0,2.6,0,3.9c0,2.2,0,4.4,0,6.6c0,0.7,0,1.4,0,2c0,0.9,0.7,1.6,1.6,1.6C31,15.7,31.7,15,31.7,14.2
+				L31.7,14.2z" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M13.5,20.5c0.5-0.5,1.1-1.1,1.6-1.6c1.3-1.3,2.6-2.6,3.9-3.9c1.6-1.6,3.3-3.3,4.9-4.9
+				c1.5-1.5,3-3,4.5-4.4c0.9-0.9,1.8-1.8,2.6-2.6c0.1-0.1,0.2-0.2,0.2-0.2c0.6-0.6,0.6-1.6,0-2.2c-0.6-0.6-1.6-0.6-2.2,0
+				C28.5,1,28,1.6,27.4,2.1c-1.3,1.3-2.6,2.6-3.9,3.9c-1.6,1.6-3.3,3.3-4.9,4.9c-1.5,1.5-3,3-4.5,4.4c-0.9,0.9-1.8,1.8-2.6,2.6
+				c-0.1,0.1-0.2,0.2-0.2,0.2c-0.6,0.6-0.6,1.6,0,2.2C11.9,21.1,12.9,21.1,13.5,20.5L13.5,20.5z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block__item content-block__item--profile || js-printed-checker anim-fade">
+                        <img src="{% static 'images/mowellens/Amy-owner.jpg' %}" alt="Amy Duncan">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper || content-sectio || js-background-zone" data-bz-color="punch" id="contribute">
+                <div class="grid__container grid__container--large || summary">
+                    <a href="#believe" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item">Во что мы верим</a>
+                    <a href="#founder" class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item ">Основатель</a>
+                    <h2 class="title title--big title--has-slash || font-van || js-printed-checker || js-split-chars || summary__item summary__item--current ">Как мы вносим свой вклад</h2>
+                </div>
+
+                <div class="grid__container || content-block">
+
+                    <div class="content-block__title js-printed-checker">Выращивают на отлично</div>
+
+                    <div class="content-block__item || js-printed-checker || wysiwyg anim-fade">
+                        <h3 class="content-block__subtitle">1 ПРОДАННЫЙ ТОВАР <BR>= <BR>1$ ДОНАТА</h3>
+                        <p>
+                          Все продукты Mowellens выращиваются для хорошего, что означает, что $1 от каждого проданного предмета
+                          пожертвован организациям, приверженным поддержке инициатив, близких и дорогих нашей миссии; целостное
+                          образование в области здоровья и ухода за собой, семейные масштабы устойчивых фермеров и тех, кто создает
+                          значимый опыт для пациентов с опухолями головного мозга. Самая лучшая часть? Наши клиенты сами решают, как
+                          тратятся доллары.
+                        </p>
+
+                        <div class="content-block__bottom">
+
+                            <a href="" class="btn btn--white js-printed-checker ">
+                                <span class="btn__label">Читать больше</span>
+                                <span class="btn__label btn__label--hover" aria-hidden="true">Читать больше</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-block__item || js-printed-checker anim-fade">
+                        <form name="mc-embedded-subscribe-form" class="newsletter-box validate">
+                            <span class="newsletter-box__title">Присоединяйтесь к нашему оздоровительному сообществу</span>
+                            <p class="newsletter-box__desc">Получите полный доступ к нашему журналу Grown for Good wellness.</p>
+
+                            <div class="newsletter-box__form">
+                                <div class="newsletter-box__fields-container">
+                                    <input type="text" value="" name="FNAME" class="newsletter-box__input" placeholder="Ваше имя">
+                                    <input class="newsletter-box__input" type="email" name="EMAIL" required placeholder="Email" />
+                                </div>
+
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" tabindex="-1" value=""></div>
+
+                                <button type="submit" value="Subscribe" class="newsletter-box__btn" name="subscribe">
+                                    <span class="newsletter-box__icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 160 70" style="enable-background:new 0 0 160 70;" xml:space="preserve">
+                                            <polygon points="125,0 125,0 125,30 0,30 0,40 125,40 125,70 125,70 160,35 " />
+                                        </svg>
+                                    </span>
+                                    <div class="newsletter-box__btn-bg"></div>
+                                </button>
+                            </div>
+
+                            <div class="newsletter-box__loading"><span></span></div>
+                            <div class="newsletter-box__result"><span></span></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="{% url 'mowellens_fact' %}" class="cta-bottom__item js-printed-checker  ">Факты </a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+{% endblock %}

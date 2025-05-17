@@ -1,0 +1,370 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Товар 1{% endblock %}
+
+{% block content %}
+
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="single-product">
+
+            <div class="js-background-zone" data-bz-color="default">
+                <section class="page-single-product__header || psp-header" data-color="#7fa8f8">
+                    <div class="psp-header__title-wrapper">
+                        <div class="page-single-product__punchline || psp-header__punchline js-printed-checker">Категория</div>
+                        <h1 class="page-single-product__title || psp-header__title || product-color-text js-printed-checker">Название</h1>
+                        <div class="page-single-product__subtitle || psp-header__subtitle || product-color-text js-printed-checker">Краткий слоган</div>
+                    </div>
+
+                    <div class="psp-header__variations || psp-variations">
+                        <div class="psp-variations__item || psp-variation">
+                            <div class="psp-variation__title">15ml</div>
+                            <div class="psp-variation__price">$32.99</div>
+                        </div>
+                        <div class="psp-variations__item || psp-variation">
+                            <div class="psp-variation__title">100ml</div>
+                            <div class="psp-variation__price">$68.99</div>
+                        </div>
+                    </div>
+
+                    <div class="add-to-cart__container  js-add-to-cart">
+                        <div class="add-to-cart__inner">
+                            <div class="add-to-cart__btn-container">
+                                <span class="btn btn--green add-to-cart__btn js-add-to-cart-btn product-color-background " data-variation="true">
+                                    <span class="btn__label">В корзину</span>
+                                    <span class="btn__label btn__label--hover" aria-hidden="true">В корзину</span>
+                                </span>
+
+                                <ul class="add-to-cart-dropdown__list">
+                                    <li class="add-to-cart-dropdown__item " data-id="231">15ml</li>
+                                    <li class="add-to-cart-dropdown__item " data-id="525">100ml</li>
+                                </ul>
+                            </div>
+
+                            <div class="cart-confirmation cart-confirmation__container">
+                                <div class="cart-confirmation__content">
+                                    <span class="cart-confirmation__title font-van">Продукт в корзине!</span>
+
+                                    <div class="cart-confirmation__btn-container">
+                                        <span class="cart-confirmation__continue-shopping js-close-confirmation">Продолжить просмотр</span>
+
+                                        <a href="" class="btn btn--light  no-barba product-color">
+                                            <span class="btn__label">Перейти в корзину</span>
+                                            <span class="btn__label btn__label--hover" aria-hidden="true">Перейти в корзину</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% include "mowellens/code1.html" %}
+
+                </section>
+
+                <section class="photo-shrink js-shrink-scroll page-single-product__featured-image || psp-featured-image">
+                    <div class="psp-featured-image__add-to-cart-begin || js-add-to-cart-begin"></div>
+
+                    <div class="photo-shrink__panel photo-shrink__panel--left"></div>
+                    <div class="photo-shrink__panel photo-shrink__panel--right"></div>
+
+                    <div class="photo-shrink__img-container" id="photo-shrink">
+                        <img class="photo-shrink__img js-scroll psp-featured-image__img" data-speed="-1" src="{% static 'images/mowellens/img_detail.jpg' %}" alt="One for All">
+                    </div>
+                </section>
+
+                <section class="photo-shrink-ios">
+                    <img class="photo-shrink-ios__img" src="{% static 'images/mowellens/img_detail.jpg' %}" alt="One for All">
+                </section>
+
+                <section class="page-single-product__section page-single-product__descriptive || psp-section || psp-descriptive">
+                    <div class="grid__wrapper || content-section">
+                        <div class="grid__container || content-block || psp-descriptive__content">
+                            <h2 class="content-block__title || psp-section__title || psp-descriptive__title">Популярный товар</h2>
+
+                            <div class="psp-descriptive__text || wysiwyg || js-printed-checker || anim-fade--multiple">
+                                <p>Непревзойденная многозадачность; наша восхитительная смесь CBD, гардении, моринги, бобов тонка и облепихи,
+                                  деликатно пробуждает чувства к осознанному движению, а также может использоваться по всему лицу и телу, чтобы
+                                  принести энергию тусклой и безжизненной коже. Видите, мы говорили вам, что он может делать две вещи одновременно.
+                                </p>
+                                <p>Это все в одном актуальном оздоровительном масле не содержит парабенов, силиконов, сульфатов, фталатов,
+                                  искусственных красителей или ароматизаторов и формальдегидов, высвобождающих консерванты, потому что трудно жить своей
+                                  лучшей жизнью, когда вы покрыты синтетическими химикатами.
+                                </p>
+                            </div>
+
+                            <div class="psp-descriptive__visual">
+                                <img class="psp-descriptive__visual-img" src="{% static 'images/mowellens/img_detail2.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="grid__container || content-block || psp-descriptive__effects">
+                            <div>
+                                <span class="psp-descriptive__effects-title || content-block__subtitle">Что он может сделать</span>
+                                <ul class="psp-descriptive__effects-list || js-printed-checker || anim-fade--multiple">
+                                    <li>Облегчает стресс и напряжение</li>
+                                    <li>Стимулирует клеточную регенерацию</li>
+                                    <li>Приносит сияние тусклой и безжизненной коже</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="psp-descriptive__visual-mobile" src="{% static 'images/mowellens/img_detail2.jpg' %}" alt="">
+                </section>
+
+                <section class="page-single-product__section page-single-product__ingredients || psp-section || psp-ingredients">
+                    <div class="grid__wrapper || content-section">
+                        <div class="grid__container || content-block || psp-ingredients__content">
+                            <h2 class="content-block__title || psp-section__title || psp-ingredients__title">Из чего сделан</h2>
+
+                            <ul class="psp-ingredients__list || wysiwyg js-printed-checker || anim-fade">
+                                <li class="psp-ingredients__item">Almond Sweet Organic Oil</li>
+                                <li class="psp-ingredients__item">Coconut Oil</li>
+                                <li class="psp-ingredients__item">Organic Moringa Seed Oil</li>
+                                <li class="psp-ingredients__item">Sea Buckthorn</li>
+                                <li class="psp-ingredients__item">Hemp Extract</li>
+                                <li class="psp-ingredients__item">Gardenia Enfleurage</li>
+                                <li class="psp-ingredients__item">Tonka Bean</li>
+                                <li class="psp-ingredients__item">Balsam of Peru Oil</li>
+                                <li class="psp-ingredients__item">Amyris</li>
+                                <li class="psp-ingredients__item">Copaiba Balsam</li>
+                                <li class="psp-ingredients__item">Tangerine</li>
+                                <li class="psp-ingredients__item">Ylang-Ylang</li>
+                                <li class="psp-ingredients__item">Benzoin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="page-single-product__section page-single-product__specs || psp-section || psp-specs">
+                    <ul class="psp-specs__tabs || psp-specs-tabs">
+                        <li class="psp-specs-tabs__item psp-specs-tabs__item--active">15ml<span class="psp-specs-tabs__underline product-color-background"></span></li>
+                        <li class="psp-specs-tabs__item ">100ml<span class="psp-specs-tabs__underline product-color-background"></span></li>
+                    </ul>
+
+                    <div class="grid__wrapper || content-section">
+                        <div class="grid__container || content-block || psp-specs__content">
+                            <h2 class="content-block__title || psp-section__title || psp-specs__title">Технические характеристики</h2>
+
+                            <div class="psp-specs__variations-list">
+                                <div class="psp-specs__variation psp-specs__variation--current">
+                                    <div class="psp-specs__list">
+                                        <div class="psp-specs__item">Cannabidiol (CBD) is a natural constituent of hemp extract</div>
+                                        <div class="psp-specs__item">.5oz - 15ml</div>
+                                        <div class="psp-specs__item">170mg hemp extract per bottle</div>
+                                        <div class="psp-specs__item">
+                                            Not Edible
+                                            <div class="psp-specs__item-icons || product-color-icons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.24 12.24">
+                                                    <path d="M6.12,0a6.12,6.12,0,1,0,6.12,6.12A6.13,6.13,0,0,0,6.12,0Zm0,.5A5.61,5.61,0,0,1,10.22,10L7.64,8.23V7.28A3.08,3.08,0,0,0,8.93,5.16,2.74,2.74,0,0,0,7.48,2.09a.25.25,0,0,0-.34.23V7.89L5,6.45V5.26A1.22,1.22,0,0,0,6.18,4V2.33a.25.25,0,0,0-.5,0V4A.72.72,0,0,1,5,4.76V2.33a.25.25,0,0,0-.5,0V4.76A.72.72,0,0,1,3.82,4V2.33a.25.25,0,0,0-.5,0V4A1.22,1.22,0,0,0,4.5,5.26v.85L1,3.77A5.62,5.62,0,0,1,6.12.5ZM7.64,6.65V2.74a2.41,2.41,0,0,1,.79,2.34A2.7,2.7,0,0,1,7.64,6.65ZM.5,6.12A5.58,5.58,0,0,1,.83,4.24L4.5,6.72v3.5a.25.25,0,0,0,.5,0V7.05L7.14,8.49v1.72a.25.25,0,0,0,.5,0V8.83l2.21,1.48A5.61,5.61,0,0,1,.5,6.12Z" transform="translate(0 0)" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="psp-specs__item">
+                                            Low THC levels - less than 0.3% <div class="psp-specs__item-icons || product-color-icons">
+                                                <span class="psp-specs__thc">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="psp-specs__thc psp-specs__thc--active" style="width: 33.333333333333%">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="psp-specs__item psp-specs__item--small">Достаточно нежный для всех типов кожи.<br />
+                                            Только для наружного применения. Никогда не глотайте эфирные масла. Прекратите использование,
+                                            если возникает неблагоприятная реакция. *Эти заявления не были оценены продуктами и лекарствами. Этот продукт не
+                                            предназначен для диагностики, лечения, лечения или предотвращения каких-либо заболеваний.
+                                        </div>
+
+                                        <a href="https://mowellens.com/app/uploads/2018/02/oneForAll_15ml_batches.pdf" class="btn btn--light js-printed-checker psp-specs__tech-btn" target="_blank">
+                                            <span class="btn__label">Техническая информация</span>
+                                            <span class="btn__label btn__label--hover" aria-hidden="true">Техническая информация</span>
+                                        </a>
+                                    </div>
+
+                                    <figure class="psp-specs__figure anim-fade js-printed-checker">
+                                        <img src="{% static 'images/mowellens/oneForAll_product-compressor-1.jpg' %}" alt="" class="psp-specs__image">
+                                    </figure>
+                                </div>
+                                <div class="psp-specs__variation psp-specs__variation--current">
+                                    <div class="psp-specs__list">
+                                        <div class="psp-specs__item">Cannabidiol (CBD) is a natural constituent of hemp extract</div>
+                                        <div class="psp-specs__item">3.4oz - 100ml</div>
+                                        <div class="psp-specs__item">1300mg hemp extract per bottle</div>
+                                        <div class="psp-specs__item">
+                                            Not Edible
+                                            <div class="psp-specs__item-icons || product-color-icons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.24 12.24">
+                                                    <path d="M6.12,0a6.12,6.12,0,1,0,6.12,6.12A6.13,6.13,0,0,0,6.12,0Zm0,.5A5.61,5.61,0,0,1,10.22,10L7.64,8.23V7.28A3.08,3.08,0,0,0,8.93,5.16,2.74,2.74,0,0,0,7.48,2.09a.25.25,0,0,0-.34.23V7.89L5,6.45V5.26A1.22,1.22,0,0,0,6.18,4V2.33a.25.25,0,0,0-.5,0V4A.72.72,0,0,1,5,4.76V2.33a.25.25,0,0,0-.5,0V4.76A.72.72,0,0,1,3.82,4V2.33a.25.25,0,0,0-.5,0V4A1.22,1.22,0,0,0,4.5,5.26v.85L1,3.77A5.62,5.62,0,0,1,6.12.5ZM7.64,6.65V2.74a2.41,2.41,0,0,1,.79,2.34A2.7,2.7,0,0,1,7.64,6.65ZM.5,6.12A5.58,5.58,0,0,1,.83,4.24L4.5,6.72v3.5a.25.25,0,0,0,.5,0V7.05L7.14,8.49v1.72a.25.25,0,0,0,.5,0V8.83l2.21,1.48A5.61,5.61,0,0,1,.5,6.12Z" transform="translate(0 0)" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="psp-specs__item">
+                                            Low THC levels - less than 0.3% <div class="psp-specs__item-icons || product-color-icons">
+                                                <span class="psp-specs__thc">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="psp-specs__thc psp-specs__thc--active" style="width: 33.333333333333%">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.82 9.42">
+                                                        <g>
+                                                            <path d="M0,6.91a.25.25,0,0,1,.25-.25H10.57a.25.25,0,0,1,0,.5H.25A.25.25,0,0,1,0,6.91Z" />
+                                                            <path d="M5.16,6.91V.25a.25.25,0,0,1,.5,0V6.91a.25.25,0,0,1-.5,0Z" />
+                                                            <g>
+                                                                <path d="M2.88,9.17A.25.25,0,0,1,3,9l7-7a.25.25,0,0,1,.35.35l-7,7a.25.25,0,0,1-.43-.18Z" />
+                                                                <path d="M.46,2.2A.25.25,0,0,1,.88,2l7,7a.25.25,0,0,1-.35.35l-7-7A.25.25,0,0,1,.46,2.2Z" />
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="psp-specs__item psp-specs__item--small">Достаточно нежный для всех типов кожи.<br />
+                                            Только для наружного применения. Никогда не глотайте эфирные масла. Прекратите использование,
+                                            если возникает неблагоприятная реакция. *Эти заявления не были оценены продуктами и лекарствами. Этот продукт не
+                                            предназначен для диагностики, лечения, лечения или предотвращения каких-либо заболеваний.
+                                        </div>
+
+                                        <a href="https://mowellens.com/app/uploads/2018/02/oneForAll_15ml_batches.pdf" class="btn btn--light js-printed-checker psp-specs__tech-btn" target="_blank">
+                                            <span class="btn__label">Техническая информация</span>
+                                            <span class="btn__label btn__label--hover" aria-hidden="true">Техническая информация</span>
+                                        </a>
+                                    </div>
+
+                                    <figure class="psp-specs__figure anim-fade js-printed-checker">
+                                        <img src="{% static 'images/mowellens/oneForAll_product_100ml-compressor.jpg' %}" alt="" class="psp-specs__image">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div id="stop-btn-230" class="js-add-to-cart-end"></div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="" class="cta-bottom__item js-printed-checker  ">Другой товар
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+
+{% endblock %}

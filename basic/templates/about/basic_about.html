@@ -1,0 +1,101 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+<div class="page page--about">
+
+    <h1 class="a11y">О нас</h1>
+
+    <div class="hero hero--about">
+        <div class="hero__content">
+            <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+                <div class="hero__meta meta spacer-smedium no-wrap">
+                    <hr class="dash" />О нас
+                </div>
+                <h2 class="h1 hero__title" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.75">Дизайнерское агентство, созданное для создания современных брендов ...</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-toolkit">
+        <div class="toolkit-mod toolkit-mod--full-bleed ">
+            <div class="media-block media-block--xx-wide">
+                <div class="container container--xx-wide">
+                    <div class="media-block__inner spacer-large spacer-large-top" data-skrollex data-sk-group data-sk-mask>
+                        <div id="video-player-0" class="video-player" data-skrollex data-sk-group data-video-player data-push-hover>
+                            <div class="video-player__thumb video-player__thumb--video">
+                                <button class="btn btn--round btn--play btn--play-large btn--play-light" type="button" aria-label="Play Video" data-btn="play" data-btn-round data-skrollex data-sk-static data-sk-show-gutter-bottom="120">
+                                    <span class="btn__text">
+                                        <span class="btn__text-inner">Play</span>
+                                    </span>
+                                    <span class="icon">
+                                        <svg>
+                                            <use xlink:href="#icon-play"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="btn__bg"></span>
+                                </button>
+                                <div class="video-player__thumb-media" data-push-hover-child>
+                                    <video loop muted data-autoplay preload="none" playsinline data-skrollex data-sk-static>
+                                        <source src="https://basicagency.com/uploads/main/Home/digital-web-design-and-branding-homepage-agency-reel-preview-2.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                            <video class="video-player__video" preload="metadata" volume="0.5" data-skrollex data-sk-static data-sk-hide-offscreen data-sk-render-gutter-bottom="100" playsinline>
+                                <source src="https://basicagency.com/uploads/main/Home/digital-web-design-and-branding-homepage-agency-reel-3.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="section-label container container--content" data-skrollex data-sk-group>
+                    <span class="meta section-label__number">01 &mdash;</span>
+                    <span class="meta">Что мы делаем</span>
+                </div>
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <h2 class="spacer-small" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.4">We make the complex, simple</h2>
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Мы назвали наше агентство BASIC, потому что для нас лучшие бренды - это простые. Бренды процветают благодаря своей способности быть понятым. Люди тоже. </p>
+                            <p>Эта основная философия стоит в центре всего, что мы делаем. Бренды, которые мы создаем, и опыт, который мы создаем, живут на стыке ясности и удивления и позиционируются в культуре через общие ценности и идеалы. Простота, сделанная правильно - это то, что связывает бренд с его аудиторией, создает выигрышную стратегию и стимулирует наше создание изо дня в день.</p>
+                            <p><a href="{% url 'basic_services' %}">Изучите наши возможности</a><br /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include 'about/basic_partners.html' %}
+
+        {% include 'about/basic_awards.html' %}
+
+    </div>
+</div>
+
+<div id="footer-holder">
+    <div class="next-page-footer pointer" data-next-page-footer data-skrollex data-sk-static data-easy-click>
+        <div class="container next-page-footer__inner">
+            <div class="next-page-footer__text">
+                <div class="meta spacer-medium">Далее </div>
+                <h2 class="h3 spacer-medium">
+                    Новости
+                </h2>
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="{% url 'basic_news' %}" data-transition="mask">
+                <span class="a11y">Новости</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

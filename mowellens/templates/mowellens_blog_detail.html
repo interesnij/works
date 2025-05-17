@@ -1,0 +1,52 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Статья{% endblock %}
+
+{% block content %}
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="single-article">
+
+            <a href="{% url 'mowellens_blog' %}" class="page-single-article__btn-back || js-sticky-element ">Вернуться назад</a>
+
+            <div class="page-single-article__share-module js-sticky-element">
+                <div class="social-share social-share__wrapper js-share js-printed-checker">
+                    <div class="social-share__container">
+                        <div class="social-share__item social-share__item--placeholder">Поделиться</div>
+                        <div class="social-share__item social-share__item--share"><a href="#" data-network="facebook">Facebook</a> / <a href="#" data-network="twitter">Twitter</a> / <a href="#" data-network="linkedin">LinkedIn</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper js-background-zone" data-bz-color="default">
+                <header class="page-single-article__header || grid__container || text-align-center">
+                    <span class="page-single-article__date js-printed-checker || anim-fade">07/19/2019</span>
+                    <h1 class="page-single-article__title || title title--big || font-van || js-printed-checker || anim-fade">Morning Hemp Elixir</h1>
+
+                    <img src="{% static 'images/mowellens/moshoneygoodmylk3.png' %}" alt="" class="page-single-article__image js-printed-checker || anim-fade">
+                </header>
+
+                <main class="page-single-article__content js-printed-checker || anim-fade || wysiwyg">
+                    <p class="p1"><span class="s1">Мы продолжаем нашу серию конопли <a href="" target="_blank" rel="noopener"><span class="s2">Good Mylk Co.</span></a> и на этой неделе мы говорим обо всех вещах конопли и хорошего самочувствия. </span></p>
+
+
+                </main>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="{% url 'mowellens_blog_detail' %}" class="cta-bottom__item js-printed-checker  ">Далее <span class="cta-bottom__subtitle">Далее</span></a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+{% endblock %}

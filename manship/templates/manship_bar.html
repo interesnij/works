@@ -1,0 +1,104 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Наш бар{% endblock %}
+
+{% block content %}
+<div class="hero-wrapper hero-inner">
+
+    <img width="1400" height="500" src="{% static 'images/manship/header-images_0002_flames-copy-3.png' %}"
+         class="hero-img img-responsive wp-post-image"
+         alt=""
+         srcset="{% static 'images/manship/header-images_0002_flames-copy-3.png' %} 1400w,
+                 {% static 'images/manship/header-images_0002_flames-copy-3.png' %} 300w,
+                 {% static 'images/manship/header-images_0002_flames-copy-3.png' %} 768w,
+                 {% static 'images/manship/header-images_0002_flames-copy-3.png' %} 1024w"
+                 sizes="(max-width: 1400px) 100vw, 1400px" />
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Наш бар</h2>
+                <img src="{% static 'images/manship/illos-05.png' %}" alt="At The Bar" class="page-header-illustration">
+            </div>
+            <div class="page-content">
+
+                <style type='text/css'>
+                    #gallery-2 {
+                        margin: auto;
+                    }
+
+                    #gallery-2 .gallery-item {
+                        float: left;
+                        margin-top: 10px;
+                        text-align: center;
+                        width: 33%;
+                    }
+
+                    #gallery-2 img {
+                        border: 2px solid #cfcfcf;
+                    }
+
+                    #gallery-2 .gallery-caption {
+                        margin-left: 0;
+                    }
+
+                </style>
+                <div id='gallery-2' class='gallery galleryid-12 gallery-columns-3 gallery-size-full'>
+                    <dl class='gallery-item'>
+                        <dt class='gallery-icon landscape'>
+                            <img width="800" height="533" src="{% static 'images/manship/WC5N5349-e1472225316211.jpg' %}" class="attachment-full size-full" alt="The Manship Bar" />
+                        </dt>
+                    </dl>
+                    <dl class='gallery-item'>
+                        <dt class='gallery-icon portrait'>
+                            <img width="673" height="1008" src="{% static 'images/manship/IMG_2249.jpg' %}" class="attachment-full size-full" alt=""  sizes="(max-width: 673px) 100vw, 673px" />
+                        </dt>
+                    </dl><br style="clear: both" />
+                    <br style='clear: both' />
+                </div>
+
+                <h3>Порция коктейлей эпохи Сухого закона с изюминкой</h3>
+                <p>
+                  Наш бар ориентирован на обслуживание лучших произведенных вин, спиртных напитков и пива с выбором всех различных стилей,
+                  чтобы ослепить ваш вкус. Мы используем ежедневно свежевыжатые соки и домашние сиропы, чтобы сделать самые вкусные
+                  коктейли. Наше внимание к ремеслу и качественным ингредиентам-это то, что заставляет нас стоять отдельно от других баров.
+                  Специализируясь на коктейлях эпохи сухого закона с изюминкой, мы используем знания старого, чтобы революционизировать
+                  нашу торговлю
+                  <a href="{% url 'manship_drink' %}">Нажмите сюда</a> чтобы увидеть некоторые из наших фирменных коктейлей.</p>
+            </div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page"><a>Наш бар</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                          <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                          <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                          <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                          <li><a href="{% url 'manship_news' %}">Новости</a></li>
+                          <li><a href="{% url 'manship_about' %}">О нас</a></li>
+                          <li><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                          <li><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+
+
+<div class="vert"></div>
+
+
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

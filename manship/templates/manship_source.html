@@ -1,0 +1,181 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Ресурсы{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrapper hero-inner">
+
+    <img width="1400" height="500" src="{% static 'images/manship/header-images_0006_flames-copy-7.png' %}"
+    class="hero-img img-responsive wp-post-image"
+    alt=""
+    srcset="
+    {% static 'images/manship/header-images_0006_flames-copy-7.png' %} 1400w,
+    {% static 'images/manship/header-images_0006_flames-copy-7.png' %} 300w,
+    {% static 'images/manship/header-images_0006_flames-copy-7.png' %} 768w,
+    {% static 'images/manship/header-images_0006_flames-copy-7.png' %} 1024w"
+    sizes="(max-width: 1400px) 100vw, 1400px" />
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Ресурсы</h2>
+                <img src="{% static 'images/manship/illos-03.png' %}" alt="Sources" class="page-header-illustration">
+            </div>
+            <div class="page-content">
+                <p>
+                  Наш ресторан стремится к местному поиску свежих, качественных ингредиентов, используемых в нашем ресторане.
+                  Использование продуктов от компаний в Миссисипи, Луизиане, Алабаме и Теннесси добавляет Южное чутье к нашей
+                  средиземноморской кухне. Южные сезонные продукты, мясо, сыры, хлеб, масла, уксус и многое другое превращает
+                  классические блюда Manship, впечатляя даже самых выдающихся гурманов.
+                </p>
+                <div id="leftColumn">
+                    <div class="menu">
+                        <div class="table-responsive">
+                            <table class="table table-responsive aligncenter" style="height: 777px;" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td><strong>ПРОДУКЦИЯ</strong></td>
+                                        <td><strong>КОМПАНИИ</strong></td>
+                                        <td><strong>ЛОКАЦИЯ</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Хлеб</td>
+                                        <td><a>Gil’s Bread</a></td>
+                                        <td>Ridgeland, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Измельченные Продукты</td>
+                                        <td><a>Delta Grind</a></td>
+                                        <td>Water Valley, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Грибы Шитаке</td>
+                                        <td><a>Mississippi Natural Products</a></td>
+                                        <td>New Hebron, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мед</td>
+                                        <td><a>Mississippi Bees</a></td>
+                                        <td>Flora, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Итальянская продукция</td>
+                                        <td><a>Nor-Joe Import Company</a></td>
+                                        <td>New Orleans, LA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Средиземноморские Продукты</td>
+                                        <td><a>Aladdin Grocery</a></td>
+                                        <td>Jackson, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Сыры/Колбасные Изделия</td>
+                                        <td><a>Galler Foods</a></td>
+                                        <td>Memphis, TN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Импортные масла и уксусы</td>
+                                        <td><a>Vom Fass</a></td>
+                                        <td> New Orleans, LA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Овощи</td>
+                                        <td><a>Reyer Farms</a></td>
+                                        <td>Lena, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Говядина, баранина и свинина свободного выгула</td>
+                                        <td><a>Home Place Pastures</a></td>
+                                        <td>Como, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Традиционные продукты</td>
+                                        <td><a>Amorphous Gardens</a></td>
+                                        <td>Canton, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кофе</td>
+                                        <td><a>Bean Fruit Coffee Co.</a></td>
+                                        <td>Jackson, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кофе Холодного Заваривания</td>
+                                        <td><a>Mississippi Cold Drip</a></td>
+                                        <td>Jackson, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Американский сом</td>
+                                        <td><a>Simmons Catfish</a></td>
+                                        <td>Yazoo City, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Гидропонная продукция</td>
+                                        <td><a>Salad Days</a></td>
+                                        <td>Flora, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Овощи</td>
+                                        <td><a>Two Dog Farms</a></td>
+                                        <td>Flora, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Водка, Джин, Виски</td>
+                                        <td><a>Bottle Tree Beverage</a></td>
+                                        <td>Madison, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Луизианская Вагю Говядина</td>
+                                        <td>Raines Wagyu</td>
+                                        <td>Flora, MS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мясо, птица и морепродукты</td>
+                                        <td><a>Evans Meats</a></td>
+                                        <td>Birmingham, AL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Блюда Из Морепродуктов</td>
+                                        <td><a>New Orleans Fish House</a></td>
+                                        <td>New Orleans, LA</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vert"></div>
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page"><a>Ресурсы</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                          <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                          <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                          <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                          <li><a href="{% url 'manship_news' %}">Новости</a></li>
+                          <li><a href="{% url 'manship_about' %}">О нас</a></li>
+                          <li><a href="{% url 'manship_gallery' %}">Галерея</a></li>
+                          <li><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

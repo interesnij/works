@@ -1,0 +1,39 @@
+{
+    "status": 200,
+    "articles": [{
+        "url": "https:\/\/mowellens.com\/balancing-life\/",
+        "title": "Balancing Life: The Plant That Helps Keep Us Sane",
+        "date": 1559804426,
+        "date-formated": "06\/06\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/06\/hutomo-abrianto-576207-unsplash.png",
+        "excerpt": "\r\n\r\nIn an age when everyday living can seem chaotic and overwhelming, many people are looking for ea..."
+    }, {
+        "url": "https:\/\/mowellens.com\/why-wellness-is-the-new-black\/",
+        "title": "Why Wellness is the New Black",
+        "date": 1557306122,
+        "date-formated": "08\/05\/2019",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2019\/05\/nordwood-themes-535273-unsplash-1.jpg",
+        "excerpt": "Diving into Mental Health Awareness Month, we\u2019re talking about the thing that goes hand-in-hand wi..."
+    }, {
+        "url": "https:\/\/mowellens.com\/lab-tested-cbd\/",
+        "title": "That Good Good &#8211; A checklist for clean products.",
+        "date": 1541493618,
+        "date-formated": "06\/11\/2018",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2018\/02\/03-compressor-1.jpg",
+        "excerpt": "Navigating the 2018 cannabis wellness market can be a bit tricky with new brands popping up and inno..."
+    }, {
+        "url": "https:\/\/mowellens.com\/five-benefits-sweet-almond-oil-skin-care\/",
+        "title": "Five Benefits of Sweet Almond Oil for Skin Care",
+        "date": 1539183256,
+        "date-formated": "10\/10\/2018",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2018\/10\/AlmondOil1.jpg",
+        "excerpt": "&nbsp;\r\n\r\nCleopatra liked to bathe in a luxurious mix of sweet almond oil, honey and the milk of a y..."
+    }, {
+        "url": "https:\/\/mowellens.com\/woods-heal-forest-bathing\/",
+        "title": "The Woods Heal: Why Forest Bathing?",
+        "date": 1531925821,
+        "date-formated": "18\/07\/2018",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2018\/07\/Screen-Shot-2018-07-18-at-10.15.51-AM.png",
+        "excerpt": "\"You\u2019re surrounded by steam rising off the mineral water in a claw foot bath, rose petals floating..."
+    }]
+}

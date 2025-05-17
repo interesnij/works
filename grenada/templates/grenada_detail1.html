@@ -1,0 +1,134 @@
+{% extends "grenada/base_2.html" %}
+{% load static %}
+
+{% block title %}Проект 1{% endblock %}
+
+{% block content %}
+
+<div id="main">
+
+            	<!-- Hero Section -->
+                <div id="hero" class="has-image">
+                    <div id="hero-styles" class="parallax-onscroll">
+                        <div id="hero-caption" class="text-align-center">
+                            <div class="inner">
+                                <h1 class="hero-title">Sonya <span>Swimsuit</span></h1>
+                                <h2 class="hero-subtitle">The more you dream, the farther you get</h2>
+
+                                <div class="scroll-down-wrap no-border link">
+                                    <a href="#" class="section-down-arrow ">
+                                        <svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+                                            <path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hero-bg-wrapper">
+                    <div id="hero-image-parallax">
+                        <div id="hero-bg-image" style="background-image:url({% static 'grenada/images/01hero.jpg' %})"></div>
+                    </div>
+                </div>
+                <!--/Hero Section -->
+
+                <!-- Main Content -->
+                <div id="main-content">
+                	<div id="main-page-content">
+
+                     	<!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <div class="one_third has-animation" data-delay="10">
+                                	<h4>Find your perfect summer swimsuit with Sonya Sculpture Swimwear.</h4>
+                                </div>
+
+                                <div class="two_third has-animation last" data-delay="50">
+                                    <p>Want to take a dip but don’t feel ready to embrace a bare-faced look just yet? No problem.
+                                       Swim-proof your holiday make-up with our expert tips. <br><br>
+                                       Waterproof and water-resistant make-up has come on leaps and bounds since the limited
+                                       options of old. Want colour, glamour and staying power? You’ve got it. Try a minimal
+                                       look if you’re planning on a serious front crawl. A gentle swim on the other hand?
+                                       You can be a bit more adventurous. Follow our insider tips for make-up that will
+                                       outlast your swim session. With not a smudge in sight…</p>
+                                    <a href="" target="_blank" class="link"><span>Read More</span></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="50" >
+                                    <img src="{% static 'grenada/images/ss01.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom has-animation" data-delay="10">
+
+                            <div class="container">
+
+                                <div class="slider">
+                                    <div class="slide"><img src="{% static 'grenada/images/ss01.jpg' %}" alt="Image Title"></div>
+                                    <div class="slide"><img src="{% static 'grenada/images/ss02.jpg' %}" alt="Image Title"></div>
+                                    <div class="slide"><img src="{% static 'grenada/images/ss03.jpg' %}" alt="Image Title"></div>
+                                    <div class="slide"><img src="{% static 'grenada/images/ss04.jpg' %}" alt="Image Title"></div>
+                                    <div class="slide"><img src="{% static 'grenada/images/ss05.jpg' %}" alt="Image Title"></div>
+                                    <div class="slide"><img src="{% static 'grenada/images/ss06.jpg' %}" alt="Image Title"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="50" >
+                                    <img src="{% static 'grenada/images/ss04.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                    </div>
+                	<!--/Main Page Content -->
+
+                    <!-- Project Navigation -->
+                    <div id="project-nav">
+                        <div class="next-project-wrap">
+                            <div class="next-project-image" style="background-image:url({% static 'grenada/images/02hero.jpg' %})"></div>
+                            <a class="next-project-title next-ajax-link-project hide-ball " data-type="page-transition" href="{% url 'grenada_detail2' %}">
+                                <div class="main-title">Novaroom <span>Design</span></div>
+                                <div class="main-subtitle">Next Project</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/Project Navigation -->
+
+                </div>
+                <!--/Main Content -->
+            </div>
+
+{% endblock %}

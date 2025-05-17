@@ -1,0 +1,76 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="{% static 'estate/styles/material-design.css' %}" type='text/css' media='all' />
+		<link rel="stylesheet" href="{% static 'estate/styles/ilightbox.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/skin.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/style.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/font-awesome.min.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/main.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/main2.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'estate/styles/main3.css' %}" type="text/css" />
+
+    <title>{% block title %}{% endblock %}</title>
+
+		<script src="{% static 'estate/scripts/jquery.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/jquery-migrate.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/jplayer.playlist.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/jquery.jplayer.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/modernizr.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/detectizr.js' %}" type="text/javascript" /></script>
+	</head>
+	<body class="">
+		<section data-module="loader" data-type="hidden"></section>
+		<div id="page" class="site" data-claim_header="EXTERIOR LIVING">
+
+		{% url 'esteta_home' as collect_url %}
+		{% url 'esteta_collect_detail' as collect_detail_url %}
+		{% url 'esteta_design_detail' as design_detail_url %}
+		{% url 'esteta_proect_detail' as proect_detail_url %}
+
+		{% if collect_url == current_url %}
+    	{% include "esteta/navbar.html" %}
+		{% endif %}
+
+		{% if esteta_proect_detail == current_url %}
+    	{% include "esteta/base_proect_detail.html" %}
+		{% endif %}
+
+		{% if collect_detail_url == current_url %}
+    	{% include "esteta/navbar_collect_detail.html" %}
+		{% endif %}
+
+		{% if design_detail_url == current_url %}
+    	{% include "esteta/navbar_design_detail.html" %}
+		{% endif %}
+
+		{% block content %}
+
+		{% endblock %}
+
+		{% include "esteta/footer.html" %}
+	  </div>
+		<script src="{% static 'estate/scripts/jquery.iframe-transport.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/Media.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/effect.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/effect-fade.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/estate/estate/jquery.form.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/scripts.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/material-components-web.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/autosize.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/material-design.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/jquery.min.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/main.js' %}" type="text/javascript" /></script>
+		<script src="{% static 'estate/scripts/wp-embed.min.js' %}" type="text/javascript" /></script>
+
+		{% block script %}
+
+		{% endblock %}
+	</body>
+
+</html>

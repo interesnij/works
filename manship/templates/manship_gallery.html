@@ -1,0 +1,70 @@
+{% extends "manship/base.html" %}
+{% load static %}
+{% block title %}Галерея{% endblock %}
+
+{% block content %}
+<div class="hero-wrapper hero-inner">
+
+    <img width="1400" height="500" src="{% static 'images/manship/header-images_0000_flames.png' %}" class="hero-img img-responsive wp-post-image" alt="" sizes="(max-width: 1400px) 100vw, 1400px" />
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div id="content" class="fadeup">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Галерея</h2>
+                <img src="{% static 'images/manship/illos-16.png' %}" alt="Photo Gallery" class="page-header-illustration">
+            </div>
+            <div class="page-content">
+                <div id="sb_instagram" class="sbi sbi_mob_col_auto sbi_col_4" style="width:100%; padding-bottom: 10px; "
+                     data-id="270864960"
+                     data-num="20"
+                     data-res="auto"
+                     data-cols="4"
+                     data-options='{&quot;sortby&quot;: &quot;none&quot;, &quot;showbio&quot;: &quot;false&quot;,&quot;feedID&quot;: &quot;270864960&quot;, &quot;headercolor&quot;: &quot;&quot;, &quot;imagepadding&quot;: &quot;5&quot;,&quot;mid&quot;: &quot;M2E4MWE5Zg==&quot;, &quot;disablecache&quot;: &quot;false&quot;, &quot;sbiCacheExists&quot;: &quot;false&quot;,&quot;callback&quot;: &quot;MDVmOTU3OTBiOTdmN.DhlMWI5ZjU4Y2U2MmViZDQyZGY=&quot;, &quot;sbiHeaderCache&quot;: &quot;false&quot;}'>
+                    <div id="sbi_images" style="padding: 5px;">
+                        <div class="sbi_loader"></div>
+                    </div>
+                    <div id="sbi_load" class="sbi_hidden">
+                      <a class="sbi_load_btn" href="javascript:void(0);" style="display: none; "><span class="sbi_btn_text">Показать еще...</span>
+                        <span class="sbi_loader sbi_hidden"></span>
+                      </a><span class="sbi_follow_btn">
+                      <a href="https://www.instagram.com/" style="" target="_blank" rel="noopener"><i class="fa fab fa-instagram"></i>Instagram</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="vert"></div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+        <div class="sm-12 lg-8">
+            <div class="sub-nav">
+                <div class="sidebar widget-area" role="complementary">
+                  <aside id="madg_subpage-2" class="widget widget_madg_subpage">
+                      <h3 class="special text-center">Все разделы</h3>
+                      <ul class="subpage-nav">
+                          <li class="active-page"><a>Галерея</a></li>
+                      </ul>
+                      <ul class="subpage-nav children">
+                          <li><a href="{% url 'manship_kitchen' %}">Наша кухня</a></li>
+                          <li><a href="{% url 'manship_bar' %}">Наш бар</a></li>
+                          <li><a href="{% url 'manship_awwards' %}">Награды</a></li>
+                          <li><a href="{% url 'manship_people' %}">Персонал</a></li>
+                          <li><a href="{% url 'manship_story' %}">Наша история</a></li>
+                          <li><a href="{% url 'manship_news' %}">Новости</a></li>
+                          <li><a href="{% url 'manship_about' %}">О нас</a></li>
+                          <li><a href="{% url 'manship_source' %}">Ресурсы</a></li>
+                      </ul>
+                  </aside>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+<script>
+  var sb_instagram_js_options = {"sb_instagram_at":"270864960.M2E4MWE5Zg==.MDVmOTU3OTBiOTdmN.DhlMWI5ZjU4Y2U2MmViZDQyZGY=","font_method":"svg"};
+  var sbiajaxurl = "";
+</script>
+{% endblock %}

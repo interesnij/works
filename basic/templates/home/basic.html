@@ -1,0 +1,20 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+            <div class="page page--home">
+
+                {% include 'home/banner.html' %}
+
+                {% include 'home/news.html' %}
+
+                {% include 'home/servises.html' %}
+
+              </div>
+
+      {% include 'home/footer.html' %}
+
+{% endblock %}

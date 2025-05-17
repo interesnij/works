@@ -1,0 +1,94 @@
+{% extends "grenada/base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<div id="main">
+
+                <div id="main-content" class="split-slider full">
+
+                    <div id="showcase-holder" class="disabled">
+                        <div id="showcase-slider" class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide active" data-number="01" data-slide="1">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail1' %}">
+                                    	<div class="slide-title" data-number="01"><span>Sonya</span></div>
+                                    </a>
+                                    <div class="slide-caption" data-slide-caption="1">The more you dream, the farther you get</div>
+                                </div>
+
+                                <div class="swiper-slide" data-number="02" data-slide="2">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail2' %}">
+                                    	<div class="slide-title" data-number="02"><span>Novaroom</span></div>
+                                    </a>
+                                    <div class="slide-caption" data-slide-caption="2">Modern lighting and furniture for your home</div>
+                                </div>
+
+                                <div class="swiper-slide" data-number="03" data-slide="3">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail3' %}">
+                                    	<div class="slide-title" data-number="03"><span>Gold Man</span></div>
+                                    </a>
+                                   	<div class="slide-caption" data-slide-caption="3">The golden passage beyond no man's land</div>
+                                </div>
+
+                                <div class="swiper-slide" data-number="04" data-slide="4">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail4' %}">
+                                    	<div class="slide-title" data-number="04"><span>Born Wild</span></div>
+                                    </a>
+                                    <div class="slide-caption" data-slide-caption="4">This means to serve someone and look up to them</div>
+                                </div>
+
+                                <div class="swiper-slide" data-number="05" data-slide="5">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail5' %}">
+                                    	<div class="slide-title" data-number="05"><span>Kitchen</span></div>
+                                    </a>
+                                    <div class="slide-caption" data-slide-caption="5">Create your perfect look with our modern furniture</div>
+
+                                </div>
+
+                                <div class="swiper-slide" data-number="06" data-slide="6">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail6' %}">
+                                   		<div class="slide-title" data-number="06"><span>Baseball</span></div>
+                                    </a>
+                                   	<div class="slide-caption" data-slide-caption="6">Let the game proceed on the battlefield</div>
+
+                                </div>
+
+                                <div class="swiper-slide " data-number="07" data-slide="7">
+                                    <a class="ajax-link-project" data-type="page-transition" href="{% url 'grenada_detail7' %}">
+                                    	<div class="slide-title" data-number="07"><span>The Biker</span></div>
+                                    </a>
+                                    <div class="slide-caption" data-slide-caption="7">You do not need a therapist if you own a motorcycle</div>
+                            	</div>
+
+                        	 </div>
+                        </div>
+                    </div>
+
+                    <div id="image-slider">
+                    	<div class="image-slider-wrapper">
+                            <div class="slider-img" data-slide="1" data-src="{% static 'grenada/images/01hero.jpg' %}"></div>
+                            <div class="slider-img" data-slide="2" data-src="{% static 'grenada/images/02hero.jpg' %}"></div>
+                            <div class="slider-img" data-slide="3" data-src="{% static 'grenada/images/03hero.jpg' %}">
+                            	<div class="hero-video-wrapper">
+                                    <video loop muted class="bgvid">
+                                        <source src="http://mathematic.tv/wp-content/uploads/2017/02/GESA_HATE_OR_GLORY_loop-preview.mp4" type="video/mp4">
+										<source src="http://mathematic.tv/wp-content/uploads/2017/02/GESA_HATE_OR_GLORY_loop-preview.webm" type="video/webm">
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="slider-img" data-slide="4" data-src="{% static 'grenada/images/04hero.jpg' %}"></div>
+                            <div class="slider-img" data-slide="5" data-src="{% static 'grenada/images/05hero.jpg' %}"></div>
+                            <div class="slider-img" data-slide="6" data-src="{% static 'grenada/images/06hero.jpg' %}"></div>
+                            <div class="slider-img" data-slide="7" data-src="{% static 'grenada/images/07hero.jpg' %}"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+{% endblock %}

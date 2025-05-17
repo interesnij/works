@@ -1,0 +1,165 @@
+{% extends "grenada/base_2.html" %}
+{% load static %}
+
+{% block title %}Проект 7{% endblock %}
+
+{% block content %}
+
+<div id="main">
+
+            	<!-- Hero Section -->
+                <div id="hero" class="has-image">
+                    <div id="hero-styles" class="parallax-onscroll">
+                        <div id="hero-caption" class="text-align-center">
+                            <div class="inner">
+                                <h1 class="hero-title">The <span>Biker</span></h1>
+                                <h2 class="hero-subtitle">You do not need a therapist if you own a motorcycle</h2>
+
+                                <div class="scroll-down-wrap no-border link">
+                                    <a href="#" class="section-down-arrow ">
+                                        <svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+                                            <path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hero-bg-wrapper">
+                    <div id="hero-image-parallax">
+                        <div id="hero-bg-image" style="background-image:url({% static 'grenada/images/07hero.jpg' %})"></div>
+                    </div>
+                </div>
+                <!--/Hero Section -->
+
+                <!-- Main Content -->
+                <div id="main-content">
+                	<div id="main-page-content">
+
+                     	<!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <div class="one_third has-animation" data-delay="10">
+                                	<h4>The only way you know you love someone is when you love them as much as your machine</h4>
+                                </div>
+
+                                <div class="two_third has-animation last" data-delay="50">
+                                    <p>Incidentally, not even half the folks that call themselves Bikers actually live the lifestyle of one. And we don’t blame them for it. It’s just the way of the world. It ties you down. Work, career, relationships, responsibility, everything designed to keep you grounded and keep you balanced. <br><br>On a bike however, it is impossible to attain balance while standing still. You gotta keep moving. The life of a biker is the living embodiment of that statement. Never stuck or tied down, always in a state of departure and arrival.</p>
+                                    <a href="" target="_blank" class="link"><span>Read More</span></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="50" >
+                                    <img src="{% static 'grenada/images/mb01.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_top">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/mb02.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/mb03.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_bottom">
+
+                            <div class="container">
+
+                                <div class="one_half">
+
+                                    <figure class="has-animation" data-delay="10" >
+                                        <img src="{% static 'grenada/images/mb04.jpg' %}" alt="Image Title">
+                                    </figure>
+
+                                </div>
+
+                                <div class="one_half last">
+
+                                    <figure class="has-animation" data-delay="20" >
+                                        <img src="{% static 'grenada/images/mb05.jpg' %}" alt="Image Title">
+                                    </figure>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="50" >
+                                    <img src="{% static 'grenada/images/mb06.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                    </div>
+                	<!--/Main Page Content -->
+
+                    <!-- Project Navigation -->
+                    <div id="project-nav">
+                        <div class="next-project-wrap">
+                            <div class="next-project-image" style="background-image:url({% static 'grenada/images/01hero.jpg' %})"></div>
+                            <a class="next-project-title next-ajax-link-project hide-ball " data-type="page-transition" href="{% url 'grenada_detail1' %}">
+                                <div class="main-title">Sonya <span>Swimsuit</span></div>
+                                <div class="main-subtitle">Next Project</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/Project Navigation -->
+
+                </div>
+                <!--/Main Content -->
+            </div>
+
+{% endblock %}

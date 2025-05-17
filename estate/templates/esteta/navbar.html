@@ -1,0 +1,145 @@
+{% load static %}
+
+<header class="site-header" role="banner" data-module="header" data-type="with_text"  data-scrollable='true' >
+  <div class="cont">
+      <a class="logo" href="{% url 'esteta_home' %}">
+        <h4>Estate</h4>
+      </a>
+      <div class="burger-menu" data-module="nav-button" data-type="burger_cross"  data-bcross-layout='go_right' >
+        <div class="container_burger">
+            <div data-container="line">
+              <div data-line="top"><span></span></div>
+              <div data-line="middle"><span></span></div>
+              <div data-line="bottom"><span></span></div>
+            </div>
+            <div data-container="cross">
+              <div data-line="left"><span></span></div>
+              <div data-line="right"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social">
+            <div class="social-container">
+                <div class="social-content">
+                    <b>Мы в сетях</b>
+                    <a class="base-icon base-icon-facebook" href="" target="_blank"></a>
+                    <a class="base-icon base-icon-instagram" href="" target="_blank"></a>
+                    <a href="" target="_blank">Подписка</a>
+                </div>
+            </div>
+          </div>
+      </div>
+  </header>
+  <div id="menu_cover"></div>
+  <nav data-module="nav" data-type="top_side"  data-enter=''  id="ml-menu" class="menu">
+    <div class="nav_cont">
+      <div class="menu__wrap">
+        <ul data-menu="main" class="menu__level">
+            <li class="menu__item  menu-item menu-item-type-post_type menu-item-object-page">
+              <a class="menu__link"  href="{% url 'esteta_brand' %}"  title="Бренд" target=""><i>01</i><b>Бренд<span></span></b></a>
+            </li>
+            <li class="menu__item have_sub  menu-item menu-item-type-custom menu-item-object-custom">
+              <a class="menu__link"  data-submenu="submenu-814"  href="#"  title="Продукты" target=""><i>02</i><b>Продукты<span></span></b></a>
+            </li>
+            <li class="menu__item have_sub  menu-item menu-item-type-post_type_archive menu-item-object-_cty_collection">
+              <a class="menu__link"  data-submenu="submenu-96"  href="#"  title="Коллекция" target=""><i>03</i><b>Коллекция<span></span></b></a>
+            </li>
+            <li class="menu__item  menu-item menu-item-type-post_type_archive menu-item-object-_cty_designer">
+              <a class="menu__link"  href="{% url 'esteta_design' %}"  title="Дизайнеры" target=""><i>04</i><b>Дизайнеры<span></span></b></a>
+            </li>
+            <li class="menu__item  menu-item menu-item-type-post_type_archive menu-item-object-_cty_project">
+              <a class="menu__link"  href="{% url 'esteta_proect' %}"  title="Проекты" target=""><i>05</i><b>Проекты<span></span></b></a>
+            </li>
+            <li class="menu__item small-item menu-item menu-item-type-post_type menu-item-object-page">
+              <a class="menu__link"  href="{% url 'esteta_pdf' %}"  title="Загрузить" target=""><i>06</i><b>Загрузить<span></span></b></a>
+            </li>
+            <li class="menu__item small-item menu-item menu-item-type-post_type menu-item-object-page menu-item-type-taxonomy menu-item-object-category menu-item-type-custom menu-item-object-custom">
+              <a class="menu__link"  href=""  title="Подписка" target=""><i>07</i><b>Подписка<span></span></b></a>
+            </li>
+            <li class="menu__item small-item menu-item menu-item-type-post_type menu-item-object-page">
+              <a class="menu__link"  href=""  title="Контакты" target=""><i>08</i><b>Контакты<span></span></b></a>
+            </li>
+        </ul>
+      </div>
+      <div class="second-level-content">
+          <ul data-menu="submenu-814" class="menu__level">
+              <li class="menu__item sub_menu_item  menu-item menu-item-type-taxonomy menu-item-object-_cta_types">
+                <a class="menu__link"  href="{% url 'esteta_product' %}" title="Продукт 1" target=""><b>Продукт 1<span></span></b></a>
+              </li>
+              <li class="menu__item sub_menu_item  menu-item menu-item-type-taxonomy menu-item-object-_cta_types">
+                <a class="menu__link"  href="{% url 'esteta_product' %}" title="Продукт 2" target=""><b>Продукт 2<span></span></b></a>
+              </li>
+              <li class="menu__item sub_menu_item  menu-item menu-item-type-taxonomy menu-item-object-_cta_types">
+                <a class="menu__link"  href="{% url 'esteta_product' %}" title="Продукт 3" target=""><b>Продукт 3<span></span></b></a>
+              </li>
+              <li class="menu__item sub_menu_item  menu-item menu-item-type-taxonomy menu-item-object-_cta_types">
+                <a class="menu__link"  href="{% url 'esteta_product' %}" title="Продукт 4" target=""><b>Продукт 4<span></span></b></a>
+              </li>
+              <li class="menu__item sub_menu_item  menu-item menu-item-type-taxonomy menu-item-object-_cta_types">
+                <a class="menu__link"  href="{% url 'esteta_product' %}" title="Продукт 5" target=""><b>Продукт 5<span></span></b></a>
+              </li>
+            </ul>
+
+            <ul data-menu="submenu-96" class="menu__level">
+                <li class="menu__item sub_menu_item  menu-item menu-item-type-post_type menu-item-object-_cty_mood">
+                  <a class="menu__link"  href="{% url 'esteta_collect_detail' %}" title="Коллекция 1" target=""><b>Коллекция 1<span></span></b></a>
+                </li>
+                <li class="menu__item sub_menu_item  menu-item menu-item-type-post_type menu-item-object-_cty_mood">
+                  <a class="menu__link"  href="{% url 'esteta_collect_detail' %}" title="Коллекция 2" target=""><b>Коллекция 2<span></span></b></a>
+                </li>
+              </ul>
+              </div>
+              <ul class="nav-legal nav-lang">
+                <li class="active-lang"><a href="">русский</a></li>
+                <li ><a href="">english</a></li>
+              </ul>
+              <div class="menu__secondary">
+                <address>
+                  <div class="string_container text text_contact_address">
+                    <div class="string"><p>Адрес</p>
+                      <p>ул. Такая-то</p>
+                      <p>Россия</p>
+                    </div>
+                  </div>
+                </address>
+                <div class="contact2">
+                  <div class="string_container">
+                    <p class="string string_contact_phone">T. +77777777</p>
+                  </div>
+                  <div class="string_container">
+                    <p class="string string_contact_fax">Ф. +77777777</p>
+                  </div>
+                  <div class="string_container">
+                    <p class="string string_contact_mail">
+                      <a href="mailto:info@exteta.it">почта</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="contact3">
+                  <div class="string_container">
+                    <p class="string string_contact_piva">выпустил</p>
+                  </div>
+                  <div class="string_container">
+                    <p class="string string_contact_copyright">такой-то</p>
+                  </div>
+                </div>
+                <ul class="nav-legal">
+                  <li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822">
+                    <a href="">Политика безовасности</a>
+                  </li>
+                  <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91">
+                    <a href="">Условия использования</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="linee_bck">
+            <span class='even line_1'></span>
+            <span class='odd line_2'></span>
+            <span class='even line_3'></span>
+            <span class='odd line_4'></span>
+            <span class='even line_5'></span>
+          </div>
+          <div class="detect top_side_mob"></div>
+        </nav>

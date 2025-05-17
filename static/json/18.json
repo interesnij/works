@@ -1,0 +1,18 @@
+{
+    "status": 200,
+    "articles": [{
+        "url": "https:\/\/mowellens.com\/lab-tested-cbd\/",
+        "title": "That Good Good &#8211; A checklist for clean products.",
+        "date": 1541493618,
+        "date-formated": "06\/11\/2018",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2018\/02\/03-compressor-1.jpg",
+        "excerpt": "Navigating the 2018 cannabis wellness market can be a bit tricky with new brands popping up and inno..."
+    }, {
+        "url": "https:\/\/mowellens.com\/why-i-started-cannabis-company\/",
+        "title": "Is CBD for me? Why I started a CBD company.",
+        "date": 1520528813,
+        "date-formated": "08\/03\/2018",
+        "image": "https:\/\/mowellens.com\/app\/uploads\/2018\/02\/DSC4801.jpg",
+        "excerpt": "Some people may wonder why I decided to start a CBD company.\u00a0\r\n\r\nIn 2012, my husband was diagnosed ..."
+    }]
+}

@@ -1,0 +1,58 @@
+{% extends "esteta/base.html" %}
+{% load static %}
+{% block title %}Отдельный дизайнер{% endblock %}
+
+{% block content %}
+
+<div id="content" class="site-content">
+    <div id="primary" class="content-area single_post single_collection">
+        <main id="main" class="site-main" role="main">
+            <div class="row">
+                <section class="module-inclusion-text-col" data-id="26" data-module="inclusion" data-type="text_col" data-layout='1'>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col col-title col-xs-12 col-sm-12">
+                                    <header class="container-title">
+                                        <h3 class="pre_title">Дизайнер</h3>
+                                        <h1 class="title">Имя Фамилия</h1>
+                                    </header>
+                                </div>
+                                <figure class="col col-text col-xs-12 col-sm-12 cover_noimg" title="Имя Фамилия">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- fine inclusion -->
+            </div>
+            <div class="row cont_article">
+                <figure class="col" style="background-image:url({% static 'estate/images/13.jpg' %});" title="">
+                </figure>
+                <article class="col">
+                    <div>
+                      После изучения архитектуры в Миланском политехническом институте, закончившемся в 1984 году, для решительного разума архитектора Массимо Кастанья шаг к запуску собственной профессиональной линии очень короткий: в 1986 году он основывает архитектурную студию, из которой до сих пор следует за важной работой для международных и исторических брендов дизайна.
+
+Его имя в мире архитектуры он посвятил скоро с проектами, подобными лаборатории “Пирамида” я думаю, для того, чтобы научный комитет Эвереста-K2-CNR и сделал для Национального научно-исследовательского Совета, установлен в 1991 году и все еще действует сегодня в Непале на высоте 5050 метров. Большое сотрудничество и непрерывные успехи приносят сильную идентичность максимума каштана даже в мире дизайна: он является арт-директором некоторых из самых важных брендов в мебельной промышленности и продуктов, которые он рисует, всегда узнаваемы, с их сильным и решительным чертом, и это раздраженный поиск новых настроений и ощущений, которые отличает и делает его работу настолько оригинальным. Архитектуры, пространства и продукты, которые вызывают эмоции за пределами визуального.
+
+Среди других, Массимо каштана сотрудничал с: Acerbis International, Ceccotti Collezioni, Exteta,Gallotti & корень, Giorgetti, Хенге , knIndustrie, Minotti кресла и диваны, Rossana Cucine.
+                    </div>
+                </article>
+            </div>
+            <div class="row cont_gallery">
+            </div>
+            <!--					<div class="next_post_row">-->
+            <!--						-->
+            <!--					</div>-->
+
+            <div class="linee_bck">
+                <span class='even line_1'></span><span class='odd line_2'></span><span class='even line_3'></span><span class='odd line_4'></span><span class='even line_5'></span> </div>
+        </main><!-- #main -->
+    </div><!-- #primary -->
+    <span class="detect global_tablet_mob"></span>
+    <span class="detect global_smart_mob"></span>
+</div>
+{% endblock %}
+{% block script %}
+{% include 'esteta/base_design_detail.html' %}
+{% endblock %}

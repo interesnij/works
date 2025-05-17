@@ -1,0 +1,490 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Новость 1{% endblock %}
+
+{% block content %}
+<div class="page page--detail page--news-detail">
+
+    <h1 class="a11y">SXSW - культурный момент, замаскированный под техническую конференцию</h1>
+
+    <div class="hero hero--news-article hero--detail-page" data-skrollex data-sk-static data-hero-detail>
+        <div class="hero__content pb0 ">
+            <div class="hero--news-article__text">
+                <div class="hero__back section-label container container--content" data-skrollex data-sk-group>
+                    <a href="{% url 'basic_news' %}" class="meta">
+                        <svg class="icon icon--arrow">
+                            <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                        Назад
+                    </a>
+                </div>
+                <div class="container container--content">
+                    <p class="h5" data-skrollex data-sk-group>
+                        <span class="text-color--x-dark">
+                            Новости
+                        </span>
+                        <span class="a11y">Опубликовано </span>
+                        &mdash; 03.12.2019
+                    </p>
+                    <h2 class="h1" data-skrollex data-sk-group data-sk-headline>
+                        SXSW - культурный момент, замаскированный под техническую конференцию
+                    </h2>
+                    <div class="excerpt dash-holder dash-holder--push-content">
+                        <hr class="dash dash--push-top" data-skrollex data-sk-group />
+                        <p class="lead fw-medium mb0" data-skrollex data-sk-group data-sk-paragraph>Мы оседлали и направились в штат Одинокой Звезды на четыре дня исследований, инноваций и Tex-Mex.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero__image spacer-large" data-skrollex data-sk-group data-sk-mask>
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272000%27%20height%3D%271127%27%20style%3D%27background%3Atransparent%27%2F%3E"
+        srcset="
+        {% static 'basic/images/22-1.jpg' %} 600w,
+        {% static 'basic/images/22-2.jpg' %} 940w,
+        {% static 'basic/images/22-3.jpg' %} 1280w," sizes="100vw" alt="" />
+    </div>
+
+    <div class="content-toolkit">
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Остин, штат Техас - расцветающий очаг на перекрестке культуры и технологий, известный многим как мировая столица живой музыки или, совсем недавно, Силиконовые холмы. Неудивительно, что в Остине также проводится ежегодный фестиваль SXSW, который является главным праздником всего культурного и инновационного в мире..</p>
+                            <p>Как команда, цель которой состоит в том, чтобы исследовать культуру и технологии с помощью дизайна, мы не могли упустить возможность присутствовать и самим увидеть, о чем был весь этот шум. Итак, мы распаковали пару ручных чемоданов и отправились на юго-восток в четырехдневную поездку в столицу Техаса.
+                            </p>
+                            <p>Мы вернулись с желудками, полными шашлыка, и головами, полными открытий, последним из которых мы готовы поделиться.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="section-title spacer-xmedium spacer-xmedium-top">
+                <div class="container container--content">
+                    <h2 data-skrollex data-sk-group data-sk-headline>Человечество - величайшее конкурентное преимущество</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div id="quote-14527" class="large-blockquote">
+                <div class="container container--content">
+                    <div class="large-blockquote__inner spacer-medium spacer-medium-top" data-skrollex data-sk-group>
+                        <blockquote>
+                            <p class="h8 spacer-small" data-skrollex data-sk-group>Люди не думающие машины или чувствующие машины, а скорее чувствующие машины, которые думают.</p>
+                            <footer data-skrollex data-sk-group>
+                                <cite class="meta"></cite>
+                            </footer>
+                        </blockquote>
+                        <div class="media-block-share" data-media-block-share>
+                            <button class="share-icon" aria-expanded="false" aria-controls="share-nav-0" data-skrollex data-sk-group>
+                                <span class="a11y">Share this quote</span>
+                                <span class="icon">
+                                    <svg>
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul id="share-nav-0" role="presentation">
+                              <li role="presentation" class="share-twitter">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Twitter</span>
+                                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-facebook">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Facebook</span>
+                                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-pinterest">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Pinterest</span>
+                                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-linkedin">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on LinkedIn</span>
+                                      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-email">
+                                  <!--email_off-->
+                                  <a href="">
+                                      <span class="a11y">Отправить другу</span>
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                                  <!--/email_off-->
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Если в этом году South By является каким-либо показателем, между нами и ИИ есть тонкая грань, но линия все еще существует. Антониу Дамасио прекрасно объяснил это различие: «Люди - это не мыслительные машины или чувствующие машины, а скорее чувствующие машины, которые думают».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="large-column-images" data-mobile-carousel>
+                <div class="container">
+                    <div class="large-column-images__inner spacer-block spacer-large-top">
+                        <div class="grid grid--gutters grid--middle grid--mobile grid--two-up">
+                            <div class="large-column-images__image grid__item" data-skrollex data-sk-group data-sk-mask>
+                                <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271200%27%20height%3D%271600%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                                srcset="
+                                {% static 'basic/images/20-1.jpg' %} 600w,
+                                {% static 'basic/images/20-2.jpg' %} 940w," sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                            <div class="large-column-images__image grid__item" data-skrollex data-sk-group data-sk-mask>
+                                <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271078%27%20height%3D%271616%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                                srcset="
+                                {% static 'basic/images/20-1.jpg' %} 600w,
+                                {% static 'basic/images/20-2.jpg' %} 940w," sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Мы всегда стараемся разговаривать с потребителями как люди, относиться к ним как к людям и проектировать опыт, которым люди будут наслаждаться. Слушайте людей, общайтесь с ними на более глубоком уровне, и мы победим их обожание.</p>
+                            <p>Спецификации Macintosh, одного из самых популярных продуктов в истории, были предназначены для людей, а не для программистов. Мы все могли бы узнать кое-что от Apple.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="toolkit-divider spacer-large">
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <h2 class="spacer-small" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.4">People Crave Meaning Over Marketing</h2>
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Но человечество является просто побочным продуктом стоимости. Один участник дискуссии призвал нас рассмотреть значение, которым обмениваются в нашей нынешней экосистеме. Потребители сегодня умны, выискивая BS в любой момент. Они не слишком любезны, когда их продают. Если опыт кажется слишком нечестным или недостоверным, они переходят к следующему.</p>
+                            <p>По словам легенды дизайна Джона Маеды, есть разница между полезными и классными впечатлениями. Мы большие поклонники первого. Функция имеет решающее значение, и цель - поразительные аккорды.
+                            </p>
+                            <p>В конце дня, практический опыт выходит за рамки KPI и ROI. Осознание - это приятное чувство, но для нас это скорее провокация.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="toolkit-divider spacer-large">
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <h2 class="spacer-small" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.4">Разнообразие - это больше, чем преходящая тенденция</h2>
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Включение было горячей темой на SXSW этого года и по уважительной причине. До недавнего времени такие отрасли, как дизайн и технологии, как правило, долгое время пренебрегали женщинами, особенно цветными. Но разнообразие в некотором роде было сокращено до еще одного модного модного слова, в котором не хватает содержания. SXSW стремится изменить все это.<br /></p>
+                            <p>Сверху вниз на панели SXSW были темы, такие как «Достижение гендерного равенства в лидерстве в дизайне» и «Женщины создают бренды, которых мы всегда хотели», и было даже всплывающее окно с предложением CEO Action for Diversity & amp; Включение (да, это реальная вещь). Тем не менее, равенство не является конечной целью; это справедливость Мы должны расширить возможности тех, кто имеет неравные позиции и продолжает проливать свет на важные разговоры, подобные этим.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="large-column-images" data-mobile-carousel>
+                <div class="container">
+                    <div class="large-column-images__inner spacer-block spacer-large-top">
+                        <div class="grid grid--gutters grid--middle grid--mobile grid--two-up">
+                            <div class="large-column-images__image grid__item" data-skrollex data-sk-group data-sk-mask>
+                                <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27600%27%20height%3D%27900%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                                srcset="{% static 'basic/images/20-1.jpg' %} 600w"
+                                sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                            <div class="large-column-images__image grid__item" data-skrollex data-sk-group data-sk-mask>
+                                <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27600%27%20height%3D%27900%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                                srcset="{% static 'basic/images/20-1.jpg' %} 600w"
+                                sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Но расширение возможностей - это только первый шаг. Хотя на бумаге это звучит хорошо, рекламный светильник Синди Галлоп считает, что найм, продвижение, финансирование и обогащение женщин бесконечно более мощны. Говоря о новой «эстетике человека» в Big Big Tech, Карли Лихи с гордостью заявила: «Женщины наращивают усилия и создают ресурсы». Господа, давайте сойдем с дороги, не так ли?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="toolkit-divider spacer-large">
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <h2 class="spacer-small" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.4">Inspired Creative Begins and Ends with Curiosity</h2>
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Работа, которую мы выполняем ежедневно, коренится в мирском осознании. Такие агентства, как Giant Spoon, поощряют своих сотрудников путешествовать по миру, сканировать поля и собирать эти культурные истины. Мир сегодня избегает любопытства, но мы должны продолжать, потому что второе, когда мы перестаем задавать вопросы об обществе, - это второе, что мы терпим неудачу.<br /></p>
+                            <p>В одной из бесед, в которой мы участвовали, участвовал легендарный дизайнер кроссовок Тинкер Хэтфилд. Он вспомнил вдохновение за его культовый дизайн Air Max. Рискованный шаг в 1987 году, он решил показать подушку безопасности в межподошве после наблюдения за выставленной внутренней частью Центра Помпиду в Париже, приносящей миллионы доходов и линию обуви, которая остается сильной сегодня.
+                            </p>
+                            <p>Как и Тинкер, наша лучшая работа рождается, когда мы смотрим на контекст за пределами нашей отрасли. Мы не можем внести свой вклад в культуру без предварительного понимания.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="toolkit-divider spacer-large">
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <h2 class="spacer-small" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.4">The Future Is Now</h2>
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Когда Тинкер Хэтфилд вообразил в фильме «Возвращение в будущее II» вымышленную, самозатягивающуюся Nike Air Mags для персонажа Майкла Дж. Фокса Марти МакФлай, он думал о 30-летии. 30 лет спустя, когда технологические инновации, такие как Hyperadapt Тинкера, наводнили рынок, это будущее стало реальностью.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div id="quote-14539" class="large-blockquote">
+                <div class="container container--content">
+                    <div class="large-blockquote__inner spacer-medium spacer-medium-top" data-skrollex data-sk-group>
+                        <blockquote>
+                            <p class="h8 spacer-small" data-skrollex data-sk-group>Наш мир постоянно развивается.</p>
+                            <footer data-skrollex data-sk-group>
+                                <cite class="meta"></cite>
+                            </footer>
+                        </blockquote>
+                        <div class="media-block-share" data-media-block-share>
+                            <button class="share-icon" aria-expanded="false" aria-controls="share-nav-1" data-skrollex data-sk-group>
+                                <span class="a11y">Поделитесь новостью</span>
+                                <span class="icon">
+                                    <svg>
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <ul id="share-nav-1" role="presentation">
+                              <li role="presentation" class="share-twitter">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Twitter</span>
+                                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-facebook">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Facebook</span>
+                                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-pinterest">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on Pinterest</span>
+                                      <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-linkedin">
+                                  <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                                      <span class="a11y">Share on LinkedIn</span>
+                                      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                              </li>
+                              <li role="presentation" class="share-email">
+                                  <!--email_off-->
+                                  <a href="">
+                                      <span class="a11y">Отправить другу</span>
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                      <span></span>
+                                  </a>
+                                  <!--/email_off-->
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p>Наш мир постоянно развивается. Агнес Пирчла заявила, что мы - одна дорогостоящая ошибка вдали от мрачного мира Чёрного Зеркала Чарли Брукера. Хотя это может быть правдой, у нас также есть возможности и ресурсы, чтобы улучшить вещи за гранью воображения.</p>
+                            <p>Сила в наших руках. Но, оглядываясь назад на обсуждения и события в эти выходные в Остине, наши руки чертовски полны.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolkit-mod toolkit-mod--contained ">
+            <div class="text-block text-block--footnote">
+                <div class="container container--content">
+                    <div class="text-block__inner">
+                        <div class="body" data-skrollex data-sk-group>
+                            <p><strong>О бейсике</strong></p>
+                            <p>BASIC - это агентство по стратегии бренда и цифрового дизайна, которое объединяет бренды и культуру. Основываясь на том, что культура стимулирует коммерцию, BASIC использует общие ценности и идеалы для информирования стратегии и дизайна, создавая цифровой опыт, который вдохновляет человеческое взаимодействие.
+                                 С растущим списком клиентов ведущих мировых брендов страсти, BASIC специализируется на тысячелетней проницательности, разработке бренда, ориентированного на стратегию и дизайн, пользовательском опыте и цифровых инновациях.<br /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-footer">
+        <div class="news-article-share spacer-large spacer-large-top">
+            <div class="container container--content">
+              <nav role="navigation">
+                  <ul id="" role="presentation">
+                      <li role="presentation" class="share-twitter">
+                          <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                              <span class="a11y">Share on Twitter</span>
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                              <span></span>
+                          </a>
+                      </li>
+                      <li role="presentation" class="share-facebook">
+                          <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                              <span class="a11y">Share on Facebook</span>
+                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                              <span></span>
+                          </a>
+                      </li>
+                      <li role="presentation" class="share-pinterest">
+                          <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                              <span class="a11y">Share on Pinterest</span>
+                              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                              <span></span>
+                          </a>
+                      </li>
+                      <li role="presentation" class="share-linkedin">
+                          <a href="" data-open-window onClick="ga('send', 'event', { eventCategory: 'social', eventAction: 'share', eventLabel: 'work'});">
+                              <span class="a11y">Share on LinkedIn</span>
+                              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                              <span></span>
+                          </a>
+                      </li>
+                      <li role="presentation" class="share-email">
+                          <!--email_off-->
+                          <a href="">
+                              <span class="a11y">Отправить друг</span>
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                              <span></span>
+                          </a>
+                          <!--/email_off-->
+                      </li>
+                  </ul>
+              </nav>
+            </div>
+        </div>
+
+        <div class="newsletter-signup-form-outer spacer-large">
+            <div class="container container--content">
+                <form class="newsletter-signup-form" method="post" accept-charset="utf-8" enctype="multipart/form-data" id="newsletter-signup" novalidate data-form>
+                    <input type="hidden" name="action" value="sproutForms/entries/saveEntry">
+                    <input type="hidden" name="handle" value="newsletterSignup">
+
+                    <div class="form-group">
+                        <input id="input-email" class="input-inline" type="email" name="fields[email]" aria-required="true" placeholder="Подписывайтесь на нашу новостную рассылку" data-validetta="required,email" aria-describedby="message-email" />
+                        <label for="input-email" class="a11y">Введите ваш адрес электронной почты</label>
+                        <div id="message-email" class="a11y">Пожалуйста, укажите свой адрес электронной почты</div>
+                        <button type="submit" onClick="ga('send', 'event', 'submission-newsletter', 'submission', 'BASIC Newsletter');">
+                            <span class="a11y">Отправить</span>
+                            <svg>
+                                <use xlink:href="#icon-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div role="alert" aria-live="polite" class="hidden form-submit-success spacer-small-top text-align-center">
+                        <p class="mb0 meta full">Спасибо за подписку. Будем на связи.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="m0" data-skrollex data-sk-group />
+    </div>
+</div>
+
+<div id="footer-holder">
+    <div class="next-page-footer pointer" data-next-page-footer data-skrollex data-sk-static data-easy-click>
+        <div class="container next-page-footer__inner">
+            <div class="next-page-footer__text">
+                <div class="meta spacer-medium">Другая новость</div>
+                <h2 class="h3 spacer-medium">
+                  Мы делаем ходы - представляем наш новый штаб
+                </h2>
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="" data-transition="mask">
+                <span class="a11y">Мы делаем ходы - представляем наш новый штаб</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

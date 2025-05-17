@@ -1,0 +1,105 @@
+{% extends "basic_base.html" %}
+{% load static %}
+
+{% block title %}Наши кейсы{% endblock %}
+
+{% block content %}
+<div class="page page--work-index">
+
+    <h1 class="a11y">Наши кейсы</h1>
+
+    <div class="hero hero--work-index" data-work-index-hero>
+        <div class="hero__content">
+            <div class="container dash-holder dash-holder--push-content" data-skrollex data-sk-group>
+                <div class="hero__meta meta spacer-smedium no-wrap">
+                    <hr class="dash" />Рекомендуемые
+                </div>
+                <h2 class="h1 hero__title" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.75">Наши кейсы</h2>
+
+                <div class="hero__filters spacer-smedium-top" data-hero-filters>
+                    <div class="category-group category-group--desktop" data-skrollex data-sk-group>
+                        <h2 class="meta">Фильтр</h2>
+                        <ul>
+                            <li><a href="" class="active">Все</a></li>
+                            <li><a href="">eCommerce<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">UX/UI Дизайн<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Брендинг<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Реклама<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Видео / Фотография<span class="a11y"> Case Studies</span></a></li>
+                            <li><a href="">Эксперименты<span class="a11y"> Case Studies</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bucket">
+        <div class="container">
+            <div id="case-studies">
+                <div class="grid">
+                    <div class="card card--case-study grid__item spacer-block" data-push-hover>
+                        <div class="card--case-study__image spacer-smedium">
+                            <div class="image-holder pos-r" data-skrollex data-sk-group data-sk-mask data-push-hover-child data-sk-sa-delay="0.2">
+                                <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27960%27%20height%3D%27610%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                                srcset="
+                                {% static 'basic/images/20-1.jpg' %} 600w,
+                                {% static 'basic/images/20-2.jpg' %} 940w"
+                                sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                        </div>
+                        <div class="card--case-study__text dash-holder dash-holder--push-content">
+                            <hr class="dash" data-skrollex data-sk-group />
+                            <div class="meta spacer-small" data-skrollex data-sk-group data-push-hover-headline>
+                                Chrome Industries
+                            </div>
+                            <h3 class="h7" data-skrollex data-sk-group data-sk-headline>ChromeIndustries.com — Bringing the brand to a new urban audience</h3>
+                        </div>
+                        <a href="{% url 'basic_work1' %}" class="layer z1"><span class="a11y">Explore Chrome Industries Case Study</span></a>
+                    </div>
+                    <div class="card card--case-study grid__item spacer-block" data-push-hover>
+                        <div class="card--case-study__image spacer-smedium">
+                            <div class="image-holder pos-r" data-skrollex data-sk-group data-sk-mask data-push-hover-child data-sk-sa-delay="0.2">
+                              <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27960%27%20height%3D%27610%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                              srcset="
+                              {% static 'basic/images/20-1.jpg' %} 600w,
+                              {% static 'basic/images/20-2.jpg' %} 940w"
+                              sizes="(max-width: 60rem) calc(100vw - 4rem), 94rem" alt="" />
+                            </div>
+                        </div>
+                        <div class="card--case-study__text dash-holder dash-holder--push-content">
+                            <hr class="dash" data-skrollex data-sk-group />
+                            <div class="meta spacer-small" data-skrollex data-sk-group data-push-hover-headline>
+                                VainGlory
+                            </div>
+                            <h3 class="h7" data-skrollex data-sk-group data-sk-headline>VainGloryGame.com — A digital platform for all things VainGlory</h3>
+                        </div>
+                        <a href="{% url 'basic_work1' %}" class="layer z1"><span class="a11y">Explore Vainglory Case Study</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer-holder">
+    <div class="next-page-footer pointer" data-next-page-footer data-skrollex data-sk-static data-easy-click>
+        <div class="container next-page-footer__inner">
+            <div class="next-page-footer__text">
+                <div class="meta spacer-medium">Далее </div>
+                <h2 class="h3 spacer-medium">
+                    О нас
+                </h2>
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="{% url 'basic_news' %}" data-transition="mask">
+                <span class="a11y">О нас</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

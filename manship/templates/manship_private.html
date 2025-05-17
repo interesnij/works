@@ -1,0 +1,97 @@
+{% extends "manship/base_private.html" %}
+{% load static %}
+{% block title %}Частные столовые{% endblock %}
+{% block content %}
+
+<div class="hero-wrapper hero-inner">
+    <img src="{% static 'images/manship/hero_private-dining.png' %}" class="hero-img img-responsive" alt="">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-2 lg-2"></div>
+        <div id="content" class="fadeup sm-12 lg-8">
+            <div class="page-header text-center vert-after">
+                <h2 class="special dots-horz">Частные столовые и кейтеринг</h2>
+                <img src="{% static 'images/manship/inner-temp4.png' %}" alt="">
+            </div>
+            <div class="page-content">
+                <div class="vert"></div>
+                <div class="private-dining-catering">
+                    <div class="bars text-center">
+                        <div class="sm-1 lg-1"></div>
+                        <div class="sm-12 lg-5 vert-after">
+                            <h3 class="special">Частные столовые:</h3>
+                            <img src="{% static 'images/manship/private-dining.png' %}" alt="">
+                            <p>
+                                <p>
+                                  Наш ресторан имеет несколько уникальных номеров в нашем банкетном зале для размещения частных
+                                  обеденных вечеринок. Мы также предлагаем современные аудио / видео возможности и комнат-разделяя
+                                  оборудование.
+                                </p>
+                            </p>
+                            <a title="" class="gather-lead-button btn btn-lg btn-default">Зарезервировать</a>
+                        </div>
+                        <div class="sm-12 lg-5 vert-after">
+                            <h3 class="special">Кейтеринг:</h3>
+                            <img src="{% static 'images/manship/catering.png' %}" alt="">
+                            <p>
+                                <p>Помимо этого, гостям предлагается питание по системе "шведский стол", а также упакованные ланчи. Выберите один из наших фирменных меню, или планируйте своё собственное с нашим шеф-поваром.</p>
+                            </p>
+                            <a href="" title="" class="btn btn-lg btn-default">Смотреть меню</a>
+                        </div>
+                        <div class="sm-1 lg-1"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm-2 lg-2"></div>
+                    <div class="sm-12 lg-8">
+                        <div class="vert"></div>
+                        <h2 class="text-center special">Смотрите нас в действии.</h2>
+                        <style type='text/css'>
+                            #gallery-2 {
+                                margin: auto;
+                            }
+
+                            #gallery-2 .gallery-item {
+                                float: left;
+                                margin-top: 10px;
+                                text-align: center;
+                                width: 33%;
+                            }
+
+                            #gallery-2 img {
+                                border: 2px solid #cfcfcf;
+                            }
+
+                            #gallery-2 .gallery-caption {
+                                margin-left: 0;
+                            }
+                        </style>
+                        <div id='gallery-2' class='gallery galleryid-20 gallery-columns-3 gallery-size-full'>
+                            <dl class='gallery-item'>
+                                <dt class='gallery-icon landscape'>
+                                    <img width="1400" height="935" src="{% static 'images/manship/Table-Decor-e1472217299887.jpg' %}" class="attachment-full size-full" alt="The Manship Catering" />
+                                </dt>
+                            </dl>
+                            <dl class='gallery-item'>
+                                <dt class='gallery-icon landscape'>
+                                    <img width="1400" height="935" src="{% static 'images/manship/Irby-Buffet-Setup-e1472217288578.jpg' %}" class="attachment-full size-full" alt="The Manship Catering" />
+                                </dt>
+                            </dl>
+                            <br style='clear: both' />
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="sm-2 lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sm-2 lg-2"></div>
+    </div>
+</div>
+
+<div class="vert"></div>
+
+
+{% endblock %}

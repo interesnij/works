@@ -1,0 +1,462 @@
+[{
+    "id": "e2fcc868690b",
+    "friendly_id": "e2fcc868690b-account-management-sales-internship",
+    "name": "Account Management / Sales Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/e2fcc868690b-account-management-sales-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Sales",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "533b5dd78315",
+    "friendly_id": "533b5dd78315-c-back-end-software-engineer",
+    "name": "C++ Back End Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/533b5dd78315-c-back-end-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "903ab24106dd",
+    "friendly_id": "903ab24106dd-c-software-engineer",
+    "name": "C++ Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/903ab24106dd-c-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "23255a66820f",
+    "friendly_id": "23255a66820f-communications-officer",
+    "name": "Communications Officer",
+    "url": "https://verity-studios-ag.breezy.hr/p/23255a66820f-communications-officer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "is_remote": false,
+        "name": "Zurich, CH"
+    },
+    "department": "Marketing",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "b4a7b4081190",
+    "friendly_id": "b4a7b4081190-drone-performance-and-reliability-analysis-internship",
+    "name": "Drone Performance and Reliability Analysis Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/b4a7b4081190-drone-performance-and-reliability-analysis-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Hardware Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "2b6ee5935680",
+    "friendly_id": "2b6ee5935680-embedded-applications-software-engineer",
+    "name": "Embedded Applications Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/2b6ee5935680-embedded-applications-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "5acc8fe2b89d",
+    "friendly_id": "5acc8fe2b89d-embedded-linux-software-engineer",
+    "name": "Embedded Linux Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/5acc8fe2b89d-embedded-linux-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "5a2d62b6b9cb",
+    "friendly_id": "5a2d62b6b9cb-embedded-software-development-internship",
+    "name": "Embedded Software Development Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/5a2d62b6b9cb-embedded-software-development-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "ff91ce5df14f",
+    "friendly_id": "ff91ce5df14f-embedded-software-engineer",
+    "name": "Embedded Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/ff91ce5df14f-embedded-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "92157f218c66",
+    "friendly_id": "92157f218c66-hardware-electronics-design-internship",
+    "name": "Hardware/Electronics Design Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/92157f218c66-hardware-electronics-design-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Hardware Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "917beb2dc0c0",
+    "friendly_id": "917beb2dc0c0-hardware-electronics-engineer",
+    "name": "Hardware/Electronics Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/917beb2dc0c0-hardware-electronics-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Hardware Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "a8d966a5497b",
+    "friendly_id": "a8d966a5497b-junior-c-software-developer",
+    "name": "Junior C++ Software Developer",
+    "url": "https://verity-studios-ag.breezy.hr/p/a8d966a5497b-junior-c-software-developer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "dc327c9576c6",
+    "friendly_id": "dc327c9576c6-qt-c-front-end-software-engineer",
+    "name": "QT/C++ Front End Software Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/dc327c9576c6-qt-c-front-end-software-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "c4da4a9efc59",
+    "friendly_id": "c4da4a9efc59-sales-executive",
+    "name": "Sales Executive",
+    "url": "https://verity-studios-ag.breezy.hr/p/c4da4a9efc59-sales-executive",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "id": "worldwide",
+            "name": "Worldwide"
+        },
+        "city": "Zurich (or remote)",
+        "name": "Zurich (or remote), worldwide"
+    },
+    "department": "Sales",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "3a83fb34b544",
+    "friendly_id": "3a83fb34b544-software-development-internship",
+    "name": "Software Development Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/3a83fb34b544-software-development-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Software Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "e8d5af459c9e",
+    "friendly_id": "e8d5af459c9e-spontaneous-application",
+    "name": "Spontaneous Application",
+    "url": "https://verity-studios-ag.breezy.hr/p/e8d5af459c9e-spontaneous-application",
+    "type": {
+        "id": "other",
+        "name": "Other"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Spontaneous Application",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "a2801d8fe87e",
+    "friendly_id": "a2801d8fe87e-system-administrator-internal-systems-engineer",
+    "name": "System Administrator / Internal Systems Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/a2801d8fe87e-system-administrator-internal-systems-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "IT",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "f0aa0ca94298",
+    "friendly_id": "f0aa0ca94298-systems-and-controls-engineer",
+    "name": "Systems and Controls Engineer",
+    "url": "https://verity-studios-ag.breezy.hr/p/f0aa0ca94298-systems-and-controls-engineer",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Control Systems Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "335484d0830c",
+    "friendly_id": "335484d0830c-systems-and-controls-internship",
+    "name": "Systems and Controls Internship",
+    "url": "https://verity-studios-ag.breezy.hr/p/335484d0830c-systems-and-controls-internship",
+    "type": {
+        "id": "temporary",
+        "name": "Temporary"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "city": "Zurich",
+        "name": "Zurich, CH"
+    },
+    "department": "Control Systems Engineering",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}, {
+    "id": "aabae664bb3b",
+    "friendly_id": "aabae664bb3b-technical-manager-for-drone-shows",
+    "name": "Technical Manager for Drone Shows",
+    "url": "https://verity-studios-ag.breezy.hr/p/aabae664bb3b-technical-manager-for-drone-shows",
+    "type": {
+        "id": "fullTime",
+        "name": "Full-Time"
+    },
+    "location": {
+        "country": {
+            "name": "Switzerland",
+            "id": "CH"
+        },
+        "name": "Zurich, CH",
+        "city": "Zurich"
+    },
+    "department": "Productions",
+    "company": {
+        "name": "Verity Studios AG",
+        "logo_url": null,
+        "friendly_id": "verity-studios-ag"
+    }
+}]

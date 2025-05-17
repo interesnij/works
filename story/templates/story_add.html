@@ -1,0 +1,432 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Макет блога{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'story/styles/story.css' %}" />
+
+<audio id="backgroundMusic" loop>
+    <source src="{% static 'story/audio/background.ogg' %}" type="audio/ogg">
+    <source src="{% static 'story/audio/background.mp3' %}" type="audio/mpeg">
+</audio>
+<audio id="backgroundMusicFiltered" loop>
+    <source src="{% static 'story/audio/background-filtered.ogg' %}" type="audio/ogg">
+    <source src="{% static 'story/audio/background-filtered.mp3' %}" type="audio/mpeg">
+</audio>
+
+<div id="siteWrapper">
+    <header>
+      <a href="{% url 'story' %}">
+        Истории
+      </a>
+      <div class="backWrapper">
+        <a class="backToStories frameTitle" href="{% url 'story' %}">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+          <span>На главную</span>
+        </a>
+        <a class="back frameTitle" href="/">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+          <span>Назад</span>
+        </a>
+      </div>
+      <nav>
+        <a class="ignoreParse soundToggle" href="#">
+          <span class="soundOn">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Icon / Sound on</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icon-/-Sound-on" fill="#FFFFFF">
+                  <g>
+                    <rect id="Rectangle" transform="translate(0.500000, 6.000000) rotate(180.000000) translate(-0.500000, -6.000000) " x="-1.11022302e-16" y="5" width="1" height="2"></rect>
+                    <rect id="Rectangle-Copy" transform="translate(3.500000, 4.500000) rotate(180.000000) translate(-3.500000, -4.500000) " x="3" y="2" width="1" height="5"></rect>
+                    <rect id="Rectangle-Copy-2" transform="translate(6.500000, 3.500000) rotate(180.000000) translate(-6.500000, -3.500000) " x="6" y="0" width="1" height="7"></rect>
+                    <rect id="Rectangle-Copy-3" transform="translate(9.500000, 5.000000) rotate(180.000000) translate(-9.500000, -5.000000) " x="9" y="3" width="1" height="4"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="soundOff">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="10px" height="1px" viewBox="0 0 10 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Icon / Sound off</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icon-/-Sound-off" fill="#FFFFFF">
+                  <g>
+                    <rect id="Rectangle" x="3" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy" x="6" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy-2" x="0" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy-3" x="9" y="0" width="1" height="1"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </a>
+        <a class="frameTitle takeAction" href="{% url 'story_add' %}"><span>Добавить</span></a>
+        <a class="frameTitle aboutProject" href="{% url 'story_about' %}"><span>о нашем проекте</span></a>
+        </nav>
+    </header>
+    <div class="LoaderTextModule">
+      <div class="IntroTextModule">
+	       <div class="textContainer">
+	          <div class="subhead">загрузка</div>
+	    	      <q>Люди с психическими расстройствами могут жить полноценной жизнью. Однако для многих миллионов людей, сталкивающихся с нищетой, конфликтами и пренебрежением, жизнь-это нищета.</q>
+              <p class='footnote'>Изучение истории реальных людей, столкнувшихся с проблемами психического здоровья. Посмотреть, как они живут, услышать их голоса, можно здесь.</p>
+              <div class="button-corner-wrapper">
+		    	      <a href="#" class="ignoreParse button-corner large">
+					         <span class="corner"></span>
+			             <span class="corner"></span>
+			             <span class="corner"></span>
+			             <span class="corner"></span>
+					         <span class="text">Далее</span>
+				        </a>
+			        </div>
+	          </div>
+	        </div>
+        </div>
+        <div id="templateLayer">
+            <div data-template="TakeActionTemplate" data-title="Добавление истории" class="template TakeActionTemplate">
+
+        <span class="border-bottom"></span>
+
+    	<div class="page-content">
+
+            <span class="gradient-mask"></span>
+
+            <div class="about-project">
+
+                <div class="content-wrapper">
+
+                    <div class="info">
+                        <h1>Предложите Вашу историю</h1>
+                        <div class="FormModule storyContentModule">
+
+	<form>
+
+		<div class="borderLeftWhite">
+			<p>Заполните форму ниже, чтобы отправить свою историю.</p>
+		</div>
+
+		<div class="borderLeftGray"></div>
+
+		<div class="borderLeftWhite">
+			<div class="form-element">
+				<label>Имя</label>
+				<div class="form-input button-corner large no-hover">
+					<input type="text" name="firstName" />
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+			    </div>
+			</div>
+
+			<div class="form-element">
+				<label>Фамилия</label>
+			    <div class="form-input button-corner large no-hover">
+					<input type="text" name="lastName" />
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+			    </div>
+			</div>
+
+			<div class="form-element">
+				<label>Email</label>
+			    <div class="form-input button-corner large no-hover">
+					<input type="text" name="email" />
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+			    </div>
+			</div>
+
+			<div class="form-element upload">
+				<label>Фото (необязательно)</label>
+				<input type="file" name="story">
+				<a href="#" class="button-corner large">
+	                <span class="corner"></span>
+	                <span class="corner"></span>
+	                <span class="corner"></span>
+	                <span class="corner"></span>
+	                <span class="text">Загрузить фото</span>
+	            </a>
+			</div>
+		</div>
+
+	    <div class="borderLeftGray"></div>
+
+	    <div class="borderLeftWhite">
+	    	<label>Краткое описание истории</label>
+	    	<div class="form-text button-corner large no-hover">
+				<textarea name="description" rows="4" cols="50"></textarea>
+	            <span class="corner"></span>
+	            <span class="corner"></span>
+	            <span class="corner"></span>
+	            <span class="corner"></span>
+		    </div>
+
+		    <div class="form-element clear">
+				<div class="form-input button-corner large">
+					<input class="form-submit" type="submit" value="ОТПРАВИТЬ">
+	        		<span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+		            <span class="corner"></span>
+	        	</div>
+	        </div>
+	    </div>
+    </form>
+    <div class="borderLeftGray"></div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="behind-the-campaign">
+                <div class="wrapper">
+                    <div class="content">
+
+                        <h2>Отправить историю</h2>
+
+                        <p><p>Каждый четвертый человек в мире в какой-то момент своей жизни столкнется с проблемой психического здоровья.
+                          Слишком долго их истории были скрыты.<br /></p>
+                        <p><p>Мы хотим, чтобы люди из всех слоев общества делились историями о своем опыте жизни с психосоциальной инвалидностью.
+                          Мы надеемся, что, делясь нашими историями, каждый сможет узнать больше об опыте других людей, получить лучшее понимание
+                          и соединиться друг с другом как люди. <br />
+<br />
+Если вы просматриваете это на мобильном телефоне или планшете и хотите поговорить с нами, вы можете <a href="" > email </a> us ваша история или сообщение. <br />
+<br />
+<strong>Быть частью изменений: <br />
+</strong>Такой кампании возможны только благодаря общности людей, как вы. Чтобы помочь нам собрать больше историй о психическом здоровье со всего мира, Пожалуйста, подумайте о том, чтобы <a href="">пожертвовать</a>. </p></p>
+
+                        <div class="contact-cta">
+                            <div class="form-cta">
+                                <a href="" target="_blank" class="button-corner large">
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="text">Пожертвовать</span>
+                                </a>
+                            </div>
+                            <div class="socials-cta">
+                                 <a href="" target="_blank" class="button-corner square">
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Facebook_2_ Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="facebook" fill-rule="nonzero" fill="#fff">
+            <path d="M17.0217391,18 L12.423913,18 L12.423913,11.0354223 L14.7717391,11.0354223 L15.1141304,8.33787466 L12.423913,8.33787466 L12.423913,6.62125341 C12.423913,5.83651226 12.6195652,5.29700272 13.7445652,5.29700272 L15.1630435,5.29700272 L15.1630435,2.84468665 C14.9184783,2.79564033 14.0869565,2.74659401 13.0597826,2.74659401 C11.0054348,2.74659401 9.58695652,4.02179837 9.58695652,6.32697548 L9.58695652,8.33787466 L7.23913043,8.33787466 L7.23913043,11.0354223 L9.58695652,11.0354223 L9.58695652,18 L0.97826087,18 C0.440217391,18 0,17.5585831 0,17.0190736 L0,0.980926431 C0,0.441416894 0.440217391,0 0.97826087,0 L16.9728261,0 C17.5108696,0 17.951087,0.441416894 17.951087,0.980926431 L17.951087,17.0190736 C18,17.5585831 17.5597826,18 17.0217391,18 Z" id="Facebook_2_-Copy"></path>
+        </g>
+    </g>
+</svg></span>
+                                </a>
+                                <a href="" target="_blank" class="button-corner square">
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>twitter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="twitter" fill-rule="nonzero" fill="#fff">
+            <path d="M20.3413333,1.30573248 C19.5813333,1.76433121 18.7706667,2.12101911 17.8586667,2.27388535 C17.1493333,1.50955414 16.136,1 15.0213333,1 C12.8933333,1 11.12,2.78343949 11.12,5.02547771 C11.12,5.33121019 11.1706667,5.63694268 11.2213333,5.94267516 C7.97866667,5.78980892 5.14133333,4.15923567 3.216,1.76433121 C2.86133333,2.37579618 2.70933333,3.03821656 2.70933333,3.80254777 C2.70933333,5.17834395 3.41866667,6.40127389 4.432,7.1656051 C3.77333333,7.1656051 3.216,6.96178344 2.65866667,6.65605096 L2.65866667,6.70700637 C2.65866667,8.6433121 3.976,10.2738854 5.8,10.6305732 C5.496,10.7324841 5.14133333,10.7834395 4.78666667,10.7834395 C4.53333333,10.7834395 4.28,10.7834395 4.07733333,10.7324841 C4.584,12.3121019 6.00266667,13.4840764 7.72533333,13.5350318 C6.408,14.6050955 4.736,15.2675159 2.912,15.2675159 C2.608,15.2675159 2.304,15.2675159 2,15.2165605 C3.72266667,16.3375796 5.74933333,17 7.97866667,17 C15.1226667,17 19.0746667,10.8853503 19.0746667,5.58598726 C19.0746667,5.43312102 19.0746667,5.22929936 19.0746667,5.07643312 C19.8346667,4.51592357 20.4933333,3.80254777 21,2.98726115 C20.2906667,3.29299363 19.5306667,3.5477707 18.7706667,3.59872611 C19.4293333,2.98726115 20.0373333,2.22292994 20.3413333,1.30573248 Z" id="Twitter_3_"></path>
+        </g>
+    </g>
+</svg></span>
+                                </a>
+                                <a href="" target="_blank" class="button-corner square">
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="corner"></span>
+                                    <span class="icon"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Screens-/-About-The-Project" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UGC-Desktop" transform="translate(-254.000000, -842.000000)" fill="#FFFFFF">
+            <g id="UI-/-CTA-/-Instagram-/-Default" transform="translate(240.000000, 828.000000)">
+                <path d="M29.9891553,14 L16.010846,14 C15.4511901,14 14.9761408,14.1984789 14.5856833,14.5954441 C14.1952258,14.9924093 14,15.4642045 14,16.0108447 L14,30.0086768 C14,30.5553173 14.1952258,31.0238592 14.5856833,31.4143167 C14.9761408,31.8047742 15.4511901,32 16.010846,32 L29.9891553,32 C30.5488099,32 31.0238587,31.8047742 31.4143167,31.4143167 C31.8047747,31.0238592 32,30.5553173 32,30.0086768 L32,16.0108447 C32,15.4642045 31.8047747,14.9924093 31.4143167,14.5954441 C31.0238587,14.1984789 30.5488099,14 29.9891553,14 Z M22.9804772,28.5249458 C23.7483764,28.5249458 24.4674593,28.3785268 25.1377434,28.0856839 C25.80803,27.792841 26.3937058,27.3958808 26.8947933,26.8947933 C27.3958808,26.3937058 27.792841,25.80803 28.0856839,25.1377434 C28.3785268,24.4674593 28.5249458,23.7483764 28.5249458,22.9804772 C28.5249458,22.8112782 28.515185,22.6453377 28.495661,22.4826458 C28.4761395,22.3199564 28.4468547,22.1605206 28.4078091,22.0043384 L29.9891553,22.0043384 L29.9891553,29.2082417 C29.9891553,29.403472 29.9240785,29.5694137 29.793925,29.7060736 C29.663774,29.8427338 29.5010846,29.9110629 29.3058568,29.9110629 L16.6941432,29.9110629 C16.4989144,29.9110629 16.3362263,29.8427338 16.2060738,29.7060736 C16.0759212,29.5694137 16.010846,29.403472 16.010846,29.2082417 L16.010846,22.0043384 L17.5531453,22.0043384 C17.5271141,22.1605206 17.504339,22.3199564 17.484815,22.4826458 C17.4652935,22.6453377 17.4555302,22.8112782 17.4555302,22.9804772 C17.4555302,23.7483764 17.5986981,24.4674593 17.8850338,25.1377434 C18.171367,25.80803 18.5650736,26.3937058 19.0661611,26.8947933 C19.5672487,27.3958808 20.1529245,27.792841 20.823211,28.0856839 C21.4934951,28.3785268 22.212578,28.5249458 22.9804772,28.5249458 Z M19.524947,22.9804772 C19.524947,22.0303646 19.8633376,21.2169227 20.5401314,20.5401289 C21.2169227,19.8633376 22.0303646,19.5249445 22.9804772,19.5249445 C23.9436067,19.5249445 24.7602997,19.8633376 25.4305863,20.5401289 C26.1008704,21.2169227 26.4360074,22.0303646 26.4360074,22.9804772 C26.4360074,23.9436067 26.1008704,24.7635533 25.4305863,25.4403471 C24.7602997,26.1171408 23.9436067,26.4555315 22.9804772,26.4555315 C22.0303646,26.4555315 21.2169227,26.1171408 20.5401314,25.4403471 C19.8633376,24.7635533 19.524947,23.9436067 19.524947,22.9804772 Z M29.3058568,18.9978308 L27.6854651,18.9978308 C27.5032517,18.9978308 27.3438184,18.9327565 27.2071577,18.802603 C27.070497,18.6724495 27.0021692,18.5097626 27.0021692,18.3145349 L27.0021692,16.6941432 C27.0021692,16.5119298 27.070497,16.3524965 27.2071577,16.2158358 C27.3438184,16.0791751 27.5032517,16.0108447 27.6854651,16.0108447 L29.3058568,16.0108447 C29.5010846,16.0108447 29.663774,16.0791751 29.793925,16.2158358 C29.9240785,16.3524965 29.9891553,16.5119298 29.9891553,16.6941432 L29.9891553,18.3145349 C29.9891553,18.5097626 29.9240785,18.6724495 29.793925,18.802603 C29.663774,18.9327565 29.5010846,18.9978308 29.3058568,18.9978308 Z" id="Page-1"></path>
+            </g>
+        </g>
+    </g>
+</svg></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </div>
+    </div>
+    <div class="module TimelineModule" data-module="TimelineModule" >
+      <div class="indicator flexrow">
+        <div class="category frameTitle">Suffocation</div>
+        <div class="graphics">
+           <div class="secondarySpots"></div>
+           <div class="primarySpots"></div>
+           <div class="progressLine"></div>
+           <div class="backgroundLine"></div>
+       </div>
+     </div>
+     <div class="mobileInfo flexrow">
+        <div class="frameTitle name">Lorem Ipsum</div>
+        <div class="frameTitle counter">0/10</div>
+     </div>
+     <div class="spotTemplates" style="display:none">
+       <div class="spot primary">
+          <span class="icon primaryIcon icon-primary-passive">
+            <?xml version="1.0" encoding="UTF-8"?>
+              <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Primary Passive</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Passive">
+                  <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                  <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="icon primaryIcon icon-primary-active">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Primary Active</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Active">
+                  <g id="Active-">
+                    <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                    <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="icon primaryIcon icon-primary-seen">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Primary Seen</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Seen" fill="#FFFFFF">
+                  <rect id="Rectangle" x="4" y="4" width="7" height="7"></rect>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="icon primaryIcon icon-primary-hover">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Timeline / Dots / Primary / Hover</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Timeline-/-Dots-/-Primary-/-Hover">
+                  <polygon id="Path-Copy" fill="#000000" points="4 0 11 0 15 4 15 11 11 15 4 15 0 11 7.34788079e-16 4"></polygon>
+                  <path d="M4.41421356,1 L1,4.41421356 L1,10.5857864 L4.41421356,14 L10.5857864,14 L14,10.5857864 L14,4.41421356 L10.5857864,1 L4.41421356,1 Z M4,-6.21724894e-15 L11,-6.21724894e-15 L15,4 L15,11 L11,15 L4,15 L-2.66453526e-15,11 L-1.92974718e-15,4 L4,-6.21724894e-15 Z" id="Rectangle-2-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+                  <rect id="Rectangle-9" fill="#FFFFFF" x="5" y="5" width="5" height="5"></rect>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <div class="hoverState">
+             <span class="frameTitle"></span>
+             <div class="background"></div>
+          </div>
+          <div class="hitter"></div>
+      </div>
+      <div class="spot secondary">
+           <span class="icon secondaryIcon icon-secondary-passive">
+             <?xml version="1.0" encoding="UTF-8"?>
+             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <title>Secondary Passive</title>
+               <desc>Created with Sketch.</desc>
+               <defs></defs>
+               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="Secondary-Passive" fill="#666666">
+                   <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+                 </g>
+               </g>
+             </svg>
+           </span>
+           <span class="icon secondaryIcon icon-secondary-active">
+             <?xml version="1.0" encoding="UTF-8"?>
+             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <title>Secondary Active</title>
+               <desc>Created with Sketch.</desc>
+               <defs></defs>
+               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="Secondary-Active">
+                   <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="5" height="5"></rect>
+                   <rect id="Fill" fill="#000000" x="1" y="1" width="3" height="3"></rect>
+                 </g>
+               </g>
+             </svg>
+           </span>
+           <span class="icon secondaryIcon icon-secondary-seen">
+             <?xml version="1.0" encoding="UTF-8"?>
+             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <title>Secondary Seen</title>
+               <desc>Created with Sketch.</desc>
+               <defs></defs>
+               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="Secondary-Seen" fill="#FFFFFF">
+                   <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+                 </g>
+               </g>
+             </svg>
+           </span>
+         </div>
+      </div>
+   </div>
+ </div>
+ <script src="{% static 'story/scripts/story2.js' %}"></script>
+{% endblock %}

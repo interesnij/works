@@ -1,0 +1,151 @@
+{% extends "grenada/base_2.html" %}
+{% load static %}
+
+{% block title %}Проект 4{% endblock %}
+
+{% block content %}
+
+<div id="main">
+            	<!-- Hero Section -->
+                <div id="hero" class="has-image">
+                    <div id="hero-styles" class="parallax-onscroll">
+                        <div id="hero-caption" class="text-align-center">
+                            <div class="inner">
+                                <h1 class="hero-title">Born <span>Wild</span></h1>
+                                <h2 class="hero-subtitle">This means to serve someone and look up to them</h2>
+
+                                <div class="scroll-down-wrap no-border link">
+                                    <a href="#" class="section-down-arrow ">
+                                        <svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+                                            <path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hero-bg-wrapper">
+                    <div id="hero-image-parallax">
+                        <div id="hero-bg-image" style="background-image:url({% static 'grenada/images/04hero.jpg' %})"></div>
+                    </div>
+                </div>
+                <!--/Hero Section -->
+
+                <!-- Main Content -->
+                <div id="main-content">
+                	<div id="main-page-content">
+
+                        <!-- Row -->
+                        <div class="vc_row small row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <h4 class="has-animation" data-delay="10">Undefeated Samurai</h4>
+
+                                <p class="has-animation" data-delay="50">In general, samurai, aristocrats, and priests had a very high literacy rate in kanji. Recent studies have shown that literacy in kanji among other groups in society was somewhat higher than previously understood. For example, court documents, birth and death records and marriage records from the Kamakura period, submitted by farmers, were prepared in Kanji. Both the kanji literacy rate and skills in math improved toward the end of Kamakura period.</p>
+
+								<p class="has-animation" data-delay="100">Some samurai had buke bunko, or "warrior library", a personal library that held texts on strategy, the science of warfare, and other documents that would have proved useful during the warring era of feudal Japan. One such library held 20,000 volumes.</p>
+								<a href="" target="_blank" class="link has-animation" data-delay="50"><span>Read More</span></a>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/bw01.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/bw02.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/bw03.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row row_padding_top row_padding_bottom">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/bw04.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                        <!-- Row -->
+                        <div class="vc_row full">
+
+                            <div class="container">
+
+                                <figure class="has-animation" data-delay="10" >
+                                    <img src="{% static 'grenada/images/bw05.jpg' %}" alt="Image Title">
+                                    <figcaption>Image Caption</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <!--/Row -->
+
+                    </div>
+                	<!--/Main Page Content -->
+
+                    <!-- Project Navigation -->
+                    <div id="project-nav">
+                        <div class="next-project-wrap">
+                            <div class="next-project-image" style="background-image:url({% static 'grenada/images/05hero.jpg' %})"></div>
+                            <a class="next-project-title next-ajax-link-project hide-ball " data-type="page-transition" href="{% url 'grenada_detail5' %}">
+                                <div class="main-title">Kitchen <span>Options</span></div>
+                                <div class="main-subtitle">Next Project</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--/Project Navigation -->
+
+                </div>
+                <!--/Main Content -->
+            </div>
+
+{% endblock %}

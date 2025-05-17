@@ -1,0 +1,70 @@
+<div class="contact page" data-url="contact" data-desc="">
+	<section class="contentblock txtImg centerOverflowed intro" data-para="50,25" data-target="1" data-anim="r" data-img="https://veritystudios.cdn.prismic.io/veritystudios/3485417ad39962dc41601b4cb32ea1d127990733_contact_hero.jpg,https://veritystudios.cdn.prismic.io/veritystudios/6e8f73a0e21606bdb83bbb7795ce9b2945061b27_contact_hero.jpg,https://veritystudios.cdn.prismic.io/veritystudios/7bd72cf44d2accf006ea86781b5f00daa7ecd0cd_contact_hero.jpg" data-rel="1584,1128,320,592">
+		<div class="txt">
+			<h5>Contact</h5>
+			<h2 class="desktop">If you’d like to talk about an upcoming show, or hear how our drones could bring a new dimension to your next project, <br />just get in touch.</h2>
+			<h2 class="mobile">If you’d like to talk about an upcoming show, or hear how our drones could bring a new dimension to your next project, just get in touch.</h2>
+			<a href="" class="outlineBtn" data-scroll="contactform">Get in touch</a>
+		</div>
+	</section>
+
+	<section class="contentblock imgTxt centerOverflowed" data-para="50,0" data-target="1" data-anim="" data-map="47.413970,8.541859" data-rel="1560,1320">
+		<div class="txt">
+			<h3>Binzmühlestrasse 81<br />8050 Zurich<br />Switzerland<br /><br />+41 44 533 83 60<br />+1 (347) 960-4198<br /><a href="https://veritystudios.atlassian.net/servicedesk/customer/portal" target="_blank">Support Portal Login</a></h3><p>We are located less than 5 minutes’ walk from the Oerlikon train station. The Oerlikon train station is a 5 minute train journey either from Zurich Airport or from Zurich’s main train station (Zurich HB). A limited number of parking spaces are also available at the back of the building.</p>
+		</div>
+	</section>
+
+	<!-- Contact form -->
+	<section class="contentblock textOnly centerOverflowed formblock" id="contactform">
+		<div class="txt">
+			<h2>Get in touch</h2>
+		</div>
+
+		<form action="Assets/Php/contact.php" target="receiveForm"  method="post">
+			<input type="text" name="fname" placeholder="*First name" autocomplete="on" required/>
+			<input type="text" name="lname" placeholder="*Last name" autocomplete="on" required/>
+			<input type="email" name="email" placeholder="*Email" autocomplete="on" required/>
+			<input type="tel" name="tel" placeholder="*Phone number (e.g. +41 44 533 83 74)" autocomplete="on" required/>
+			<input type="text" name="company" placeholder="*Company name"/>
+			<select name="type" required class="mainselect">
+				<option value="" selected disabled hidden>*What describes your inquiry</option>
+				<option value="General inquiry">General inquiry</option>
+				<option value="Request a quote">Request a quote</option>
+				<option value="Press inquiry">Press inquiry</option>
+				<option value="Partnership inquiry">Partnership inquiry</option>
+			</select>
+			<select name="description" class="forquote">
+				<option value="" selected disabled hidden>*How best to describe your project?</option>
+				<option value="Touring">Touring</option>
+				<option value="One-time event">One-time event</option>
+				<option value="Permanent installation">Permanent installation</option>
+			</select>
+			<input type="number" name="budget" class="forquote budget" placeholder="*What is your budget in USD? (e.g. 100000)"/>
+			<!--<select name="budget" class="forquote">
+				<option value="" selected disabled hidden>*What is your budget range?</option>
+				<option value="USD 50,000 – 100,000">USD 50,000 – 100,000</option>
+				<option value="USD 101,000 – 200,000">USD 101,000 – 200,000</option>
+				<option value="USD 200,000 – 300,000">USD 200,000 – 300,000</option>
+				<option value="USD > 301,000">USD > 301,000</option>
+			</select>-->
+			<textarea name="how" placeholder="*How can we help?" rows="20" required></textarea>
+			<input type="text" name="hear" placeholder="How did you hear about us?" />
+			<div class="gdpr">
+				<div class="rect"><div class="inner"></div></div>
+				<p>I consent to my data being passed and stored by Verity Studios for marketing and analysis purposes in accordance with GDPR regulations. Please read our <a href="legal">privacy policy</a> for more details.</p>
+			</div>
+			<input id="submitcontact" type="submit" value="Submit" />
+			<!-- Hidden field, please dont edit -->
+			<input type="text" name="v" value="ver" style="display:none;"/>
+
+			<!-- Thank you message -->
+			<div class="thanksOverlay"></div>
+			<div class="thanks">
+				<h3>Thanks for getting in touch.</h3>
+				<p>A member of our team will be in contact with you soon.</p>
+				<a href="" class="outlineBtn">Close</a>
+			</div>
+		</form>
+		<iframe name="receiveForm" style="display:none;"></iframe>
+	</section>
+</div>

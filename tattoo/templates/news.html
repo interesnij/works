@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" type="text/css" href="{% static 'tattoo/styles/tattoo.css' %}" />
+  <title>Наши новости</title>
+</head>
+<body class="page-template page-template-templates page-template-page-news page-template-templatespage-news-php page page-id-10">
+  <div class="cover cover-main">
+    <div class="line-loader-container">
+      <div class="line-loader"></div>
+    </div>
+  </div>
+  <div class="cover cover-dark"></div>
+  <div class="cover cover-red"></div>
+  <div class="cover cover-gold"></div>
+  <div class="hamburger-container">
+    <button class="hamburger hamburger--spin-r" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+  <div id="navigation">
+    <div class="navigation cover-gold"></div>
+    <div class="navigation cover-red"></div>
+    <div class="navigation cover-dark">
+      <div class="top-container">
+        <div class="top-nav">
+          <nav class="nav-animation">
+            <ul>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo' %}" class="portfolio-item reveal-tattoo">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Главная">Главная</span>
+                  <div class="nav-stripe stripe-tattoo-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav">
+                <a href="{% url 'tattoo_example' %}" class="portfolio-item reveal-tattoo">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Татуировки">Татуировки</span>
+                  <div class="nav-stripe stripe-tattoo-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'tattoo_about' %}" class="portfolio-item reveal-studio">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Студия &#038; Био">Студия &#038; Био</span>
+                  <div class="nav-stripe stripe-studio-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav selected">
+                <a href="{% url 'tattoo_news' %}" class="portfolio-item reveal-news">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Новости">Новости</span>
+                  <div class="nav-stripe stripe-news-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav ">
+                <a href="{% url 'goods_index' %}" class="portfolio-item reveal-merch">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Март">Март</span>
+                  <div class="nav-stripe stripe-merch-nav"></div>
+                </a>
+              </li>
+              <li class="open-nav">
+                <a href="{% url 'tattoo_contacts' %}" class="portfolio-item reveal-contacts">
+                  <div class="underline-nav"></div>
+                  <span data-hover="Контакты">Контакты</span>
+                  <div class="nav-stripe stripe-contacts-nav"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="top-image nav-image image-nav-tattoo">
+          <img src="{% static 'tattoo/images/1.jpg' %}" alt="Tattoos" />
+        </div>
+        <div class="top-image nav-image image-nav-studio">
+          <img src="{% static 'tattoo/images/2.jpg' %}" alt="Studio &#038; Bio" />
+        </div>
+        <div class="top-image nav-image image-nav-news">
+          <img src="{% static 'tattoo/images/4.jpg' %}" alt="News" />
+        </div>
+        <div class="top-image nav-image image-nav-merch">
+          <img src="{% static 'tattoo/images/4.jpg' %}" alt="Merch" />
+        </div>
+        <div class="top-image nav-image image-nav-contacts">
+          <img src="{% static 'tattoo/images/3.jpg' %}" alt="Contacts" />
+        </div>
+      </div>
+      <div class="massive-typo typo-nav"></div>
+    </div>
+  </div>
+  <header>
+    <div class="header-logo">
+      <a href=""></a>
+    </div>
+  </header>
+<div id="wrapper-outer">
+  <div id="wrapper">
+    <div class="opening">
+      <div class="top-container">
+        <div class="top-copy">
+          <div class="highlight">
+            <div class="underline"></div>
+            <h1>Новости</h1>
+          </div>
+          <div class="highlight">
+            <div class="underline"></div>
+            <h2>Наши новости</h2>
+          </div>
+          <div class="vertical-text">MXVIII</div>
+        </div>
+        <div class="big-stripe stripe-news"></div>
+        <div class="image-cover"></div>
+        <div class="top-image image atvImg">
+          <div class="atvImg-layer" data-img="{% static 'tattoo/images/4.jpg' %}"></div>
+        </div>
+      </div>
+      <div class="massive-typo typo-news"></div>
+      <div class="line-scroll-down-container">
+        <div class="line-scroll-down"></div>
+      </div>
+    </div>
+    <div class="filter-bar-container">
+      <div class="search-container">
+        <input type="search" placeholder="Search in the News..." id="search-news" autocomplete="off" />
+      </div>
+      <div class="filter-container">
+        <select class="cs-select cs-skin-elastic" data-type="category">
+          <option value="" disabled selected>Category</option>
+          <option value="all">All</option>
+          <option value="news">News</option>
+        </select>
+        <div id="category-buttons" class="hidden hidden-filters">
+          <button class="button is-checked" data-filter="">Category</button>
+          <button class="button all" data-filter="">All</button>
+          <button class="button news" data-filter="news">News</button>
+        </div>
+      </div>
+    </div>
+    <div class="nothing-found">No articles matching the search terms found.</div>
+    <div id="masonry-container" class="news-wrapper">
+      <div class="masonry-grid news-size selected" data-title="new-zealand-tattoo-038-art-festival" data-category="news">
+        <a href="{% url 'tattoo_news_detail' %}">
+          <div class="masonry-module">
+            <div class="news-category">News</div>
+            <div class="news-image">
+              <img src="{% static 'tattoo/images/18.jpg' %}">
+            </div>
+            <div class="news-contents">
+              <p>01/04/2017</p>
+              <h4>New Zealand Tattoo &#038; Art Festival</h4>
+            </div>
+            <div class="news-arrow"></div>
+          </div>
+        </a>
+      </div>
+      <div class="masonry-grid news-size selected" data-title="perth-tattoo-expo" data-category="news">
+        <a href="{% url 'tattoo_news_detail' %}">
+          <div class="masonry-module">
+            <div class="news-category">News</div>
+            <div class="news-image">
+              <img src="{% static 'tattoo/images/19.jpg' %}">
+            </div>
+            <div class="news-contents">
+              <p>01/02/2017</p>
+              <h4>Perth Tattoo Expo</h4>
+            </div>
+            <div class="news-arrow"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="loader" class="hidden"></div>
+<div id="holder-newpage" class="hidden"></div>
+<footer itemscope itemtype="">
+  <div class="footer-top">
+    <div class="footer-title">
+      <h4>Сайт</h4>
+      <h7></h7>
+    </div>
+    <div class="footer-50">
+      <p>The Tattoo Shop Burleigh heads<br /> Альфа центавра
+        <br /> ул Космонавтов
+      </p>
+    </div>
+    <div class="footer-50">
+      <p>Tel. <span>+7(777) 777777</span>
+        <br/><br />
+        <a href="" target="_blank">Enquiry</a>
+      </p>
+    </div>
+    <div class="form">
+      <form style="display:inline;" action="" method="post" id="subForm" target="_blank">
+        <input placeholder="Email Address" id="fieldEmail" name="cm-mjynt-mjynt" type="email" required />
+        <div class="arrow-newsletter"></div>
+        <input type="submit" id="send-email" value="" /></form>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-nav">
+    <nav class="nav-animation footer-nav-main">
+      <ul>
+        <li>
+          <a href="{% url 'tattoo_example' %}" class="intro-item">
+            <div class="underline-nav"></div>
+            <span data-hover="Tattoos">Tattoos</span>
+            <div class="nav-stripe stripe-tattoo-nav"></div>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'tattoo_about' %}" class="intro-item">
+            <div class="underline-nav"></div>
+            <span data-hover="Studio &#038; Bio">Studio &#038; Bio</span>
+            <div class="nav-stripe stripe-studio-nav"></div>
+          </a>
+        </li>
+        <li class="selected">
+          <a href="{% url 'tattoo_news' %}" class="intro-item">
+          <div class="underline-nav"></div>
+          <span data-hover="News">News</span>
+          <div class="nav-stripe stripe-news-nav"></div>
+          </a>
+        </li>
+        <li > <a href="{% url 'goods_index' %}" class="intro-item">
+          <div class="underline-nav"></div>
+          <span data-hover="Merch">Merch</span>
+          <div class="nav-stripe stripe-merch-nav"></div>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'tattoo_contacts' %}" class="intro-item">
+            <div class="underline-nav"></div>
+            <span data-hover="Contacts">Contacts</span>
+            <div class="nav-stripe stripe-contacts-nav"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script type="text/javascript" defer src="{% static 'tattoo/scripts/autoptimize.js' %}"></script>
+</body>
+</html>
+
+
+
+<!-- Compression = gzip -->

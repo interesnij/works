@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1,width=device-width,height=device-height,viewport-fit=cover">
+  <title>Студия Job</title>
+
+  <meta name=msapplication-TileColor content=#000000>
+  <meta name=theme-color content=#000000>
+  <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+  <script defer src="{% static 'scripts/job/bundle.min.js' %}"></script>
+  <link class=bia_styleLoader rel=preload href="{% static 'styles/job/style.min.css' %}" as=style onload='this.rel="stylesheet"'>
+  <noscript>
+    <link rel=stylesheet href="{% static 'styles/job/style.min.css' %}">
+  </noscript>
+
+  <link rel=stylesheet href="{% static 'styles/job/job.css' %}">
+  <script src="{% static 'scripts/job/job.js' %}"></script>
+</head>

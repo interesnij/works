@@ -1,0 +1,170 @@
+ {% load static %}
+<!doctype html>
+<html class="no-js">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Музыка </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel='stylesheet' id='main_style-css'  href="{% static 'music/styles/music.css' %}" type='text/css' media='all' />
+    </head>
+
+<body class="loading">
+
+            <style>
+        .loader-spot--color,
+        .nav-hover-spot--color,
+        .nav-impressum-spot--color,
+        ::-webkit-scrollbar-thumb {
+          background-color: #3cbc3a;
+          color: #3cbc3a;
+        }
+        #menu:hover span,
+        #menu:hover span:before,
+        #menu:hover span:after,
+        body.nav-open #menu:hover span:before,
+        body.nav-open #menu:hover span:after,
+        #impressum,
+        .poster-overview__item--overlay.nav-hover-spot--color,
+        .tooltip,
+        .sc-progress-bar,
+        .overlay-background {
+          background-color: #3cbc3a !important;
+        }
+        #container,
+        #content,
+        .gif-items,
+        .uh-oh,
+        #sc-progress,
+        #preloader-bar {
+          background-color: #3cbc3a;
+        }
+        .nav-link--spot-color,
+        #impressum-link:hover,
+        #impressum-link.open {
+          color: #3cbc3a;
+        }
+    </style>
+
+<button id="menu" type="button">
+    <span>Меню</span>
+  </button>
+
+  <div id="progress-wrapper">
+    <div class="sc-progress-bar-bg"></div>
+    <div class="sc-progress-bar"></div>
+    <div id="sc-progress"></div>
+  </div>
+
+  <div id="nav-overlay">
+
+    <div id="nav-overlay__inner">
+
+      <div class="nav-impressum">
+          Титры титры
+          <br>
+          <br>
+          Титры титры Титры титры Титры титры<br>
+          20:00 — 03:00 Uhr
+          <br>
+          <br>
+          <a href="" class="nav-link--spot-color">facebook</a> &nbsp;&nbsp; <a href="" class="nav-link--spot-color">mail</a>
+      </div>
+      <div id="poster-overview">
+
+        {% include 'track_preview.html' %}
+
+      </div>
+
+    </div>
+
+    <div id="impressum">
+      <div class="block-33">
+        Титры титры<br>
+        Титры титры<br>
+        Титры титры<br>
+        <br><br>
+        Титры титры<br>
+        <a href="">
+          Титры титры
+        </a>
+      </div>
+      <div class="block-33">
+        Титры титры<br>
+        Титры титры<br>
+        Титры титры<br>
+        Титры титры<br>
+        <br>
+        <a href="">
+          Титры титры
+        </a><br>
+        Титры титры
+      </div>
+      <div class="block-33">
+        Титры титры<br>
+        Титры титры<br>
+        Титры титры<br>
+        <br><br>
+        Титры титры<br>
+        Титры титры
+      </div>
+    </div>
+
+  </div>
+
+  <div id="container" style="overflow:hidden;">
+    <div id="content">
+
+    {% include 'first_track.html' %}
+
+    {% include 'track_index.html' %}
+
+
+
+    </div>
+  </div>
+
+  <div class="tooltip tooltip-play hide">
+    Нажми и слушай
+  </div>
+
+  <div class="tooltip tooltip-seek hide">
+    Нажми и слушай
+  </div>
+
+  <div id="preloader">
+    <div id="preloader-bar"></div>
+
+  </div>
+
+  <div id="overlay-message">
+    <div class="overlay-background"></div>
+    <div class="overlay__inner">
+      <p class="overlay-title">
+        #thisMakesMeSad
+      </p>
+      <p>
+        Этого трека нет в SoundCloud, к несчастью
+      </p>
+    </div>
+  </div>
+
+<script type='text/javascript' src="{% static 'music/scripts/music.js' %}"></script>
+
+
+
+<div class="uh-oh">
+
+  <h1>Du hast gewonnen!</h1>
+  <p>
+    Nee Blödsinn. Dein Browser ist zu alt… Bitte <a href="http://browsehappy.com/">updaten</a> Sie Ihren Browser.
+    <br><br>
+    <a href="">
+      Наш фейсбук
+    </a>
+  </p>
+</div>
+
+</body>
+</html>

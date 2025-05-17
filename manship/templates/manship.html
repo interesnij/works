@@ -1,0 +1,69 @@
+{% extends "manship/base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<div class="hero-wrapper">
+    <img src="{% static 'images/manship/pork-belly.jpg' %}" class="hero-img img-responsive" alt="">
+    <div class="hero-wrapper_inner">
+        <div class="hero-caption container">
+            <div class="hero-caption_copy fadeup">
+                <h2><span class="special">Без Огня,</span><br>КАК МОЖЕТ ВКУС ВОСПЛАМЕНИТЬСЯ?</h2>
+            </div>
+        </div>
+        <div class="smoke"></div>
+    </div>
+</div>
+<div class="container-fluid craftsmanship">
+    <div class="row">
+        <div class="sm-12 md-7 lg-7">
+            <img src="{% static 'images/manship/bread.png' %}" alt="" class="align-center visible-xs img-responsive">
+        </div>
+        <div class="sm-12 md-4 lg-4 text-center">
+            <div class="craftsmanship-content">
+                <h2 class="special dots-horz">Illuminated</h2>
+                <p>Мы используем огонь, чтобы раздвинуть границы вкуса, прокладывая новые кулинарные тропы через тысячи лет после рассвета человека.
+                  Куда мы пришли и куда идем? На что это похоже на вкус?</p>
+                <a href="" title="Наша история" class="btn btn-lg btn-default">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="sm-12 md-12 lg-6 home-menu-hero">
+            <img src="{% static 'images/manship/shrimp.png' %}" alt="" class="hidden-xs img-responsive">
+        </div>
+        <div class="sm-12 md-12 lg-6">
+            <div class="menu-list bars fadeup text-center">
+                <div class="visible-xs visible-sm">
+                    <h2 class="special dots-horz">Меню</h2>
+                </div>
+                <p class="special h2 hidden-xs hidden-sm">"Мы все едим, и это было бы печальной тратой возможности есть плохо"</p>
+                <p>-Ульрих Третий</p>
+                <div class="row">
+                    <div class="sm-6 lg-6">
+                        <a href="{% url 'manship_dinner' %}" title="" class="btn btn-lg btn-default">Обед</a>
+                    </div>
+                    <div class="sm-6 lg-6">
+                        <a href="{% url 'manship_lunch' %}" title="" class="btn btn-lg btn-default">Ланч</a>
+                    </div>
+                    <div class="sm-6 lg-6">
+                        <a href="{% url 'manship_brunch' %}" title="" class="btn btn-lg btn-default">Бранч</a>
+                    </div>
+                    <div class="sm-6 lg-6">
+                        <a href="{% url 'manship_drink' %}" title="" class="btn btn-lg btn-default">Возлияния</a>
+                    </div>
+                </div>
+                <a href="" title="" class="btn btn-lg btn-link special">Смотреть меню</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vert"></div>
+{% include 'manship/reserve.html' %}
+
+{% endblock %}

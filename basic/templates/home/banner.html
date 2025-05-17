@@ -1,0 +1,353 @@
+{% load static %}
+
+<h1 class="a11y">BASIC - это агентство цифрового дизайна и брендинга, предлагающее помощь в электронной коммерции. Мы разрабатываем стратегии бренда и пользовательский опыт.</h1>
+
+<div class="hero hero--home">
+    <div class="hero--home__inner hero__content">
+        <div class="container">
+            <h2 class="h1" data-skrollex data-sk-group data-sk-headline data-sk-sa-delay="0.5">Мы являемся брендинговым и опытным дизайнерским агентством, которое создает бренды, имеющие значение для культуры.</h2>
+        </div>
+    </div>
+</div>
+
+<div class="featured-work-carousel spacer-large" data-featured-work-carousel data-skrollex data-sk-group>
+
+    <div class="featured-work-carousel__nav">
+        <ul role="presentation">
+            <li role="presentation" class="active">
+                <button>Слайд 1</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+            <li role="presentation">
+                <button>Слайд 2</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+            <li role="presentation">
+                <button>Слайд 3</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+            <li role="presentation">
+                <button>Слайд 4</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+            <li role="presentation">
+                <button>Слайд 5</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+            <li role="presentation">
+                <button>Слайд 6</button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path class="circle--bg" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                    <path class="circle--fill" d="M8,14.5A6.5,6.5,0,1,1,14.5,8,6.5,6.5,0,0,1,8,14.5Z" />
+                </svg>
+            </li>
+        </ul>
+    </div>
+
+    <div class="featured-work-carousel__next-image">
+        <button class="meta">
+            Далее <svg class="arrow">
+                <use xlink:href="#icon-arrow"></use>
+            </svg>
+            <span><span class="inner">Beats by Dre</span></span>
+        </button>
+    </div>
+
+    <div class="featured-work-carousel__images" data-skrollex data-sk-group data-sk-mask>
+        <div class="featured-work-carousel__image entering" data-title="Beats by Dre">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <video class="video-player__video" preload="metadata" loop muted volume="0.5" data-skrollex data-sk-static data-sk-hide-offscreen data-sk-render-gutter-bottom="100" playsinline>
+                        <source src="https://basicagency.com/uploads/case-studies/Beats-by-Dre/beats-by-dre-branded-ecommerce-web-design-case-study-hero-video.mp4" type="video/mp4" />
+                    </video>
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/13-4.jpg' %} 600w,
+                    {% static 'basic/images/14-3.jpg' %} 940w,
+                    {% static 'basic/images/14-2.jpg' %} 1280w,
+                    {% static 'basic/images/14-1.jpg' %} 2000w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 50px; height: 50px;">
+                                        <img src="{% static 'basic/images/Beats.svg' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        Beats by Dre
+                                    </p>
+                                    <h3 class="card--featured-work__title">Создание бренда Beats с помощью дизайна и электронной коммерции
+                                    </h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-work-carousel__image" data-title="BB Dakota">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/13-4.jpg' %} 600w,
+                    {% static 'basic/images/13-3.jpg' %} 940w,
+                    {% static 'basic/images/13-2.jpg' %} 1280w,
+                    {% static 'basic/images/13-1.jpg' %} 2000w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 115px; height: 25px;">
+                                        <img src="{% static 'basic/images/BBDakota.svg' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        BB Dakota
+                                    </p>
+                                    <h3 class="card--featured-work__title">Создание бренда и опыта eComm с непочтительной личностью</h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-work-carousel__image" data-title="OXO">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/12-4.jpg' %} 600w,
+                    {% static 'basic/images/12-3.jpg' %} 940w,
+                    {% static 'basic/images/12-2.jpg' %} 1280w,
+                    {% static 'basic/images/12-1.jpg' %} 2000w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 85px; height: 25px;">
+                                        <img src="{% static 'basic/images/oxo-logo.svg' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        OXO
+                                    </p>
+                                    <h3 class="card--featured-work__title">Создание электронной коммерции более эргономичной за счет дизайна</h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-work-carousel__image" data-title="SoftBank Vision Fund">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/11-4.jpg' %} 600w,
+                    {% static 'basic/images/11-3.jpg' %} 940w,
+                    {% static 'basic/images/11-2.jpg' %} 1280w,
+                    {% static 'basic/images/11-1.jpg' %} 2000w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 280px; height: 25px;">
+                                        <img src="{% static 'basic/images/SBIA-SVG.svg' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        SoftBank Vision Fund
+                                    </p>
+                                    <h3 class="card--featured-work__title">Переосмысление инвестиций в технологии в сфере цифрового дизайна</h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-work-carousel__image" data-title="Heath Ceramics">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/10-3.jpg' %} 600w,
+                    {% static 'basic/images/10-2.jpg' %} 940w,
+                    {% static 'basic/images/10-1.jpg' %} 1280w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 104px; height: 54px;">
+                                        <img src="{% static 'basic/images/Heath-Logo.png' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        Heath Ceramics
+                                    </p>
+                                    <h3 class="card--featured-work__title">Опыт электронной коммерции, созданный так же, как и их продукты</h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featured-work-carousel__image" data-title="Chrome Industries">
+
+            <div class="card card--featured-work pointer" data-skrollex data-sk-group data-featured-work-card data-test="work">
+                <div class="card--featured-work__image">
+
+                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%272358%27%20height%3D%271000%27%20style%3D%27background%3Atransparent%27%2F%3E"
+                    srcset="
+                    {% static 'basic/images/9-4.jpg' %} 600w,
+                    {% static 'basic/images/9-3.jpg' %} 940w,
+                    {% static 'basic/images/9-2.jpg' %} 1280w,
+                    {% static 'basic/images/9-1.jpg' %} 2000w"
+                    sizes="100vw" alt="" class="layer bg" />
+
+                </div>
+                <div class="card--featured-work__text">
+                    <div class="container">
+                        <div class="text-inner">
+                            <div class="text-inner__content" data-easy-click>
+                                <div class="content__inner">
+                                    <div class="card--featured-work__logo" style="width: 40px; height: 63px;">
+                                        <img src="{% static 'basic/images/Chrome.svg' %}" alt="" />
+                                    </div>
+                                    <p class="card--featured-work__meta meta">
+                                        Chrome Industries
+                                    </p>
+                                    <h3 class="card--featured-work__title">Соединение Chrome с городской аудиторией через электронную коммерцию</h3>
+                                    <div class="card--featured-work__cta">
+
+                                        <a data-skrollex data-sk-group data-sk-btn data-btn href="" class="btn btn--icon btn--collapse btn--collapse-all btn--collapse-dark" data-btn-collapse="">
+
+                                            <span class="btn__text"><span class="btn__text-inner">Смотреть</span></span>
+                                            <div class="icon">
+                                                <svg class="">
+                                                    <use xlink:href="#icon-arrow"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

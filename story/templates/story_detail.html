@@ -1,0 +1,1814 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Отдельная история{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'story/styles/story.css' %}" />
+
+<audio id="backgroundMusic" loop>
+    <source src="{% static 'story/audio/background.ogg' %}" type="audio/ogg">
+    <source src="{% static 'story/audio/background.mp3' %}" type="audio/mpeg">
+</audio>
+<audio id="backgroundMusicFiltered" loop>
+    <source src="{% static 'story/audio/background-filtered.ogg' %}" type="audio/ogg">
+    <source src="{% static 'story/audio/background-filtered.mp3' %}" type="audio/mpeg">
+</audio>
+
+<div id="siteWrapper">
+    <header>
+      <a href="{% url 'story' %}">
+        Истории
+      </a>
+      <div class="backWrapper">
+        <a class="backToStories frameTitle" href="{% url 'story' %}">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+          <span>На главную</span>
+        </a>
+        <a class="back frameTitle" href="/">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+          <span>Назад</span>
+        </a>
+      </div>
+      <nav>
+        <a class="ignoreParse soundToggle" href="#">
+          <span class="soundOn">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Icon / Sound on</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icon-/-Sound-on" fill="#FFFFFF">
+                  <g>
+                    <rect id="Rectangle" transform="translate(0.500000, 6.000000) rotate(180.000000) translate(-0.500000, -6.000000) " x="-1.11022302e-16" y="5" width="1" height="2"></rect>
+                    <rect id="Rectangle-Copy" transform="translate(3.500000, 4.500000) rotate(180.000000) translate(-3.500000, -4.500000) " x="3" y="2" width="1" height="5"></rect>
+                    <rect id="Rectangle-Copy-2" transform="translate(6.500000, 3.500000) rotate(180.000000) translate(-6.500000, -3.500000) " x="6" y="0" width="1" height="7"></rect>
+                    <rect id="Rectangle-Copy-3" transform="translate(9.500000, 5.000000) rotate(180.000000) translate(-9.500000, -5.000000) " x="9" y="3" width="1" height="4"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="soundOff">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="10px" height="1px" viewBox="0 0 10 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title>Icon / Sound off</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icon-/-Sound-off" fill="#FFFFFF">
+                  <g>
+                    <rect id="Rectangle" x="3" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy" x="6" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy-2" x="0" y="0" width="1" height="1"></rect>
+                    <rect id="Rectangle-Copy-3" x="9" y="0" width="1" height="1"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </a>
+        <a class="frameTitle takeAction" href="{% url 'story_add' %}"><span>Добавить</span></a>
+        <a class="frameTitle aboutProject" href="{% url 'story_about' %}"><span>о нашем проекте</span></a>
+        </nav>
+    </header>
+    <div class="LoaderTextModule">
+      <div class="IntroTextModule">
+        <div class="textContainer">
+           <div class="subhead">загрузка</div>
+             <q>Люди с психическими расстройствами могут жить полноценной жизнью. Однако для многих миллионов людей, сталкивающихся с нищетой, конфликтами и пренебрежением, жизнь-это нищета.</q>
+              <p class='footnote'>Изучение истории реальных людей, столкнувшихся с проблемами психического здоровья. Посмотреть, как они живут, услышать их голоса, можно здесь.</p>
+              <div class="button-corner-wrapper">
+               <a href="#" class="ignoreParse button-corner large">
+                  <span class="corner"></span>
+                  <span class="corner"></span>
+                  <span class="corner"></span>
+                  <span class="corner"></span>
+                  <span class="text">Далее</span>
+               </a>
+             </div>
+           </div>
+         </div>
+        </div>
+
+
+        <div id="templateLayer">
+                    <div data-template="StoriesTemplate" data-title="Отдельная история" class="template StoriesTemplate">
+
+                <div class="IntroTextModule">
+
+            <div class="textContainer">
+                <div class="subhead">Название</div>
+            	<q>По данным ЮНИСЕФ, 81,2% сельского населения того живет за чертой бедности, что делает его одной из беднейших стран мира.
+                Север того является одним из наиболее нуждающихся регионов этой бедной страны.
+ </q>
+            </div>
+
+            <div class='skip'>Листайте вниз</div>
+        </div>        <div class="ScrollIndicatorModule">
+        	<div class="indicator">
+        		<div class="background"></div>
+        	    <div class="verticalLine"></div>
+        		<div class="icon icon-primary-passive top"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Passive">
+                    <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                    <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+                </g>
+            </g>
+        </svg></div>
+        		<div class="icon icon-primary-passive bottom"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Passive">
+                    <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                    <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+                </g>
+            </g>
+        </svg></div>
+        	    <div class="icon icon-primary-active"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Active</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Active">
+                    <g id="Active-">
+                        <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                        <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+                    </g>
+                </g>
+            </g>
+        </svg></div>
+        	    <div class="icon icon-primary-active2"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Active</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Active">
+                    <g id="Active-">
+                        <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                        <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+                    </g>
+                </g>
+            </g>
+        </svg></div>
+        	    		<div class="text">
+        			<h5 class="scroll">Листайте вниз<br/>чтоб читать всю историю</h5>
+        					</div>
+        	</div>
+        </div>
+                <div class="vignette"></div>
+
+                <div class="readLookToggle">
+                    <div class="indicator">
+                        <div class="line"></div>
+                        <span class="passiveStartSpot"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Passive">
+                    <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                    <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+                </g>
+            </g>
+        </svg></span>
+                        <span class="passiveEndSpot"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Passive">
+                    <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                    <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+                </g>
+            </g>
+        </svg></span>
+                        <span class="activeSpot"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Active</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Primary-Active">
+                    <g id="Active-">
+                        <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                        <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                    </div>
+                    <span class="read">Читать</span>
+                    <span class="look active">Смотреть</span>
+                </div>
+
+            	<div class="storyModules">
+
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="5geZYtvRMsiwWWC4QM8qMK">
+
+                <video crossorigin="anonymous" loop muted class="lookVideo">
+                <source src="//videos.ctfassets.net/l9v0rq9yqvbx/yriYUonTuoewkoCWcmIQa/522340fad65458b5cb6adb04739cb01f/MHT150929V_000222_1-smoothloop.mp4" type="video/mp4">
+                            <source src="//videos.ctfassets.net/l9v0rq9yqvbx/2sWq0QCCucKSYWYQ08aeW2/309235a8aab3a9dd403e1a552ada1a3c/MHT150929V_000222_1.webm" type="video/webm">
+
+            </video>
+
+
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/3uI9Yw6DQsYkIueIaKGSOY/070b8968f375243b164d9fb80ac06b95/MHT150929D_005844.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Часть 1</span>
+                </div>
+
+                <div class="scrollableContent">
+
+                    <div class="featuredColumn primary">
+
+                        <div class="featuredHeading storyContentModule">
+                            <h1>Вера как целитель</h1>
+                        </div>
+
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Часть 1</h2>
+                                    <p><p>Во всем мире подавляющее большинство людей с психосоциальными отклонениями живут в нищете, имеют плохое
+                                      физическое здоровье и подвергаются нарушениям прав человека. Мало того, что жизнь с проблемой психического
+                                      здоровья означает, что человек, вероятно, станет нищим; нищета может усугубить или даже вызвать проблемы
+                                      психического здоровья. Что еще хуже, уход почти всегда некачественный в регионах, борющихся с бедностью.<br />
+        <br />
+        В того значительное большинство людей, страдающих психосоциальной инвалидностью, используют традиционную медицину, не могут позволить
+        себе наркотики и не имеют доступа к специалистам в области психического здоровья. <br />
+        <br />
+        В того значительное большинство людей, страдающих психосоциальной инвалидностью, используют традиционную медицину, не могут позволить себе наркотики и не имеют доступа к специалистам в области психического здоровья.
+.<br /></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+
+
+
+
+
+        <div class="module VideoModule storyContentModule" data-module="VideoModule" data-autoplay=true>
+        	<div class="borderLeftWhite">
+        		<div class="video--wrapper">
+
+        			<div class="video--poster visible">
+        				<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/3uI9Yw6DQsYkIueIaKGSOY/070b8968f375243b164d9fb80ac06b95/MHT150929D_005844.jpg?w=600">
+        			</div>
+
+        			<div class="video--loader">
+        							</div>
+
+        			<video class="video--element" controlsList="nodownload" preload="none">
+        				<source src="//videos.ctfassets.net/l9v0rq9yqvbx/69kb50akLY8MSWMQAC28sE/80d49a8f127c0c12c5d5e373e522a842/Lare_Bedagou_V1.mp4" type="video/mp4">
+        									<source src="//videos.ctfassets.net/l9v0rq9yqvbx/6kJ1HUjm24MOSiqKGOcQaS/0f3faa0f34f6bfa77ccc0c25784b9dc6/Lare-Bedagou_Facebook.webm" type="video/webm">
+
+        			</video>
+        		</div>
+
+        		<div class="video--controls">
+        			<button class='video--controls-state paused'>
+        				<span class="play"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>Rectangle 8</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle-8" fill="#D8D8D8" transform="translate(0.196699, 4.473350) rotate(-225.000000) translate(-0.196699, -4.473350) " points="-3.14321337 1.17112646 3.53661165 1.41161165 -2.82734938 7.77557268"></polygon>
+            </g>
+        </svg></span>
+        				<span class="pause"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="7px" viewBox="0 0 6 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>pause</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="pause" fill="#D8D8D8">
+                    <rect id="Rectangle-2" x="4" y="0" width="2" height="7"></rect>
+                    <rect id="Rectangle-2-Copy" x="0" y="0" width="2" height="7"></rect>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<div class="video--controls-time">
+        				-<span class='minutes'>00</span>:<span class='seconds'>00</span>
+        			</div>
+        			<div class="video--controls-grabber">
+        				<span class='grab-bar-bg'></span>
+        				<span class='grab-bar-progress'></span>
+        			</div>
+        			<button class="video--controls-sound ">
+        				<span class="unmute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>unmute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-136.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="unmute" transform="translate(136.000000, 91.000000)">
+                        <rect id="Rectangle" x="0" y="2" width="1" height="6"></rect>
+                        <polygon id="Rectangle-Copy" points="2 2.85714286 6 0 6 10 2 7.14285714"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        				<span class="mute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>mute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-135.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="mute" transform="translate(135.000000, 91.000000)">
+                        <path d="M2,7.29289322 L2,2 L1,2 L1,8 L1.29289322,8 L2,7.29289322 Z" id="Rectangle"></path>
+                        <path d="M7,2.29289322 L3,6.29289322 L3,2.85714286 L7,0 L7,2.29289322 Z M7,3.70710678 L7,10 L3.32914562,7.37796116 L7,3.70710678 Z" id="Rectangle-Copy"></path>
+                        <polygon id="Line-2" fill-rule="nonzero" points="1.5 10.2071068 9.20710678 2.5 8.5 1.79289322 0.792893219 9.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<button class="video--controls-fullscreen"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>Fullscreen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Fullscreen" fill="#D8D8D8">
+                    <polygon id="Line-Copy" fill-rule="nonzero" points="1.5 9.91421356 9.41421356 2 8 0.585786438 0.0857864376 8.5"></polygon>
+                    <polygon id="Rectangle-2-Copy" transform="translate(7.000000, 3.000000) rotate(-270.000000) translate(-7.000000, -3.000000) " points="5 1 9 1 5 5"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" transform="translate(2.000000, 8.000000) rotate(-90.000000) translate(-2.000000, -8.000000) " points="0 6 4 6 0 10"></polygon>
+                </g>
+            </g>
+        </svg></button>
+        		</div>
+        	</div>
+
+        	<div class="borderLeftGray"></div>
+
+        </div>
+
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>Когда мы приехали сюда, я не мог даже приблизиться к нему, потому что он бы ударил меня. Но теперь с помощью мужей Божьих,
+                  которые молились за него здесь, я вижу, что ему лучше.</q>
+                        	<div class="authorText">Sankpél Bédagou, говоря о ее сыне, Ларэ.</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                        </div>
+                    <div class="featuredColumn secondary">
+                                    </div>
+
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">продолжайте прокрутку до</div>
+                            <div class="seeNext">См. следующую историю</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="6i2hfafIPeUM4I68coAMue">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/4heSp02UlGCUyCUOU0qq4e/4de2083e7049def102494959e5dbb69e/MHT150929D_005873.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 2</span>
+                </div>
+
+                <div class="scrollableContent">
+
+                    <div class="featuredColumn primary">
+
+                        <div class="featuredHeading storyContentModule">
+                            <h1>&quot;Какой бы ни была ваша болезнь, если вы придете сюда, мы молимся...&quot;</h1>
+                        </div>
+
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 2</h2>
+                                    <p><p>Пастор лэр Дамитот Бертран молится о Ларе Бедагоа, который живет с проблемой психического здоровья и обычно прикован к
+                                      дереву на территории Пятидесятнической Церкви Бокиченага. Его мать привела его в церковь, чтобы он исцелился.<br />
+        <br />
+        Одна из главных функций церкви-молиться, чтобы решить проблемы прихожан, начиная от финансовых трудностей и заканчивая тяжелыми заболеваниями. <br />
+        <br />
+        В учреждениях по всему миру люди, живущие с проблемами психического здоровья, ограничены. Там, где ресурсы невелики, как, например,
+        в северной части того, цепи часто используются для предотвращения причинения вреда себе, другим или бегства. В этот день около
+        15 взрослых, страдающих психическими расстройствами, были прикованы цепями к деревьям или столбам, ожидая исцеления с помощью молитвы.
+        Некоторые из них были ограничены более года.<br /></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+        <div class="module VideoModule storyContentModule" data-module="VideoModule" data-autoplay=true>
+        	<div class="borderLeftWhite">
+        		<div class="video--wrapper">
+        			<div class="video--poster visible">
+        				<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/4eRXvjSL5K0gcc0S8O42CQ/f268cbffd11da6e937cb7f55ad4a93e7/Lare_Bertrand_PF.jpg?w=600">
+        			</div>
+        			<div class="video--loader">
+        							</div>
+        			<video class="video--element" controlsList="nodownload" preload="none">
+        				<source src="//videos.ctfassets.net/l9v0rq9yqvbx/5w1fcCCtIQOuQCAcEuUaCY/c14ead4c3b46fb027d0f371f4fca6ea6/Lare_Bertrand_Facebook.mp4" type="video/mp4">
+        									<source src="//videos.ctfassets.net/l9v0rq9yqvbx/2fvuZNsk2862M8KcaiU6YC/7fe0e1b04c6463775747ec9e1c94deb5/Lare-Bertrand_Facebook.webm" type="video/webm">
+        			</video>
+        		</div>
+        		<div class="video--controls">
+        			<button class='video--controls-state paused'>
+        				<span class="play"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>Rectangle 8</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle-8" fill="#D8D8D8" transform="translate(0.196699, 4.473350) rotate(-225.000000) translate(-0.196699, -4.473350) " points="-3.14321337 1.17112646 3.53661165 1.41161165 -2.82734938 7.77557268"></polygon>
+            </g>
+        </svg></span>
+        				<span class="pause"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="7px" viewBox="0 0 6 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>pause</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="pause" fill="#D8D8D8">
+                    <rect id="Rectangle-2" x="4" y="0" width="2" height="7"></rect>
+                    <rect id="Rectangle-2-Copy" x="0" y="0" width="2" height="7"></rect>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<div class="video--controls-time">
+        				-<span class='minutes'>00</span>:<span class='seconds'>00</span>
+        			</div>
+        			<div class="video--controls-grabber">
+        				<span class='grab-bar-bg'></span>
+        				<span class='grab-bar-progress'></span>
+        			</div>
+        			<button class="video--controls-sound ">
+        				<span class="unmute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>unmute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-136.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="unmute" transform="translate(136.000000, 91.000000)">
+                        <rect id="Rectangle" x="0" y="2" width="1" height="6"></rect>
+                        <polygon id="Rectangle-Copy" points="2 2.85714286 6 0 6 10 2 7.14285714"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        				<span class="mute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>mute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-135.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="mute" transform="translate(135.000000, 91.000000)">
+                        <path d="M2,7.29289322 L2,2 L1,2 L1,8 L1.29289322,8 L2,7.29289322 Z" id="Rectangle"></path>
+                        <path d="M7,2.29289322 L3,6.29289322 L3,2.85714286 L7,0 L7,2.29289322 Z M7,3.70710678 L7,10 L3.32914562,7.37796116 L7,3.70710678 Z" id="Rectangle-Copy"></path>
+                        <polygon id="Line-2" fill-rule="nonzero" points="1.5 10.2071068 9.20710678 2.5 8.5 1.79289322 0.792893219 9.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<button class="video--controls-fullscreen"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>Fullscreen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Fullscreen" fill="#D8D8D8">
+                    <polygon id="Line-Copy" fill-rule="nonzero" points="1.5 9.91421356 9.41421356 2 8 0.585786438 0.0857864376 8.5"></polygon>
+                    <polygon id="Rectangle-2-Copy" transform="translate(7.000000, 3.000000) rotate(-270.000000) translate(-7.000000, -3.000000) " points="5 1 9 1 5 5"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" transform="translate(2.000000, 8.000000) rotate(-90.000000) translate(-2.000000, -8.000000) " points="0 6 4 6 0 10"></polygon>
+                </g>
+            </g>
+        </svg></button>
+        		</div>
+        	</div>
+        	<div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2></h2>
+                <p>Pastor Lare Damitote Bertrand with church officials.</p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/50XwTIPjVCg6IgiAuE2yoo/4839a1fbc4f5bb34f24c5c3238d49453/MHT150927D_004368.jpg?w=1200">
+        	        	            <p class='caption'>More than 1000 people attend Sunday service at The Pentecostal Church of Bokiccenag in northern Togo. Many have come for healing.</p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/SlZNbN1cc0GgwOsWcOMWW/663d769e43885fade5575456a52aa1c5/MHT150929D_005261.jpg?w=1200">
+        	        	            <p class='caption'>The Pentecostal Church of Bokiccenag Deacon, 60 year old Lamboni Kimèbe. </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/4NCWZCOrosgYym6ACwIYIM/f346de2b71ecef56844b80c21b8be47c/MHT150927D_004573.jpg?w=1200">
+        	        	            <p class='caption'>Church goers collapse and convulse during prayer.</p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/4wATGp9yEgwuWAe4A228Ck/a9fb2543644b5956e07465fbf6010d53/MHT150929D_006116.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Yendani Mathieu (center) who is living with a mental health problem threatens The Pentecostal Church of Bokiccenag Grounds Supervisor Douti Lankondjoua, while being prayed over by Church Deacon Douti Sambiani André.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                      </div>
+                    <div class="featuredColumn secondary">
+                                    </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="5ZjpCCDedqamoiACiiSaWA">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/4l5wetKyjSSgSEuYYoQk08/7b9b793477efe022bb619769962bb28e/MHT150929D_006955.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 3</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>&quot;When my illness began, I was attached with oxen chains.&quot;</h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 3</h2>
+                                    <p><p>Yendani Mathieu has been brought to The Pentecostal Church of Bokiccenag by his mother for healing. He spends his days chained to a tree inside the grounds of the church. <br /></p></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/35xA2TNxug0ssE2aqIGsAy/1e1604a142cae643ba46bfb23e489a17/MHT150929D_006798.jpg?w=1200">
+        	        	            <p class='caption'>Shelters are constructed at The Pentecostal Church of Bokiccenag, to shade those shackled inside from the sun and rain. Most are built near trees, so that the occupant may be chained to the nearby trunk. </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                        </div>
+                    <div class="featuredColumn secondary">
+                                            <div class="borderLeftGray top"></div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/Zl3LdEeKOWE4i0wScM2qw/59dae1a9f336b98bf72205563e40d4f6/MHT150927D_004502.jpg?w=1200">
+        	        	            <p class='caption'>Lare Bédagou has been chained to this tree at the church for three months. He believes his mental health problems arise from being cursed.</p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>My former boss bewitched me and sent me what I’m suffering of. They brought me to Dapaong and I found myself here and I do not even know how. Now I feel better and I just want to go home.</q>
+                        	<div class="authorText"> </div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/20fcM4Iov6ckYuoWsSA4oc/56298b8aa16f9a4359c82cb2da7b046f/MHT150929D_006742.jpg?w=1200">
+        	        	            <p class='caption'>One of the many chained individuals living with mental health problems at The Pentecostal Church of Bokiccenag in northern Togo. </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                </div>
+
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="5nbiVz4xqMKaWoqO4KWwUY">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/6pahlft8CA2AAiIqCgoUY0/00b73f165cba49ca38c22678cd2c1b7e/MHT150929D_006347.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 4</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>&quot;Suddenly I had a feeling of fear.&quot;</h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 4</h2>
+                                    <p><p>Kandjine Laré and his wife Kinam came with their two children to The Pentecostal Church of Bokiccenag, seeking healing through prayer. He says he is now healed: “We are here in the house of God. I had gone mad, I went to the hospital to treat me in vain, and then I went to traditional healers but it still nothing. But I learned that they could treat me here and that&#039;s why I came. When I arrived, they have to tie me here. Once I even cut my ties and I fled, but I was caught. But now I’m fine by the prayers, and I live here waiting to go back home very soon. When I was sick, I completely undressed, but nothing of that now.”</p></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/63KaUAbCNiKUa4oIYeaC6S/626a8e20e5c8382c5623d0f3f264ecc7/MHT150929D_006435.jpg?w=1200">
+        	        	            <p class='caption'>Members of the Church pray over a woman with a mental health problem brought for healing. She, along with approximately 15 others, are spread around the grounds of the church, chained to trees to prevent their escape.</p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/2fONWBbMlS8gKQG6qwyWu6/26b985ac8c298512b2bbae143880295a/MHT150929D_006328.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Amina, who says that prayers helped heal her mental illness. </p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>“I needed chains because I was doing everything wrong, and I destroyed everything I found on my way. But now that I&#039;m detached, I realize that I am correct, and I no more do wrong things. I am more willing to arrange things, than to destroy them.<br />
+        <br />
+        I hope I will never be attached again, because being attached is not a good thing. I expect that God will improve my health, and he will give me health so that I can live normally.“</p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>She told me herself that she felt many things escape from her like animals, and spirits. All this can’t be treated in the hospital, only by the power of God.  God has done his work and I give him thanks.</q>
+                        	<div class="authorText">Adisa, Amina&#039;s mother.</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                        </div>
+                    <div class="featuredColumn secondary">
+                                    </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="j8vQ6jBwl2QE0qwwEKY4u">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/5I9u1Tm67mSYU6S66E8ioM/363338e2cf1a51177dd51c31d2be0b73/MHT150930D_008073.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 5</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>The curse of poverty </h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 5</h2>
+                                    <p><p>Poverty can exacerbate, or even cause, mental health problems. The village of Tantouagou is located in northern Togo, one of the poorest regions in the country. Many mental health professionals say poverty contributes to the high number of people living here with mental health problems.<br /></p></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+        <div class="module VideoModule storyContentModule" data-module="VideoModule" data-autoplay=true>
+        	<div class="borderLeftWhite">
+        		<div class="video--wrapper">
+        			<div class="video--poster visible">
+        				<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/4MVzzjGSI8k2mEIqcMqW2E/b49f2899adcad2c809744a809733339b/Screenshot_2017-08-31_10.44.11.png?w=600">
+        			</div>
+        			<div class="video--loader">
+        							</div>
+        			<video class="video--element" controlsList="nodownload" preload="none">
+        				<source src="//videos.ctfassets.net/l9v0rq9yqvbx/4viDSB4aCQWoE4M8GUQeww/50c2b864927b2c9fc82cac1a93df4ec8/Lenle_Facebook.mp4" type="video/mp4">
+        									<source src="//videos.ctfassets.net/l9v0rq9yqvbx/2KURgAlXGEMEwYiIwk8Aym/1b0a0fea8f14c1629529f8fda50fb5e0/Lenle_Facebook.webm" type="video/webm">
+        			</video>
+        		</div>
+        		<div class="video--controls">
+        			<button class='video--controls-state paused'>
+        				<span class="play"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>Rectangle 8</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle-8" fill="#D8D8D8" transform="translate(0.196699, 4.473350) rotate(-225.000000) translate(-0.196699, -4.473350) " points="-3.14321337 1.17112646 3.53661165 1.41161165 -2.82734938 7.77557268"></polygon>
+            </g>
+        </svg></span>
+        				<span class="pause"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="7px" viewBox="0 0 6 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>pause</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="pause" fill="#D8D8D8">
+                    <rect id="Rectangle-2" x="4" y="0" width="2" height="7"></rect>
+                    <rect id="Rectangle-2-Copy" x="0" y="0" width="2" height="7"></rect>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<div class="video--controls-time">
+        				-<span class='minutes'>00</span>:<span class='seconds'>00</span>
+        			</div>
+        			<div class="video--controls-grabber">
+        				<span class='grab-bar-bg'></span>
+        				<span class='grab-bar-progress'></span>
+        			</div>
+        			<button class="video--controls-sound ">
+        				<span class="unmute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>unmute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-136.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="unmute" transform="translate(136.000000, 91.000000)">
+                        <rect id="Rectangle" x="0" y="2" width="1" height="6"></rect>
+                        <polygon id="Rectangle-Copy" points="2 2.85714286 6 0 6 10 2 7.14285714"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        				<span class="mute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>mute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-135.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="mute" transform="translate(135.000000, 91.000000)">
+                        <path d="M2,7.29289322 L2,2 L1,2 L1,8 L1.29289322,8 L2,7.29289322 Z" id="Rectangle"></path>
+                        <path d="M7,2.29289322 L3,6.29289322 L3,2.85714286 L7,0 L7,2.29289322 Z M7,3.70710678 L7,10 L3.32914562,7.37796116 L7,3.70710678 Z" id="Rectangle-Copy"></path>
+                        <polygon id="Line-2" fill-rule="nonzero" points="1.5 10.2071068 9.20710678 2.5 8.5 1.79289322 0.792893219 9.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<button class="video--controls-fullscreen"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>Fullscreen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Fullscreen" fill="#D8D8D8">
+                    <polygon id="Line-Copy" fill-rule="nonzero" points="1.5 9.91421356 9.41421356 2 8 0.585786438 0.0857864376 8.5"></polygon>
+                    <polygon id="Rectangle-2-Copy" transform="translate(7.000000, 3.000000) rotate(-270.000000) translate(-7.000000, -3.000000) " points="5 1 9 1 5 5"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" transform="translate(2.000000, 8.000000) rotate(-90.000000) translate(-2.000000, -8.000000) " points="0 6 4 6 0 10"></polygon>
+                </g>
+            </g>
+        </svg></button>
+        		</div>
+        	</div>
+        	<div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>Brothers Tadja Yendja (left) and Tadja Lenle (right) in the village of village of Sibor Toti in northern Togo. <br />
+        </p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/5qKoWkaV2g2IOA0IsUOQSc/9996717a8da21fce33de865abdae3cc1/MHT150924D_000370.jpg?w=1200">
+        	        	            <p class='caption'>Tadja Lenle (center), a farmer living with a mental health problem, standing between his carers (his brother and sister-in-law). </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2></h2>
+                <p>Tadja Lenle is a farmer suffering from mental illness. He was able to get temporary relief through treatments at a nearby hospital, but doesn’t have the money to continue them indefinitely. Without the medicine, he quickly relapsed. Though he’s cared for by his brother and sister-in-law, he’s weighed down by the reality of his condition: <br />
+        <br />
+        &quot;I hear voices and I have the impression that something strikes me…I’ve undergone rituals and I’ve made sacrifices with traditional healers without success. I have also been to the hospital for medical treatment…All my life is only suffering because I am no longer the person I was.&quot;<br />
+        </p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/217XLeaWZmG4WwgCk2WmiM/07b3ee10f15de62d1ed6a8a29f6bacfb/MHT150930D_007295.jpg?w=1200">
+        	        	            <p class='caption'>Tantouagou, northern Togo. </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                                    </div>
+                    <div class="featuredColumn secondary">
+                                            <div class="borderLeftGray top"></div>
+                                                    	 <div class="ImageModule storyContentModule">
+        	    <div class="borderLeftWhite">
+        	       	<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/3t2bcOyOqcCaQIwUmkGG88/7fc836346fd4cc6993364d83ef675698/MHT150930D_007346.jpg?w=1200">
+        	        	            <p class='caption'>Tantouagou, northern Togo. </p>
+        	        	    </div>
+        	    <div class="borderLeftGray"></div>
+        	    <div class="zoomImageBackground"></div>
+        	</div>
+                                    </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="dNFcr5Po3eKomy0uaAqSO">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/23fCxUcfh6YemU2waOIOYY/59d16831997a3bc9a2a91318f879df09/MHT151001D_009235.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 6</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>The possibility of hope</h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 6</h2>
+                                    <p><p>People living with mental health problems are often brought to the center in chains. If patients are violent, they may have to be sedated. The family members that bring them are often desperate for help and struggling to cope. <br />
+        <br />
+        <br /></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/7gkRKVs6eAsAQWKmAeawcS/2a83df18fa6dc3fa9c783684e77a5931/MHT150925D_001842.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Mangba Barthelemy is a security guard at the Pediatric Center of Dapaong living with a mental health problem. Although he was able to receive treatment and get better, he still deals with the negative stigma of the mentally ill within his community.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>There are many people who treat me differently</q>
+                        	<div class="authorText">Mangba Barthelemy </div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+        <div class="module VideoModule storyContentModule" data-module="VideoModule" data-autoplay=true>
+        	<div class="borderLeftWhite">
+        		<div class="video--wrapper">
+        			<div class="video--poster visible">
+        				<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/44U041SFywY4SaGqoA4aAU/4a4fa74f043163519bcbeca6f375dde0/MANGBA_Barthelemy_PF.jpg?w=600">
+        			</div>
+        			<div class="video--loader">
+        							</div>
+        			<video class="video--element" controlsList="nodownload" preload="none">
+        				<source src="//videos.ctfassets.net/l9v0rq9yqvbx/6o127toHokWymQIwoCWwgO/5fee3ea809cce910ec21026d685fd09d/MANGBA_Barthelemy_Facebook.mp4" type="video/mp4">
+        									<source src="//videos.ctfassets.net/l9v0rq9yqvbx/6swlX3PaZq8wg0UCwgKui4/2f5ebd798055614fe629c2c57e6ba1c6/MANGBA-Barthelemy_Facebook.webm" type="video/webm">
+        			</video>
+        		</div>
+        		<div class="video--controls">
+        			<button class='video--controls-state paused'>
+        				<span class="play"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>Rectangle 8</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle-8" fill="#D8D8D8" transform="translate(0.196699, 4.473350) rotate(-225.000000) translate(-0.196699, -4.473350) " points="-3.14321337 1.17112646 3.53661165 1.41161165 -2.82734938 7.77557268"></polygon>
+            </g>
+        </svg></span>
+        				<span class="pause"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="7px" viewBox="0 0 6 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>pause</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="pause" fill="#D8D8D8">
+                    <rect id="Rectangle-2" x="4" y="0" width="2" height="7"></rect>
+                    <rect id="Rectangle-2-Copy" x="0" y="0" width="2" height="7"></rect>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<div class="video--controls-time">
+        				-<span class='minutes'>00</span>:<span class='seconds'>00</span>
+        			</div>
+        			<div class="video--controls-grabber">
+        				<span class='grab-bar-bg'></span>
+        				<span class='grab-bar-progress'></span>
+        			</div>
+        			<button class="video--controls-sound ">
+        				<span class="unmute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>unmute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-136.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="unmute" transform="translate(136.000000, 91.000000)">
+                        <rect id="Rectangle" x="0" y="2" width="1" height="6"></rect>
+                        <polygon id="Rectangle-Copy" points="2 2.85714286 6 0 6 10 2 7.14285714"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        				<span class="mute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>mute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-135.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="mute" transform="translate(135.000000, 91.000000)">
+                        <path d="M2,7.29289322 L2,2 L1,2 L1,8 L1.29289322,8 L2,7.29289322 Z" id="Rectangle"></path>
+                        <path d="M7,2.29289322 L3,6.29289322 L3,2.85714286 L7,0 L7,2.29289322 Z M7,3.70710678 L7,10 L3.32914562,7.37796116 L7,3.70710678 Z" id="Rectangle-Copy"></path>
+                        <polygon id="Line-2" fill-rule="nonzero" points="1.5 10.2071068 9.20710678 2.5 8.5 1.79289322 0.792893219 9.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<button class="video--controls-fullscreen"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>Fullscreen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Fullscreen" fill="#D8D8D8">
+                    <polygon id="Line-Copy" fill-rule="nonzero" points="1.5 9.91421356 9.41421356 2 8 0.585786438 0.0857864376 8.5"></polygon>
+                    <polygon id="Rectangle-2-Copy" transform="translate(7.000000, 3.000000) rotate(-270.000000) translate(-7.000000, -3.000000) " points="5 1 9 1 5 5"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" transform="translate(2.000000, 8.000000) rotate(-90.000000) translate(-2.000000, -8.000000) " points="0 6 4 6 0 10"></polygon>
+                </g>
+            </g>
+        </svg></button>
+        		</div>
+        	</div>
+        	<div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/3OgKz4y7TWKWwqGWIAKqUC/6d446e8d32f387e3c34f289a455ba491/MHT150924D_000698.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Yacoubou Salamatou (left), a farmer living a mental health problem; with her mother, Ansa Yacoubou.  </p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>Yacouba Salamatou is a farmer in the village of Sibor Toti, northern Togo, who lives with a mental health problem. She recalls the sudden arrival of her disease, and longs for a return to a normal life with her family. <br />
+        <br />
+        “I hope I will have treatment for a better future. I want to take care of my children who are in Lomé [Togo’s capital city].”<br />
+        </p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>It&#039;s like something came and weighed on me at night, and my illness began.</q>
+                        	<div class="authorText">YACOUBOU SALAMATOU</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>When the disease manifests itself, it is as she is frightened by something, and when she wakes up she starts to shout and slap people</q>
+                        	<div class="authorText">ANSA YACOUBOU, SALAMATOU&#039;S MOTHER.</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                  <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/4n99G9BfcAycouQ46YC6GC/60db8fd0179a4c176fbebe8fce36ece5/MHT150925D_002004.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>52 year old retired soldier Dampotine Djagba. </p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>They often ask why I still live with him</q>
+                        	<div class="authorText">Kanyéba, Dampotine’s wife.</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2></h2>
+                <p>“When he has an attack, he reacts like a crazy person, and I am not safe, neither are our children. I often go to join my father and then, when he calms down, I come back.&quot; Says Kanyéba, describing Dampotine&#039;s illness. &quot;Many people make fun of him. Sometimes he gets out, especially at night, and he goes into people&#039;s homes to spoil their things. Sometimes he is beaten for destroying things…People make fun of me too. They often ask me why I still live with him. But I can’t leave him. We have three boys, two at the university, and the last in college. I think about their future.” <br />
+        <br />
+        Kanyéba, a tailor and now the breadwinner, feels weighed down by this burden: “I take care of him like a son…It&#039;s really difficult, because I can’t compare myself to my colleagues. We are all tailors and I work more than many of them, but we do not have the same level. Because there are some whose husbands help them, while I used all my money for my children and my husband. It&#039;s really hard… I hope everything will be better in the future, and this disease will not affect me, and none of my children will suffer. I want my husband to feel better too.”<br />
+        </p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/11boIYJaaIMuGeqUWEy4q4/831d1ad5c543a1e5755a5ed3dc592138/MHT150925D_002396.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Lamboni Laré, a mechanic, lives with a mental health problem and attends Centre de Santé Mentale (a Handicap International partner), in Dapaong, northern Togo. </p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>For many in the region, the treatments they receive here can enable them to keep their jobs and independence. Lamboni Lare is a mechanic living with a mental health problem. The medication he receives at the Centre allows him to continue working.<br />
+        <br />
+        “I am here because I was not going well mentally. Before I could not sleep, and sometimes I go out for a walk without any desire to return. Sometimes I spoke disorderly. But since I&#039;m having the treatment, I’m fine…The Centre has helped me with treatments. When I had no medication, it really bothered me. But now that I take it, I feel myself changing. I could not even work before treatment. Now I work well without problem from morning until evening.”<br />
+        </p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>I just hope that my disease will not come back again. I also wish that the country’s authorities would take care of the mentally ill who have no means to care, like I had too, so they can recover their health.</q>
+                        	<div class="authorText">Mangba Barthelemy.</div>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                        </div>
+                    <div class="featuredColumn secondary">
+                                    </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="2I1bXpr6Gce0kUu0AUOac8">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/4yyIA7bMc8kIWWcOikqAAE/762ca4fe8aafaf2957afc7470b8aead8/MHT150924D_001557.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 7</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>“There are a lot of people suffering”</h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 7</h2>
+                                    <p><p>Saguedin Kpiémame is a Community Health Worker in the village of Sibor Toti, in northern Togo, recruited by Handicap International to monitor people living with mental health problems in their homes. She works to take care of people with mental health problems and epileptic patients in her community, and reaches out to families to tell them about the existence of treatment at the health center.<br />
+        <br />
+        “I want to participate in the development of my community. There are a lot of people suffering from mental health problems, so we have to sensitize the community so that people living with mental health problems can go to the center, receive help, and then they can work, and help the development of the community.”</p></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+        <div class="module VideoModule storyContentModule" data-module="VideoModule" data-autoplay=true>
+        	<div class="borderLeftWhite">
+        		<div class="video--wrapper">
+        			<div class="video--poster visible">
+        				<img data-src="//images.ctfassets.net/l9v0rq9yqvbx/11i5lfsGcCa6MGQ60CouwQ/8636167da7d1bdbdbb60f021464b8fbd/Saguedin_Kpiyemame_PF.jpg?w=600">
+        			</div>
+        			<div class="video--loader">
+        							</div>
+        			<video class="video--element" controlsList="nodownload" preload="none">
+        				<source src="//videos.ctfassets.net/l9v0rq9yqvbx/6baukDUNCEIMqaKYcKCY4G/dd69a8e5bf4e3a5730c804666b726aa4/Saguedin_Kpiyemame_Facebook.mp4" type="video/mp4">
+        									<source src="//videos.ctfassets.net/l9v0rq9yqvbx/19prqhMNCwe68CYAkMK4ig/ee4dbdb4ca34396a81a35cc24ddbd724/Saguedin-Kpiyemame_Facebook.webm" type="video/webm">
+        			</video>
+        		</div>
+        		<div class="video--controls">
+        			<button class='video--controls-state paused'>
+        				<span class="play"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>Rectangle 8</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon id="Rectangle-8" fill="#D8D8D8" transform="translate(0.196699, 4.473350) rotate(-225.000000) translate(-0.196699, -4.473350) " points="-3.14321337 1.17112646 3.53661165 1.41161165 -2.82734938 7.77557268"></polygon>
+            </g>
+        </svg></span>
+        				<span class="pause"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="7px" viewBox="0 0 6 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+            <title>pause</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="pause" fill="#D8D8D8">
+                    <rect id="Rectangle-2" x="4" y="0" width="2" height="7"></rect>
+                    <rect id="Rectangle-2-Copy" x="0" y="0" width="2" height="7"></rect>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<div class="video--controls-time">
+        				-<span class='minutes'>00</span>:<span class='seconds'>00</span>
+        			</div>
+        			<div class="video--controls-grabber">
+        				<span class='grab-bar-bg'></span>
+        				<span class='grab-bar-progress'></span>
+        			</div>
+        			<button class="video--controls-sound ">
+        				<span class="unmute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>unmute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-136.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="unmute" transform="translate(136.000000, 91.000000)">
+                        <rect id="Rectangle" x="0" y="2" width="1" height="6"></rect>
+                        <polygon id="Rectangle-Copy" points="2 2.85714286 6 0 6 10 2 7.14285714"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        				<span class="mute"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="11px" viewBox="0 0 10 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>mute</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard" transform="translate(-135.000000, -91.000000)" fill="#D8D8D8">
+                    <g id="mute" transform="translate(135.000000, 91.000000)">
+                        <path d="M2,7.29289322 L2,2 L1,2 L1,8 L1.29289322,8 L2,7.29289322 Z" id="Rectangle"></path>
+                        <path d="M7,2.29289322 L3,6.29289322 L3,2.85714286 L7,0 L7,2.29289322 Z M7,3.70710678 L7,10 L3.32914562,7.37796116 L7,3.70710678 Z" id="Rectangle-Copy"></path>
+                        <polygon id="Line-2" fill-rule="nonzero" points="1.5 10.2071068 9.20710678 2.5 8.5 1.79289322 0.792893219 9.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+        			</button>
+        			<button class="video--controls-fullscreen"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+            <title>Fullscreen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Fullscreen" fill="#D8D8D8">
+                    <polygon id="Line-Copy" fill-rule="nonzero" points="1.5 9.91421356 9.41421356 2 8 0.585786438 0.0857864376 8.5"></polygon>
+                    <polygon id="Rectangle-2-Copy" transform="translate(7.000000, 3.000000) rotate(-270.000000) translate(-7.000000, -3.000000) " points="5 1 9 1 5 5"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" transform="translate(2.000000, 8.000000) rotate(-90.000000) translate(-2.000000, -8.000000) " points="0 6 4 6 0 10"></polygon>
+                </g>
+            </g>
+        </svg></button>
+        		</div>
+        	</div>
+        	<div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/4hQPBIPMRiuq0yoAsOme4y/3f17c90ed08656109a5f96235c089214/MHT150925D_002618.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Sankalengue Baron receives medication from Handicap International partner, Centre de Santé Mentale, in Dapaong, northern Togo.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>It is up to the creator to decide my fate</q>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>Sankalengue Baraon also receives treatment at the Centre. He used to be a mason, but had to stop working due to his disorder: <br />
+        <br />
+        “My mental disorders do not lead me to hurt people. It just makes me sing, and I sing for long times. Sometimes it makes me walk long distances. Sometimes I hear voices, and they give me instructions. For example they can point me to go into a strange house at a certain time to have food, and when I go, I actually find people eating and I have my share.”</p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/1YgYHTYgnyaEAwIKgSWEW8/8423f4881aa3f719f41b8a32ead95730/MHT150925D_002861.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>John, a homeless man living with a mental health problem, spends his time roaming the streets of Dapaong, northern Togo.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/6yq22epHwWWYkoo0CAKA4s/e3e290c84a5e7476f0b08cf49caf0c60/MHT150924D_001076.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Nine year old Manale Dambouame, with her father Manale Amidou, in the village of Sibor Toti, Dapaong.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>&quot;Since my daughter was born, she does not speak or walk…We can’t know what happened to her…Our biggest challenge is to get a good treatment so we could change her life. I am financially exhausted… seeing her like that really makes me pity. Girls of her age are not like that and it tears me to see her like that.”</p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="FullImageModule storyContentModule portrait">
+        	<div class="backgroundWrapper">
+        		<div class="imagesWrapper">
+        		    <img class="portrait" data-src="//images.ctfassets.net/l9v0rq9yqvbx/4pxjd1qe0oyCWIwwoK4c06/fac4a339e76e20d46363ecd4f8f386a8/MHT150925D_001967.jpg?w=1200">
+        		</div>
+        	</div>
+            <div class="borderLeftGray bottom">
+           	       	<p class='caption'>Kolani Kondougue, a seller of soap, goes to Handicap International partner Centre de Santé Mentale, in Dapaong, northern Togo, for treatment.</p>
+                </div>
+            <div class="zoomImageBackground"></div>
+            <div class="vLine"></div>
+        </div>
+                                                    <div class="quote storyContentModule">
+            <div class="borderLeftWhite">
+                <q>I do not want this disease to come back in my life again.</q>
+                    </div>
+            <div class="borderLeftGray"></div>
+        </div>
+                                                    <div class="context ContextModule storyContentModule">
+            <div class="borderLeftWhite">
+                <h2> </h2>
+                <p>Another one of the Centre de Sante Mentale’s goals is to teach patients a life skill, that they can use to earn a living. Kolani Kondougue came for treatment and was given medication. When she became healthy, she learned how to make soap to sell in the community.<br />
+        <br />
+        “I can say that I have no more challenge, because I sell things at the market and I live a good life with my children and my husband… All I want is to have health. This is precisely why I regularly come to the health center to take my medication. I do not want this disease to come back in my life again.”</p>
+            </div>
+            <div class="borderLeftGray"></div>
+        </div>                                                </div>
+                    <div class="featuredColumn secondary">
+                                    </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-module="StoryModule" data-title="Story" class="module StoryModule" data-id="fjoT2f0l4AYE0iEcISAAW">
+        <div class="module StoryImageModule" data-module="StoryImageModule" data-img="//images.ctfassets.net/l9v0rq9yqvbx/6awddrcWVUUIqaGWkq2UKC/d06c21c2a5404b7882a7ec61fcaca9ff/MHT150923D_001715.jpg?w=1500">
+        	<div class="featuredImageContainer">
+        		<div class="linearGradient"></div>
+        		<div class="pixiContainer" ></div>
+        	</div>
+        </div>
+            <div class="article">
+                <div class="articleHeadings">
+                    <span class="typeText">Togo</span>
+                    <span class="nameText"> Part 8</span>
+                </div>
+                <div class="scrollableContent">
+                    <div class="featuredColumn primary">
+                        <div class="featuredHeading storyContentModule">
+                            <h1>So many left behind</h1>
+                        </div>
+                        <div class="featuredIntroText storyContentModule">
+                            <div class="borderLeftWhite">
+                                <div class="nameWithIcon">
+                                    <span class='eyeIcon'><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+            <title>Icons / Eye</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+            </defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Icons-/-Eye">
+                    <g id="eye">
+                        <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
+                        </g>
+                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </svg></span>
+                                    <h2 class="primaryPerson"> Part 8</h2>
+                                    <p><p>14 year old Kossi Nadjou, who lives with a mental health problem, spends much of his day wandering around the village of Sibor Toti in Dapaong. He is cared for by his grandparents.<br /></p></p>
+                                </div>
+                            </div>
+                            <div class="borderLeftGray"></div>
+                        </div>
+                                    </div>
+                    <div class="featuredColumn secondary">
+                                  </div>
+                    <div class="nextUnit">
+                        <div class="nextPortraitMessaging">
+                            <div class="small">keep scrolling to</div>
+                            <div class="seeNext">See next story</div>
+                        </div>
+                        <div class="nextTrigger">
+                             <div class="backgroundLine line"></div>
+                             <div class="foregroundLine line"></div>
+                        </div>
+                        <div class="nextPortraitTitle">Diab Diala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            		                	</div>
+        	    <a id="prevStoryButton" class="sidebarButton arrowContainer" data-baseUrl="/" href="#">
+                     <span class="arrow icon"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </svg></span>
+                      <div class="hoverName">
+                        <div class="title">Previous Story</div>
+                        <div class="subtitle">Hekmat Abo Shakra</div>
+                     </div>
+                     <div class="background"></div>
+                </a>
+        	    <a id="nextStoryButton" class="sidebarButton arrowContainer" data-baseUrl="/" href="#">
+                     <span class="arrow icon"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero" transform="translate(2.500000, 4.500000) rotate(-180.000000) translate(-2.500000, -4.500000) "></path>
+            </g>
+        </svg></span>
+                     <div class="hoverName">
+                        <div class="title">Next Story</div>
+                        <div class="subtitle">Hekmat Abo Shakra</div>
+                     </div>
+                     <div class="background"></div>
+                </a>
+                <div id="scrollStoryButton" class="arrowContainer">
+                     <span class="arrow icon"><?xml version="1.0" encoding="UTF-8"?>
+        <svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+            <title>arrow</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M3.20710678,2.5 L6.85355339,-1.14644661 L6.14644661,-1.85355339 L2.14644661,2.14644661 L2.5,2.5 L2.14644661,2.85355339 L6.14644661,6.85355339 L6.85355339,6.14644661 L3.20710678,2.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero" transform="translate(4.500000, 2.500000) rotate(-90.000000) translate(-4.500000, -2.500000) "></path>
+            </g>
+        </svg></span>
+                </div>
+            </div>
+            </div>
+<div class="module TimelineModule" data-module="TimelineModule" >
+  <div class="indicator flexrow">
+    <div class="category frameTitle">Suffocation</div>
+    <div class="graphics">
+       <div class="secondarySpots"></div>
+       <div class="primarySpots"></div>
+       <div class="progressLine"></div>
+       <div class="backgroundLine"></div>
+   </div>
+ </div>
+ <div class="mobileInfo flexrow">
+    <div class="frameTitle name">Lorem Ipsum</div>
+    <div class="frameTitle counter">0/10</div>
+ </div>
+ <div class="spotTemplates" style="display:none">
+   <div class="spot primary">
+      <span class="icon primaryIcon icon-primary-passive">
+        <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Primary Passive</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Primary-Passive">
+              <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+              <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span class="icon primaryIcon icon-primary-active">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Primary Active</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Primary-Active">
+              <g id="Active-">
+                <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span class="icon primaryIcon icon-primary-seen">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Primary Seen</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Primary-Seen" fill="#FFFFFF">
+              <rect id="Rectangle" x="4" y="4" width="7" height="7"></rect>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span class="icon primaryIcon icon-primary-hover">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>Timeline / Dots / Primary / Hover</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Timeline-/-Dots-/-Primary-/-Hover">
+              <polygon id="Path-Copy" fill="#000000" points="4 0 11 0 15 4 15 11 11 15 4 15 0 11 7.34788079e-16 4"></polygon>
+              <path d="M4.41421356,1 L1,4.41421356 L1,10.5857864 L4.41421356,14 L10.5857864,14 L14,10.5857864 L14,4.41421356 L10.5857864,1 L4.41421356,1 Z M4,-6.21724894e-15 L11,-6.21724894e-15 L15,4 L15,11 L11,15 L4,15 L-2.66453526e-15,11 L-1.92974718e-15,4 L4,-6.21724894e-15 Z" id="Rectangle-2-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+              <rect id="Rectangle-9" fill="#FFFFFF" x="5" y="5" width="5" height="5"></rect>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <div class="hoverState">
+         <span class="frameTitle"></span>
+         <div class="background"></div>
+      </div>
+      <div class="hitter"></div>
+  </div>
+  <div class="spot secondary">
+       <span class="icon secondaryIcon icon-secondary-passive">
+         <?xml version="1.0" encoding="UTF-8"?>
+         <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <title>Secondary Passive</title>
+           <desc>Created with Sketch.</desc>
+           <defs></defs>
+           <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+             <g id="Secondary-Passive" fill="#666666">
+               <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+             </g>
+           </g>
+         </svg>
+       </span>
+       <span class="icon secondaryIcon icon-secondary-active">
+         <?xml version="1.0" encoding="UTF-8"?>
+         <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <title>Secondary Active</title>
+           <desc>Created with Sketch.</desc>
+           <defs></defs>
+           <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+             <g id="Secondary-Active">
+               <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="5" height="5"></rect>
+               <rect id="Fill" fill="#000000" x="1" y="1" width="3" height="3"></rect>
+             </g>
+           </g>
+         </svg>
+       </span>
+       <span class="icon secondaryIcon icon-secondary-seen">
+         <?xml version="1.0" encoding="UTF-8"?>
+         <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+           <title>Secondary Seen</title>
+           <desc>Created with Sketch.</desc>
+           <defs></defs>
+           <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+             <g id="Secondary-Seen" fill="#FFFFFF">
+               <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+             </g>
+           </g>
+         </svg>
+       </span>
+     </div>
+  </div>
+</div>
+</div>
+<script src="{% static 'story/scripts/story2.js' %}"></script>
+
+{% endblock %}

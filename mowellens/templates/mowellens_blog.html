@@ -1,0 +1,57 @@
+{% extends "mowellens/base.html" %}
+{% load static %}
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+
+<div class="scroller-wrapper" scrollbar>
+    <main id="barba-wrapper">
+        <section class="barba-container" data-namespace="the-journal">
+
+            <div class="grid__wrapper js-background-zone" data-bz-color="default">
+                <section class="grid__container grid__container--large">
+                    <section class="page-the-journal__categories || journal-categories">
+                        <ul class="journal-categories__list js-printed-checker anim-fade">
+                            <li class="journal-categories__item"><a href="#all" data-cat-id="0" class="journal-categories__link journal-categories__link--active || title title--big || font-van">Все статьи</a></li>
+                            <li class="journal-categories__item"><a href="#01_news" data-cat-id="18" class="journal-categories__link || title title--big || font-van">Новости</a></li>
+                            <li class="journal-categories__item"><a href="#02_events" data-cat-id="17" class="journal-categories__link || title title--big || font-van">События</a></li>
+                            <li class="journal-categories__item"><a href="#03_wellness" data-cat-id="19" class="journal-categories__link || title title--big || font-van">Хорошее здоровье</a></li>
+                            <li class="journal-categories__item"><a href="#04_publications" data-cat-id="20" class="journal-categories__link || title title--big || font-van">Публикации</a></li>
+                            <li class="journal-categories__item"><a href="#05_science" data-cat-id="21" class="journal-categories__link || title title--big || font-van">Наука</a></li>
+                            <li class="journal-categories__item"><a href="#06_products" data-cat-id="22" class="journal-categories__link || title title--big || font-van">Продукты</a></li>
+                            <li class="journal-categories__item"><a href="#07_community" data-cat-id="23" class="journal-categories__link || title title--big || font-van">Сообщество</a></li>
+                            <li class="journal-categories__item"><a href="#cbd-recipes" data-cat-id="25" class="journal-categories__link || title title--big || font-van">CBD рецепты</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <div class="grid__container">
+                    <p class="font-van || js-printed-checker || subtitle subtitle--half subtitle--medium || anim--twist || page-plain-text__subtitle">
+                      Приходите часто, чтобы получить все последние новости и открыть для себя наши вдохновения.
+                    </p>
+                </div>
+
+                <div class="grid__container">
+                    <div class="journal-articles">
+                        {% include 'json/blog.json' %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__wrapper">
+                <div class="grid__container cta-bottom js-background-zone" data-bz-color="punch">
+                    <a href="#" class="cta-bottom__item js-printed-checker  page-the-journal__load-more  ">Еще статьи </a>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="grid__wrapper">
+                    <div class="grid__container site-footer__container">
+                        <span class="site-footer__copy">Copyright 2019 &copy; Тестовый сайт</span>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+{% endblock %}

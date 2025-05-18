@@ -2,9 +2,10 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <base href="http://модули.рус/basic/" />
+    <base href="https://works.my-demo.ru/basic/" />
     <meta charset="utf-8" />
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0" />
@@ -12,14 +13,14 @@
     <link href="{% static 'basic/styles/enhanced.bundle.css' %}" as="style" rel='stylesheet'>
     <noscript>
         <link rel="stylesheet" href="{% static 'basic/styles/enhanced.css' %}">
-      </noscript>
-<script src="{% static 'basic/scripts/modernizr.js' %}"></script>
+    </noscript>
+    <script src="{% static 'basic/scripts/modernizr.js' %}"></script>
     <script>
-        ! function(e) {
+        ! function (e) {
             "use strict";
-            var n = function(n, t, o) {
+            var n = function (n, t, o) {
                 function i(e) {
-                    return a.body ? e() : void setTimeout(function() {
+                    return a.body ? e() : void setTimeout(function () {
                         i(e)
                     })
                 }
@@ -35,13 +36,13 @@
                     d = s[s.length - 1]
                 }
                 var f = a.styleSheets;
-                l.rel = "stylesheet", l.href = n, l.media = "only x", i(function() {
+                l.rel = "stylesheet", l.href = n, l.media = "only x", i(function () {
                     d.parentNode.insertBefore(l, t ? d : d.nextSibling)
                 });
-                var u = function(e) {
+                var u = function (e) {
                     for (var n = l.href, t = f.length; t--;)
                         if (f[t].href === n) return e();
-                    setTimeout(function() {
+                    setTimeout(function () {
                         u(e)
                     })
                 };
@@ -49,26 +50,26 @@
             };
             "undefined" != typeof exports ? exports.loadCSS = n : e.loadCSS = n
         }("undefined" != typeof global ? global : this);
-        ! function(t) {
+        ! function (t) {
             if (t.loadCSS) {
                 var e = loadCSS.relpreload = {};
-                if (e.support = function() {
-                        try {
-                            return t.document.createElement("link").relList.supports("preload")
-                        } catch (e) {
-                            return !1
-                        }
-                    }, e.poly = function() {
-                        for (var e = t.document.getElementsByTagName("link"), r = 0; r < e.length; r++) {
-                            var n = e[r];
-                            "preload" === n.rel && "style" === n.getAttribute("as") && (t.loadCSS(n.href, n, n.getAttribute("media")), n.rel = null)
-                        }
-                    }, !e.support()) {
+                if (e.support = function () {
+                    try {
+                        return t.document.createElement("link").relList.supports("preload")
+                    } catch (e) {
+                        return !1
+                    }
+                }, e.poly = function () {
+                    for (var e = t.document.getElementsByTagName("link"), r = 0; r < e.length; r++) {
+                        var n = e[r];
+                        "preload" === n.rel && "style" === n.getAttribute("as") && (t.loadCSS(n.href, n, n.getAttribute("media")), n.rel = null)
+                    }
+                }, !e.support()) {
                     e.poly();
                     var r = t.setInterval(e.poly, 300);
-                    t.addEventListener && t.addEventListener("load", function() {
+                    t.addEventListener && t.addEventListener("load", function () {
                         e.poly(), t.clearInterval(r)
-                    }), t.attachEvent && t.attachEvent("onload", function() {
+                    }), t.attachEvent && t.attachEvent("onload", function () {
                         t.clearInterval(r)
                     })
                 }
@@ -77,8 +78,8 @@
     </script>
 
     <script>
-        (function(h, o, t, j, a, r) {
-            h.hj = h.hj || function() {
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
             h._hjSettings = {
@@ -101,7 +102,7 @@
         <header id="header" class="main-nav" data-header>
             <div class="container">
 
-                <a href="http://модули.рус/basic/" class="logo">
+                <a href="https://works.my-demo.ru/basic/" class="logo">
                     <svg>
                         <use xlink:href="#basic-logo"></use>
                     </svg>
@@ -145,13 +146,16 @@
                             </a>
                         </li>
                         <li role="presentation">
-                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_contacts' %}" class="btn btn--light text-align-center no-hover" data-btn-fill="" onClick="ga(&#039;send&#039;, &#039;event&#039;, &#039;contact-cta&#039;, &#039;click&#039;, &#039;Contact Page CTA&#039;);">
+                            <a data-skrollex data-sk-group data-sk-btn data-btn href="{% url 'basic_contacts' %}"
+                                class="btn btn--light text-align-center no-hover" data-btn-fill=""
+                                onClick="ga(&#039;send&#039;, &#039;event&#039;, &#039;contact-cta&#039;, &#039;click&#039;, &#039;Contact Page CTA&#039;);">
                                 <span class="btn__text"><span class="btn__text-inner">Контакты</span></span>
                             </a>
 
                         </li>
                         <li role="presentation" class="contact-link">
-                            <a href="" onClick="ga('send', 'event', 'contact-cta', 'click', 'Contact Page CTA');">Contact<span></span></a>
+                            <a href=""
+                                onClick="ga('send', 'event', 'contact-cta', 'click', 'Contact Page CTA');">Contact<span></span></a>
                         </li>
                     </ul>
                 </nav>
@@ -166,10 +170,10 @@
     </div>
     <div id="content">
         <div id="main" role="main">
-          {% block content %}
-          {% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
-      </div>
+    </div>
 
     <footer id="footer" data-skrollex data-sk-static data-sk-hide-offscreen>
         <div class="container">
@@ -182,19 +186,24 @@
                 </div>
                 <div class="grid__item col-8--small">
                     <div class="footer__copy">
-                        <p class="lead mb0">We collaborate with ambitious brands and people; we&rsquo;d love to build something great together.</p>
-                        <p class="lead fw-bold"><a href="" class="link-hover" onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'New Business Email Clicks');">biz@basicagency.com</a></p>
+                        <p class="lead mb0">We collaborate with ambitious brands and people; we&rsquo;d love to build
+                            something great together.</p>
+                        <p class="lead fw-bold"><a href="" class="link-hover"
+                                onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'New Business Email Clicks');">biz@basicagency.com</a>
+                        </p>
                     </div>
                     <div class="footer__contact-info grid grid--mobile">
                         <div class="grid__item col-6 col-3--large mb3 mb0--large">
                             <p class="fw-bold">Office</p>
                             <p>
-                                <a href="" target="_blank" class="address link-hover no-underline" onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
+                                <a href="" target="_blank" class="address link-hover no-underline"
+                                    onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
                                     San Diego &mdash;<br />845 15th Street, Suite 501<br /> San Diego, CA 92101
                                 </a>
                             </p>
                             <p>
-                                <a href="" target="_blank" class="address link-hover no-underline" onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
+                                <a href="" target="_blank" class="address link-hover no-underline"
+                                    onClick="ga('send', 'event', 'contact-maps', 'click', 'BASIC Office Directions', {'NonInteraction': 1});">
                                     Mountain View &mdash;<br />1300 Villa St<br /> Mountain View, CA 94041
                                 </a>
                             </p>
@@ -202,27 +211,38 @@
                         <div class="grid__item col-6 col-3--large mb3 mb0--large">
                             <p class="fw-bold">Start a conversation</p>
                             <p>
-                                <a href="" class="link-hover" onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'General Email Clicks');"></a>
+                                <a href="" class="link-hover"
+                                    onClick="ga('send', 'event', ' Mailto', 'click-to-email', 'General Email Clicks');"></a>
                                 <br />
-                                <a href="tel:+1.858.755.6922" class="link-hover no-underline" onClick=”ga('send', 'event' , ' Phone Call' , 'click-to-call' , '+1.858.755.6922' );”>+7.904.000.0000</a>
+                                <a href="tel:+1.858.755.6922" class="link-hover no-underline"
+                                    onClick=”ga('send', 'event' , ' Phone Call' , 'click-to-call' , '+1.858.755.6922'
+                                    );”>+7.904.000.0000</a>
                             </p>
                         </div>
                         <div class="grid__item col-6 col-3--large mb5 mb0--large">
                             <p class="fw-bold">Basic sites</p>
                             <p>
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-culturemanual', 'click', '', {'NonInteraction': 1});">Culture Manual</a>
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-culturemanual', 'click', '', {'NonInteraction': 1});">Culture
+                                    Manual</a>
                                 <br />
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-brandbeats', 'click', '', {'NonInteraction': 1});">BrandBeats</a>
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-brandbeats', 'click', '', {'NonInteraction': 1});">BrandBeats</a>
                                 <br />
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-basicyir16', 'click', 'BASIC YIR 16', {'NonInteraction': 1});">2016 YIR</a>
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-basicyir16', 'click', 'BASIC YIR 16', {'NonInteraction': 1});">2016
+                                    YIR</a>
                             </p>
                         </div>
                         <div class="grid__item col-6 col-3--large mb5 mb0--large">
                             <p class="fw-bold">Social</p>
                             <p>
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Facebook', {'NonInteraction': 1});">Facebook</a><br />
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Twitter', {'NonInteraction': 1});">Twitter</a><br />
-                                <a href="" class="link-hover" target="_blank" onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Instagram', {'NonInteraction': 1});">Instagram</a>
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Facebook', {'NonInteraction': 1});">Facebook</a><br />
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Twitter', {'NonInteraction': 1});">Twitter</a><br />
+                                <a href="" class="link-hover" target="_blank"
+                                    onClick="ga('send', 'event', 'exit-facebook', 'click', 'BASIC Instagram', {'NonInteraction': 1});">Instagram</a>
                             </p>
                         </div>
                     </div>
@@ -246,15 +266,15 @@
         </div>
     </footer>
 
-<div class="next-page-footer__mask pos-f layer"></div>
-</div>
+    <div class="next-page-footer__mask pos-f layer"></div>
+    </div>
 
-<div class="page-transition-mask pos-f layer"></div>
+    <div class="page-transition-mask pos-f layer"></div>
 
-<script src="https://use.fontawesome.com/dfca782c46.js" async></script>
-<script src="{% static 'basic/scripts/common.js' %}"></script>
-<script src="{% static 'basic/scripts/main.bundle.js' %}"></script>
-<script src="{% static 'basic/scripts/enhanced.bundle.js' %}"></script>
+    <script src="https://use.fontawesome.com/dfca782c46.js" async></script>
+    <script src="{% static 'basic/scripts/common.js' %}"></script>
+    <script src="{% static 'basic/scripts/main.bundle.js' %}"></script>
+    <script src="{% static 'basic/scripts/enhanced.bundle.js' %}"></script>
 
 </body>
 

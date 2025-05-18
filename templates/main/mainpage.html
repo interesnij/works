@@ -5,7 +5,7 @@
 {% block content %}
 
 <style>
-	nav a {
+	.ax a {
 		margin: 20px;
 		font-size: 24px;
 		padding: 5px;
@@ -13,7 +13,7 @@
 		margin-top: 20px;
 	}
 
-	nav {
+	.ax {
 		padding: 50px;
 		letter-spacing: 5px;
 		margin-top: 20%;
@@ -64,7 +64,7 @@
 	<div class="content content--fixed demo2">
 		<div class="">
 
-			<nav class="">
+			<div class="ax">
 				<a class="" href="{% url 'gallery' %}">Галерея</a>
 				<a class="" href="{% url 'aframe' %}">Aframe</a>
 				<a class="" href="{% url 'parallax' %}">Параллакс</a>
@@ -82,13 +82,13 @@
 				<a class="" href="{% url 'basic' %}">Basic</a>
 				<a class="" href="{% url 'mowellens' %}">Mowellens</a>
 				<a class="" href="{% url 'manship' %}">Manship</a>
-			</nav>
+				</nav>
 
+			</div>
 		</div>
-	</div>
-	<script src="{% static 'main/scripts/imagesloaded.pkgd.min.js' %}"></script>
-	<script src="{% static 'main/scripts/charming.min.js' %}"></script>
-	<script src="{% static 'main/scripts/anime.min.js' %}"></script>
-	<script src="{% static 'main/scripts/demo1.js' %}"></script>
+		<script src="{% static 'main/scripts/imagesloaded.pkgd.min.js' %}"></script>
+		<script src="{% static 'main/scripts/charming.min.js' %}"></script>
+		<script src="{% static 'main/scripts/anime.min.js' %}"></script>
+		<script src="{% static 'main/scripts/demo1.js' %}"></script>
 </main>
 {% endblock %}

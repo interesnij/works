@@ -8,344 +8,384 @@
 <link rel="stylesheet" type="text/css" href="{% static 'story/styles/story.css' %}" />
 
 <audio id="backgroundMusic" loop>
-    <source src="{% static 'story/audio/background.ogg' %}" type="audio/ogg">
-    <source src="{% static 'story/audio/background.mp3' %}" type="audio/mpeg">
+  <source src="{% static 'story/audio/background.ogg' %}" type="audio/ogg">
+  <source src="{% static 'story/audio/background.mp3' %}" type="audio/mpeg">
 </audio>
 <audio id="backgroundMusicFiltered" loop>
-    <source src="{% static 'audio/background-filtered.ogg' %}" type="audio/ogg">
-    <source src="{% static 'audio/background-filtered.mp3' %}" type="audio/mpeg">
+  <source src="{% static 'story/audio/background-filtered.ogg' %}" type="audio/ogg">
+  <source src="{% static 'story/audio/background-filtered.mp3' %}" type="audio/mpeg">
 </audio>
 
 <div id="siteWrapper">
-    <header>
-      <a href="{% url 'story' %}">
-        Истории
+  <header>
+    <a href="{% url 'story' %}">
+      Истории
+    </a>
+    <div class="backWrapper">
+      <a class="backToStories frameTitle" href="{% url 'story' %}">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>arrow</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path
+              d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z"
+              id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+        <span>На главную</span>
       </a>
-      <div class="backWrapper">
-        <a class="backToStories frameTitle" href="{% url 'story' %}">
+      <a class="back frameTitle" href="/">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>arrow</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path
+              d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z"
+              id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+        <span>Назад</span>
+      </a>
+    </div>
+    <nav>
+      <a class="ignoreParse soundToggle" href="#">
+        <span class="soundOn">
           <?xml version="1.0" encoding="UTF-8"?>
-          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>arrow</title>
+          <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Icon / Sound on</title>
             <desc>Created with Sketch.</desc>
             <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Icon-/-Sound-on" fill="#FFFFFF">
+                <g>
+                  <rect id="Rectangle"
+                    transform="translate(0.500000, 6.000000) rotate(180.000000) translate(-0.500000, -6.000000) "
+                    x="-1.11022302e-16" y="5" width="1" height="2"></rect>
+                  <rect id="Rectangle-Copy"
+                    transform="translate(3.500000, 4.500000) rotate(180.000000) translate(-3.500000, -4.500000) " x="3"
+                    y="2" width="1" height="5"></rect>
+                  <rect id="Rectangle-Copy-2"
+                    transform="translate(6.500000, 3.500000) rotate(180.000000) translate(-6.500000, -3.500000) " x="6"
+                    y="0" width="1" height="7"></rect>
+                  <rect id="Rectangle-Copy-3"
+                    transform="translate(9.500000, 5.000000) rotate(180.000000) translate(-9.500000, -5.000000) " x="9"
+                    y="3" width="1" height="4"></rect>
+                </g>
+              </g>
             </g>
           </svg>
-          <span>На главную</span>
-        </a>
-        <a class="back frameTitle" href="/">
+        </span>
+        <span class="soundOff">
           <?xml version="1.0" encoding="UTF-8"?>
-          <svg width="10px" height="18px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>arrow</title>
+          <svg width="10px" height="1px" viewBox="0 0 10 1" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Icon / Sound off</title>
             <desc>Created with Sketch.</desc>
             <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M1.20710678,4.5 L4.85355339,0.853553391 L4.14644661,0.146446609 L0.146446609,4.14644661 L0.5,4.5 L0.146446609,4.85355339 L4.14644661,8.85355339 L4.85355339,8.14644661 L1.20710678,4.5 Z" id="arrow" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Icon-/-Sound-off" fill="#FFFFFF">
+                <g>
+                  <rect id="Rectangle" x="3" y="0" width="1" height="1"></rect>
+                  <rect id="Rectangle-Copy" x="6" y="0" width="1" height="1"></rect>
+                  <rect id="Rectangle-Copy-2" x="0" y="0" width="1" height="1"></rect>
+                  <rect id="Rectangle-Copy-3" x="9" y="0" width="1" height="1"></rect>
+                </g>
+              </g>
             </g>
           </svg>
-          <span>Назад</span>
-        </a>
-      </div>
-      <nav>
-        <a class="ignoreParse soundToggle" href="#">
-          <span class="soundOn">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>Icon / Sound on</title>
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
-              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Icon-/-Sound-on" fill="#FFFFFF">
-                  <g>
-                    <rect id="Rectangle" transform="translate(0.500000, 6.000000) rotate(180.000000) translate(-0.500000, -6.000000) " x="-1.11022302e-16" y="5" width="1" height="2"></rect>
-                    <rect id="Rectangle-Copy" transform="translate(3.500000, 4.500000) rotate(180.000000) translate(-3.500000, -4.500000) " x="3" y="2" width="1" height="5"></rect>
-                    <rect id="Rectangle-Copy-2" transform="translate(6.500000, 3.500000) rotate(180.000000) translate(-6.500000, -3.500000) " x="6" y="0" width="1" height="7"></rect>
-                    <rect id="Rectangle-Copy-3" transform="translate(9.500000, 5.000000) rotate(180.000000) translate(-9.500000, -5.000000) " x="9" y="3" width="1" height="4"></rect>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </span>
-          <span class="soundOff">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg width="10px" height="1px" viewBox="0 0 10 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <title>Icon / Sound off</title>
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
-              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Icon-/-Sound-off" fill="#FFFFFF">
-                  <g>
-                    <rect id="Rectangle" x="3" y="0" width="1" height="1"></rect>
-                    <rect id="Rectangle-Copy" x="6" y="0" width="1" height="1"></rect>
-                    <rect id="Rectangle-Copy-2" x="0" y="0" width="1" height="1"></rect>
-                    <rect id="Rectangle-Copy-3" x="9" y="0" width="1" height="1"></rect>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </span>
-        </a>
-        <a class="frameTitle takeAction" href="{% url 'story_add' %}"><span>Добавить</span></a>
-        <a class="frameTitle aboutProject" href="{% url 'story_about' %}"><span>о нашем проекте</span></a>
-        </nav>
-    </header>
-    <div class="LoaderTextModule">
-      <div class="IntroTextModule">
-	       <div class="textContainer">
-	          <div class="subhead">загрузка</div>
-            <q>Люди с психическими расстройствами могут жить полноценной жизнью. Однако для многих миллионов людей, сталкивающихся с нищетой, конфликтами и пренебрежением, жизнь-это нищета.</q>
-            <p class='footnote'>Изучение истории реальных людей, столкнувшихся с проблемами психического здоровья. Посмотреть, как они живут, услышать их голоса, можно здесь.</p>
-              <div class="button-corner-wrapper">
-		    	      <a href="#" class="ignoreParse button-corner large">
-					         <span class="corner"></span>
-			             <span class="corner"></span>
-			             <span class="corner"></span>
-			             <span class="corner"></span>
-					         <span class="text">Далее</span>
-				        </a>
-			        </div>
-	          </div>
-	        </div>
+        </span>
+      </a>
+      <a class="frameTitle takeAction" href="{% url 'story_add' %}"><span>Добавить</span></a>
+      <a class="frameTitle aboutProject" href="{% url 'story_about' %}"><span>о нашем проекте</span></a>
+    </nav>
+  </header>
+  <div class="LoaderTextModule">
+    <div class="IntroTextModule">
+      <div class="textContainer">
+        <div class="subhead">загрузка</div>
+        <q>Люди с психическими расстройствами могут жить полноценной жизнью. Однако для многих миллионов людей,
+          сталкивающихся с нищетой, конфликтами и пренебрежением, жизнь-это нищета.</q>
+        <p class='footnote'>Изучение истории реальных людей, столкнувшихся с проблемами психического здоровья.
+          Посмотреть, как они живут, услышать их голоса, можно здесь.</p>
+        <div class="button-corner-wrapper">
+          <a href="#" class="ignoreParse button-corner large">
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="corner"></span>
+            <span class="text">Далее</span>
+          </a>
         </div>
-        <div id="templateLayer">
-          <div data-template="HomeTemplate" data-title="Макет блога" class="template HomeTemplate">
-    	       <div class="blackRectangle"></div>
-    	        <div class="module CarouselModule" data-module="CarouselModule">
-	               <div class="vignette"></div>
-	                <div class="pixiContainer"></div>
-	                 <div class="titleUnit">
-		                 <ul class="titles">
-											  <li data-img="{% static 'story/images/1.jpg' %}" data-img-mobile="{% static 'story/images/1_mob.jpg' %}">
-						               <div class="subtitle">Краткий слоган статьи</div>
-						                 <div class="title">Название</div>
-						                   <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
-						                      <a href="{% url 'story_detail' %}" class="button enterStoryButton">
-							                       <span class="corner"></span>
-		                                 <span class="corner"></span>
-		                                 <span class="corner"></span>
-		                                 <span class="corner"></span>
-							                       <span class="icon">
-                                       <?xml version="1.0" encoding="UTF-8"?>
-                                       <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                         <title>Icons / Eye</title>
-                                         <desc>Created with Sketch.</desc>
-                                         <defs>
-                                           <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
-                                         </defs>
-                                         <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                           <g id="Icons-/-Eye">
-                                             <g id="eye">
-                                               <g id="Oval">
-                                                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                                 <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
-                                               </g>
-                                               <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
-                                             </g>
-                                           </g>
-                                         </g>
-                                       </svg>
-                                     </span>
-							                       <span class="text">Читать</span>
-						                       </a>
-					                       </li>
-                                 <li data-img="{% static 'story/images/2.jpg' %}" data-img-mobile="{% static 'story/images/2_mob.jpg' %}">
-                                    <div class="subtitle">Краткий  слоган истории</div>
-                                      <div class="title">Название</div>
-                                        <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
-                                           <a href="{% url 'story_detail' %}" class="button enterStoryButton">
-                                              <span class="corner"></span>
-                                              <span class="corner"></span>
-                                              <span class="corner"></span>
-                                              <span class="corner"></span>
-                                              <span class="icon">
-                                                <?xml version="1.0" encoding="UTF-8"?>
-                                                <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                  <title>Icons / Eye</title>
-                                                  <desc>Created with Sketch.</desc>
-                                                  <defs>
-                                                    <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
-                                                  </defs>
-                                                  <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <g id="Icons-/-Eye">
-                                                      <g id="eye">
-                                                        <g id="Oval">
-                                                          <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                                          <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
-                                                        </g>
-                                                        <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
-                                                      </g>
-                                                    </g>
-                                                  </g>
-                                                </svg>
-                                              </span>
-                                              <span class="text">Читать</span>
-                                            </a>
-                                          </li>
-                                          <li data-img="{% static 'story/images/3.jpg' %}" data-img-mobile="{% static 'story/images/3_mob.jpg' %}">
-                                             <div class="subtitle">Краткуий слоган статьи</div>
-                                               <div class="title">Название</div>
-                                                 <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
-                                                    <a href="{% url 'story_detail' %}" class="button enterStoryButton">
-                                                       <span class="corner"></span>
-                                                       <span class="corner"></span>
-                                                       <span class="corner"></span>
-                                                       <span class="corner"></span>
-                                                       <span class="icon">
-                                                         <?xml version="1.0" encoding="UTF-8"?>
-                                                         <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                           <title>Icons / Eye</title>
-                                                           <desc>Created with Sketch.</desc>
-                                                           <defs>
-                                                             <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
-                                                           </defs>
-                                                           <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                             <g id="Icons-/-Eye">
-                                                               <g id="eye">
-                                                                 <g id="Oval">
-                                                                   <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                                                   <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2"></ellipse>
-                                                                 </g>
-                                                                 <ellipse id="Oval-2" fill="#242424" transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) " cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
-                                                               </g>
-                                                             </g>
-                                                           </g>
-                                                         </svg>
-                                                       </span>
-                                                       <span class="text">Читать</span>
-                                                     </a>
-                                                   </li>
+      </div>
+    </div>
+  </div>
+  <div id="templateLayer">
+    <div data-template="HomeTemplate" data-title="Макет блога" class="template HomeTemplate">
+      <div class="blackRectangle"></div>
+      <div class="module CarouselModule" data-module="CarouselModule">
+        <div class="vignette"></div>
+        <div class="pixiContainer"></div>
+        <div class="titleUnit">
+          <ul class="titles">
+            <li data-img="{% static 'story/images/1.jpg' %}" data-img-mobile="{% static 'story/images/1_mob.jpg' %}">
+              <div class="subtitle">Краткий слоган статьи</div>
+              <div class="title">Название</div>
+              <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
+              <a href="{% url 'story_detail' %}" class="button enterStoryButton">
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="icon">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Icons / Eye</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs>
+                      <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+                    </defs>
+                    <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons-/-Eye">
+                        <g id="eye">
+                          <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2">
+                            </ellipse>
+                          </g>
+                          <ellipse id="Oval-2" fill="#242424"
+                            transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) "
+                            cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="text">Читать</span>
+              </a>
+            </li>
+            <li data-img="{% static 'story/images/2.jpg' %}" data-img-mobile="{% static 'story/images/2_mob.jpg' %}">
+              <div class="subtitle">Краткий слоган истории</div>
+              <div class="title">Название</div>
+              <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
+              <a href="{% url 'story_detail' %}" class="button enterStoryButton">
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="icon">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Icons / Eye</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs>
+                      <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+                    </defs>
+                    <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons-/-Eye">
+                        <g id="eye">
+                          <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2">
+                            </ellipse>
+                          </g>
+                          <ellipse id="Oval-2" fill="#242424"
+                            transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) "
+                            cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="text">Читать</span>
+              </a>
+            </li>
+            <li data-img="{% static 'story/images/3.jpg' %}" data-img-mobile="{% static 'story/images/3_mob.jpg' %}">
+              <div class="subtitle">Краткуий слоган статьи</div>
+              <div class="title">Название</div>
+              <p>Phasellus ut condimentum diam, eget tempus lorem. Morbi bibendum est quis arcu posuere condimentum.</p>
+              <a href="{% url 'story_detail' %}" class="button enterStoryButton">
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="corner"></span>
+                <span class="icon">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Icons / Eye</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs>
+                      <ellipse id="path-1" cx="3.49407783" cy="2.5" rx="3.49407783" ry="2.5"></ellipse>
+                    </defs>
+                    <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons-/-Eye">
+                        <g id="eye">
+                          <g id="Oval">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <ellipse stroke="#FFFFFF" stroke-width="1" cx="3.49407783" cy="2.5" rx="2.99407783" ry="2">
+                            </ellipse>
+                          </g>
+                          <ellipse id="Oval-2" fill="#242424"
+                            transform="translate(3.494078, 2.500000) scale(1, -1) translate(-3.494078, -2.500000) "
+                            cx="3.49407783" cy="2.5" rx="1.49746193" ry="1.5"></ellipse>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="text">Читать</span>
+              </a>
+            </li>
 
-									                     </ul>
-	                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    <div class="module TimelineModule" data-module="TimelineModule" >
-                      <div class="indicator flexrow">
-                        <div class="category frameTitle">Suffocation</div>
-                        <div class="graphics">
-        	                 <div class="secondarySpots"></div>
-        	                 <div class="primarySpots"></div>
-        	                 <div class="progressLine"></div>
-        	                 <div class="backgroundLine"></div>
-                       </div>
-                     </div>
-	                   <div class="mobileInfo flexrow">
-    	                  <div class="frameTitle name">Lorem Ipsum</div>
-    	                  <div class="frameTitle counter">0/10</div>
-                     </div>
-                     <div class="spotTemplates" style="display:none">
-		                   <div class="spot primary">
-			                    <span class="icon primaryIcon icon-primary-passive">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                              <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <title>Primary Passive</title>
-                              <desc>Created with Sketch.</desc>
-                              <defs></defs>
-                              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Primary-Passive">
-                                  <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
-                                  <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
-                                </g>
-                              </g>
-                            </svg>
-                          </span>
-			                    <span class="icon primaryIcon icon-primary-active">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <title>Primary Active</title>
-                              <desc>Created with Sketch.</desc>
-                              <defs></defs>
-                              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Primary-Active">
-                                  <g id="Active-">
-                                    <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
-                                    <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
-                                  </g>
-                                </g>
-                              </g>
-                            </svg>
-                          </span>
-			                    <span class="icon primaryIcon icon-primary-seen">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <title>Primary Seen</title>
-                              <desc>Created with Sketch.</desc>
-                              <defs></defs>
-                              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Primary-Seen" fill="#FFFFFF">
-                                  <rect id="Rectangle" x="4" y="4" width="7" height="7"></rect>
-                                </g>
-                              </g>
-                            </svg>
-                          </span>
-			                    <span class="icon primaryIcon icon-primary-hover">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <title>Timeline / Dots / Primary / Hover</title>
-                              <desc>Created with Sketch.</desc>
-                              <defs></defs>
-                              <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Timeline-/-Dots-/-Primary-/-Hover">
-                                  <polygon id="Path-Copy" fill="#000000" points="4 0 11 0 15 4 15 11 11 15 4 15 0 11 7.34788079e-16 4"></polygon>
-                                  <path d="M4.41421356,1 L1,4.41421356 L1,10.5857864 L4.41421356,14 L10.5857864,14 L14,10.5857864 L14,4.41421356 L10.5857864,1 L4.41421356,1 Z M4,-6.21724894e-15 L11,-6.21724894e-15 L15,4 L15,11 L11,15 L4,15 L-2.66453526e-15,11 L-1.92974718e-15,4 L4,-6.21724894e-15 Z" id="Rectangle-2-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
-                                  <rect id="Rectangle-9" fill="#FFFFFF" x="5" y="5" width="5" height="5"></rect>
-                                </g>
-                              </g>
-                            </svg>
-                          </span>
-			                    <div class="hoverState">
-				                     <span class="frameTitle"></span>
-				                     <div class="background"></div>
-			                    </div>
-			                    <div class="hitter"></div>
-		                  </div>
-                      <div class="spot secondary">
-			                     <span class="icon secondaryIcon icon-secondary-passive">
-                             <?xml version="1.0" encoding="UTF-8"?>
-                             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                               <title>Secondary Passive</title>
-                               <desc>Created with Sketch.</desc>
-                               <defs></defs>
-                               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                 <g id="Secondary-Passive" fill="#666666">
-                                   <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
-                                 </g>
-                               </g>
-                             </svg>
-                           </span>
-			                     <span class="icon secondaryIcon icon-secondary-active">
-                             <?xml version="1.0" encoding="UTF-8"?>
-                             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                               <title>Secondary Active</title>
-                               <desc>Created with Sketch.</desc>
-                               <defs></defs>
-                               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                 <g id="Secondary-Active">
-                                   <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="5" height="5"></rect>
-                                   <rect id="Fill" fill="#000000" x="1" y="1" width="3" height="3"></rect>
-                                 </g>
-                               </g>
-                             </svg>
-                           </span>
-			                     <span class="icon secondaryIcon icon-secondary-seen">
-                             <?xml version="1.0" encoding="UTF-8"?>
-                             <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                               <title>Secondary Seen</title>
-                               <desc>Created with Sketch.</desc>
-                               <defs></defs>
-                               <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                 <g id="Secondary-Seen" fill="#FFFFFF">
-                                   <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
-                                 </g>
-                               </g>
-                             </svg>
-                           </span>
-		                     </div>
-	                    </div>
-                   </div>
-                 </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="module TimelineModule" data-module="TimelineModule">
+    <div class="indicator flexrow">
+      <div class="category frameTitle">Suffocation</div>
+      <div class="graphics">
+        <div class="secondarySpots"></div>
+        <div class="primarySpots"></div>
+        <div class="progressLine"></div>
+        <div class="backgroundLine"></div>
+      </div>
+    </div>
+    <div class="mobileInfo flexrow">
+      <div class="frameTitle name">Lorem Ipsum</div>
+      <div class="frameTitle counter">0/10</div>
+    </div>
+    <div class="spotTemplates" style="display:none">
+      <div class="spot primary">
+        <span class="icon primaryIcon icon-primary-passive">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Primary-Passive">
+                <polygon id="Rectangle" fill="#666666" fill-rule="nonzero" points="0 0 7 0 7 7 0 7"></polygon>
+                <polygon id="Rectangle-path" fill="#000000" points="1 6 6 6 6 1 1 1"></polygon>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="icon primaryIcon icon-primary-active">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Active</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Primary-Active">
+                <g id="Active-">
+                  <path d="M5,3 L10,3 L12,5 L12,10 L10,12 L5,12 L3,10 L3,5 L5,3 Z" id="Rectangle" fill="#FFFFFF"></path>
+                  <rect id="Fill" fill="#000000" x="5" y="5" width="5" height="5"></rect>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="icon primaryIcon icon-primary-seen">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Primary Seen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Primary-Seen" fill="#FFFFFF">
+                <rect id="Rectangle" x="4" y="4" width="7" height="7"></rect>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="icon primaryIcon icon-primary-hover">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Timeline / Dots / Primary / Hover</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Timeline-/-Dots-/-Primary-/-Hover">
+                <polygon id="Path-Copy" fill="#000000" points="4 0 11 0 15 4 15 11 11 15 4 15 0 11 7.34788079e-16 4">
+                </polygon>
+                <path
+                  d="M4.41421356,1 L1,4.41421356 L1,10.5857864 L4.41421356,14 L10.5857864,14 L14,10.5857864 L14,4.41421356 L10.5857864,1 L4.41421356,1 Z M4,-6.21724894e-15 L11,-6.21724894e-15 L15,4 L15,11 L11,15 L4,15 L-2.66453526e-15,11 L-1.92974718e-15,4 L4,-6.21724894e-15 Z"
+                  id="Rectangle-2-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <rect id="Rectangle-9" fill="#FFFFFF" x="5" y="5" width="5" height="5"></rect>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <div class="hoverState">
+          <span class="frameTitle"></span>
+          <div class="background"></div>
+        </div>
+        <div class="hitter"></div>
+      </div>
+      <div class="spot secondary">
+        <span class="icon secondaryIcon icon-secondary-passive">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Secondary Passive</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Secondary-Passive" fill="#666666">
+                <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="icon secondaryIcon icon-secondary-active">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Secondary Active</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Secondary-Active">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="5" height="5"></rect>
+                <rect id="Fill" fill="#000000" x="1" y="1" width="3" height="3"></rect>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="icon secondaryIcon icon-secondary-seen">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg width="5px" height="5px" viewBox="0 0 5 5" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Secondary Seen</title>
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Secondary-Seen" fill="#FFFFFF">
+                <rect id="Rectangle" x="1" y="1" width="3" height="3"></rect>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="{% static 'story/scripts/story2.js' %}"></script>
 
